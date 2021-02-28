@@ -1,0 +1,271 @@
+music_station = "american_forces_network"
+
+music = {
+	song = "american_patrol"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "yankee_doodle"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "anchors_aweigh"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "when_johnny_comes_marching_home"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "arms_for_the_love_of_america"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "USMC_anthem"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "battle_hymn_of_the_republic"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "us_field_artillery"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "blood_upon_the_risers"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "this_is_the_army"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "bravura_march"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_washington_post"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "bugle_boy_of_company_b"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_trombone_king"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "comin_in_on_a_wing_and_a_prayer"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_stars_and_stripes_forever"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "defend_america"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_star_spangled_banner"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "espirit_de_corps"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_army_air_corps"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "g_i_jive"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "song_of_the_army_engineer"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "god_bless_america"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "semper_fidelis"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "hail_columbia"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "over_there"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "hail_to_the_chief"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "i_am_in_the_army_now"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "my_country_tis_of_thee"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "king_cotton"
+
+	chance = {
+		factor = 1
+
+	}
+}

@@ -1,0 +1,190 @@
+#################
+#### GERMANY ####
+#################
+
+GER_reich_lands_category = {
+	icon = ger_pangermanism
+
+}
+
+GER_gp_reichskommissariats_west = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_gp_reichskommissariats_ost = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_gp_reichskommissariats_balkan = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_gp_reichskommissariats_amerika = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichblr_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichcro_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichhun_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichalb_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichbul_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichgeo_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichkaz_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichwsi_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichesi_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichukr_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichfin_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichbel_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichhol_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichspa_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichcog_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichnmb_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichzim_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichsaf_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichken_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichalg_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichchi_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichprc_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichraj_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichtur_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichins_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichusa_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichmex_category = {
+	icon = ger_reichskommissariats
+
+}
+GER_reicharg_category = {
+	icon = ger_reichskommissariats
+
+}
+GER_reichchl_category = {
+	icon = ger_reichskommissariats
+
+}
+GER_reichven_category = {
+	icon = ger_reichskommissariats
+
+}
+# Add event to change capital 
+GER_reichbra_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichcub_category = {
+	icon = ger_reichskommissariats
+
+}
+
+GER_reichsov_category = {
+	icon = ger_reichskommissariats
+
+}

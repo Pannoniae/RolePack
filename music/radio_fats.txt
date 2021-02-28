@@ -1,0 +1,56 @@
+music_station = "radio_fats"
+
+music = {
+	song = "aint_misbehavin"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "im_crazy_bout_my_baby"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "wheres_the_sun"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "christopher_columbus"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "ive_got_my_fingers_crossed"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "curse_of_an_aching_heart"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "because_of_once_upon_a_time"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "squeeze_me"
+	chance = {
+		factor = 1
+	}
+}
+music = {
+	song = "erika"
+	chance = {
+		factor = 1
+	}
+}

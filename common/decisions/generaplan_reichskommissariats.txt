@@ -1,0 +1,3752 @@
+GER_gp_reichskommissariats_ost = {
+
+	#Poland released
+	#who'd want to release them anyway am i right?
+
+	GER_gp_reichskommissariat_poland = {
+
+		fire_only_once = yes
+
+		icon = ger_reichskommissariats
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+							controls_state = 10
+							controls_state = 88
+							controls_state = 90
+							controls_state = 92
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 10
+							controls_state = 88
+							controls_state = 90
+							controls_state = 92
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+					controls_state = 10
+					controls_state = 88
+					controls_state = 90
+					controls_state = 92
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 10
+						controls_state = 88
+						controls_state = 90
+						controls_state = 92
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = POL
+						NOT = { POL = { has_government = fascism } }
+					}
+					hidden_effect = {
+						POL = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"}
+							set_state_controller = 10
+							set_state_controller = 88
+							set_state_controller = 90
+							set_state_controller = 92
+						}
+					}
+					POL = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = POL
+							has_government = fascism
+						}
+						transfer_state = 10
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 92
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = POL_GER
+						create_country_leader = {
+							name = "Hans Frank"
+							desc = "POLITICS_HANS_FRANK_DESC"
+							picture = "gfx/leaders/GER/Portrait_Hans_Frank.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+				}
+				else = {
+					POL = {
+						hidden_effect = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+						}
+						transfer_state = 10
+						transfer_state = 88
+						transfer_state = 90
+						transfer_state = 92
+						set_cosmetic_tag = POL_GER
+						create_country_leader = {
+							name = "Hans Frank"
+							desc = "POLITICS_HANS_FRANK_DESC"
+							picture = "gfx/leaders/GER/Portrait_Hans_Frank.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+					set_autonomy = { target = POL autonomy_state = autonomy_reichskommissariat }
+				}
+			}
+		}
+
+	#Czechoslovakia released
+
+	GER_gp_reichskommissariat_czechoslovakia = {
+		icon = ger_reichskommissariats
+
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 9
+					controls_state = 75
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 9
+						controls_state = 75
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 9
+				controls_state = 75
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 9
+					controls_state = 75
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = CZE
+					NOT = { CZE = { has_government = fascism } }
+				}
+				hidden_effect = {
+					CZE = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+						set_state_controller = 9
+						set_state_controller = 75
+					}
+				}
+				CZE = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = CZE
+						has_government = fascism
+					}
+					transfer_state = 9
+					transfer_state = 75
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					
+					set_cosmetic_tag = CZE_GER
+					create_country_leader = {
+						name = "Reinhard Heydrich"
+						desc = "POLITICS_REINHARD_HEYDRICH_DESC"
+						picture = "gfx/leaders/GER/Portrait_Reinhard_Heydrich.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+			}
+			else = {
+				CZE = {
+					hidden_effect = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+					}
+					transfer_state = 9
+					transfer_state = 75
+					set_cosmetic_tag = CZE_GER
+					create_country_leader = {
+						name = "Reinhard Heydrich"
+						desc = "POLITICS_REINHARD_HEYDRICH_DESC"
+						picture = "gfx/leaders/GER/Portrait_Reinhard_Heydrich.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+				set_autonomy = { target = CZE autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	
+	GER_gp_reichskommissariat_slovakia = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+		tag = GER 
+		OR = {
+			GER = {
+			controls_state = 71
+			controls_state = 70
+		}
+			any_other_country = {
+				is_subject_of = GER
+			controls_state = 71
+			controls_state = 70
+			}
+		}
+	}
+
+	visible = {
+		OR = {
+			GER = {
+			controls_state = 71
+			controls_state = 70
+			}
+			any_other_country = {
+				is_subject_of = GER
+				controls_state = 71
+				controls_state = 70
+			}
+		}
+		original_tag = GER
+		has_government = fascism
+	}
+
+	complete_effect = {
+		GER = {
+			release_puppet = SLO
+		}
+		SLO = {
+			set_cosmetic_tag = SLO_GER
+		}
+		set_autonomy = { target = SLO autonomy_state = autonomy_reichsprotectorate }
+	}
+}
+
+		#Belarus released
+		GER_gp_reichskommissariat_belarus = {
+
+			icon = ger_reichskommissariats
+
+			fire_only_once = yes
+				
+			available = {
+					tag = GER 
+						OR = {
+							GER = {
+								controls_state = 94
+								controls_state = 95
+								controls_state = 96
+						}
+							any_other_country = {
+								is_subject_of = GER
+								controls_state = 94
+								controls_state = 95
+								controls_state = 96
+						}
+					}
+				}
+		
+			visible = {
+					OR = {
+						GER = {
+						controls_state = 94
+						controls_state = 95
+						controls_state = 96
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 94
+							controls_state = 95
+							controls_state = 96
+					}
+				}
+					original_tag = GER
+					has_government = fascism
+			}
+		
+			complete_effect = {
+					if = {
+						limit = {
+							country_exists = BLR
+							NOT = { BLR = { has_government = fascism } }
+						}
+						hidden_effect = {						
+							BLR = {
+								set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+								set_state_controller = 94
+								set_state_controller = 95
+								set_state_controller = 96
+							}
+						}
+						BLR = {
+							start_civil_war = { ideology = fascism size = 1 }
+						}
+						random_country = {
+							limit= {
+								original_tag = BLR
+								has_government = fascism
+							}
+							transfer_state = 94
+							transfer_state = 95
+							transfer_state = 96
+							GER = {
+								puppet = PREV
+								set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+							}
+							
+							set_cosmetic_tag = BLR_GER
+							create_country_leader = {
+								name = "Hinrich Lohse"
+								desc = "POLITICS_HINRICH_LOHSE_DESC"
+								picture = "gfx/leaders/GER/Portrait_Hinrich_Lohse.dds"
+								expire = "1965.1.1"
+								ideology = nazism
+								traits = {
+								}
+							}
+						}
+					}
+					else = {
+						BLR = {
+							hidden_effect = {
+								set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+							}
+							transfer_state = 94
+							transfer_state = 95
+							transfer_state = 96
+							set_cosmetic_tag = BLR_GER
+							create_country_leader = {
+								name = "Hinrich Lohse"
+								desc = "POLITICS_HINRICH_LOHSE_DESC"
+								picture = "gfx/leaders/GER/Portrait_Hinrich_Lohse.dds"
+								expire = "1965.1.1"
+								ideology = nazism
+								traits = {
+								}
+							}
+						}
+						set_autonomy = { target = BLR autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+			}
+		
+		#Ukraine released
+		GER_gp_reichskommissariat_ukraine = {
+
+			icon = ger_reichskommissariats
+
+			fire_only_once = yes
+				
+			available = {
+					tag = GER 
+						OR = {
+							GER = {
+								controls_state = 93
+						}
+							any_other_country = {
+								is_subject_of = GER
+								controls_state = 93
+						}
+					}
+				}
+		
+			visible = {
+					OR = {
+						GER = {
+						controls_state = 93
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 93
+					}
+				}
+					original_tag = GER
+					has_government = fascism
+			}
+		
+			complete_effect = {
+					if = {
+						limit = {
+							country_exists = UKR
+							NOT = { UKR = { has_government = fascism } }
+						}
+						hidden_effect = {
+							UKR = {
+								set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+								set_state_controller = 93
+							}
+						}
+						UKR = {
+							start_civil_war = { ideology = fascism size = 1 }
+						}
+						random_country = {
+							limit= {
+								original_tag = UKR
+								has_government = fascism
+							}
+							transfer_state = 93
+							GER = {
+								puppet = PREV
+								set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+							}
+							
+							set_cosmetic_tag = UKR_GER
+							create_country_leader = {
+								name = "Erich Koch"
+								desc = "POLITICS_ERICH_KOCH_DESC"
+								picture = "gfx/leaders/GER/Portrait_Erich_Koch.dds"
+								expire = "1965.1.1"
+								ideology = nazism
+								traits = {
+								}
+							}
+						}
+					}
+					else = {
+						UKR = {
+							hidden_effect = {
+								set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+							}
+							transfer_state = 93
+							set_cosmetic_tag = UKR_GER
+							create_country_leader = {
+								name = "Erich Koch"
+								desc = "POLITICS_ERICH_KOCH_DESC"
+								picture = "gfx/leaders/GER/Portrait_Erich_Koch.dds"
+								expire = "1965.1.1"
+								ideology = nazism
+								traits = {
+								}
+							}
+						}
+						set_autonomy = { target = UKR autonomy_state = autonomy_reichskommissariat }
+					}
+				}
+			}
+	
+	#Moscow released
+		GER_gp_reichskommissariat_moskowien = {
+			icon = ger_reichskommissariats
+	
+			fire_only_once = yes
+		
+			available = {
+					tag = GER 
+					OR = {
+						GER = {
+						owns_state = 219
+					}
+						any_other_country = {
+							is_subject_of = GER
+							owns_state = 219
+					}
+				}
+			}
+			visible = {
+					original_tag = GER
+					has_government = fascism
+					OR = {
+						GER = {
+						owns_state = 219
+					}
+						any_other_country = {
+							is_subject_of = GER
+							owns_state = 219
+					}
+				}
+					}
+			complete_effect = {
+				SOV = {
+				create_country_leader = {
+						name = "Siegfried Kasche"
+						desc = "POLITICS_SIEGFRIED_KASCHE_DESC"
+						picture = "gfx/leaders/GER/Portrait_Siegfried_Kasche.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+							}
+						}
+					}
+				set_autonomy = {
+							target = SOV
+							autonomy_state = autonomy_reichskommissariat
+						}			
+				hidden_effect = {
+					SOV = {
+					remove_ideas = {
+						trotskyite_plot
+						home_of_revolution
+						rehabilitated_military_focus
+						peoples_commissariat_focus
+						officers_purged_7
+						nkvd
+						nkvd_2
+						smersh
+						partisan_suppression_focus
+						progress_cult_focus
+						SOV_collectivist_propaganda
+						militarized_schools
+						workers_culture
+						socialist_science_focus 
+						}
+					load_focus_tree = generic_focus
+					set_cosmetic_tag = SOV_GER
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+					}
+					GER = {
+					release_puppet = SOV
+					}
+					set_autonomy = {
+						target = SOV
+						autonomy_state = autonomy_reichskommissariat
+					}
+				}
+			}
+		}
+
+	#Kaukasus released
+	GER_gp_reichskommissariat_kaukasia = {
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 231
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 231
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 231
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 231
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+				}
+		complete_effect = {
+			GEO = {
+				transfer_state = 231
+				create_country_leader = {
+					name = "Arno Schickedanz"
+					desc = "POLITICS_ARNO_SCHICKEDANZ_DESC"
+					picture = "gfx/leaders/GER/Portrait_Arno_Schickedanz.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+			}
+			set_autonomy = {
+						target = GEO
+						autonomy_state = autonomy_reichskommissariat
+					}			
+			hidden_effect = {
+				GEO = {
+					set_country_leader_ideology = nazism
+					set_cosmetic_tag = GEO_GER
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				}
+				GER = {
+				#puppet = GEO
+				}
+			}
+		}
+	}
+	
+	#Ural released
+	GER_gp_reichskommissariat_ural = {
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 516
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 516
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 516
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 516
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+				}
+		complete_effect = {
+			WSI = {
+				create_country_leader = {
+					name = "Erhard Milch"
+					desc = "POLITICS_ERHARD_MILCH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erhard_Milch.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+				transfer_state = 516
+			}
+			set_autonomy = {
+						target = WSI
+						autonomy_state = autonomy_reichskommissariat
+					}			
+			hidden_effect = {
+				WSI = {
+				set_cosmetic_tag = WSI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				}
+				GER = {
+				#puppet = WSI
+				}
+			}
+		}
+	}
+	
+	#Kazakstan released
+	GER_gp_reichskommissariat_turkestan = {
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 588
+					owns_state = 583
+					owns_state = 590
+					owns_state = 402
+					owns_state = 406
+					owns_state = 407
+					owns_state = 587
+					owns_state = 404
+					owns_state = 589
+					owns_state = 586
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 588
+					owns_state = 583
+					owns_state = 590
+					owns_state = 402
+					owns_state = 406
+					owns_state = 407
+					owns_state = 587
+					owns_state = 404
+					owns_state = 589
+					owns_state = 586
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 588
+					owns_state = 583
+					owns_state = 590
+					owns_state = 402
+					owns_state = 406
+					owns_state = 407
+					owns_state = 587
+					owns_state = 404
+					owns_state = 589
+					owns_state = 586
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 588
+						owns_state = 583
+						owns_state = 590
+						owns_state = 402
+						owns_state = 406
+						owns_state = 407
+						owns_state = 587
+						owns_state = 404
+						owns_state = 589
+						owns_state = 586
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+				}
+		complete_effect = {
+			KAZ = {
+				create_country_leader = {
+					name = "Werner Kempf"
+					desc = "POLITICS_WERNER_KEMPF_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Werner_Kempf.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+				transfer_state = 588
+				transfer_state = 583
+				transfer_state = 590
+				transfer_state = 402
+				transfer_state = 406
+				transfer_state = 407
+				transfer_state = 587
+				transfer_state = 404
+				transfer_state = 589
+				transfer_state = 586
+			}
+			set_autonomy = {
+						target = KAZ
+						autonomy_state = autonomy_reichskommissariat
+					}			
+			hidden_effect = {
+				KAZ = {
+				set_cosmetic_tag = KAZ_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				}
+				GER = {
+				#puppet = KAZ
+				}
+			}
+		}
+	}
+	
+	#Siberian released
+	GER_gp_reichskommissariat_siberian = {
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 644
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 644
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 644
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 644
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+				}
+		complete_effect = {
+			ESI = {
+				create_country_leader = {
+					name = "Hans-Karl Freiherr von Esebeck"
+					desc = "POLITICS_HANS-KARL_FREIHERR_VON_ESEBECK_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Hans-Karl_Freiherr_von_Esebeck.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+				transfer_state = 644
+			}
+			set_autonomy = {
+						target = ESI
+						autonomy_state = autonomy_reichskommissariat
+					}			
+			hidden_effect = {
+				ESI = {
+				set_cosmetic_tag = ESI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				}
+				GER = {
+				#puppet = ESI
+				}
+			}
+		}
+	}
+}
+
+GER_gp_reichskommissariats_west = {
+
+	 GER_gp_reichskommissariat_denmark = {
+
+	icon = ger_reichskommissariats
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 37
+					controls_state = 99
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 37
+					controls_state = 99
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 37
+				controls_state = 99
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 37
+					controls_state = 99
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = DEN
+					NOT = { DEN = { has_government = fascism } }
+				}
+				hidden_effect = {
+					DEN = {
+						set_state_controller = 37
+						set_state_controller = 99
+						set_party_name = { ideology = fascism long_name = "National Unity Government" name = "National Unity"} 
+					}
+				}
+				DEN = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					create_country_leader = {
+						name = "Erik Scavenius"
+						desc = "POLITICS_ERIK_SCAVENIUS_DESC"
+						picture = "gfx/leaders/DEN/Portrait_Denmark_Erik_Scavenius.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+					limit= {
+						original_tag = DEN
+						has_government = fascism
+					}
+					set_state_controller = 37
+					set_state_controller = 99
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = DEN_GER
+				}
+			}
+			else = {
+				DEN = {
+					create_country_leader = {
+						name = "Erik Scavenius"
+						desc = "POLITICS_ERIK_SCAVENIUS_DESC"
+						picture = "gfx/leaders/DEN/Portrait_Denmark_Erik_Scavenius.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Unity Government" name = "National Unity"} 
+					}
+					transfer_state = 37
+					transfer_state = 99
+					set_cosmetic_tag = DEN_GER
+				}
+				set_autonomy = { target = DEN autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+
+	GER_gp_reichskommissariat_switzerland = {
+
+		icon = ger_reichskommissariats
+		
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 3
+					}
+						any_other_country = {
+							is_subject_of = GER
+						controls_state = 3
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+					controls_state = 3
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 3
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = SWI
+						NOT = { SWI = { has_government = fascism } }
+					}
+					hidden_effect = {
+						SWI = {
+							remove_ideas = { neutrality_idea }
+							set_country_leader_ideology = nazism
+							set_state_controller = 3
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+					}
+					SWI = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = SWI
+							has_government = fascism
+						}
+						set_state_controller = 3
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+						}
+						set_cosmetic_tag = SWI_GER
+					}
+				}
+				else = {
+					SWI = {
+						hidden_effect = {
+							remove_ideas = {neutrality_idea}
+							set_country_leader_ideology = nazism
+							set_party_name = { ideology = fascism long_name = "The National Front" name = "National Front"}
+						}
+						transfer_state = 3
+						set_cosmetic_tag = SWI_GER
+					}
+					set_autonomy = { target = SWI autonomy_state = autonomy_reichsprotectorate }
+				}
+			}
+		}
+
+	GER_gp_reichskommissariat_netherlands = {
+
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 36
+						controls_state = 35
+						controls_state = 7
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 36
+							controls_state = 35
+							controls_state = 7
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+					controls_state = 36
+					controls_state = 35
+					controls_state = 7
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 36
+						controls_state = 35
+						controls_state = 7
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = HOL
+						NOT = { HOL = { has_government = fascism } }
+					}
+					hidden_effect = {
+						HOL = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 36
+							set_state_controller = 35
+							set_state_controller = 7
+						}
+					}
+					HOL = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = HOL
+							has_government = fascism
+						}
+						transfer_state = 36
+						transfer_state = 35
+						transfer_state = 7
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = HOL_GER
+						create_country_leader = {
+							name = "Arthur Seyss-Inquart"
+							desc = "POLITICS_ARTHUR_SEYSS-INQUART_DESC"
+							picture = "gfx/leaders/GER/Portrait_Arthur_SeyssInquart.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+				}
+				else = {					
+					HOL = {
+						hidden_effect = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 36
+						transfer_state = 35
+						transfer_state = 7
+						set_cosmetic_tag = HOL_GER
+						create_country_leader = {
+							name = "Arthur Seyss-Inquart"
+							desc = "POLITICS_ARTHUR_SEYSS-INQUART_DESC"
+							picture = "gfx/leaders/GER/Portrait_Arthur_SeyssInquart.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+					set_autonomy = { target = HOL autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+
+ #Belgium released
+ 
+ 	GER_gp_reichskommissariat_belgium = {
+
+	icon = ger_reichskommissariats
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 34
+					controls_state = 6
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 34
+					controls_state = 6
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 34
+				controls_state = 6
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 34
+					controls_state = 6
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = BEL
+					NOT = { BEL = { has_government = fascism } }
+				}
+				hidden_effect = {
+					BEL = {
+						set_state_controller = 34
+						set_state_controller = 6
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+					}
+				}
+				BEL = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = BEL
+						has_government = fascism
+					}
+					set_state_controller = 34
+					set_state_controller = 6
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+					}
+					set_cosmetic_tag = BEL_GER
+					create_country_leader = {
+					name = "Josef Grohe"
+					desc = "POLITICS_JOSEF_GROHE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Grohe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+				}
+			}
+			else = {
+				BEL = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+					}
+					transfer_state = 34
+					transfer_state = 6
+					set_cosmetic_tag = BEL_GER
+					create_country_leader = {
+					name = "Josef Grohe"
+					desc = "POLITICS_JOSEF_GROHE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Grohe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+				}
+				set_autonomy = { target = BEL autonomy_state = autonomy_reichskommissariat }
+			}
+		}
+	}
+ 
+	GER_gp_reichskommissariat_norway = {
+
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 110
+						controls_state = 142
+						controls_state = 143
+						controls_state = 144
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 110
+							controls_state = 142
+							controls_state = 143
+							controls_state = 144
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 110
+						controls_state = 142
+						controls_state = 143
+						controls_state = 144
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 110
+						controls_state = 142
+						controls_state = 143
+						controls_state = 144
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = NOR
+						NOT = { NOR = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						NOR = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 110
+							set_state_controller = 142
+							set_state_controller = 143
+							set_state_controller = 144
+						}
+					}
+					NOR = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = NOR
+							has_government = fascism
+						}
+						transfer_state = 110
+						transfer_state = 142
+						transfer_state = 143
+						transfer_state = 144
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = NOR_GER
+						create_country_leader = {
+							name = "Josef Terboven"
+							desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+							picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+				}
+				else = {
+					NOR = {
+						hidden_effect = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 110
+						transfer_state = 142
+						transfer_state = 143
+						transfer_state = 144
+						set_cosmetic_tag = NOR_GER
+						create_country_leader = {
+							name = "Josef Terboven"
+							desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+							picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+					set_autonomy = { target = NOR autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+
+	GER_gp_reichskommissariat_sweden = {
+
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 141
+						controls_state = 38
+						controls_state = 140
+						controls_state = 139
+						controls_state = 124
+						controls_state = 138
+						controls_state = 666
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 141
+							controls_state = 38
+							controls_state = 140
+							controls_state = 139
+							controls_state = 124
+							controls_state = 138
+							controls_state = 666
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 141
+						controls_state = 38
+						controls_state = 140
+						controls_state = 139
+						controls_state = 124
+						controls_state = 138
+						controls_state = 666
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 141
+						controls_state = 38
+						controls_state = 140
+						controls_state = 139
+						controls_state = 124
+						controls_state = 138
+						controls_state = 666
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = SWE
+						NOT = { SWE = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						SWE = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 141
+							set_state_controller = 140
+							set_state_controller = 38
+							set_state_controller = 139
+							set_state_controller = 124
+							set_state_controller = 138
+							set_state_controller = 666
+						}
+					}
+					SWE = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = SWE
+							has_government = fascism
+						}
+						transfer_state = 141
+						transfer_state = 140
+						transfer_state = 38
+						transfer_state = 139
+						transfer_state = 124
+						transfer_state = 138
+						transfer_state = 666
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = SWE_GER
+						create_country_leader = {
+							name = "Josef Terboven"
+							desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+							picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+				}
+				else = {
+					SWE = {
+						hidden_effect = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 141
+						transfer_state = 140
+						transfer_state = 38
+						transfer_state = 139
+						transfer_state = 124
+						transfer_state = 138
+						transfer_state = 666
+						set_cosmetic_tag = SWE_GER
+					}
+					set_autonomy = { target = SWE autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+	
+	#England released
+ 
+ GER_gp_dismantle_uk = {
+
+	fire_only_once = yes
+	
+	cost = 10
+
+	icon = eng_support_imperialist_coup
+		
+	available = {
+		tag = GER 
+			OR = {
+				GER = {
+				controls_state = 126
+				controls_state = 338
+				controls_state = 125
+				controls_state = 129
+				controls_state = 128
+				controls_state = 122
+				controls_state = 132
+				controls_state = 130
+				controls_state = 131
+				controls_state = 121
+				controls_state = 133
+				controls_state = 136
+				controls_state = 120
+				controls_state = 123
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 122
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 121
+					controls_state = 133
+					controls_state = 136
+					controls_state = 120
+					controls_state = 123
+			}
+		}
+	}
+
+	visible = {
+			OR = {
+				GER = {
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 123
+					controls_state = 127
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 123
+					controls_state = 127
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+				IRE = {transfer_state = 119}
+				release = WLS
+				release = SCO
+			if = {
+				limit = {
+					country_exists = ENG
+					NOT = { ENG = { has_government = fascism } }
+				}
+				hidden_effect = {
+					ENG = {
+						set_party_name = { ideology = fascism long_name = "Royal Party" name = "Royal Party"}
+						set_state_controller = 126
+						set_state_controller = 338
+						set_state_controller = 125
+						set_state_controller = 129
+						set_state_controller = 128
+						set_state_controller = 132
+						set_state_controller = 130
+						set_state_controller = 131
+						set_state_controller = 123
+						set_state_controller = 127
+					}
+				}
+				ENG = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = ENG
+						has_government = fascism
+					}
+					transfer_state = 126
+					transfer_state = 338
+					transfer_state = 125
+					transfer_state = 129
+					transfer_state = 128
+					transfer_state = 132
+					transfer_state = 130
+					transfer_state = 131
+					transfer_state = 123
+					transfer_state = 127
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_satellite }
+					}
+					
+					set_cosmetic_tag = ENG_GER_DUN
+				}
+			}
+			else = {
+				ENG = {
+					hidden_effect = {
+						set_party_name = { ideology = fascism long_name = "Royal Party" name = "Royal Party"} 
+					}
+					transfer_state = 126
+					transfer_state = 338
+					transfer_state = 125
+					transfer_state = 129
+					transfer_state = 128
+					transfer_state = 132
+					transfer_state = 130
+					transfer_state = 131
+					transfer_state = 123
+					transfer_state = 127
+					set_cosmetic_tag = ENG_GER_DUN
+					create_country_leader = {
+						name = "Edward VIII"
+						desc = "POLITICS_EDWARD_VIII_DESC"
+						picture = "gfx/leaders/ENG/Portrait_Britain_Edward_VIII.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+				set_autonomy = { target = ENG autonomy_state = autonomy_satellite }
+			}
+		}
+	}
+
+ GER_gp_reichskommissariat_england = {
+
+	fire_only_once = yes
+	
+	cost = 150
+
+	icon = ger_reichskommissariats
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 122
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 121
+					controls_state = 133
+					controls_state = 136
+					controls_state = 120
+					controls_state = 123
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 126
+						controls_state = 338
+						controls_state = 125
+						controls_state = 129
+						controls_state = 128
+						controls_state = 122
+						controls_state = 132
+						controls_state = 130
+						controls_state = 131
+						controls_state = 121
+						controls_state = 133
+						controls_state = 136
+						controls_state = 120
+						controls_state = 123
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 122
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 121
+					controls_state = 133
+					controls_state = 136
+					controls_state = 120
+					controls_state = 123
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 126
+					controls_state = 338
+					controls_state = 125
+					controls_state = 129
+					controls_state = 128
+					controls_state = 122
+					controls_state = 132
+					controls_state = 130
+					controls_state = 131
+					controls_state = 121
+					controls_state = 133
+					controls_state = 136
+					controls_state = 120
+					controls_state = 123					
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = ENG
+					NOT = { ENG = { has_government = fascism } }
+				}
+				hidden_effect = {
+					ENG = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+						set_state_controller = 126
+						set_state_controller = 338
+						set_state_controller = 125
+						set_state_controller = 129
+						set_state_controller = 128
+						set_state_controller = 122
+						set_state_controller = 132
+						set_state_controller = 130
+						set_state_controller = 131
+						set_state_controller = 121
+						set_state_controller = 133
+						set_state_controller = 136
+						set_state_controller = 120
+						set_state_controller = 123
+					}
+				}
+				ENG = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				GER = {
+					transfer_state = 127
+				}
+				random_country = {
+					limit= {
+						original_tag = ENG
+						has_government = fascism
+					}
+					transfer_state = 126
+					transfer_state = 338
+					transfer_state = 125
+					transfer_state = 129
+					transfer_state = 128
+					transfer_state = 122
+					transfer_state = 132
+					transfer_state = 130
+					transfer_state = 131
+					transfer_state = 121
+					transfer_state = 133
+					transfer_state = 136
+					transfer_state = 120
+					transfer_state = 123
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+					}
+					
+					set_cosmetic_tag = ENG_GER
+					create_country_leader = {
+						name = "Alfred Rosenberg"
+						desc = "POLITICS_ALFRED_ROSENBERG_DESC"
+						picture = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+			}
+			else = {
+				ENG = {
+					hidden_effect = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+					}
+					transfer_state = 126
+					transfer_state = 338
+					transfer_state = 125
+					transfer_state = 129
+					transfer_state = 128
+					transfer_state = 122
+					transfer_state = 132
+					transfer_state = 130
+					transfer_state = 131
+					transfer_state = 121
+					transfer_state = 133
+					transfer_state = 136
+					transfer_state = 120
+					transfer_state = 123
+					set_cosmetic_tag = ENG_GER
+					create_country_leader = {
+						name = "Alfred Rosenberg"
+						desc = "POLITICS_ALFRED_ROSENBERG_DESC"
+						picture = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+				GER = {
+					transfer_state = 127
+				}
+				set_autonomy = { target = ENG autonomy_state = autonomy_reichskommissariat }
+			}
+		}
+	}
+	
+	#Italy released
+	GER_gp_reichskommissariat_italy = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 736
+					controls_state = 160
+					controls_state = 159
+					controls_state = 158
+					controls_state = 161
+					controls_state = 162
+					controls_state = 157
+					controls_state = 2
+					controls_state = 117
+					controls_state = 156
+					controls_state = 115
+					controls_state = 114
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 736
+						controls_state = 160
+						controls_state = 159
+						controls_state = 158
+						controls_state = 161
+						controls_state = 162
+						controls_state = 157
+						controls_state = 2
+						controls_state = 117
+						controls_state = 156
+						controls_state = 115
+						controls_state = 114
+				}
+			}
+		}
+
+	visible = {
+		OR = {
+			GER = {
+				controls_state = 736
+				controls_state = 160
+				controls_state = 159
+				controls_state = 158
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 114
+			}
+			any_other_country = {
+				is_subject_of = GER
+				controls_state = 736
+				controls_state = 160
+				controls_state = 159
+				controls_state = 158
+				controls_state = 161
+				controls_state = 162
+				controls_state = 157
+				controls_state = 2
+				controls_state = 117
+				controls_state = 156
+				controls_state = 115
+				controls_state = 114
+			}
+		}
+		original_tag = GER
+		has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = ITA
+					NOT = { ITA = { has_government = fascism } }
+				}
+				hidden_effect = {
+					ITA = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+						set_state_controller = 736
+						set_state_controller = 160
+						set_state_controller = 159
+						set_state_controller = 158
+						set_state_controller = 161
+						set_state_controller = 162
+						set_state_controller = 157
+						set_state_controller = 2
+						set_state_controller = 117
+						set_state_controller = 156
+						set_state_controller = 115
+						set_state_controller = 114
+					}
+				}
+				ITA = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = ITA
+						has_government = fascism
+					}
+					set_state_controller = 736
+					set_state_controller = 160
+					set_state_controller = 159
+					set_state_controller = 158
+					set_state_controller = 161
+					set_state_controller = 162
+					set_state_controller = 157
+					set_state_controller = 2
+					set_state_controller = 117
+					set_state_controller = 156
+					set_state_controller = 115
+					set_state_controller = 114
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_satellite }
+					}
+					
+					set_cosmetic_tag = ITA_GER
+					create_country_leader = {
+					name = "Giovanni Messe"
+					desc = "POLITICS_GIOVANNI_MESSE_DESC"
+					picture = "gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+				}
+			}
+			else = {
+				ITA = {
+					transfer_state = 736
+					transfer_state = 160
+					transfer_state = 159
+					transfer_state = 158
+					transfer_state = 161
+					transfer_state = 162
+					transfer_state = 157
+					transfer_state = 2
+					transfer_state = 117
+					transfer_state = 156
+					transfer_state = 115
+					transfer_state = 114
+					set_cosmetic_tag = ITA_GER
+					create_country_leader = {
+					name = "Giovanni Messe"
+					desc = "POLITICS_GIOVANNI_MESSE_DESC"
+					picture = "gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+						}
+					}
+					hidden_effect = { set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} }
+				}
+				set_autonomy = { target = ITA autonomy_state = autonomy_satellite }
+			}
+		}
+	}
+
+	#France released
+	
+	GER_gp_reichskommissariat_france = {
+		icon = generic_nationalism
+
+	fire_only_once = yes
+		
+	available = {
+			tag = GER
+				OR = {
+					GER = {
+					controls_state = 26
+					controls_state = 33
+					controls_state = 25
+					controls_state = 31
+					controls_state = 19
+					controls_state = 22
+					controls_state = 20
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 26
+						controls_state = 33
+						controls_state = 25
+						controls_state = 31
+						controls_state = 19
+						controls_state = 22
+						controls_state = 20
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 26
+				controls_state = 33
+				controls_state = 25
+				controls_state = 31
+				controls_state = 19
+				controls_state = 22
+				controls_state = 20
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 26
+					controls_state = 33
+					controls_state = 25
+					controls_state = 31
+					controls_state = 19
+					controls_state = 22
+					controls_state = 20
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			FRA = {
+				hidden_effect = { 
+					set_country_leader_ideology = nazism 
+				}
+				set_cosmetic_tag = FRA_GER
+			}
+			GER = {
+				release_puppet = FRA
+				}
+			hidden_effect = {
+				set_autonomy = {
+					target = FRA
+					autonomy_state = autonomy_satellite
+				}
+				GER = {
+				transfer_state = 28
+				}
+			}
+		}
+	}
+#
+
+ #Spain released
+
+ GER_gp_reichskommissariat_spain = {
+
+	fire_only_once = yes
+
+	icon = generic_nationalism
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 165
+					controls_state = 794
+					controls_state = 166
+					controls_state = 176
+					controls_state = 172
+					controls_state = 792
+					controls_state = 790
+					controls_state = 171
+					controls_state = 174
+					controls_state = 791
+					controls_state = 793
+					controls_state = 167
+					controls_state = 168
+					controls_state = 41
+					controls_state = 788
+					controls_state = 170
+					controls_state = 169
+					controls_state = 173
+					controls_state = 789
+					controls_state = 175
+					controls_state = 177
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 165
+						controls_state = 794
+						controls_state = 166
+						controls_state = 176
+						controls_state = 172
+						controls_state = 792
+						controls_state = 790
+						controls_state = 171
+						controls_state = 174
+						controls_state = 791
+						controls_state = 793
+						controls_state = 167
+						controls_state = 168
+						controls_state = 41
+						controls_state = 788
+						controls_state = 170
+						controls_state = 169
+						controls_state = 173
+						controls_state = 789
+						controls_state = 175
+						controls_state = 177
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+					controls_state = 165
+					controls_state = 794
+					controls_state = 166
+					controls_state = 176
+					controls_state = 172
+					controls_state = 792
+					controls_state = 790
+					controls_state = 171
+					controls_state = 174
+					controls_state = 791
+					controls_state = 793
+					controls_state = 167
+					controls_state = 168
+					controls_state = 41
+					controls_state = 788
+					controls_state = 170
+					controls_state = 169
+					controls_state = 173
+					controls_state = 789
+					controls_state = 175
+					controls_state = 177
+			}
+				any_other_country = {
+					is_subject_of = GER
+						controls_state = 165
+						controls_state = 794
+						controls_state = 166
+						controls_state = 176
+						controls_state = 172
+						controls_state = 792
+						controls_state = 790
+						controls_state = 171
+						controls_state = 174
+						controls_state = 791
+						controls_state = 793
+						controls_state = 167
+						controls_state = 168
+						controls_state = 41
+						controls_state = 788
+						controls_state = 170
+						controls_state = 169
+						controls_state = 173
+						controls_state = 789	
+						controls_state = 175
+						controls_state = 177			
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = SPA
+					NOT = { SPA = { has_government = fascism } }
+				}
+				hidden_effect = {
+					SPA = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+						set_state_controller = 165
+						set_state_controller = 794
+						set_state_controller = 166
+						set_state_controller = 176
+						set_state_controller = 172
+						set_state_controller = 792
+						set_state_controller = 790
+						set_state_controller = 171
+						set_state_controller = 174
+						set_state_controller = 791
+						set_state_controller = 793
+						set_state_controller = 167
+						set_state_controller = 168
+						set_state_controller = 41
+						set_state_controller = 788
+						set_state_controller = 170
+						set_state_controller = 169
+						set_state_controller = 173
+						set_state_controller = 789
+						set_state_controller = 175
+						set_state_controller = 177
+					}
+				}
+				SPA = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = SPA
+						has_government = fascism
+					}
+					transfer_state = 165
+					transfer_state = 794
+					transfer_state = 166
+					transfer_state = 176
+					transfer_state = 172
+					transfer_state = 792
+					transfer_state = 790
+					transfer_state = 171
+					transfer_state = 174
+					transfer_state = 791
+					transfer_state = 793
+					transfer_state = 167
+					transfer_state = 168
+					transfer_state = 41
+					transfer_state = 788
+					transfer_state = 170
+					transfer_state = 169
+					transfer_state = 173
+					transfer_state = 789
+					transfer_state = 175
+					transfer_state = 177
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_satellite }
+					}
+					
+					set_cosmetic_tag = SPA_GER
+				}
+			}
+			else = {
+				SPA = {
+					hidden_effect = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+					}
+					transfer_state = 165
+					transfer_state = 794
+					transfer_state = 166
+					transfer_state = 176
+					transfer_state = 172
+					transfer_state = 792
+					transfer_state = 790
+					transfer_state = 171
+					transfer_state = 174
+					transfer_state = 791
+					transfer_state = 793
+					transfer_state = 167
+					transfer_state = 168
+					transfer_state = 41
+					transfer_state = 788
+					transfer_state = 170
+					transfer_state = 169
+					transfer_state = 173
+					transfer_state = 789
+					transfer_state = 175
+					transfer_state = 177
+					set_cosmetic_tag = SPA_GER
+				}
+				set_autonomy = { target = SPA autonomy_state = autonomy_satellite }
+			}
+		}
+	}
+	GER_gp_reichskommissariat_finland = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 111
+						controls_state = 150
+						controls_state = 149
+						controls_state = 148
+						controls_state = 145
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 111
+							controls_state = 150
+							controls_state = 149
+							controls_state = 148
+							controls_state = 145
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 111
+						controls_state = 150
+						controls_state = 149
+						controls_state = 148
+						controls_state = 145
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 111
+						controls_state = 150
+						controls_state = 149
+						controls_state = 148
+						controls_state = 145
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = FIN
+						NOT = { FIN = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						FIN = {
+							set_country_leader_ideology = nazism
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 111
+							set_state_controller = 150
+							set_state_controller = 149
+							set_state_controller = 148
+							set_state_controller = 145
+						}
+					}
+					FIN = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = FIN
+							has_government = fascism
+						}
+						transfer_state = 111
+						transfer_state = 150
+						transfer_state = 149
+						transfer_state = 148
+						transfer_state = 145
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+						}
+						
+						set_cosmetic_tag = FIN_GER
+					}
+				}
+				else = {
+					FIN = {
+						hidden_effect = {
+							set_country_leader_ideology = nazism
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 111
+						transfer_state = 150
+						transfer_state = 149
+						transfer_state = 148
+						transfer_state = 145
+						set_cosmetic_tag = FIN_GER
+					}
+					set_autonomy = { target = FIN autonomy_state = autonomy_reichsprotectorate }
+				}
+		}
+	}
+ }
+ 
+ GER_gp_reichskommissariats_balkan = {
+ 
+	GER_gp_reichskommissariat_serbia = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 107
+					controls_state = 108
+					controls_state = 764
+					controls_state = 816
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 107
+					controls_state = 108
+					controls_state = 764
+					controls_state = 816
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 107
+				controls_state = 108
+				controls_state = 764
+				controls_state = 816
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 107
+					controls_state = 108
+					controls_state = 764
+					controls_state = 816
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = SER
+					NOT = { SER = { has_government = fascism } }
+				}
+				hidden_effect = {
+					SER = {
+						set_state_controller = 108
+						set_state_controller = 107
+						set_state_controller = 764
+						set_state_controller = 816
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				CRO = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = DEN
+						has_government = fascism
+					}
+					set_state_controller = 107
+					set_state_controller = 108
+					set_state_controller = 764
+					set_state_controller = 816
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = SER_GER
+				}
+			}
+			else = {
+				SER = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 107
+					transfer_state = 108
+					transfer_state = 764
+					transfer_state = 816
+					set_cosmetic_tag = SER_GER
+				}
+				set_autonomy = { target = SER autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	
+	GER_gp_reichskommissariat_croatia = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 109
+					controls_state = 103
+					controls_state = 821
+					controls_state = 822
+					controls_state = 815
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 109
+					controls_state = 103
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 109
+				controls_state = 103
+				controls_state = 821
+				controls_state = 822
+				controls_state = 815
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 109
+					controls_state = 103
+					controls_state = 821
+					controls_state = 822
+					controls_state = 815
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = CRO
+					NOT = { CRO = { has_government = fascism } }
+				}
+				hidden_effect = {
+					CRO = {
+						set_state_controller = 109
+						set_state_controller = 103
+						set_state_controller = 821
+						set_state_controller = 822
+						set_state_controller = 815
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				CRO = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = CRO
+						has_government = fascism
+					}
+					set_state_controller = 109
+					set_state_controller = 103
+					set_state_controller = 821
+					set_state_controller = 822
+					set_state_controller = 815
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = CRO_GER
+				}
+			}
+			else = {
+				CRO = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 109
+					transfer_state = 103
+					transfer_state = 821
+					transfer_state = 822
+					transfer_state = 815
+					set_cosmetic_tag = CRO_GER
+				}
+				set_autonomy = { target = CRO autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	
+	GER_gp_reichskommissariat_montenegro = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+		tag = GER 
+			OR = {
+				GER = {
+				controls_state = 105
+				controls_state = 826
+			}
+				any_other_country = {
+					is_subject_of = GER
+				controls_state = 105
+				controls_state = 826
+			}
+		}
+	}
+
+	visible = {
+		NOT = {
+			ALB = {
+			controls_state = 105
+			controls_state = 826
+			}
+		}
+		OR = {
+			GER = {
+			controls_state = 105
+			controls_state = 826
+		}
+			any_other_country = {
+				is_subject_of = GER
+				controls_state = 105
+				controls_state = 826
+		}
+	}
+		original_tag = GER
+		has_government = fascism
+	}
+
+	complete_effect = {
+		if = {
+			limit = {
+				country_exists = MNT
+				NOT = { MNT = { has_government = fascism } }
+			}
+			hidden_effect = {
+				MNT = {
+					set_state_controller = 105
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+				}
+			}
+			MNT = {
+				start_civil_war = { ideology = fascism size = 1 }
+			}
+			random_country = {
+				limit= {
+					original_tag = MNT
+					has_government = fascism
+				}
+				set_state_controller = 105
+				set_state_controller = 826				
+				GER = {
+					puppet = PREV
+					set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+				}
+				set_cosmetic_tag = MNT_GER
+			}
+		}
+		else = {
+			MNT = {
+				hidden_effect = {
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+				}
+				transfer_state = 105
+				transfer_state = 826
+				set_cosmetic_tag = MNT_GER
+			}
+			set_autonomy = { target = MNT autonomy_state = autonomy_reichsprotectorate }
+		}
+	}
+}
+	
+	GER_gp_reichskommissariat_hungary = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 155
+					controls_state = 43
+					controls_state = 154
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 155
+					controls_state = 43
+					controls_state = 154
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 155
+				controls_state = 43
+				controls_state = 154
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 155
+					controls_state = 43
+					controls_state = 154
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = HUN
+					NOT = { HUN = { has_government = fascism } }
+				}
+				hidden_effect = {
+					HUN = {
+						set_state_controller = 155
+						set_state_controller = 43
+						set_state_controller = 154
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				HUN = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = HUN
+						has_government = fascism
+					}
+					set_state_controller = 155
+					set_state_controller = 43
+					set_state_controller = 154
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = HUN_GER
+					create_country_leader = {
+						name = "Ferenc Szálasi"
+						desc = "POLITICS_FERENC_SZALASI_DESC"
+						picture = "gfx/leaders/HUN/Portrait_Hungary_Ferenc_Szalasi.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+				}
+			}
+			else = {
+				HUN = {
+					create_country_leader = {
+						name = "Ferenc Szálasi"
+						desc = "POLITICS_FERENC_SZALASI_DESC"
+						picture = "gfx/leaders/HUN/Portrait_Hungary_Ferenc_Szalasi.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 155
+					transfer_state = 43 
+					transfer_state = 154
+					set_cosmetic_tag = HUN_GER
+				}
+				set_autonomy = { target = HUN autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	GER_gp_reichskommissariat_greece = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 186
+					controls_state = 47
+					controls_state = 185
+					controls_state = 731
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 186
+					controls_state = 47
+					controls_state = 185
+					controls_state = 731
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 186
+				controls_state = 47
+				controls_state = 185
+				controls_state = 731
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 186
+					controls_state = 47
+					controls_state = 185
+					controls_state = 731
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = GRE
+					NOT = { GRE = { has_government = fascism } }
+				}
+				hidden_effect = {
+					GRE = {
+						set_state_controller = 186
+						set_state_controller = 47
+						set_state_controller = 185
+						set_state_controller = 731
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				GRE = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = GRE
+						has_government = fascism
+					}
+					set_state_controller = 186
+					set_state_controller = 47
+					set_state_controller = 185
+					set_state_controller = 731
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = GRE_GER
+				}
+			}
+			else = {
+				GRE = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 186
+					transfer_state = 47
+					transfer_state = 185
+					transfer_state = 731
+					set_cosmetic_tag = GRE_GER
+				}
+				set_autonomy = { target = GRE autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	GER_gp_reichskommissariat_bulgaria = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 48
+					controls_state = 211
+					controls_state = 212
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 48
+					controls_state = 211
+					controls_state = 212
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 48
+				controls_state = 211
+				controls_state = 212
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 48
+					controls_state = 211
+					controls_state = 212
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = BUL
+					NOT = { BUL = { has_government = fascism } }
+				}
+				hidden_effect = {
+					BUL = {
+						set_state_controller = 48
+						set_state_controller = 211
+						set_state_controller = 212
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				BUL = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = BUL
+						has_government = fascism
+					}
+					set_state_controller = 48
+					set_state_controller = 211
+					set_state_controller = 212
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = BUL_GER
+				}
+			}
+			else = {
+				BUL = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 48
+					transfer_state = 211
+					transfer_state = 212
+					set_cosmetic_tag = BUL_GER
+				}
+				set_autonomy = { target = BUL autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	GER_gp_reichskommissariat_romania = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 46
+					controls_state = 79
+					controls_state = 766
+					controls_state = 78
+					controls_state = 80
+					controls_state = 81
+					controls_state = 82
+					controls_state = 84
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 46
+					controls_state = 79
+					controls_state = 766
+					controls_state = 78
+					controls_state = 80
+					controls_state = 81
+					controls_state = 82
+					controls_state = 84
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+					controls_state = 46
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 46
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = ROM
+					NOT = { ROM = { has_government = fascism } }
+				}
+				hidden_effect = {
+					ROM = {
+						set_state_controller = 48
+						set_state_controller = 211
+						set_state_controller = 212
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				ROM = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = ROM
+						has_government = fascism
+					}
+					set_state_controller = 48
+					set_state_controller = 211
+					set_state_controller = 212
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = ROM_GER
+				}
+			}
+			else = {
+				GER = {
+					release_puppet = ROM
+				}
+				ROM = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					set_cosmetic_tag = ROM_GER
+				}
+				set_autonomy = { target = ROM autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+	GER_gp_reichskommissariat_albania = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 44
+					controls_state = 800
+					controls_state = 806
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 44
+					controls_state = 800
+					controls_state = 806
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+					controls_state = 44
+					controls_state = 800
+					controls_state = 806
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 44
+					controls_state = 800
+					controls_state = 806
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+			if = {
+				limit = {
+					country_exists = ALB
+					NOT = { ALB = { has_government = fascism } }
+				}
+				hidden_effect = {
+					ALB = {
+						set_state_controller = 44
+						set_state_controller = 800
+						set_state_controller = 806
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+				}
+				ALB = {
+					start_civil_war = { ideology = fascism size = 1 }
+				}
+				random_country = {
+					limit= {
+						original_tag = ALB
+						has_government = fascism
+					}
+					set_state_controller = 44
+					set_state_controller = 800
+					set_state_controller = 806
+					GER = {
+						puppet = PREV
+						set_autonomy = { target = PREV autonomy_state = autonomy_reichsprotectorate }
+					}
+					set_cosmetic_tag = ALB_GER
+				}
+			}
+			else = {
+				ALB = {
+					hidden_effect = {
+					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"} 
+					}
+					transfer_state = 44
+					transfer_state = 800
+					transfer_state = 806
+					set_cosmetic_tag = ALB_GER
+				}
+				set_autonomy = { target = ALB autonomy_state = autonomy_reichsprotectorate }
+			}
+		}
+	}
+}
+ 
+ GER_gp_reichskommissariats_amerika = {
+
+	 GER_gp_reichskommissariat_usa = {
+
+	icon = ger_reichskommissariats
+	
+	fire_only_once = yes
+		
+	available = {
+		tag = GER 
+			NOT = {
+			country_exists = USA
+			}
+		}
+
+	visible = {
+		tag = GER 
+			NOT = {
+			country_exists = USA
+			}
+		has_government = fascism
+	}
+	complete_effect = {
+		GER = {
+			release_puppet = USA
+		}
+		USA = {
+			hidden_effect = {
+			set_capital = 358
+			set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "NSDAP"} 
+			}
+			set_cosmetic_tag = USA_GER
+			create_country_leader = {
+					name = "Erwin Rommel"
+					desc = "POLITICS_ERWIN_ROMMEL_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+		set_autonomy = { target = USA autonomy_state = autonomy_satellite }
+		}
+		
+	}
+
+	GER_gp_reichskommissariat_mexico = {
+
+		icon = ger_reichskommissariats
+		
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 277
+						controls_state = 477
+						controls_state = 485
+						controls_state = 476
+						controls_state = 475
+						controls_state = 474
+					}
+						any_other_country = {
+							is_subject_of = GER
+						controls_state = 277
+						controls_state = 477
+						controls_state = 485
+						controls_state = 476
+						controls_state = 475
+						controls_state = 474
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+					controls_state = 277
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 277
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = MEX
+						NOT = { MEX = { has_government = fascism } }
+					}
+					hidden_effect = {
+						MEX = {
+							remove_ideas = { neutrality_idea }
+							set_country_leader_ideology = nazism
+							set_state_controller = 277
+							set_state_controller = 477
+							set_state_controller = 485
+							set_state_controller = 476
+							set_state_controller = 475
+							set_state_controller = 474
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+					}
+					MEX = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = MEX
+							has_government = fascism
+						}
+						set_state_controller = 277
+						set_state_controller = 477
+						set_state_controller = 485
+						set_state_controller = 476
+						set_state_controller = 475
+						set_state_controller = 474
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						set_cosmetic_tag = MEX_GER
+						create_country_leader = {
+							name = "Hermann Boehm"
+							desc = "POLITICS_HERMANN_BOEHM_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+				}
+				else = {
+					MEX = {
+						create_country_leader = {
+							name = "Hermann Boehm"
+							desc = "POLITICS_HERMANN_BOEHM_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+						hidden_effect = {
+							remove_ideas = {neutrality_idea}
+							set_country_leader_ideology = nazism
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 277
+						transfer_state = 477
+						transfer_state = 485
+						transfer_state = 476
+						transfer_state = 475
+						transfer_state = 474
+						set_cosmetic_tag = MEX_GER
+					}
+					set_autonomy = { target = MEX autonomy_state = autonomy_reichskommissariat }
+				}
+			}
+		}
+
+	GER_gp_reichskommissariat_cuba = {
+
+		icon = ger_reichskommissariats
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 315
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 315
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+					controls_state = 315
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 315
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = CUB
+						NOT = { CUB = { has_government = fascism } }
+					}
+					hidden_effect = {
+						CUB = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 315
+						}
+					}
+					CUB = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = CUB
+							has_government = fascism
+						}
+						transfer_state = 315
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = CUB_GER
+						create_country_leader = {
+							name = "Wilhelm Marschall"
+							desc = "POLITICS_WILHELM_MARSCHALL_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+						}
+					}
+					}
+				}
+				else = {					
+					CUB = {
+						hidden_effect = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 315
+						set_cosmetic_tag = CUB_GER
+						create_country_leader = {
+							name = "Wilhelm Marschall"
+							desc = "POLITICS_WILHELM_MARSCHALL_DESC"
+							picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
+							expire = "1965.1.1"
+							ideology = nazism
+							traits = {
+							}
+						}
+					}
+					set_autonomy = { target = CUB autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+
+ #Brazil released
+ 
+ 	GER_gp_reichskommissariat_brazil = {
+
+	icon = generic_nationalism
+	
+	fire_only_once = yes
+		
+	available = {
+			tag = GER 
+				OR = {
+					GER = {
+					controls_state = 500
+				}
+					any_other_country = {
+						is_subject_of = GER
+					controls_state = 500
+				}
+			}
+		}
+
+	visible = {
+			OR = {
+				GER = {
+				controls_state = 500
+			}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 500
+			}
+		}
+			original_tag = GER
+			has_government = fascism
+	}
+
+	complete_effect = {
+		GER = {
+			release_puppet = BRA
+		}
+		BRA = {
+			hidden_effect = {
+			set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "NSDAP"} 
+			}
+			set_cosmetic_tag = BRA_GER
+			}
+		set_autonomy = { target = BRA autonomy_state = autonomy_reichskommissariat }
+		}
+	}
+ 
+	GER_gp_reichskommissariat_argentina = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 512
+						controls_state = 511
+						controls_state = 278
+						controls_state = 510
+						controls_state = 509
+						controls_state = 508
+						controls_state = 301
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 512
+							controls_state = 511
+							controls_state = 278
+							controls_state = 510
+							controls_state = 509
+							controls_state = 508
+							controls_state = 301
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 512
+						controls_state = 511
+						controls_state = 278
+						controls_state = 510
+						controls_state = 509
+						controls_state = 508
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 512
+						controls_state = 511
+						controls_state = 278
+						controls_state = 510
+						controls_state = 509
+						controls_state = 508
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = ARG
+						NOT = { ARG = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						ARG = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 512
+							set_state_controller = 511
+							set_state_controller = 278
+							set_state_controller = 510
+							set_state_controller = 509
+							set_state_controller = 508
+						}
+					}
+					ARG = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = ARG
+							has_government = fascism
+						}
+						transfer_state = 512
+						transfer_state = 511
+						transfer_state = 278
+						transfer_state = 510
+						transfer_state = 509
+						transfer_state = 508
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = ARG_GER
+					}
+				}
+				else = {
+					ARG = {
+						hidden_effect = {
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 512
+						transfer_state = 511
+						transfer_state = 278
+						transfer_state = 510
+						transfer_state = 509
+						transfer_state = 508
+						set_cosmetic_tag = ARG_GER
+					}
+					set_autonomy = { target = ARG autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+	
+	GER_gp_reichskommissariat_venezuela = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 488
+						controls_state = 489
+						controls_state = 307
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 488
+							controls_state = 489
+							controls_state = 307
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 488
+						controls_state = 489
+						controls_state = 307
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 488
+						controls_state = 489
+						controls_state = 307
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = VEN
+						NOT = { VEN = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						VEN = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 488
+							set_state_controller = 489
+							set_state_controller = 307
+						}
+					}
+					VEN = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = VEN
+							has_government = fascism
+						}
+						transfer_state = 488
+						transfer_state = 489
+						transfer_state = 307
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						set_cosmetic_tag = VEN_GER
+					}
+				}
+				else = {
+					VEN = {
+						hidden_effect = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 488
+						transfer_state = 489
+						transfer_state = 307
+						set_cosmetic_tag = VEN_GER
+					}
+					set_autonomy = { target = VEN autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+
+	GER_gp_reichskommissariat_chile = {
+
+		icon = generic_nationalism
+
+		fire_only_once = yes
+			
+		available = {
+				tag = GER 
+					OR = {
+						GER = {
+						controls_state = 506
+						controls_state = 507
+						controls_state = 279
+						controls_state = 817
+					}
+						any_other_country = {
+							is_subject_of = GER
+							controls_state = 506
+							controls_state = 507
+							controls_state = 279
+							controls_state = 817
+					}
+				}
+			}
+	
+		visible = {
+				OR = {
+					GER = {
+						controls_state = 506
+						controls_state = 507
+						controls_state = 279
+						controls_state = 817
+				}
+					any_other_country = {
+						is_subject_of = GER
+						controls_state = 506
+						controls_state = 507
+						controls_state = 279
+						controls_state = 817
+				}
+			}
+				original_tag = GER
+				has_government = fascism
+		}
+	
+		complete_effect = {
+				if = {
+					limit = {
+						country_exists = CHL
+						NOT = { CHL = { has_government = fascism } }
+					}
+					hidden_effect = {					
+						CHL = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+							set_state_controller = 506
+							set_state_controller = 507
+							set_state_controller = 279
+							set_state_controller = 817
+						}
+					}
+					CHL = {
+						start_civil_war = { ideology = fascism size = 1 }
+					}
+					random_country = {
+						limit= {
+							original_tag = CHL
+							has_government = fascism
+						}
+						transfer_state = 506
+						transfer_state = 507
+						transfer_state = 279
+						transfer_state = 817
+						GER = {
+							puppet = PREV
+							set_autonomy = { target = PREV autonomy_state = autonomy_reichskommissariat }
+						}
+						
+						set_cosmetic_tag = CHL_GER
+					}
+				}
+				else = {
+					CHL = {
+						hidden_effect = {
+							remove_ideas = {neutrality_idea}
+							set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"} 
+						}
+						transfer_state = 506
+						transfer_state = 507
+						transfer_state = 279
+						transfer_state = 817
+						set_cosmetic_tag = CHL_GER
+					}
+					set_autonomy = { target = CHL autonomy_state = autonomy_reichskommissariat }
+				}
+		}
+	}
+}

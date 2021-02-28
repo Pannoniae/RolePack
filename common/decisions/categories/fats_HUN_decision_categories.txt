@@ -1,0 +1,5 @@
+HUN_rename_cities = {
+	allowed = {
+		original_tag = HUN
+	}
+}

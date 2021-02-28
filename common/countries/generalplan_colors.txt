@@ -1,0 +1,16 @@
+#reload countrycolors
+
+WSI = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+ESI = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+BUR = {
+	color = rgb { 76 46 76 }
+	color_ui = rgb { 76 46 76 }
+NEG = {
+	color = rgb { 76 46 76 }
+	color_ui = rgb { 76 46 76 }

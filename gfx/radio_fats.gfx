@@ -1,0 +1,9 @@
+spriteTypes = {
+	
+
+	spriteType = {
+		name = "GFX_radio_fats_album_art"
+		texturefile = "gfx/radio_fats_album_art.tga"
+		noOfFrames = 2
+	}	
+}

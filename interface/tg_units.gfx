@@ -1,0 +1,462 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_nato_unit_SS_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_SS_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_motorized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_motorized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_SS_motorized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_motorized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_motorized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_mechanized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_mechanized_icon_small"
+		texturefile = "gfx/texticons/unit_SS_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_mechanized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_mechanized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_light_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_light_tank_icon_small"
+		texturefile = "gfx/texticons/unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_light_tank_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_light_tank_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_medium_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_medium_tank_icon_small"
+		texturefile = "gfx/texticons/unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_medium_tank_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_medium_tank_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_heavy_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_heavy_tank_icon_small"
+		texturefile = "gfx/texticons/unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_heavy_tank_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_heavy_tank_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_super_heavy_tank_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_super_heavy_tank_icon_small"
+		texturefile = "gfx/texticons/unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_super_heavy_tank_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_super_heavy_tank_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_SS_modern_armor_icon_small"
+		texturefile = "gfx/texticons/nato_unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_SS_modern_armor_icon_small"
+		texturefile = "gfx/texticons/unit_SS_light_tank_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_modern_armor_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_SS_modern_armor_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_SS_light_tank_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_freikorps_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_freikorps_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_freikorps_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_freikorps_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+
+	spriteType = { 
+		name = "GFX_unit_freikorps_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_freikorps_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+
+
+	spriteType = { 
+		name = "GFX_unit_freikorps_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_freikorps_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_freikorps_motorized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_freikorps_motorized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_freikorps_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_freikorps_motorized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_freikorps_motorized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_freikorps_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_freikorps_motorized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_freikorps_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_freikorps_mechanized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_freikorps_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_freikorps_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_freikorps_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_freikorps_mechanized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_freikorps_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_freikorps_mechanized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_freikorps_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_grenz_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_grenz_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_grenz_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_grenz_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_nato_unit_grenz_motorized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_motorized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_grenz_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_motorized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_grenz_motorized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_grenz_motorized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_grenz_mechanized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_grenz_mechanized_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_grenz_mechanized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_grenz_mechanized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_bgrenz_infantry_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_infantry_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_bgrenz_infantry_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_infantry_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_bgrenz_infantry_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_bgrenz_infantry_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_infantry_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = {
+		name = "GFX_nato_unit_bgrenz_motorized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_motorized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_bgrenz_motorized_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_motorized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_bgrenz_motorized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_bgrenz_motorized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_motorized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	
+	spriteType = {
+		name = "GFX_nato_unit_bgrenz_mechanized_icon_small"
+		texturefile = "gfx/texticons/nato_unit_grenzer_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_unit_bgrenz_mechanized_icon_small"
+		texturefile = "gfx/texticons/unit_grenzer_mechanized_icon_small.dds"
+		legacy_lazy_load = no
+		noOfFrames = 2
+	}	
+
+	spriteType = { 
+		name = "GFX_unit_bgrenz_mechanized_icon_medium"
+		textureFile = "gfx/interface/counters/divisions_large/unit_grenzer_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+	spriteType = { 
+		name = "GFX_unit_bgrenz_mechanized_icon_medium_white"
+		textureFile = "gfx/interface/counters/divisions_small/onmap_unit_grenzer_mechanized_icon.dds" 
+		noOfFrames = 2
+	}
+	
+}

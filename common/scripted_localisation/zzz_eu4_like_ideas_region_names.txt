@@ -1,0 +1,111 @@
+# Strategic Regions
+defined_text = {
+	name = GetStrategicRegionNameGreece
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_25
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameAsiaMinor
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_129
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameIran
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_116
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNamePakistan
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_190
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameMiddleEast
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_28
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameManchuria
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_155
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameEasternChina
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_164
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameNorthernChina
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_143
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameWesternChina
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_144
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameSouthernChina
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_165
+	}
+}
+
+defined_text = {
+	name = GetStrategicRegionNameQinghai
+	text = {
+		trigger = {
+			always = yes
+		}
+		localization_key = STRATEGICREGION_200
+	}
+}
+

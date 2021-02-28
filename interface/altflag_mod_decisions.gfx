@@ -1,0 +1,280 @@
+spriteTypes = {	
+	
+	####flags####
+	
+	spriteType = {
+		name = "GFX_alternative_AST1_democratic"
+		texturefile = "gfx/interface/decisions/alternative_AST1_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_AUS2_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_AUS2_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_BEL1"
+		texturefile = "gfx/interface/decisions/alternative_BEL1.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_BEL2"
+		texturefile = "gfx/interface/decisions/alternative_BEL2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ENG1"
+		texturefile = "gfx/interface/decisions/alternative_ENG1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_alternative_ENG2"
+		texturefile = "gfx/interface/decisions/alternative_ENG2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ENG3_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_ENG3_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_FRA1_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_FRA1_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_FRA2_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_FRA2_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_FRA3_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_FRA3_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_FRA4_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_FRA4_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_FRA5_democratic"
+		texturefile = "gfx/interface/decisions/alternative_FRA5_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER1_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_GER1_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER2_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_GER2_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER3"
+		texturefile = "gfx/interface/decisions/alternative_GER3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER4_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_GER4_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER5_democratic"
+		texturefile = "gfx/interface/decisions/alternative_GER5_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER6_democratic"
+		texturefile = "gfx/interface/decisions/alternative_GER6_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER7_democratic"
+		texturefile = "gfx/interface/decisions/alternative_GER7_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER8_communism"
+		texturefile = "gfx/interface/decisions/alternative_GER8_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER9_fascism"
+		texturefile = "gfx/interface/decisions/alternative_GER9_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER10_fascism"
+		texturefile = "gfx/interface/decisions/alternative_GER10_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER11_fascism"
+		texturefile = "gfx/interface/decisions/alternative_GER11_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER12_fascism"
+		texturefile = "gfx/interface/decisions/alternative_GER12_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_GER13_communism"
+		texturefile = "gfx/interface/decisions/alternative_GER13_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_HUN1_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_HUN1_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_HUN2_fascism"
+		texturefile = "gfx/interface/decisions/alternative_HUN2_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_HUN3_fascism"
+		texturefile = "gfx/interface/decisions/alternative_HUN3_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ROM1_fascism"
+		texturefile = "gfx/interface/decisions/alternative_ROM1_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ITA1_democratic"
+		texturefile = "gfx/interface/decisions/alternative_ITA1_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ITA2_fascism"
+		texturefile = "gfx/interface/decisions/alternative_ITA2_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ITA3_fascism"
+		texturefile = "gfx/interface/decisions/alternative_ITA3_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_ITA4_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_ITA4_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_JAP1_fascism"
+		texturefile = "gfx/interface/decisions/alternative_JAP1_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_JAP2_neutrality"
+		texturefile = "gfx/interface/decisions/alternative_JAP2_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SOV1_neutrality"
+		texturefile = "gfx/interface/decisions/SOV1_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SOV2_neutrality"
+		texturefile = "gfx/interface/decisions/SOV2_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SOV3_neutrality"
+		texturefile = "gfx/interface/decisions/SOV3_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SOV4_neutrality"
+		texturefile = "gfx/interface/decisions/SOV4_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SOV5_communism"
+		texturefile = "gfx/interface/decisions/SOV5_alternative_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SWE1_neutrality"
+		texturefile = "gfx/interface/decisions/SWE1_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SWE2_neutrality"
+		texturefile = "gfx/interface/decisions/SWE2_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SWI1_neutrality"
+		texturefile = "gfx/interface/decisions/SWI1_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_SWI2_neutrality"
+		texturefile = "gfx/interface/decisions/SWI2_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA1_democratic"
+		texturefile = "gfx/interface/decisions/USA1_alternative_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA2_democratic"
+		texturefile = "gfx/interface/decisions/USA2_alternative_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA3_democratic"
+		texturefile = "gfx/interface/decisions/USA3_alternative_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA4_democratic"
+		texturefile = "gfx/interface/decisions/USA4_alternative_democratic.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA5_neutrality"
+		texturefile = "gfx/interface/decisions/USA5_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA6_fascism"
+		texturefile = "gfx/interface/decisions/USA6_alternative_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA7_fascism"
+		texturefile = "gfx/interface/decisions/USA7_alternative_fascism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA8_communism"
+		texturefile = "gfx/interface/decisions/USA8_alternative_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA9_communism"
+		texturefile = "gfx/interface/decisions/USA9_alternative_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA10_neutrality"
+		texturefile = "gfx/interface/decisions/USA10_alternative_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_alternative_USA11_neutrality"
+		texturefile = "gfx/interface/decisions/USA11_alternative_neutrality.dds"
+	}
+	
+}

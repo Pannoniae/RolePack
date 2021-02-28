@@ -1,0 +1,63 @@
+ideas = {
+	country = {
+		war_debuff_1936 = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			cancel = {
+				date > 1939.1.1
+			}
+			modifier = {
+				stability_factor = -0.4
+				war_support_factor = -0.7
+				political_power_gain = -1.0
+				resistance_target = 0.3
+				army_org_factor = -0.6
+				army_defence_factor = -0.5
+				army_attack_factor = -0.5
+				production_speed_buildings_factor = -0.4
+				industrial_capacity_factory = -0.5
+			}
+		}
+		war_debuff_1937 = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			cancel = {
+				date > 1939.1.1
+			}
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.5
+				political_power_gain = -0.5
+				resistance_target = 0.2
+				army_org_factor = -0.4
+				army_defence_factor = -0.3
+				army_attack_factor = -0.3
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.3
+			}
+		}
+		war_debuff_1938 = {
+			picture = chi_incompetent_officers
+			allowed = {
+				always = no
+			}
+			cancel = {
+				date > 1939.1.1
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.2
+				political_power_gain = -0.1
+				resistance_target = 0.05
+				army_org_factor = -0.15
+				army_defence_factor = -0.1
+				army_attack_factor = -0.1
+				industrial_capacity_factory = -0.1
+			}
+		}
+	}
+}

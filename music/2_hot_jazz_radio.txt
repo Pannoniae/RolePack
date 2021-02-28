@@ -1,0 +1,181 @@
+music_station = "hot_jazz_radio"
+
+music = {
+	song = "beale_street_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "viva_la_rocca"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "black_bottom_stomp"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "turn_on_the_heat"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "bluin_the_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_dixieland_band"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_chant"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "bye_bye_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "sorry"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "dixieland_shuffle"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "riverboat_shuffle"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "doctor_jazz"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "oh_miss_hannah"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "fussy_mabel"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "never_never_land_fantasy"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "georgia_on_my_mind"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "mary"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "im_coming_virginia"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "mad_about_the_boy"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "in_the_valley_of_the_moon"
+
+	chance = {
+		factor = 1
+
+	}
+}

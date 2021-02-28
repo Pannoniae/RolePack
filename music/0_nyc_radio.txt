@@ -1,0 +1,280 @@
+music_station = "nyc_radio"
+
+music = {
+	song = "a_string_of_pearls"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "you_go_to_my_heat"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "pensylvania_6_5000"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "amapola"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "tuxedo_junction"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "back_bay_shuffle"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "tangerine"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "begin_the_beguine"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "sunrise_serenade"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "buddy_rich"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "stardust"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "chattanooga_choo_choo"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "soft_winds"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "chicago"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "smoke_rings"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "do_nothing_till_you_hear_from_me"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "six_flats_of_furnished"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "heart_and_soul"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "sing_sing_sing"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "i_didnt_know_about_you"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "perfidia"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "ill_never_smile_again"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "pensylvania_6_5000"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "in_the_mood"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "non_stop_flight"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "kalamazoo"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "nightmare"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "moonlight_serenade"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "lets_dance"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "memories_of_you"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "little_brown_jug"
+
+	chance = {
+		factor = 1
+
+	}
+}

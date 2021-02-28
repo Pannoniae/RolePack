@@ -1,0 +1,1301 @@
+equipment_modules = {
+## Battle_Carrier_modules
+#### Battle_Carrier_bomber_launcher
+	ship_heavy_bomber_launcher_1 = {
+		category = ship_heavy_bomber_launcher
+		gfx = ship_heavy_bomber_launcher_1
+		
+		add_stats = {
+			carrier_size = 6
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 600
+			reliability = -0.05
+		}
+		manpower = 500
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+#		can_convert_from = {
+#			module_category = ship_heavy_battery
+#			convert_cost_ic = 300
+#		}
+	}
+
+	ship_heavy_bomber_launcher_2 = {
+		category = ship_heavy_bomber_launcher
+		gfx = ship_heavy_bomber_launcher_2
+		
+		add_stats = {
+			carrier_size = 10
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 1000
+			reliability = -0.05
+		}
+		manpower = 500
+		multiply_stats = {
+			naval_speed = -0.04
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+#		can_convert_from = {
+#			module_category = ship_heavy_battery
+#			convert_cost_ic = 500
+#		}
+	}
+
+	ship_heavy_bomber_launcher_3 = {
+		category = ship_heavy_bomber_launcher
+		gfx = ship_heavy_bomber_launcher_3
+		
+		add_stats = {
+			carrier_size = 12
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 1200
+			reliability = -0.05
+		}
+		manpower = 500
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+#		can_convert_from = {
+#			module_category = ship_heavy_battery
+#			convert_cost_ic = 600
+#		}
+
+	}
+
+	ship_heavy_angled_deck = {
+		category = ship_heavy_bomber_launcher
+		gfx = ship_heavy_bomber_launcher_4
+		
+		add_stats = {
+			carrier_size = 14
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 1400
+			reliability = -0.05
+		}
+		manpower = 500
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+#		can_convert_from = {
+#			module_category = ship_heavy_battery
+#			convert_cost_ic = 700
+#		}
+	}
+
+	ship_heavy_V_angled_deck = {
+		category = ship_heavy_bomber_launcher
+		gfx = ship_heavy_bomber_launcher_5
+		
+		add_stats = {
+			carrier_size = 18
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 1800
+			reliability = -0.05
+		}
+		manpower = 500
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = ship_heavy_battery
+			convert_cost_ic = 900
+		}
+	}
+
+#### Battle_Carrier_deck_space	
+	ship_battle_carrier_deck_space_small = {
+		category = ship_battle_carrier_deck_space
+		gfx = ship_battle_carrier_deck_space_small
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 4
+			build_cost_ic = 400
+			reliability = -0.04
+		}
+		manpower = 100
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_battle_carrier_deck_space_medium = {
+		category = ship_battle_carrier_deck_space
+		gfx = ship_battle_carrier_deck_space_medium
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 8
+			build_cost_ic = 800
+			reliability = -0.06
+		}
+		manpower = 200
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_battle_carrier_deck_space_large = {
+		category = ship_battle_carrier_deck_space
+		gfx = ship_battle_carrier_deck_space_large
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 12
+			build_cost_ic = 1200
+			reliability = -0.08
+		}
+		manpower = 300
+		multiply_stats = {
+			naval_speed = -0.04
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+####Battle_Carrier_hanger
+	ship_battle_carrier_deck_space_very_large = {
+		category = ship_battle_carrier_hanger
+		gfx = ship_battle_carrier_deck_space_very_large
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 16
+			build_cost_ic = 1600
+			reliability = -0.10
+		}
+		manpower = 400
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_battle_carrier_deck_space_very_large_2 = {
+		category = ship_battle_carrier_hanger_2
+		gfx = ship_battle_carrier_deck_space_very_large_2
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 16
+			build_cost_ic = 1600
+			reliability = -0.10
+		}
+		manpower = 400
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+#### Battle_Carrier_flightdeck_anti_air
+##ship_cruiser_bomber_launcher_4_anti_air
+	ship_battle_carrier_4_rear_anti_air_1 = {
+		category = ship_battle_carrier_4_rear_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_battle_carrier_4_rear_anti_air_2 = {
+		category = ship_battle_carrier_4_rear_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_battle_carrier_4_rear_anti_air_3 = {
+		category = ship_battle_carrier_4_rear_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_battle_carrier_4_rear_anti_air_4 = {
+		category = ship_battle_carrier_4_rear_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+## Battle_Carrier_4_mid_2_anti_air
+##ship_cruiser_bomber_launcher_4_anti_air
+	ship_battle_carrier_4_mid_2_anti_air_1 = {
+		category = ship_battle_carrier_4_mid_2_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_battle_carrier_4_mid_2_anti_air_2 = {
+		category = ship_battle_carrier_4_mid_2_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_battle_carrier_4_mid_2_anti_air_3 = {
+		category = ship_battle_carrier_4_mid_2_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_battle_carrier_4_mid_2_anti_air_4 = {
+		category = ship_battle_carrier_4_mid_2_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+
+## Flyingdeck_Cruiser_modules
+	ship_cruiser_bomber_launcher_1 = {
+		category = ship_cruiser_bomber_launcher
+		gfx = ship_cruiser_bomber_launcher_1
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 4
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 400
+			reliability = -0.4
+		}
+		manpower = 100
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_cruiser_bomber_launcher_2 = {
+		category = ship_cruiser_bomber_launcher
+		gfx = ship_cruiser_bomber_launcher_2
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 6
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 600
+			reliability = -0.4
+		}
+		manpower = 150
+		multiply_stats = {
+			naval_speed = -0.04
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_cruiser_bomber_launcher_3 = {
+		category = ship_cruiser_bomber_launcher
+		gfx = ship_cruiser_bomber_launcher_3
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 8
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 800
+			reliability = -0.5
+		}
+		manpower = 200
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_cruiser_bomber_launcher_4 = {
+		category = ship_cruiser_bomber_launcher
+		gfx = ship_cruiser_bomber_launcher_4
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 10
+			surface_detection = 10
+			sub_detection = 3.5
+			build_cost_ic = 1000
+			reliability = -0.5
+		}
+		manpower = 250
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_flyingdeck_cruiser_deck_space_small = {
+		category = ship_flyingdeck_cruiser_deck_space
+		gfx = ship_flyingdeck_cruiser_deck_space_small
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 2
+			build_cost_ic = 200
+			reliability = -0.02
+		}
+		manpower = 50
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_flyingdeck_cruiser_deck_space_medium = {
+		category = ship_flyingdeck_cruiser_deck_space
+		gfx = ship_flyingdeck_cruiser_deck_space_medium
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 4
+			build_cost_ic = 400
+			reliability = -0.04
+		}
+		manpower = 100
+		multiply_stats = {
+			naval_speed = -0.04
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+	ship_flyingdeck_cruiser_deck_space_large = {
+		category = ship_flyingdeck_cruiser_deck_space
+		gfx = ship_flyingdeck_cruiser_deck_space_large
+		
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 6
+			build_cost_ic = 600
+			reliability = -0.06
+		}
+		manpower = 50
+		multiply_stats = {
+			naval_speed = -0.06
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+
+##ship_cruiser_bomber_launcher_1_anti_air
+	ship_flyingdeck_cruiser_1_anti_air_1 = {
+		category = ship_flyingdeck_cruiser_1_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_flyingdeck_cruiser_1_anti_air_2 = {
+		category = ship_flyingdeck_cruiser_1_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_1_anti_air_3 = {
+		category = ship_flyingdeck_cruiser_1_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_1_anti_air_4 = {
+		category = ship_flyingdeck_cruiser_1_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+##ship_cruiser_bomber_launcher_2_anti_air
+	ship_flyingdeck_cruiser_2_anti_air_1 = {
+		category = ship_flyingdeck_cruiser_2_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_flyingdeck_cruiser_2_anti_air_2 = {
+		category = ship_flyingdeck_cruiser_2_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_2_anti_air_3 = {
+		category = ship_flyingdeck_cruiser_2_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_2_anti_air_4 = {
+		category = ship_flyingdeck_cruiser_2_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+##ship_cruiser_bomber_launcher_3_anti_air
+	ship_flyingdeck_cruiser_3_anti_air_1 = {
+		category = ship_flyingdeck_cruiser_3_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_flyingdeck_cruiser_3_anti_air_2 = {
+		category = ship_flyingdeck_cruiser_3_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_3_anti_air_3 = {
+		category = ship_flyingdeck_cruiser_3_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_3_anti_air_4 = {
+		category = ship_flyingdeck_cruiser_3_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+##ship_cruiser_bomber_launcher_4_anti_air
+	ship_flyingdeck_cruiser_4_anti_air_1 = {
+		category = ship_flyingdeck_cruiser_4_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_flyingdeck_cruiser_4_anti_air_2 = {
+		category = ship_flyingdeck_cruiser_4_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_4_anti_air_3 = {
+		category = ship_flyingdeck_cruiser_4_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_4_anti_air_4 = {
+		category = ship_flyingdeck_cruiser_4_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+##ship_cruiser_bomber_launcher_4_mid_anti_air
+	ship_flyingdeck_cruiser_4_mid_anti_air_1 = {
+		category = ship_flyingdeck_cruiser_4_mid_anti_air
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 1.5
+			build_cost_ic = 90
+		}
+		
+		multiply_stats = {
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+			naval_speed = -0.01
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 60
+		}
+	}
+
+	ship_flyingdeck_cruiser_4_mid_anti_air_2 = {
+		category = ship_flyingdeck_cruiser_4_mid_anti_air
+		parent = ship_anti_air_1
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		
+		add_stats = {
+			anti_air_attack = 2
+			build_cost_ic = 120
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.1
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_1
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_4_mid_anti_air_3 = {
+		category = ship_flyingdeck_cruiser_4_mid_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 3
+			build_cost_ic = 150
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.125
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 90
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_2
+			convert_cost_ic = 60
+		}
+	}
+	ship_flyingdeck_cruiser_4_mid_anti_air_4 = {
+		category = ship_flyingdeck_cruiser_4_mid_anti_air
+		parent = ship_anti_air_2
+		sfx = sfx_ui_sd_module_turret
+
+		add_equipment_type = anti_air
+		add_stats = {
+			anti_air_attack = 4
+			build_cost_ic = 190
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.01
+			build_cost_ic = 0.025
+			anti_air_attack = 0.15
+		}
+
+		can_convert_from = {
+			module_category = ship_anti_air
+			convert_cost_ic = 120
+		}
+
+		can_convert_from = {
+			module = ship_anti_air_3
+			convert_cost_ic = 50
+		}
+	}
+
+##　FC4_mid_secondaries
+	ship_flyingdeck_cruiser_4_mid_secondaries_1 = {
+		category = ship_flyingdeck_cruiser_4_mid_secondaries
+		sfx = sfx_ui_sd_module_turret
+
+		
+		add_stats = {
+			lg_attack = 3
+			build_cost_ic = 180
+		}
+		
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+
+		add_average_stats = {
+			lg_armor_piercing = 5.5
+		}
+		
+		can_convert_from = {
+			module_category = ship_secondaries
+			convert_cost_ic = 100
+		}
+		critical_parts = { damaged_secondaries }
+	}
+
+	ship_flyingdeck_cruiser_4_mid_secondaries_2 = {
+		category = ship_flyingdeck_cruiser_4_mid_secondaries
+		parent = ship_secondaries_1
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			lg_attack = 4
+			build_cost_ic = 240
+		}
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+		
+		add_average_stats = {
+			lg_armor_piercing = 7
+		}
+		
+		can_convert_from = {
+			module_category = ship_secondaries
+			convert_cost_ic = 120
+		}
+		critical_parts = { damaged_secondaries }
+	}
+	dp_ship_flyingdeck_cruiser_4_mid_secondaries = {
+		category = ship_flyingdeck_cruiser_4_mid_secondaries
+		parent = ship_secondaries_2
+		gfx = ship_secondaries_3
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			lg_attack = 4.5
+			anti_air_attack = 2.5
+			build_cost_ic = 290
+		}
+
+		multiply_stats = {
+			naval_speed = -0.03
+		}
+		
+		add_average_stats = {
+			lg_armor_piercing = 8
+		}
+		
+		can_convert_from = {
+			module_category = ship_secondaries
+			convert_cost_ic = 150
+		}
+		critical_parts = { damaged_secondaries }
+	}
+
+
+##FC4_mid_torp
+	ship_flyingdeck_cruiser_4_mid_torpedo_1 = {
+		category = ship_flyingdeck_cruiser_4_mid_torpedo
+		sfx = sfx_ui_sd_module_turret
+
+		
+		add_stats = {
+			torpedo_attack = 18
+			build_cost_ic = 90
+		}
+		multiply_stats = {
+			naval_speed = -0.01			
+		}
+		build_cost_resources = {
+			steel = 0
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+	ship_flyingdeck_cruiser_4_mid_torpedo_2 = {
+		category = ship_flyingdeck_cruiser_4_mid_torpedo
+		parent = ship_mid_torpedo_1
+		
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			torpedo_attack = 27
+			build_cost_ic = 120
+		}
+		multiply_stats = {
+			naval_speed = -0.01		
+		}
+		build_cost_resources = {
+			steel = 0
+		}
+		 
+		dismantle_cost_ic = 60
+		dismantle_cost_resources = {
+			steel = 0
+		}
+
+		can_convert_from = {
+			module_category = ship_mid_torpedo
+			convert_cost_ic = 60
+			convert_cost_resources = {
+				steel = 0
+			}
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+	ship_flyingdeck_cruiser_4_mid_torpedo_3 = {
+		category = ship_flyingdeck_cruiser_4_mid_torpedo
+		parent = ship_mid_torpedo_2
+		
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			torpedo_attack = 36
+			build_cost_ic = 150
+		}
+		multiply_stats = {
+			naval_speed = -0.01			
+		}
+		dismantle_cost_ic = 60
+
+		can_convert_from = {
+			module_category = ship_mid_torpedo
+			convert_cost_ic = 60
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+	ship_flyingdeck_cruiser_4_mid_torpedo_4 = {
+		category = ship_flyingdeck_cruiser_4_mid_torpedo
+		parent = ship_mid_torpedo_3
+		
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			torpedo_attack = 45
+			build_cost_ic = 180
+		}
+		multiply_stats = {
+			naval_speed = -0.01			
+		}
+		dismantle_cost_ic = 60
+
+		can_convert_from = {
+			module_category = ship_mid_torpedo
+			convert_cost_ic = 60
+		}
+		critical_parts = { damaged_torpedoes }
+	}
+
+
+##ship_submarine_bomber_launcher
+	ship_submarine_bomber_launcher = {
+		category = ship_submarine_bomber_launcher
+		gfx = ship_airplane_launcher
+		
+		add_stats = {
+			carrier_size = 2
+			build_cost_ic = 500
+			reliability = -0.05
+		}
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}
+	
+##ship_submarine_deck_space
+	ship_submarine_deck_space = {
+		category = ship_submarine_deck_space
+		gfx = ship_deck_space
+		
+		add_stats = {
+			carrier_size = 1
+			build_cost_ic = 500
+			reliability = -0.05
+		}
+		manpower = 40
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+	}

@@ -1,0 +1,51 @@
+enable_global_alliance = {
+	name = "ENABLE_GLOBAL_ALLIANCE"
+	group = "RULE_GROUP_FATS"
+	icon = ""
+	option = {
+		name = "DISABLE_GLOBAL_ALLIANCE"
+		text = "DISABLE_GLOBAL_ALLIANCE_TEXT"
+		desc = "DISABLE_GLOBAL_ALLIANCE_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = "ENABLE_GLOBAL_ALLIANCE"
+		text = "ENABLE_GLOBAL_ALLIANCE_TEXT"
+		desc = "ENABLE_GLOBAL_ALLIANCE_DESC"
+		allow_achievements = yes
+	}
+}
+enable_warmonger_penalty = {
+	name = "ENABLE_WARMONGER_PENALTY"
+	group = "RULE_GROUP_FATS"
+	icon = ""
+	option = {
+		name = "DISABLE_WARMONGER_PENALTY"
+		text = "DISABLE_WARMONGER_PENALTY_TEXT"
+		desc = "DISABLE_WARMONGER_PENALTY_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = "ENABLE_WARMONGER_PENALTY"
+		text = "ENABLE_WARMONGER_PENALTY_TEXT"
+		desc = "ENABLE_WARMONGER_PENALTY_DESC"
+		allow_achievements = yes
+	}
+}
+toolpack_force_enabled_rule = {
+	name = "TOOLPACK_FORCE_ENABLED_RULE"
+	group = "RULE_GROUP_FATS"
+	icon = ""
+	option = {
+		name = "TOOLPACK_FORCE_ENABLED"
+		text = "TOOLPACK_FORCE_ENABLED_TEXT"
+		desc = "TOOLPACK_FORCE_ENABLED_DESC"
+		allow_achievements = yes
+	}
+	default = {
+		name = "TOOLPACK_FORCE_DISABLED"
+		text = "TOOLPACK_FORCE_DISABLED_TEXT"
+		desc = "TOOLPACK_FORCE_DISABLED_DESC"
+		allow_achievements = yes
+	}
+}

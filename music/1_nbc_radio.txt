@@ -1,0 +1,172 @@
+music_station = "nbc_radio"
+
+music = {
+	song = "aurora"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "yours_and_mine"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "ciribiribin"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "you_made_me_love_you"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "east_of_the_sun"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "two_sleepy_people"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "embraceable_you"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_lonesome_road"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "happy_days_are_here_again"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "sing_a_song_of_sunbeans"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "i_double_dare_you"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "rum_and_coca_cola"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "i_must_see_annie_tonight"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "picture_girl"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "ill_be_with_you_in_apple_blossom_time"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "one_in_a_million"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "lili_marleen1"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "oh_johnny_oh_johnny"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "mister_five_by_five"
+
+	chance = {
+		factor = 1
+
+	}
+}

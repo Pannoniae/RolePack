@@ -1,0 +1,166 @@
+HUN_rename_cities = {
+	HUN_rename_kosice = {
+		available = {
+            controls_state = 664
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 6573
+				name = "Kassa"
+			}
+		}
+	}
+	HUN_rename_munkacevo = {
+		available = {
+            controls_state = 73
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 3548
+				name = "Munkács"
+			}
+			73 = {
+				set_state_name = "Kárpátalja"
+			}
+		}
+	}
+	HUN_rename_cluj = {
+		available = {
+            controls_state = 76
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 6711
+				name = "Kolozsvár"
+			}
+			76 = {
+				set_state_name = "Észak-Erdély"
+			}
+		}
+	}
+	HUN_rename_arad = {
+		available = {
+            controls_state = 83
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 6682
+				name = "Arad"
+			}
+			83 = {
+				set_state_name = "Körösvidék"
+			}
+		}
+	}
+	HUN_rename_timisoara = {
+		available = {
+            controls_state = 82
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 9606
+				name = "Temesvár"
+			}
+			82 = {
+				set_state_name = "Bánát"
+			}
+		}
+	}
+	HUN_rename_timisoara_2 = {
+		available = {
+            controls_state = 764
+        }
+		complete_effect = {
+			764 = {
+				set_state_name = "Nyugat-Bánát"
+			}
+		}
+	}
+	HUN_rename_brasov = {
+		available = {
+            controls_state = 84
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 690
+				name = "Brassó"
+			}
+			84 = {
+				set_state_name = "Dél-Erdély"
+			}
+		}
+	}
+	HUN_rename_novi_sad = {
+		available = {
+            controls_state = 45
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 619
+				name = "Újvidék"
+			}
+			45 = {
+				set_state_name = "Vajdaság"
+			}
+		}
+	}
+	HUN_rename_osijek = {
+		available = {
+            controls_state = 822
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 6647
+				name = "Eszék"
+			}
+		}
+	}
+	HUN_rename_zagreb = {
+		available = {
+            controls_state = 109
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 11581
+				name = "Zágráb"
+			}
+			109 = {
+				set_state_name = "Zágráb"
+			}
+		}
+	}
+	HUN_rename_murska_sobota = {
+		available = {
+            controls_state = 819
+        }
+		complete_effect = {
+			set_province_name = {
+				id = 6672
+				name = "Nagyszombat"
+			}
+			819 = {
+				set_state_name "Muravidék"
+			}
+		}
+	}
+	HUN_rename_northern_hungary = {
+		available = {
+			controls_state = 43
+		}
+		complete_effect = {
+			43 = {
+				set_state_name = "Észak-Magyarország"
+			}
+		}
+	}
+	HUN_rename_transdanubia = {
+		available = {
+			controls_state = 155
+		}
+		complete_effect = {
+			155 = {
+				set_state_name = "Dunántúl"
+			}
+		}
+	}
+}

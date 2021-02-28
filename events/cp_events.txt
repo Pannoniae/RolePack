@@ -1,0 +1,38 @@
+add_namespace = cp
+
+country_event = {
+	id = cp.1
+	title = cp.1.t
+	desc = cp.1.d
+	fire_only_once = yes
+	hidden = yes
+	
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				AND = {
+					country_exists = MAF
+					country_exists = CAF
+					country_exists = FNG
+					country_exists = GEA 
+				}
+			}
+			set_global_flag = cp_yes_kaiserreich
+		}
+		if = {
+			limit = {
+				NOT = {
+					AND = {
+						country_exists = MAF
+						country_exists = CAF
+						country_exists = FNG
+						country_exists = GEA 
+					}
+				}
+			}
+			set_global_flag = cp_no_kaiserreich
+		}
+	}
+}

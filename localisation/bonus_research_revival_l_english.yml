@@ -1,0 +1,39 @@
+﻿l_english:
+
+## Rules
+RULE_GROUP_research: "Bonus Research"
+
+RULE_bonus_research_slot: "Bonus Research Slot"
+RULE_OPTION_EVERYONE_ONE: "Everyone One"
+RULE_OPTION_EVERYONE_ONE_desc: "Every nation receives one bonus research slot."
+RULE_OPTION_EVERYONE_TWO: "Everyone Two"
+RULE_OPTION_EVERYONE_TWO_desc: "Every nation receives two bonus research slots."
+RULE_OPTION_RANDOM_EXTRA: "Random Extra"
+RULE_OPTION_RANDOM_EXTRA_desc: "Every nation receives between 0 and 3 bonus research slots, selected at random."
+RULE_OPTION_RANDOM: "Random"
+RULE_OPTION_RANDOM_desc: "Every nation starts with between 1 and 5 research slots (skewed towards Major Nations getting more)."
+RULE_OPTION_MINORS_ONE: "Minors One"
+RULE_OPTION_MINORS_ONE_desc: "Minor Nations receive one bonus research slot."
+RULE_OPTION_MINORS_TWO: "Minors Two"
+RULE_OPTION_MINORS_TWO_desc: "Minor Nations receive two bonus research slots."
+RULE_OPTION_MAJORS_ONE: "Majors One"
+RULE_OPTION_MAJORS_ONE_desc: "Major Nations receive one bonus research slot."
+RULE_OPTION_MINORS_TWO_MAJORS_ONE: "Minors Two, Majors One"
+RULE_OPTION_MINORS_TWO_MAJORS_ONE_desc: "Major Nations receive one bonus research slot, Minor Nations get two bonus research slots."
+RULE_OPTION_ABSOLUTE_FIVE: "Absolute Five"
+RULE_OPTION_ABSOLUTE_FIVE_desc: "Every Nation starts with 5 research slots."
+RULE_OPTION_RANDOM_EXTREME: "Random Extreme"
+RULE_OPTION_RANDOM_EXTREME_desc: "Every Nation starts with between 1 and 7 research slots."
+RULE_OPTION_EVERYONE_ONLY_ONE: "Only One"
+RULE_OPTION_EVERYONE_ONLY_ONE_desc: "Every Nation starts with only one research slot."
+RULE_OPTION_VANILLA: "Vanilla"
+RULE_OPTION_VANILLA_brr_desc: "Default vanilla amount of research slots for everyone."
+
+RULE_zeitgeist: "Technological Zeitgeist"
+RULE_zeitgeist_NO_desc: "The Technological Zeitgeist is disabled."
+RULE_zeitgeist_YES_desc: "The more countries have researched a technology, the cheaper it becomes for every other nation. Helps minors to play catch-up and fill technological gaps.\n\nIn gameplay terms, every nation is automatically part of a very weak technological sharing group. Has the unintended side-effect of being able to see what tech every other nation has researched."
+
+# Tech sharing
+
+zeitgeist_research_name: "Technological Zeitgeist"
+zeitgeist_research_desc: "Reduced research time for technologies researched by other countries."

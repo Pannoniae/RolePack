@@ -1,0 +1,44 @@
+﻿###########################
+# German Events
+###########################
+
+add_namespace = germany
+
+#rename stalingrad and leningrad
+country_event = {
+	id = germany.1091
+	title = germany.999.t
+	desc = germany.999.desc
+	picture = GFX_report_event_german_reichstag_gathering
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = GER
+			any_other_country = {
+					is_subject_of = GER
+					owns_state = 217
+					owns_state = 195
+		}
+	}
+
+	option = { #a great idea!
+		name = germany.999.a
+		ai_chance = {
+			base = 100
+		}
+		set_province_name = { id = 3529 name = "Hindenburg"}
+		set_province_name = { id = 3151 name = "Ludendorff"}
+		set_global_flag = GER_cities_renamed
+	}
+
+	option = { #rather not
+		name = germany.999.b
+		ai_chance = {
+			base = 0
+		}
+		add_stability = -0.05 #because fuck you
+							  #language
+							  ##paradox devs are funni
+	}
+}

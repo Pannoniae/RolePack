@@ -1,0 +1,55 @@
+﻿BATTLE_CARRIER = {
+	name = NAME_THEME_BATTLE_CARRIER
+	for_countries = {}
+	
+	type = ship
+	ship_types = { ship_hull_battle_carrier }			
+
+	prefix = ""
+	fallback_name = "Battle Carrier %d"					
+
+}
+
+FLYINGDECK_CRUISER = {
+	name = NAME_THEME_CRUISER_CARRIER
+	for_countries = {}
+	
+	type = ship
+	ship_types = { ship_hull_cruiser_carrier }
+	
+	prefix = ""
+	fallback_name = "Cruiser Carrier %d"
+}
+
+SUBMARINE_CRUISER = {
+	name = NAME_THEME_SUBMARINE_CRUISER
+	for_countries = {}
+	
+	type = ship
+	ship_types = { ship_hull_submarine_cruiser }
+	
+	prefix = ""
+	fallback_name = "Submarine Cruiser %d"
+}
+
+SUBMARINE_HEAVY = {
+	name = NAME_THEME_SUBMARINE_HEAVY
+	for_countries = {}
+	
+	type = ship
+	ship_types = { ship_hull_submarine_heavy }
+	
+	prefix = ""
+	fallback_name = "Submarine Heavy Cruiser %d"
+}
+
+SUBMARINE_CARRIER = {
+	name = NAME_THEME_SUBMARINE_CARRIER
+	for_countries = {}
+	
+	type = ship
+	ship_types = { ship_hull_submarine_carrier }
+	
+	prefix = ""
+	fallback_name = "Submarine Carrier %d"
+}

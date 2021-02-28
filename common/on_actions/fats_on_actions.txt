@@ -1,0 +1,182 @@
+on_actions = {
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { # old controller
+						divisions_in_state = { # defender did not have divs there
+							state = FROM.FROM
+							size < 1
+						}
+						is_ai = no
+						has_war = yes
+					}
+				}
+				set_variable = { global.rp_lost_state = FROM.FROM }
+				FROM = {
+					country_event = { id = rp.1 }
+				}
+			}
+		}
+	}
+	on_war_relation_added = {
+		effect = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = enable_warmonger_penalty
+						option = ENABLE_WARMONGER_PENALTY
+					}
+					ROOT = {
+						is_ai = no
+					}
+					FROM = {
+						is_ai = no
+					}
+				}
+				# 1936
+				if = {
+					limit = {
+						date > 1936.1.1
+						date < 1937.1.1
+					}
+					ROOT = {
+						add_ideas = war_debuff_1936
+					}
+				}
+				# 1937
+				if = {
+					limit = {
+						date > 1937.1.1
+						date < 1938.1.1
+					}
+					ROOT = {
+						add_ideas = war_debuff_1937
+					}
+				}
+				# 1938
+				if = {
+					limit = {
+						date > 1938.1.1
+						date < 1939.1.1
+					}
+					ROOT = {
+						add_ideas = war_debuff_1938
+					}
+				}
+			}
+		}
+	}
+	#on_offer_join_faction = {
+	#	effect = {
+	#		
+	#	}
+	#}
+	on_leave_faction = {
+		effect = {
+			remove_from_tech_sharing_group = continuous_tech_share
+		}
+	}
+	on_weekly_GER = { # Count all allies buffed to shit. If more than 3, make global alliance
+		effect = {
+			#every_country = {
+			#	limit = {
+			#		is_faction_leader = yes
+			#	}
+			#	add_to_tech_sharing_group = continuous_tech_share
+			#	for_each_scope_loop = {
+			#		array = THIS.faction_members
+			#		THIS = {
+			#			add_to_tech_sharing_group = continuous_tech_share
+			#		}
+			#	}
+			#}
+			every_country = {
+				limit = {
+					is_in_faction = yes
+				}
+				add_to_tech_sharing_group = continuous_tech_share
+			}
+			log = "68"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = enable_global_alliance
+						option = ENABLE_GLOBAL_ALLIANCE
+					}
+					NOT = {
+						has_global_flag = global_faction_created
+					}
+				}
+				every_country = {
+					limit = {
+						is_faction_leader = yes
+					}
+					log = "74"
+					set_variable = { global.op_count = 0 }
+					set_variable = { global.op_country = THIS }
+					log = "77"
+					for_each_scope_loop = {
+						array = THIS.faction_members
+						if = {
+							limit = {
+								OR = {
+									is_major = yes
+									num_of_civilian_factories > 75
+								}
+							}
+							log = "88"
+							add_to_variable = { global.op_count = 1 }
+						}
+					}
+					if = {
+						limit = {
+							check_variable = { global.op_count > 3 } # 4 or more op shit, time to fix
+						}
+						log = "94"
+						random_country = { # pick a faction leader
+							limit = {
+								is_ai = yes
+								NOT = {
+									is_in_faction_with = var:global.op_country
+								}
+							}
+							log = "102"
+							create_faction = "Global Alliance"
+							set_variable = { global.op_faction_leader = THIS }
+						}
+						every_country = {
+							limit = {
+								is_ai = yes
+								NOT = {
+									is_in_faction_with = var:global.op_country
+								}
+								NOT = {
+									is_in_faction_with = var:global.op_faction_leader
+								}
+							}
+							log = "116"
+							dismantle_faction = yes
+							var:global.op_faction_leader = {
+								add_to_faction = PREV
+							}
+							log = "121"
+							news_event = {
+								id = fats.1
+								days = 1
+							}
+						}
+						set_global_flag = global_faction_created
+						log = "127"
+						var:global.op_faction_leader = {
+							declare_war_on = {
+								target = var:global.op_country
+								type = annex_everything
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

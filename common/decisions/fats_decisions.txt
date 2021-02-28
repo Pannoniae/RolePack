@@ -1,0 +1,55 @@
+toolpack_decisions = {
+	toolpack_force_enable = {
+		visible = {
+			has_game_rule = {
+				rule = toolpack_force_enabled_rule option = TOOLPACK_FORCE_ENABLED
+			}
+		}
+		available = {
+			has_game_rule = {
+				rule = toolpack_force_enabled_rule option = TOOLPACK_FORCE_ENABLED
+			}
+		}
+		complete_effect = {
+			set_country_flag = toolpack_allowed
+		}
+	}
+	toolpack_enable = {
+		visible = {
+			NOT = {
+				has_game_rule = {
+					rule = toolpack_force_enabled_rule option = TOOLPACK_FORCE_ENABLED
+				}
+			}
+			NOT = {
+				any_country = {
+					has_country_flag = toolpack_allowed
+				}
+			}
+		}	
+		available = {
+			NOT = {
+				has_game_rule = {
+					rule = toolpack_force_enabled_rule option = TOOLPACK_FORCE_ENABLED
+				}
+			}
+            NOT = {
+				any_country = {
+					has_country_flag = toolpack_allowed
+				}
+			}
+        }
+		complete_effect = {
+			clr_country_flag = toolpack_q1_right
+			clr_country_flag = toolpack_q2_right
+			clr_country_flag = toolpack_q3_right
+			clr_country_flag = toolpack_q4_right
+			clr_country_flag = toolpack_q5_right
+			clr_country_flag = toolpack_q6_right
+			country_event = {
+				id = fats.3
+			}
+		}
+	}
+	
+}

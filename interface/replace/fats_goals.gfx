@@ -1,0 +1,6 @@
+spriteTypes = {
+	spriteType = {
+		name = "r56_goal_HUN_democracy"
+		texturefile = "gfx/interface/goals/hun/r56_goal_HUN_democracy.dds"
+	}
+}

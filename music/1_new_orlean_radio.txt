@@ -1,0 +1,271 @@
+music_station = "new_orlean_radio"
+
+music = {
+	song = "a_gypsy_without_a_song"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "you_feets_too_big"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "all_the_jive_is_gone"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "work_song"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "big_fat_woman_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "when_its_sleepy_time_down_south"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "caravan"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "wade_in_the_water"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "christopher_columbus"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "uptown_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "coquette"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "toadie_toddle"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "easy_street"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_mooche"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "grinders_swing"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_bourgeois_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "harlem_air_shaft"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "take_the_a_train"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "i_know"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "take_me_back_baby"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "im_confessin"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "subtle_lament"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "in_four_flats"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "perdido"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "in_the_gloaming"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "on_monday"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "it_dont_mean_a_thing"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "mr_hitler"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "leaving_blues"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "jeepers_creepers"
+
+	chance = {
+		factor = 1
+
+	}
+}

@@ -1,0 +1,45 @@
+music = {
+	name = "aint_misbehavin"
+	file = "Ain't Misbehavin'.ogg"
+	volume = 1
+}
+music = {
+	name = "im_crazy_bout_my_baby"
+	file = "I'm Crazy 'bout My Baby.ogg"
+	volume = 1
+}
+music = {
+	name = "wheres_the_sun"
+	file = "Where's The Sun.ogg"
+	volume = 1
+}
+music = {
+	name = "christopher_columbus"
+	file = "Christopher Columbus.ogg"
+	volume = 1
+}
+music = {
+	name = "ive_got_my_fingers_crossed"
+	file = "I've Got My Fingers Crossed.ogg"
+	volume = 1
+}
+music = {
+	name = "curse_of_an_aching_heart"
+	file = "Curse Of The Aching Heart.ogg"
+	volume = 1
+}
+music = {
+	name = "because_of_once_upon_a_time"
+	file = "Because Of Once Upon a Time.ogg"
+	volume = 1
+}
+music = {
+	name = "squeeze_me"
+	file = "Squeeze Me.ogg"
+	volume = 1
+}
+music = {
+	name = "erika"
+	file = "GER_erika.ogg"
+	volume = 1
+}

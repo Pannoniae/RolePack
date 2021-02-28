@@ -1,0 +1,10711 @@
+GER_reich_lands_category = {
+
+	GER_declare_greater_germanic_reich = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+
+		available = {
+				GER = {
+					827 = {is_core_of = GER}
+					828 = {is_core_of = GER}
+					#Alsace-Lorraine
+					28 = {is_core_of = GER}
+					#Luxemburg
+					8 = {is_core_of = GER}
+					#Austria
+					153 = {is_core_of = GER}
+					4 = {is_core_of = GER}
+					152 = {is_core_of = GER}
+					#Slovakia
+					102 = {is_core_of = GER}
+					#Czechoslovakia
+					69 = {is_core_of = GER}
+					74 = {is_core_of = GER}
+					72 = {is_core_of = GER}
+					#Polish Lands
+					762 = {is_core_of = GER}
+					87 = {is_core_of = GER}
+					86 = {is_core_of = GER}
+					85 = {is_core_of = GER}
+					98 = {is_core_of = GER}
+					97 = {is_core_of = GER}
+					#Memel
+					188 = {is_core_of = GER}
+					}
+		}
+		visible = {
+				GER = {
+					AND = {
+						has_global_flag = form_greater_german_reich_flag
+						OR = {
+							827 = {is_core_of = GER}
+							828 = {is_core_of = GER}
+							#Alsace-Lorraine
+							28 = {is_core_of = GER}
+							#Luxemburg
+							8 = {is_core_of = GER}
+							#Austria
+							153 = {is_core_of = GER}
+							4 = {is_core_of = GER}
+							152 = {is_core_of = GER}
+							#Slovakia
+							102 = {is_core_of = GER}
+							#Czechoslovakia
+							69 = {is_core_of = GER}
+							74 = {is_core_of = GER}
+							72 = {is_core_of = GER}
+							#Polish Lands
+							762 = {is_core_of = GER}
+							87 = {is_core_of = GER}
+							86 = {is_core_of = GER}
+							85 = {is_core_of = GER}
+							98 = {is_core_of = GER}
+							97 = {is_core_of = GER}
+							#Memel
+							188 = {is_core_of = GER}
+							}
+						}
+					}
+				original_tag = GER
+				has_government = fascism
+				}
+		complete_effect = {
+		add_stability = 0.1
+		GER = {set_cosmetic_tag = GER_greater_germanic_reich}
+		}
+	}
+
+	GER_pol_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 60
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 86
+					owns_state = 85
+					owns_state = 87
+					owns_state = 762
+					owns_state = 98
+					owns_state = 97
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 86
+					owns_state = 85
+					owns_state = 87
+					owns_state = 762
+					owns_state = 98
+					owns_state = 97
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						owns_state = 86
+						owns_state = 85
+						owns_state = 87
+						owns_state = 762
+						owns_state = 98
+						owns_state = 97
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = POL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			GER = {transfer_state = 86}
+			GER = {transfer_state = 85}
+			GER = {transfer_state = 87}
+			GER = {transfer_state = 762}
+			GER = {transfer_state = 98}
+			GER = {transfer_state = 97}
+				hidden_effect = {
+				85 = {add_core_of = GER}
+				86 = {add_core_of = GER}
+				762 = {add_core_of = GER}
+			}
+		}
+	}
+		
+	GER_pol_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 180
+		days_remove = 30#210
+		
+		fire_only_once = yes
+		
+		highlight_state_targets = {
+			state = 86
+		}
+
+		available = {
+			GER = {
+				owns_state = 85
+				owns_state = 86
+				owns_state = 87
+				owns_state = 762
+				owns_state = 98
+				owns_state = 97
+				}
+			}
+		modifier = {
+			civilian_factory_use = 15
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 87
+					owns_state = 86
+					owns_state = 85
+					owns_state = 762
+					owns_state = 98
+					owns_state = 97
+					}
+				}
+		remove_effect = {
+			85 = {add_core_of = GER}
+			85 = {set_state_name = "Westpreußen"}
+			86 = {add_core_of = GER}
+			86 = {set_state_name = "Wartheland"}
+			87 = {add_core_of = GER}
+			87 = {set_state_name = "Ostwartheland"}
+			762 = {add_core_of = GER}
+			762 = {set_state_name = "Ostoberschlesien"}
+			98 = {add_core_of = GER}
+			98 = {set_state_name = "Plock"}
+			97 = {add_core_of = GER}
+			97 = {set_state_name = "Bialystok"}
+		}
+	}
+	
+	GER_lit_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 188
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 188
+					}
+				}
+			}
+		}
+		visible = {
+				#NOT = {
+				#	GER = {
+				#		owns_state = 188
+				#	}
+				#}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = { 
+				is_subject_of = GER
+				owns_state = 188
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 188}
+		}
+	}
+		
+	GER_lit_lands_core = {
+		icon = infiltrate_state
+		
+		highlight_state_targets = {
+			state = 188
+		}
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+
+		available = {
+			GER = {
+				owns_state = 188
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 188
+					}
+				}
+		remove_effect = {
+			188 = {add_core_of = GER}
+		}
+	}
+
+	GER_fra_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 28
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 28
+					}
+				}
+			}
+		}
+		visible = {
+				#NOT = {
+				#	GER = {
+				#		owns_state = 28
+				#	}
+				#}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = { 
+				is_subject_of = GER
+				owns_state = 28
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 28}
+		}
+	}
+		
+	GER_fra_lands_core = {
+		icon = infiltrate_state
+		
+		highlight_state_targets = {
+			state = 28
+		}
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+
+		available = {
+			GER = {
+				owns_state = 28
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 28
+					}
+				}
+		remove_effect = {
+			28 = {add_core_of = GER}
+			28 = {set_state_name = "Elsass-Lothringen"}
+		}
+	}
+
+	GER_lux_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 8
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 8
+					}
+				}
+			}
+		}
+		visible = {
+				#NOT = {
+				#	GER = {
+				#		owns_state = 28
+				#	}
+				#}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = { 
+				is_subject_of = GER
+				owns_state = 8
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 8}
+		}
+	}
+		
+	GER_lux_lands_core = {
+		icon = infiltrate_state
+		
+		highlight_state_targets = {
+			state = 8
+		}
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+
+		available = {
+			GER = {
+				owns_state = 8
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 8
+					}
+				}
+		remove_effect = {
+			8 = {add_core_of = GER}
+		}
+	}
+
+	GER_ita_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 39
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 39
+					}
+				}
+			}
+		}
+		visible = {
+				#NOT = {
+				#	GER = {
+				#		owns_state = 28
+				#	}
+				#}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = { 
+				is_subject_of = GER
+				owns_state = 39
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 39}
+		}
+	}
+		
+	GER_ita_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+		
+		highlight_state_targets = {
+			state = 39
+		}
+
+		available = {
+			GER = {
+				owns_state = 39
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 39
+					}
+				}
+		remove_effect = {
+			39 = {add_core_of = GER}
+			39 = {set_state_name = "Südtyrol"}
+		}
+	}
+
+	GER_slv_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 102
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					owns_state = 102
+					}
+				}
+			}
+		}
+		visible = {
+				#NOT = {
+				#	GER = {
+				#		owns_state = 28
+				#	}
+				#}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = { 
+				is_subject_of = GER
+				owns_state = 102
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 102}
+		}
+	}
+		
+	GER_slv_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+		
+		highlight_state_targets = {
+			state = 102
+		}
+
+		available = {
+			GER = {
+				owns_state = 102
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 102
+					}
+				}
+		remove_effect = {
+			102 = {set_state_name = "Slowenien"}
+			102 = {add_core_of = GER}
+		}
+	}
+
+	GER_aus_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+					}
+					any_other_country = {
+						AND = { 
+							is_subject_of = GER
+							owns_state = 4
+							owns_state = 152
+							owns_state = 153
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						AND = { 
+						owns_state = 4
+						owns_state = 152
+						owns_state = 153
+						}
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = {
+						is_subject_of = GER
+						owns_state = 4
+						owns_state = 152
+						owns_state = 153
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 102}
+		}
+	}
+		
+	GER_aus_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+		
+		highlight_state_targets = {
+			state = 152
+		}
+
+		available = {
+			GER = {
+				owns_state = 4
+				owns_state = 152
+				owns_state = 153
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				NOT = {
+					4 = {is_core_of = GER}
+					152 = {is_core_of = GER}
+					153 = {is_core_of = GER}
+				}
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 4
+					owns_state = 152
+					owns_state = 153
+					}
+				}
+		remove_effect = {
+			4 = {set_state_name = "Niederösterreich"}
+			152 = {set_state_name = "Oberösterreich"}
+			4 = {add_core_of = GER}
+			152 = {add_core_of = GER}
+			153 = {add_core_of = GER}
+		}
+	}
+
+	GER_cze_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 50
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 69
+					owns_state = 74
+					owns_state = 72
+					}
+					any_other_country = {
+						AND = { 
+							is_subject_of = GER
+							owns_state = 69
+							owns_state = 74
+							owns_state = 72
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						AND = { 
+						owns_state = 69
+						owns_state = 74
+						owns_state = 72
+						}
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = {
+						is_subject_of = GER
+						owns_state = 69
+						owns_state = 72
+						owns_state = 74
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 69}
+			GER = {transfer_state = 72}
+			GER = {transfer_state = 74}
+		}
+	}
+		
+	GER_cze_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 90
+		days_remove = 105
+		
+		fire_only_once = yes
+		
+		highlight_state_targets = {
+			state = 69
+		}
+
+		available = {
+			GER = {
+				owns_state = 69
+				owns_state = 72
+				owns_state = 74
+				}
+			}
+		modifier = {
+			civilian_factory_use = 6
+		}
+		visible = {
+				NOT = {
+					69 = {is_core_of = GER}
+					72 = {is_core_of = GER}
+					74 = {is_core_of = GER}
+				}
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 69
+					owns_state = 72
+					owns_state = 74
+					}
+				}
+		remove_effect = {
+			69 = {add_core_of = GER}
+			72 = {add_core_of = GER}
+			72 = {set_state_name = "Südoberschlesien"}
+			74 = {add_core_of = GER}
+			74 = {set_state_name = "östliches Sudetenland"}
+		}
+	}
+
+	GER_swi_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 151
+					}
+					any_other_country = {
+						AND = { 
+							is_subject_of = GER
+							owns_state = 151
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						AND = { 
+						owns_state = 151
+						}
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = {
+						is_subject_of = GER
+						owns_state = 151
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 102}
+		}
+	}
+		
+	GER_swi_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		highlight_state_targets = {
+			state = 151
+		}
+		
+		fire_only_once = yes
+
+		available = {
+			GER = {
+				owns_state = 151
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				NOT = {
+					151 = {is_core_of = GER}
+				}
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 151
+					}
+				}
+		remove_effect = {
+			151 = {add_core_of = GER}
+			151 = {set_state_name = "Ostschweiz"}
+		}
+	}
+	GER_den_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+		
+		highlight_state_targets = {
+			state = 827
+		}
+		
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 827
+					}
+					any_other_country = {
+						AND = { 
+							is_subject_of = GER
+							owns_state = 827
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						AND = { 
+						owns_state = 827
+						}
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = {
+						is_subject_of = GER
+						owns_state = 827
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 102}
+		}
+	}
+		
+	GER_den_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+
+		highlight_state_targets = {
+			state = 827
+		}
+
+		available = {
+			GER = {
+				owns_state = 827
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				NOT = {
+					827 = {is_core_of = GER}
+				}
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 827
+					}
+				}
+		remove_effect = {
+			827 = {add_core_of = GER}
+			151 = {set_state_name = "Ostschweiz"}
+		}
+	}
+		GER_bel_lands = {
+		icon = infiltrate_state
+		
+		fire_only_once = yes
+		
+		cost = 30
+
+		highlight_state_targets = {
+			state = 828
+		}
+
+		available = {
+			OR = { 
+				GER = {
+					owns_state = 828
+					}
+					any_other_country = {
+						AND = { 
+							is_subject_of = GER
+							owns_state = 828
+					}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					GER = {
+						AND = { 
+						owns_state = 828
+						}
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_other_country = {
+					AND = {
+						is_subject_of = GER
+						owns_state = 828
+				}
+			}
+		}
+		complete_effect = {
+			GER = {transfer_state = 102}
+		}
+	}
+		
+	GER_bel_lands_core = {
+		icon = infiltrate_state
+		
+		cost = 30
+		days_remove = 35
+		
+		fire_only_once = yes
+
+		highlight_state_targets = {
+			state = 828
+		}
+
+		available = {
+			GER = {
+				owns_state = 828
+				}
+			}
+		modifier = {
+			civilian_factory_use = 2
+		}
+		visible = {
+				NOT = {
+					828 = {is_core_of = GER}
+				}
+				original_tag = GER
+				has_government = fascism
+				GER = {
+					owns_state = 828
+					}
+				}
+		remove_effect = {
+			828 = {add_core_of = GER}
+			151 = {set_state_name = "Ostschweiz"}
+		}
+	}
+}
+GER_reichblr_category = {
+
+	#Ostland expansion0
+	GER_blr_expansionpol = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			OR = { 
+				GER = {
+					controls_state = 784
+					}
+					any_other_country = {
+						AND = { 
+					is_subject_of = GER
+					controls_state = 784
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BLR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BLR = {transfer_state = 784}
+			hidden_effect = {
+				784 = {add_core_of = BLR}
+			}
+		}
+	}
+
+	#Ostland expansion1
+	GER_blr_expansionlit = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 11
+							owns_state = 189
+					}
+						AND = {
+							controls_state = 11
+							controls_state = 189
+					}
+				}
+					}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+					OR = {
+						AND = {
+							controls_state = 11
+							controls_state = 189
+						}
+						AND = { 
+							owns_state = 11
+							owns_state = 189
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BLR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BLR = {
+				transfer_state = 11
+				transfer_state = 189
+				}
+				hidden_effect = {
+				11 = {add_core_of = BLR}
+				189 = {add_core_of = BLR}
+				}
+			}
+		}
+
+	#Ostland expansion2
+	GER_blr_expansionlat = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 12
+							owns_state = 190
+					}
+						AND = {
+							controls_state = 12
+							controls_state = 190
+					}
+				}
+			}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+					OR = {
+						AND = {
+							controls_state = 12
+							controls_state = 190
+						}
+						AND = { 
+							owns_state = 12
+							owns_state = 190
+							}
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BLR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BLR = {
+				transfer_state = 12
+				transfer_state = 190
+				hidden_effect = {
+				12 = {add_core_of = BLR}
+				190 = {add_core_of = BLR}
+					}
+				}
+			}
+		}
+
+	#Ostland expansion3
+	GER_blr_expansionest = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 13
+							owns_state = 191
+					}
+						AND = {
+							controls_state = 13
+							controls_state = 191
+					}
+				}
+					}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+					OR = {
+						AND = {
+							controls_state = 13
+							controls_state = 191
+						}
+						AND = { 
+							owns_state = 13
+							owns_state = 191
+							}
+						}
+					}
+				}
+			}
+		}
+
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BLR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BLR = {
+				transfer_state = 13
+				transfer_state = 191
+				hidden_effect = {
+				13 = {add_core_of = BLR}
+				191 = {add_core_of = BLR}
+				}
+			}
+		}
+	}
+
+	#Ostland expansion4
+	GER_blr_expansionblr = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 241
+							owns_state = 194
+							owns_state = 204
+							owns_state = 206
+							owns_state = 207
+					}
+						AND = {
+							controls_state = 241
+							controls_state = 194
+							controls_state = 204
+							controls_state = 206
+							controls_state = 207
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+								owns_state = 241
+								owns_state = 194
+								owns_state = 204
+								owns_state = 206
+								owns_state = 207
+						}
+							AND = {
+								controls_state = 241
+								controls_state = 194
+								controls_state = 204
+								controls_state = 206
+								controls_state = 207
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BLR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BLR = {
+				transfer_state = 241
+				transfer_state = 194
+				transfer_state = 204
+				transfer_state = 206
+				transfer_state = 207
+			}
+		}
+	}
+}
+
+GER_reichgeo_category = {
+
+	#Kaukasus expansion0
+	GER_geo_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 232
+					owns_state = 233
+					owns_state = 234
+					owns_state = 235
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 232
+						owns_state = 233
+						owns_state = 234
+						owns_state = 235
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = GEO
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			GEO = {
+				transfer_state = 232
+				transfer_state = 233
+				transfer_state = 234
+				transfer_state = 235
+					hidden_effect = {
+						232 = {add_core_of = GEO}
+						233 = {add_core_of = GEO}
+						234 = {add_core_of = GEO}
+						235 = {add_core_of = GEO}
+				}
+			}
+		}
+	}
+
+	GER_geo_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 229
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 229
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = geo
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			GEO = {transfer_state = 229}
+			hidden_effect = {
+				229 = {add_core_of = GEO}
+			}
+		}
+		}
+
+	GER_geo_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 230
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 230
+				}
+			}
+		}
+	
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = GEO
+					is_subject_of = GER
+					}
+				}
+	
+		complete_effect = {
+			GEO = {
+			transfer_state = 230
+			hidden_effect = {
+				230 = {add_core_of = GEO}
+				}
+			}
+		}
+	}
+}
+
+GER_reichkaz_category = {
+
+	#Türkestan expansion0
+	GER_kaz_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 585
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 585
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KAZ
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			KAZ = {
+				transfer_state = 585
+				hidden_effect = {
+				585 = {add_core_of = KAZ}
+				}
+			}
+		}
+		}
+
+	#Türkestan expansion1
+	GER_kaz_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 732
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 732
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KAZ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KAZ = {
+				transfer_state = 732
+				hidden_effect = {
+				732 = {add_core_of = KAZ}
+				}
+			}
+		}
+		}
+
+	#Türkestan expansion2
+	GER_kaz_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 584
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 584
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KAZ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KAZ = {
+				transfer_state = 584
+				hidden_effect = {
+				584 = {add_core_of = KAZ}
+				}
+			}
+		}
+		}
+
+	#Türkestan expansion3
+	GER_kaz_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 405
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 405
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KAZ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KAZ = {
+				transfer_state = 405
+				hidden_effect = {
+				405 = {add_core_of = KAZ}
+				}
+			}
+		}
+		}
+
+	#Türkestan expansion4
+	GER_kaz_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 742
+				}
+				any_other_country = {
+					AND = { 
+					is_subject_of = GER
+					owns_state = 742
+				}
+			}
+		}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KAZ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KAZ = {
+				transfer_state = 742
+				hidden_effect = {
+				742 = {add_core_of = KAZ}
+				}
+			}
+		}
+		}
+	}
+
+
+GER_reichwsi_category = {
+
+	#Ural expansion0
+	GER_wsi_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 579
+				owns_state = 581
+				owns_state = 580
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 579
+					owns_state = 581
+					owns_state = 580
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			WSI = {
+				transfer_state = 579
+				transfer_state = 581
+				transfer_state = 580
+				hidden_effect = {
+				579 = {add_core_of = WSI}
+				581 = {add_core_of = WSI}
+				580 = {add_core_of = WSI}
+					}
+				}
+			}
+		}
+
+	#Ural expansion1
+	GER_wsi_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 576
+				owns_state = 577
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 576
+					owns_state = 577
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			WSI = {
+				transfer_state = 576
+				transfer_state = 577
+				hidden_effect = {
+				576 = {add_core_of = WSI}
+				577 = {add_core_of = WSI}
+				}
+			}
+		}
+		}
+
+	#Ural expansion2
+	GER_wsi_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 578
+				owns_state = 570
+				owns_state = 571
+				owns_state = 403
+				owns_state = 653
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 578
+					owns_state = 570
+					owns_state = 571
+					owns_state = 403
+					owns_state = 653
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			WSI = {
+				transfer_state = 578
+				transfer_state = 570
+				transfer_state = 571
+				transfer_state = 403
+				transfer_state = 653
+				hidden_effect = {
+				578 = {add_core_of = WSI}
+				570 = {add_core_of = WSI}
+				571 = {add_core_of = WSI}
+				403 = {add_core_of = WSI}
+				653 = {add_core_of = WSI}
+				}
+			}
+		}
+		}
+
+	#Ural expansion3
+	GER_wsi_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 572
+				owns_state = 573
+				owns_state = 582
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 572
+					owns_state = 573
+					owns_state = 582
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			WSI = {
+				transfer_state = 572
+				transfer_state = 573
+				transfer_state = 582
+				hidden_effect = {
+				572 = {add_core_of = WSI}
+				573 = {add_core_of = WSI}
+				582 = {add_core_of = WSI}
+				}
+			}
+		}
+		}
+
+	#Ural expansion4
+	GER_wsi_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 568
+				owns_state = 569
+				owns_state = 654
+				owns_state = 40
+				}
+				any_other_country = {
+					AND = { 
+					is_subject_of = GER
+					owns_state = 568
+					owns_state = 569
+					owns_state = 654
+					owns_state = 40
+				}
+			}
+		}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			WSI = {
+				transfer_state = 568
+				transfer_state = 569
+				transfer_state = 654
+				transfer_state = 40
+				hidden_effect = {
+				568 = {add_core_of = WSI}
+				569 = {add_core_of = WSI}
+				654 = {add_core_of = WSI}
+				40 = {add_core_of = WSI}
+					}
+				}
+			}
+		}
+
+	#Ural expansion5
+	GER_wsi_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 329
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 329
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 329
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 329
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = WSI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			WSI = {
+				transfer_state = 329
+				hidden_effect = {
+				329 = {add_core_of = WSI}
+				}
+			}
+		}
+	}
+}
+
+GER_reichesi_category = {
+
+	#Siberian expansion0
+	GER_esi_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 637
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 637
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			ESI = {
+				transfer_state = 637
+				hidden_effect = {
+				637 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+
+	#Siberian expansion1
+	GER_esi_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 562
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 562
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ESI = {
+				transfer_state = 562
+				hidden_effect = {
+				562 = {add_core_of = ESI}
+				}
+			}
+		}
+		}
+
+	#Siberian expansion2
+	GER_esi_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 574
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 574
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ESI = {
+				transfer_state = 574
+				hidden_effect = {
+				574 = {add_core_of = ESI}
+				}
+			}
+		}
+		}
+
+	#Siberian expansion3
+	GER_esi_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 567
+				owns_state = 575
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 567
+					owns_state = 575
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ESI = {
+				transfer_state = 567
+				transfer_state = 575
+				hidden_effect = {
+				567 = {add_core_of = ESI}
+				575 = {add_core_of = ESI}
+				}
+			}
+		}
+		}
+
+	#Siberian expansion4
+	GER_esi_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 564
+				owns_state = 565
+				owns_state = 566
+				}
+				any_other_country = {
+					AND = { 
+					is_subject_of = GER
+					owns_state = 564
+					owns_state = 565
+					owns_state = 566
+				}
+			}
+		}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ESI = {
+				transfer_state = 564
+				transfer_state = 565
+				transfer_state = 566
+				hidden_effect = {
+				564 = {add_core_of = ESI}
+				565 = {add_core_of = ESI}
+				566 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+
+	#Siberian expansion5
+	GER_esi_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 561
+				owns_state = 563
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 561
+					owns_state = 563
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			ESI = {
+				transfer_state = 561
+				transfer_state = 563
+				hidden_effect = {
+				561 = {add_core_of = ESI}
+				563 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+
+	#Siberian expansion6
+	GER_esi_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 560
+				owns_state = 657
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 560
+					owns_state = 657
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			ESI = {
+				transfer_state = 560
+				transfer_state = 657
+				hidden_effect = {
+				560 = {add_core_of = ESI}
+				657 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+
+	#Siberian expansion7
+	GER_esi_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 408
+				owns_state = 409
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 408
+					owns_state = 409
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			ESI = {
+				transfer_state = 408
+				transfer_state = 409
+				hidden_effect = {
+				408 = {add_core_of = ESI}
+				409 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+
+	#Siberian expansion8
+	GER_esi_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		available = {
+			tag = GER 
+			OR = {
+				GER = {
+				owns_state = 655
+				}
+				any_other_country = {
+					is_subject_of = GER
+					owns_state = 655
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 655
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 655
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ESI
+					is_subject_of = GER
+					}
+				}
+
+		complete_effect = {
+			ESI = {
+				transfer_state = 655
+				hidden_effect = {
+				655 = {add_core_of = ESI}
+					}
+				}
+			}
+		}
+}
+
+GER_reichukr_category = { 
+
+	
+
+	#Ukraine expansion0
+	GER_ukr_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 199
+							owns_state = 201
+							owns_state = 198
+							owns_state = 192
+							owns_state = 202
+							owns_state = 203
+							owns_state = 197
+							owns_state = 193
+							owns_state = 225
+							owns_state = 259
+							owns_state = 226
+							owns_state = 196
+							owns_state = 221
+							owns_state = 200
+							owns_state = 227
+							owns_state = 228
+					}
+						AND = {
+							controls_state = 199
+							controls_state = 201
+							controls_state = 198
+							controls_state = 192
+							controls_state = 202
+							controls_state = 203
+							controls_state = 197
+							controls_state = 193
+							controls_state = 225
+							controls_state = 259
+							controls_state = 226
+							controls_state = 196
+							controls_state = 221
+							controls_state = 200
+							controls_state = 227
+							controls_state = 228
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 199
+							owns_state = 201
+							owns_state = 198
+							owns_state = 192
+							owns_state = 202
+							owns_state = 203
+							owns_state = 197
+							owns_state = 193
+							owns_state = 225
+							owns_state = 259
+							owns_state = 226
+							owns_state = 196
+							owns_state = 221
+							owns_state = 200
+							owns_state = 227
+							owns_state = 228
+					}
+						AND = {
+							controls_state = 199
+							controls_state = 201
+							controls_state = 198
+							controls_state = 192
+							controls_state = 202
+							controls_state = 203
+							controls_state = 197
+							controls_state = 193
+							controls_state = 225
+							controls_state = 259
+							controls_state = 226
+							controls_state = 196
+							controls_state = 221
+							controls_state = 200
+							controls_state = 227
+							controls_state = 228
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = UKR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			UKR = {
+				transfer_state = 199
+				transfer_state = 201
+				transfer_state = 198
+				transfer_state = 192
+				transfer_state = 202
+				transfer_state = 203
+				transfer_state = 197
+				transfer_state = 193
+				transfer_state = 225
+				transfer_state = 259
+				transfer_state = 226
+				transfer_state = 196
+				transfer_state = 221
+				transfer_state = 200
+				transfer_state = 227
+				transfer_state = 228
+			}
+		}
+	}
+}
+
+GER_reichfin_category = { 
+
+	#Finland expansion0
+	GER_fin_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 722
+					}
+						AND = {
+							controls_state = 722
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 722
+					}
+						AND = {
+							controls_state = 722
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = FIN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			FIN = {
+				transfer_state = 722
+			}
+		}
+	}
+	GER_fin_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 147
+					}
+						AND = {
+							controls_state = 147
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 147
+					}
+						AND = {
+							controls_state = 147
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = FIN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			FIN = {
+				transfer_state = 147
+			}
+		}
+	}
+	GER_fin_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 146
+					}
+						AND = {
+							controls_state = 146
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 146
+					}
+						AND = {
+							controls_state = 146
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = FIN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			FIN = {
+				transfer_state = 146
+			}
+		}
+	}
+	GER_fin_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 213
+							owns_state = 215
+							owns_state = 216
+					}
+						AND = {
+							controls_state = 213
+							controls_state = 215
+							controls_state = 216
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+								owns_state = 213
+								owns_state = 215
+								owns_state = 216
+					}
+						AND = {
+							controls_state = 213
+							controls_state = 215
+							controls_state = 216
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = FIN
+				is_subject_of = GER
+			}
+		}
+		complete_effect = {
+			FIN = {
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 216
+			}
+			hidden_effect = {
+				213 = { add_core_of = FIN }
+				215 = { add_core_of = FIN }
+				216 = { add_core_of = FIN }
+			}
+		}
+	}
+}
+
+GER_reichbel_category = {
+
+	#Belgium expansion0
+	GER_bel_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+						OR = {
+					owns_state = 29
+					controls_state = 29
+					}
+				}
+					any_other_country = {
+						is_subject_of = GER
+						OR = {
+						owns_state = 29
+						controls_state = 29
+						}
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					HOL = {
+						owns_state = 6
+						owns_state = 34
+						owns_state = 29
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BEL = {
+				transfer_state = 29
+				hidden_effect = { 
+				29 = {add_core_of = BEL}
+				set_cosmetic_tag = BEL_GER1
+					}
+				}
+			}
+		}
+
+	#Belgium North France expansion1
+	GER_bel_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 785
+					owns_state = 18
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 785
+						owns_state = 18
+				}
+			}
+		}
+		visible = {
+				
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					29 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+					}
+					}
+				}
+		complete_effect = {
+			BEL = {
+				transfer_state = 785
+				transfer_state = 18
+				hidden_effect = { 
+				785 = {add_core_of = BEL}
+				18 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+
+	#Belgium North France expansion2
+	GER_bel_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+		
+		cost = 25
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 15
+					owns_state = 16
+					owns_state = 17
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 15
+						owns_state = 16					
+						owns_state = 17				
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					29 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+					}
+					18 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+					}
+				}
+			}
+		complete_effect = {
+			BEL = {
+				transfer_state = 15
+				transfer_state = 16
+				transfer_state = 17
+				hidden_effect = { 
+				15 = {add_core_of = BEL}
+				16 = {add_core_of = BEL}
+				17 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+
+	#Belgium North France expansion3
+	GER_bel_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 24
+					owns_state = 27
+					owns_state = 30
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 24
+						owns_state = 27					
+						owns_state = 30				
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					29 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+						}
+					16 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+						}
+					}
+				}
+		complete_effect = {
+			BEL = {
+				transfer_state = 24
+				transfer_state = 27
+				transfer_state = 30
+				hidden_effect = { 
+				24 = {add_core_of = BEL}
+				27 = {add_core_of = BEL}
+				30 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+
+	#Belgium North France expansion4
+	GER_bel_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 23
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 23
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					30 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+					}
+					}
+				}
+		complete_effect = {
+			BEL = {
+				transfer_state = 23
+				hidden_effect = { 
+				23 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+		
+	#Belgium North France expansion brittany
+	GER_bel_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 14
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 14
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					30 = {
+						is_owned_by = BEL
+						is_core_of = BEL
+					}
+					}
+				}
+		complete_effect = {
+			BEL = {
+				transfer_state = 14
+				hidden_effect = { 
+				14 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+
+	#Belgium North France expansion switzerland
+	GER_bel_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 3
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 3
+				}
+			}
+		}
+		visible = {
+				BEL = {owns_state = 17}
+				NOT = {
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					owns_state = 30
+					}
+				OR = {
+					GER = { 
+					owns_state = 3
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 3
+						}
+					}
+				}
+
+		complete_effect = {
+			BEL = {
+				transfer_state = 3
+				hidden_effect = { 
+				3 = {add_core_of = BEL}
+					}
+				}
+			}
+		}
+
+		#Belgium becomes SS Ordensstaat Burgund instead
+	GER_bel_expansion7 = {
+		icon = generic_army_support
+
+		fire_only_once = yes
+		
+		cost = 50
+	
+		available = {
+				NOT = {
+					has_country_leader = {
+						name = "Heinrich Himmler"
+						ruling_only = yes
+					}
+				}
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 27
+					owns_state = 17
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 27
+						owns_state = 17
+				}
+			}
+		}
+		visible = {
+				BEL = {owns_state = 18}
+				NOT = {
+					BEL = {owns_state = 15}
+					has_war_with = ENG
+					has_war_with = FRA
+					}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BEL
+					is_subject_of = GER
+					owns_state = 18
+					}
+				OR = {
+					GER = { 
+					owns_state = 27
+					owns_state = 17
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 27
+						owns_state = 17
+						}
+					}
+				}
+
+		complete_effect = {
+			BUR = {
+				transfer_state = 27
+				transfer_state = 17
+				transfer_state = 18
+				transfer_state = 785
+				transfer_state = 29
+				transfer_state = 6
+				transfer_state = 34
+				GER = { 
+				set_autonomy = { target = BUR autonomy_state = autonomy_reichskommissariat }
+				}
+				hidden_effect = {
+				set_party_name = { ideology = fascism long_name = "Nationalsozialistische Deutsche Arbeiterpartei" name = "NSDAP-Himmlerite"}
+				27 = {add_core_of = BUR}
+				17 = {add_core_of = BUR}
+				18 = {add_core_of = BUR}
+				785 = {add_core_of = BUR}
+				29 = {add_core_of = BUR}
+				6 = {add_core_of = BUR}
+				34 = {add_core_of = BUR}
+					}
+				}
+			}
+		}
+}
+
+GER_reichhol_category = {
+
+	#Netherlands expansion0
+	GER_hol_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 6
+					owns_state = 34
+					owns_state = 29
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 6
+						owns_state = 34
+						owns_state = 29
+				}
+			}
+		}
+		visible = {
+				BEL = {
+					owns_state = 30
+					owns_state = 24
+					owns_state = 27
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = HOL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			HOL = {
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 29
+				set_cosmetic_tag = HOL_GER1
+				hidden_effect = { 
+					6 = {add_core_of = HOL}
+					34 = {add_core_of = HOL}
+					29 = {add_core_of = HOL}
+					}
+				}
+				BEL = {
+					hidden_effect = {
+						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"}
+					}
+					set_cosmetic_tag = BEL_GER2
+				}
+				set_autonomy = { target = BEL autonomy_state = autonomy_reichskommissariat }
+				hidden_effect = {
+					BEL = {
+						set_capital = 16
+				}
+			}
+		}
+	}
+}
+
+GER_reichcro_category = {
+
+	#Croatia - Bosnia
+	GER_cro_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 104
+					owns_state = 823
+					owns_state = 824
+					owns_state = 825
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 104
+						owns_state = 823
+						owns_state = 824
+						owns_state = 825
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					CRO = {
+						owns_state = 104
+						owns_state = 823
+						owns_state = 824
+						owns_state = 825
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CRO
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CRO = {
+				transfer_state = 104
+				transfer_state = 823
+				transfer_state = 824
+				transfer_state = 825
+				hidden_effect = { 
+					104 = {add_core_of = CRO}
+					823 = {add_core_of = CRO}
+					824 = {add_core_of = CRO}
+					825 = {add_core_of = CRO}
+				}
+			}
+		}
+	}
+}
+
+GER_reichhun_category = {
+
+	#Hungary - Vojvodina
+	GER_hun_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 45
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 45
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 45
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 45
+					}
+				}
+				NOT = {
+					HUN = {
+						owns_state = 45
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = HUN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			HUN = {
+				transfer_state = 45
+				hidden_effect = { 
+					45 = {add_core_of = HUN}
+				}
+			}
+		}
+	}
+	#Southern Slovakia
+	GER_hun_expansion1 = {
+		icon = infiltrate_state
+	
+		fire_only_once = yes
+		
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 664
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 664
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					HUN = {
+						owns_state = 664
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = HUN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			HUN = {
+				transfer_state = 664
+				hidden_effect = { 
+					664 = {add_core_of = HUN}
+				}
+			}
+		}
+	}
+	#Carpathian Ruthenia
+	GER_hun_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 73
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 73
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					HUN = {
+						owns_state = 73
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = HUN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			HUN = {
+				transfer_state = 73
+				hidden_effect = { 
+					73 = {add_core_of = HUN}
+				}
+			}
+		}
+	}
+	GER_hun_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 819
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 819
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					HUN = {
+						owns_state = 819
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = HUN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			HUN = {
+				transfer_state = 819
+				hidden_effect = { 
+					819 = {add_core_of = HUN}
+				}
+			}
+		}
+	}
+}
+
+GER_reichalb_category = {
+
+	#Albania - Montenegro
+	GER_alb_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 105
+					owns_state = 826
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 105
+						owns_state = 826
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					ALB = {
+						owns_state = 105
+						owns_state = 826
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALB = {
+				transfer_state = 105
+				transfer_state = 826
+				hidden_effect = { 
+					105 = {add_core_of = ALB}
+					826 = {add_core_of = ALB}
+				}
+			}
+		}
+	}
+	#Albania - Kosovo, Debar
+	GER_alb_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 812
+					owns_state = 813
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 812
+						owns_state = 813
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					ALB = {
+						owns_state = 812
+						owns_state = 813
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALB = {
+				transfer_state = 812
+				transfer_state = 813
+				hidden_effect = { 
+					812 = {add_core_of = ALB}
+					813 = {add_core_of = ALB}
+				}
+			}
+		}
+	}
+}
+
+GER_reichbul_category = {
+
+	#Bulgaria - Macedonia
+	GER_bul_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 106
+					owns_state = 814
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 106
+						owns_state = 814
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					BUL = {
+						owns_state = 106
+						owns_state = 814
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BUL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BUL = {
+				transfer_state = 106
+				transfer_state = 814
+				hidden_effect = { 
+					106 = {add_core_of = BUL}
+					814 = {add_core_of = BUL}
+				}
+			}
+		}
+	}
+	#Bulgaria - Thrace
+	GER_bul_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 184
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 184
+				}
+			}
+		}
+		visible = {
+				NOT = {
+					BUL = {
+						owns_state = 184
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BUL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BUL = {
+				transfer_state = 184
+				hidden_effect = { 
+					184 = {add_core_of = BUL}
+				}
+			}
+		}
+	}
+}
+
+GER_reichspa_category = {
+
+	#Spain expansion0
+	GER_spa_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+			OR = {
+				GER = {
+					controls_state = 118
+				}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 118
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				SPA = {
+					controls_state = 118
+				}
+			}
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = SPA
+				is_subject_of = GER
+			}
+		}
+		complete_effect = {
+			SPA = {
+				transfer_state = 118
+				}
+		}
+	}
+
+	GER_spa_expansion1 = {
+		icon = generic_form_nation
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+			OR = {
+				GER = {
+					controls_state = 180
+					controls_state = 181
+					controls_state = 112
+					controls_state = 795
+					controls_state = 179
+				}
+				any_other_country = {
+					is_subject_of = GER
+					controls_state = 180
+					controls_state = 181
+					controls_state = 112
+					controls_state = 795
+					controls_state = 179
+				}
+			}
+		}
+		visible = {
+			NOT = {
+				SPA = {
+					controls_state = 180
+					controls_state = 181
+					controls_state = 112
+					controls_state = 795
+					controls_state = 179
+				}
+			}
+			original_tag = GER
+			has_government = fascism
+			any_country_with_original_tag = {
+				original_tag_to_check = SPA
+				is_subject_of = GER
+			}
+		}
+		complete_effect = {
+			SPA = {
+				set_cosmetic_tag = IBR_GER
+				transfer_state = 180
+				transfer_state = 181
+				transfer_state = 112
+				transfer_state = 795
+				transfer_state = 179
+				}
+			hidden_effect = {
+				180 = {add_core_of = SPA}
+				181 = {add_core_of = SPA}
+				112 = {add_core_of = SPA}
+				795 = {add_core_of = SPA}
+				179 = {add_core_of = SPA}
+			}
+		}
+	}
+}
+
+GER_reichcog_category = {
+
+	#Mittelafrika expansion0
+	GER_cog_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 768
+					owns_state = 769
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 768
+						owns_state = 769
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 768
+				transfer_state = 769
+				hidden_effect = { 
+					768 = {add_core_of = COG}
+					769 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion1
+	GER_cog_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 546
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 546
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 546
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 546
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 546
+				hidden_effect = { 
+					546 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+	#Mittelafrika expansion2
+	GER_cog_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 772
+					owns_state = 539
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 772
+						owns_state = 539
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 772
+					owns_state = 539
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 772
+					owns_state = 539
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 539
+				transfer_state = 772
+				hidden_effect = { 
+					772 = {add_core_of = COG}
+					539 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion17
+	GER_cog_expansion17 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 297
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 297
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 297
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 297
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 297
+				hidden_effect = { 
+					297 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion18
+	GER_cog_expansion18 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 796
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 796
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 796
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 796
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 796
+				hidden_effect = { 
+					796 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion3
+	GER_cog_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 773
+					owns_state = 774
+					owns_state = 660
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 773
+						owns_state = 774
+						owns_state = 660
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 773
+					owns_state = 774
+					owns_state = 660
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 773
+						owns_state = 774
+						owns_state = 660
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 773
+				transfer_state = 774
+				transfer_state = 660
+				hidden_effect = { 
+					773 = {add_core_of = COG}
+					774 = {add_core_of = COG}
+					660 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion4
+	GER_cog_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 558
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 558
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 558
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 558
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 558
+				hidden_effect = { 
+					558 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion5
+	GER_cog_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 515
+					owns_state = 775
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 515
+						owns_state = 775
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 515
+					owns_state = 775
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 515
+						owns_state = 775
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 515
+				transfer_state = 775
+				hidden_effect = { 
+					515 = {add_core_of = COG}
+					775 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion16
+	GER_cog_expansion16 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 782
+					owns_state = 786
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 782
+						owns_state = 786
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 782
+					owns_state = 786
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 782
+						owns_state = 786
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 782
+				transfer_state = 786
+				hidden_effect = { 
+					782 = {add_core_of = COG}
+					786 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion6
+	GER_cog_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 777
+					owns_state = 776
+					owns_state = 781
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 777
+						owns_state = 776
+						owns_state = 781
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 777
+					owns_state = 776
+					owns_state = 781
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 777
+						owns_state = 776
+						owns_state = 781
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 777
+				transfer_state = 776
+				transfer_state = 781
+				hidden_effect = { 
+					777 = {add_core_of = COG}
+					776 = {add_core_of = COG}
+					781 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion7
+	GER_cog_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 778
+					owns_state = 779
+					owns_state = 556
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 778
+						owns_state = 779
+						owns_state = 556
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 778
+					owns_state = 779
+					owns_state = 556
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 778
+						owns_state = 779
+						owns_state = 556
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 778
+				transfer_state = 779
+				transfer_state = 556
+				hidden_effect = { 
+					778 = {add_core_of = COG}
+					779 = {add_core_of = COG}
+					556 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion8
+	GER_cog_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 274
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 274
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 274
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 274
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 274
+				hidden_effect = { 
+					274 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion9
+	GER_cog_expansion9 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 780
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 780
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 780
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 780
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 780
+				hidden_effect = { 
+					780 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+		#Mittelafrika expansion10
+	GER_cog_expansion10 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 557
+					owns_state = 272
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 557
+						owns_state = 272
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 557
+					owns_state = 272
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 557
+						owns_state = 272
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 557
+				transfer_state = 272
+				hidden_effect = { 
+					557 = {add_core_of = COG}
+					272 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion11
+	GER_cog_expansion11 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 274
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 274
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 274
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 274
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 274
+				hidden_effect = { 
+					274 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion12
+	GER_cog_expansion12 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 700
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 700
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 700
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 700
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 700
+				hidden_effect = { 
+					700 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion13
+	GER_cog_expansion13 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 701
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 701
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 701
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 701
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 701
+				hidden_effect = { 
+					701 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion14
+	GER_cog_expansion14 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 298
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 298
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 298
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 298
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 298
+				hidden_effect = { 
+					298 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion15
+	GER_cog_expansion15 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 296
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 296
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 296
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 296
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 296
+				hidden_effect = { 
+					296 = {add_core_of = COG}
+				}
+			}
+		}
+	}
+
+	#Mittelafrika expansion19
+	GER_cog_expansion19 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 699
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 699
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+					owns_state = 699
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 699
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = COG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			COG = {
+				transfer_state = 699
+				hidden_effect = { 
+					699 = {add_core_of = COG}
+				}
+			}
+		}
+	}	
+}
+
+GER_reichnmb_category = {
+
+	#Südwestafrika expansion0
+	GER_nmb_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 540
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 540
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = NMB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			NMB = {
+				transfer_state = 540
+				hidden_effect = { 
+					540 = {add_core_of = NMB}
+				}
+			}
+		}
+	}
+}
+
+GER_reichzim_category = {
+
+	#Südostafrika expansion0
+	GER_zim_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 771
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 771
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ZIM
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ZIM = {
+				transfer_state = 771
+				hidden_effect = { 
+					771 = {add_core_of = ZIM}
+				}
+			}
+		}
+	}
+
+	#Südostafrika expansion2
+	GER_zim_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 770
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 770
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ZIM
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ZIM = {
+				transfer_state = 770
+				hidden_effect = { 
+					770 = {add_core_of = ZIM}
+				}
+			}
+		}
+	}
+
+	#Südostafrika expansion1
+	GER_zim_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 544
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 544
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ZIM
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ZIM = {
+				transfer_state = 544
+				hidden_effect = { 
+					544 = {add_core_of = ZIM}
+				}
+			}
+		}
+	}
+
+	#Südostafrika expansion3
+	GER_zim_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 543
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 543
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ZIM
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ZIM = {
+				transfer_state = 543
+				hidden_effect = { 
+					543 = {add_core_of = ZIM}
+				}
+			}
+		}
+	}
+	#Südostafrika expansion4
+	GER_zim_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 708
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 708
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ZIM
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ZIM = {
+				transfer_state = 708
+				hidden_effect = { 
+					708 = {add_core_of = ZIM}
+				}
+			}
+		}
+	}
+}
+
+GER_reichsaf_category = {
+
+	#Südafrika expansion0
+	GER_saf_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 542
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 542
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = SAF
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			SAF = {
+				transfer_state = 542
+				hidden_effect = { 
+					542 = {add_core_of = SAF}
+				}
+			}
+		}
+	}
+}
+
+GER_reichken_category = {
+
+	#Ostafrika expansion0
+	GER_ken_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 559
+					owns_state = 271
+					owns_state = 550
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 559
+						owns_state = 271
+						owns_state = 550
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 559
+				transfer_state = 271
+				transfer_state = 550
+				hidden_effect = { 
+					559 = {add_core_of = KEN}
+					271 = {add_core_of = KEN}
+					550 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+
+	#Ostafrika expansion1
+	GER_ken_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 269
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 269
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 269
+				hidden_effect = { 
+					269 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+
+	#Ostafrika expansion2
+	GER_ken_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 268
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 268
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 268
+				hidden_effect = { 
+					268 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+
+	#Ostafrika expansion3
+	GER_ken_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 548
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 548
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 548
+				hidden_effect = { 
+					548 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+
+	#Ostafrika expansion4
+	GER_ken_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 549
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 549
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 549
+				hidden_effect = { 
+					549 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+
+	#Ostafrika expansion5
+	GER_ken_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 551
+					owns_state = 767
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 551
+						owns_state = 767
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = KEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			KEN = {
+				transfer_state = 551
+				transfer_state = 767
+				hidden_effect = { 
+					551 = {add_core_of = KEN}
+					767 = {add_core_of = KEN}
+				}
+			}
+		}
+	}
+}
+
+GER_reichalg_category = {
+
+	#Nordafrika expansion0
+	GER_alg_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 665
+					owns_state = 458
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 665
+						owns_state = 458
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALG = {
+				transfer_state = 665
+				transfer_state = 458
+				hidden_effect = { 
+					665 = {add_core_of = ALG}
+					458 = {add_core_of = ALG}
+				}
+			}
+		}
+	}
+
+	#Nordafrika expansion1
+	GER_alg_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 461
+					owns_state = 462
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 461
+					owns_state = 462
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALG = {
+				transfer_state = 461
+				transfer_state = 462
+				hidden_effect = { 
+					461 = {add_core_of = ALG}
+					462 = {add_core_of = ALG}
+				}
+			}
+		}
+	}
+
+	#Nordafrika expansion2
+	GER_alg_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 290
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 290
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 290
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 290
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALG = {
+				transfer_state = 290
+				hidden_effect = { 
+					290 = {add_core_of = ALG}
+				}
+			}
+		}
+	}
+
+	#Nordafrika expansion3
+	GER_alg_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 783
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 783
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 783
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 783
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALG = {
+				transfer_state = 783
+				hidden_effect = { 
+					783= {add_core_of = ALG}
+				}
+			}
+		}
+	}
+
+		#Nordafrika expansion5
+		GER_alg_expansion5 = {
+			icon = infiltrate_state
+	
+			fire_only_once = yes
+		
+			available = {
+					tag = GER 
+					OR = {
+						GER = {
+						owns_state = 448
+						owns_state = 661
+						owns_state = 449
+						owns_state = 662
+						owns_state = 450
+						owns_state = 663
+						owns_state = 451
+						owns_state = 273
+					}
+						any_other_country = {
+							is_subject_of = GER
+							owns_state = 448
+							owns_state = 661
+							owns_state = 449
+							owns_state = 662
+							owns_state = 450
+							owns_state = 663
+							owns_state = 451
+							owns_state = 273
+					}
+				}
+			}
+			visible = {
+					OR = {
+						GER = {
+							owns_state = 448
+							owns_state = 661
+							owns_state = 449
+							owns_state = 662
+							owns_state = 450
+							owns_state = 663
+							owns_state = 451
+							owns_state = 273
+						}
+						any_other_country = {
+							is_subject_of = GER
+							owns_state = 448
+							owns_state = 661
+							owns_state = 449
+							owns_state = 662
+							owns_state = 450
+							owns_state = 663
+							owns_state = 451
+							owns_state = 273
+						}
+					}
+					original_tag = GER
+					has_government = fascism
+					any_country_with_original_tag = {
+						original_tag_to_check = ALG
+						is_subject_of = GER
+						}
+					}
+			complete_effect = {
+				ALG = {
+					transfer_state = 448
+					transfer_state = 661
+					transfer_state = 449
+					transfer_state = 662
+					transfer_state = 450
+					transfer_state = 663
+					transfer_state = 451
+					transfer_state = 273
+					hidden_effect = { 
+						448= {add_core_of = ALG}
+						661= {add_core_of = ALG}
+						449= {add_core_of = ALG}
+						662= {add_core_of = ALG}
+						450= {add_core_of = ALG}
+						663= {add_core_of = ALG}
+						451= {add_core_of = ALG}
+						273= {add_core_of = ALG}
+					}
+				}
+			}
+		}
+
+	#Nordafrika expansion4
+	GER_alg_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 452
+					owns_state = 447
+					owns_state = 446
+					owns_state = 453
+					owns_state = 457
+					owns_state = 456
+					owns_state = 552
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 452
+						owns_state = 447
+						owns_state = 446
+						owns_state = 453
+						owns_state = 457
+						owns_state = 456
+						owns_state = 552
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 452
+						owns_state = 447
+						owns_state = 446
+						owns_state = 453
+						owns_state = 457
+						owns_state = 456
+						owns_state = 552
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 452
+						owns_state = 447
+						owns_state = 446
+						owns_state = 453
+						owns_state = 457
+						owns_state = 456
+						owns_state = 552
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ALG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			ALG = {
+				transfer_state = 452
+				transfer_state = 447
+				transfer_state = 446
+				transfer_state = 453
+				transfer_state = 457
+				transfer_state = 456
+				transfer_state = 552
+				hidden_effect = { 
+					452= {add_core_of = ALG}
+					447= {add_core_of = ALG}
+					446= {add_core_of = ALG}
+					453= {add_core_of = ALG}
+					457= {add_core_of = ALG}
+					456= {add_core_of = ALG}
+					552= {add_core_of = ALG}
+				}
+			}
+		}
+	}
+}
+
+GER_reichchi_category = {
+
+	#China expansion0
+	GER_chi_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 525
+					owns_state = 527
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 525
+						owns_state = 527
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 525
+						owns_state = 527
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 525
+						owns_state = 527
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CHI = {
+				transfer_state = 525
+				transfer_state = 527
+				hidden_effect = { 
+					525 = {add_core_of = CHI}
+					527 = {add_core_of = CHI}
+				}
+			}
+		}
+	}
+
+	#China expansion1
+	GER_chi_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 330
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 330
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 330
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 330
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CHI = {
+				transfer_state = 330
+				hidden_effect = { 
+					330 = {add_core_of = CHI}
+				}
+			}
+		}
+	}
+
+	#China expansion2
+	GER_chi_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 322
+					owns_state = 757
+					owns_state = 758
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CHI = {
+				transfer_state = 322
+				transfer_state = 757
+				transfer_state = 758
+				hidden_effect = { 
+					322 = {add_core_of = CHI}
+					757 = {add_core_of = CHI}
+					758 = {add_core_of = CHI}
+				}
+			}
+		}
+	}
+
+	#China expansion3
+	GER_chi_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 524
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 524
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 524
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 524
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHI
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CHI = {
+				transfer_state = 524
+				hidden_effect = { 
+					524 = {add_core_of = CHI}
+				}
+			}
+		}
+	}
+}
+
+GER_reichprc_category = {
+
+	#China expansion0
+	GER_prc_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 525
+					owns_state = 527
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 525
+						owns_state = 527
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 525
+						owns_state = 527
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 525
+						owns_state = 527
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = PRC
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			PRC = {
+				transfer_state = 525
+				transfer_state = 527
+				hidden_effect = { 
+					525 = {add_core_of = PRC}
+					527 = {add_core_of = PRC}
+				}
+			}
+		}
+	}
+
+	#China expansion1
+	GER_prc_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 330
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 330
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 330
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 330
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = PRC
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			PRC = {
+				transfer_state = 330
+				hidden_effect = { 
+					330 = {add_core_of = PRC}
+				}
+			}
+		}
+	}
+
+	#China expansion2
+	GER_prc_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 322
+					owns_state = 757
+					owns_state = 758
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 322
+						owns_state = 757
+						owns_state = 758
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = PRC
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			PRC = {
+				transfer_state = 322
+				transfer_state = 757
+				transfer_state = 758
+				hidden_effect = { 
+					322 = {add_core_of = PRC}
+					757 = {add_core_of = PRC}
+					758 = {add_core_of = PRC}
+				}
+			}
+		}
+	}
+
+	#China expansion3
+	GER_prc_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 524
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 524
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 524
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 524
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = PRC
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			PRC = {
+				transfer_state = 524
+				hidden_effect = { 
+					524 = {add_core_of = PRC}
+				}
+			}
+		}
+	}
+}
+
+GER_reichins_category = {
+
+	#Indonesien expansion0
+	GER_ins_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 333
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 333
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 333
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 333
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 333
+				hidden_effect = { 
+					333 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion1
+	GER_ins_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 627
+					owns_state = 626
+					owns_state = 628
+					owns_state = 625
+					owns_state = 624
+					owns_state = 327
+					owns_state = 623
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 627
+						owns_state = 626
+						owns_state = 628
+						owns_state = 625
+						owns_state = 624
+						owns_state = 327
+						owns_state = 623
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 627
+						owns_state = 626
+						owns_state = 628
+						owns_state = 625
+						owns_state = 624
+						owns_state = 327
+						owns_state = 623
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 627
+						owns_state = 626
+						owns_state = 628
+						owns_state = 625
+						owns_state = 624
+						owns_state = 327
+						owns_state = 623
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 627
+				transfer_state = 626
+				transfer_state = 628
+				transfer_state = 625
+				transfer_state = 624
+				transfer_state = 327
+				transfer_state = 623
+				hidden_effect = { 
+					627 = {add_core_of = INS}
+					626 = {add_core_of = INS}
+					628 = {add_core_of = INS}
+					625 = {add_core_of = INS}
+					624 = {add_core_of = INS}
+					327 = {add_core_of = INS}
+					623 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion2
+	GER_ins_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 523
+					owns_state = 737
+					owns_state = 634
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 523
+						owns_state = 737
+						owns_state = 634
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 523
+						owns_state = 737
+						owns_state = 634
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 523
+						owns_state = 737
+						owns_state = 634
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 523
+				transfer_state = 737
+				transfer_state = 634
+				hidden_effect = { 
+					523 = {add_core_of = INS}
+					737 = {add_core_of = INS}
+					634 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion3
+	GER_ins_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 734
+					owns_state = 635
+					owns_state = 641
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 734
+						owns_state = 635
+						owns_state = 641
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 734
+						owns_state = 635
+						owns_state = 641
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 734
+						owns_state = 635
+						owns_state = 641
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 734
+				transfer_state = 635
+				transfer_state = 641
+				hidden_effect = { 
+					734 = {add_core_of = INS}
+					635 = {add_core_of = INS}
+					641 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion4
+	GER_ins_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 647
+					owns_state = 684
+					owns_state = 633
+					owns_state = 648
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 647
+						owns_state = 684
+						owns_state = 633
+						owns_state = 648
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 647
+						owns_state = 684
+						owns_state = 633
+						owns_state = 648
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 647
+						owns_state = 684
+						owns_state = 633
+						owns_state = 648
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 647
+				transfer_state = 684
+				transfer_state = 633
+				transfer_state = 648
+				hidden_effect = { 
+					647 = {add_core_of = INS}
+					684 = {add_core_of = INS}
+					633 = {add_core_of = INS}
+					648 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion5
+	GER_ins_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 638
+					owns_state = 632
+					owns_state = 642
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 638
+						owns_state = 684
+						owns_state = 642
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 638
+						owns_state = 632
+						owns_state = 642
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 638
+						owns_state = 632
+						owns_state = 642
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 638
+				transfer_state = 632
+				transfer_state = 642
+				hidden_effect = { 
+					638 = {add_core_of = INS}
+					632 = {add_core_of = INS}
+					642 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion6
+	GER_ins_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 636
+					owns_state = 643
+					owns_state = 639
+					owns_state = 725
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 636
+						owns_state = 643
+						owns_state = 639
+						owns_state = 725
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 636
+						owns_state = 643
+						owns_state = 639
+						owns_state = 725
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 636
+						owns_state = 643
+						owns_state = 639
+						owns_state = 725
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 636
+				transfer_state = 643
+				transfer_state = 639
+				transfer_state = 725
+				hidden_effect = { 
+					636 = {add_core_of = INS}
+					643 = {add_core_of = INS}
+					639 = {add_core_of = INS}
+					725 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+	
+	#Indonesien expansion7
+	GER_ins_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 726
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 726
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 726
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 726
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 726
+				hidden_effect = { 
+					726 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+
+	#Indonesien expansion8
+	GER_ins_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 727
+					owns_state = 630
+					owns_state = 631
+					owns_state = 650
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 727
+						owns_state = 630
+						owns_state = 631
+						owns_state = 650
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 727
+						owns_state = 630
+						owns_state = 631
+						owns_state = 650
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 727
+						owns_state = 630
+						owns_state = 631
+						owns_state = 650
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = INS
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			INS = {
+				transfer_state = 727
+				transfer_state = 630
+				transfer_state = 631
+				transfer_state = 650
+				hidden_effect = { 
+					727 = {add_core_of = INS}
+					630 = {add_core_of = INS}
+					631 = {add_core_of = INS}
+					650 = {add_core_of = INS}
+				}
+			}
+		}
+	}
+}
+
+GER_reichraj_category = {
+
+	#Indien expansion0
+	GER_raj_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 640
+					owns_state = 288
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 640
+						owns_state = 288
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 640
+						owns_state = 288
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 640
+						owns_state = 288
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 640
+				transfer_state = 288
+				hidden_effect = { 
+					640 = {add_core_of = RAJ}
+					288 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion1
+	GER_raj_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 289
+					owns_state = 724
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 289
+						owns_state = 724
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 289
+						owns_state = 724
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 289
+						owns_state = 724
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 289
+				transfer_state = 724
+				hidden_effect = { 
+					289 = {add_core_of = RAJ}
+					724 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion2
+	GER_raj_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 670
+					owns_state = 741
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 670
+						owns_state = 741
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 670
+						owns_state = 741
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 670
+						owns_state = 741
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 670
+				transfer_state = 741
+				hidden_effect = { 
+					670 = {add_core_of = RAJ}
+					741 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion3
+	GER_raj_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 671
+					owns_state = 286
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 671
+						owns_state = 286
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 671
+						owns_state = 286
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 671
+						owns_state = 286
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 671
+				transfer_state = 286
+				hidden_effect = { 
+					671 = {add_core_of = RAJ}
+					286 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion4
+	GER_raj_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 336
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 336
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 336
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 336
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 336
+				hidden_effect = { 
+					336 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion5
+	GER_raj_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 323
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 323
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 323
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 323
+					}
+				}
+				OR = {
+					GER = {
+						owns_state = 323
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 323
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 323
+				hidden_effect = { 
+					323 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion6
+	GER_raj_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 324
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 324
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 324
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 324
+					}
+				}
+				OR = {
+					GER = {
+						owns_state = 324
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 324
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 324
+				hidden_effect = { 
+					324 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion7
+	GER_raj_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 440
+					owns_state = 442
+					owns_state = 443
+					owns_state = 444
+					owns_state = 445
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 440
+						owns_state = 442
+						owns_state = 443
+						owns_state = 444
+						owns_state = 445
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 440
+						owns_state = 442
+						owns_state = 443
+						owns_state = 444
+						owns_state = 445
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 440
+						owns_state = 442
+						owns_state = 443
+						owns_state = 444
+						owns_state = 445
+					}
+				}
+				OR = {
+					GER = {
+						owns_state = 440
+						owns_state = 442
+						owns_state = 443
+						owns_state = 444
+						owns_state = 445
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 440
+						owns_state = 442
+						owns_state = 443
+						owns_state = 444
+						owns_state = 445
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 440
+				transfer_state = 442
+				transfer_state = 443
+				transfer_state = 444
+				transfer_state = 445
+				hidden_effect = { 
+					440 = {add_core_of = RAJ}
+					442 = {add_core_of = RAJ}
+					443 = {add_core_of = RAJ}
+					444 = {add_core_of = RAJ}
+					445 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion8
+	GER_raj_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 267
+					owns_state = 415
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 267
+						owns_state = 415
+				}
+			}
+		}
+		visible = {
+			
+				OR = {
+					GER = {
+						owns_state = 267
+						owns_state = 415
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 267
+						owns_state = 415
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 267
+				transfer_state = 415
+				hidden_effect = { 
+					267 = {add_core_of = RAJ}
+					415 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+
+	#Indien expansion9
+	GER_raj_expansion9 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 410
+					owns_state = 412
+					owns_state = 414
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 410
+						owns_state = 412
+						owns_state = 414
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 410
+						owns_state = 412
+						owns_state = 414
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 410
+						owns_state = 412
+						owns_state = 414
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = RAJ
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			RAJ = {
+				transfer_state = 410
+				transfer_state = 412
+				transfer_state = 414
+				hidden_effect = { 
+					410 = {add_core_of = RAJ}
+					412 = {add_core_of = RAJ}
+					414 = {add_core_of = RAJ}
+				}
+			}
+		}
+	}
+}
+
+GER_reichtur_category = {
+
+	#Mittlerer Osten expansion0
+	GER_tur_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 677
+					owns_state = 680
+					owns_state = 554
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 677
+						owns_state = 680
+						owns_state = 554
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 677
+						owns_state = 680
+						owns_state = 554
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 677
+						owns_state = 680
+						owns_state = 554
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 677
+				transfer_state = 680
+				transfer_state = 554
+				hidden_effect = { 
+					677 = {add_core_of = TUR}
+					680 = {add_core_of = TUR}
+					554 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion1
+	GER_tur_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 553
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 553
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 553
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 553
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 553
+				hidden_effect = { 
+					553 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion2
+	GER_tur_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 676
+					owns_state = 291
+					owns_state = 675
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 676
+						owns_state = 291
+						owns_state = 675
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 676
+						owns_state = 291
+						owns_state = 675
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 676
+						owns_state = 291
+						owns_state = 675
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 676
+				transfer_state = 291
+				transfer_state = 675
+				hidden_effect = { 
+					676 = {add_core_of = TUR}
+					291 = {add_core_of = TUR}
+					675 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion3
+	GER_tur_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 678
+					owns_state = 292
+					owns_state = 679
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 678
+						owns_state = 292
+						owns_state = 679
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 678
+						owns_state = 292
+						owns_state = 679
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 678
+						owns_state = 292
+						owns_state = 679
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 678
+				transfer_state = 292
+				transfer_state = 679
+				hidden_effect = { 
+					678 = {add_core_of = TUR}
+					292 = {add_core_of = TUR}
+					679 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion4
+	GER_tur_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 293
+					owns_state = 659
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 293
+						owns_state = 659
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 293
+						owns_state = 659
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 293
+						owns_state = 659
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 293
+				transfer_state = 659
+				hidden_effect = { 
+					293 = {add_core_of = TUR}
+					659 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion5
+	GER_tur_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 294
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 294
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 294
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 294
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 294
+				hidden_effect = { 
+					294 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion6
+	GER_tur_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 419
+					owns_state = 420
+					owns_state = 421
+					owns_state = 417
+					owns_state = 413
+					owns_state = 411
+					owns_state = 418
+					owns_state = 416
+					owns_state = 266
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 419
+						owns_state = 420
+						owns_state = 421
+						owns_state = 417
+						owns_state = 413
+						owns_state = 411
+						owns_state = 418
+						owns_state = 416
+						owns_state = 266
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 419
+						owns_state = 420
+						owns_state = 421
+						owns_state = 417
+						owns_state = 413
+						owns_state = 411
+						owns_state = 418
+						owns_state = 416
+						owns_state = 266
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 419
+						owns_state = 420
+						owns_state = 421
+						owns_state = 417
+						owns_state = 413
+						owns_state = 411
+						owns_state = 418
+						owns_state = 416
+						owns_state = 266
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 419
+				transfer_state = 420
+				transfer_state = 421
+				transfer_state = 417
+				transfer_state = 413
+				transfer_state = 411
+				transfer_state = 418
+				transfer_state = 416
+				transfer_state = 266
+				hidden_effect = { 
+					419 = {add_core_of = TUR}
+					420 = {add_core_of = TUR}
+					421 = {add_core_of = TUR}
+					417 = {add_core_of = TUR}
+					413 = {add_core_of = TUR}
+					411 = {add_core_of = TUR}
+					418 = {add_core_of = TUR}
+					416 = {add_core_of = TUR}
+					266 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion7
+	GER_tur_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 454
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 454
+				}
+			}
+		}
+		visible = {
+			OR = {
+					GER = {
+						owns_state = 454
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 454
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 454
+				hidden_effect = { 
+					454 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion8
+	GER_tur_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 455
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 455
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 455
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 455
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 455
+				hidden_effect = { 
+					455 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion9
+	GER_tur_expansion9 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 656
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 656
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 656
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 656
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 656
+				hidden_effect = { 
+					656 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion10
+	GER_tur_expansion10 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 765
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 765
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 765
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 765
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 765
+				hidden_effect = { 
+					765 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion11
+	GER_tur_expansion11 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 658
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 658
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 658
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 658
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 658
+				hidden_effect = { 
+					658 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+
+	#Mittlerer Osten expansion12
+	GER_tur_expansion12 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 183
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 183
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 183
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 183
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = TUR
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			TUR = {
+				transfer_state = 183
+				hidden_effect = { 
+					183 = {add_core_of = TUR}
+				}
+			}
+		}
+	}
+}
+
+GER_reichusa_category = {
+
+	#Amerika expansion0
+	GER_usa_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 464
+					owns_state = 465
+					owns_state = 468
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 464
+						owns_state = 465
+						owns_state = 468
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 464
+						owns_state = 465
+						owns_state = 468
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 464
+						owns_state = 465
+						owns_state = 468
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 464
+				transfer_state = 465
+				transfer_state = 468
+				hidden_effect = {
+					464 = {add_core_of = USA}
+					465 = {add_core_of = USA}
+					468 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion1
+	GER_usa_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 331
+					owns_state = 332
+					owns_state = 466
+					owns_state = 276
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 331
+						owns_state = 332
+						owns_state = 466
+						owns_state = 276
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 331
+						owns_state = 332
+						owns_state = 466
+						owns_state = 276
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 331
+						owns_state = 332
+						owns_state = 466
+						owns_state = 276
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 331
+				transfer_state = 332
+				transfer_state = 466
+				transfer_state = 276
+				hidden_effect = { 
+					331 = {add_core_of = USA}
+					332 = {add_core_of = USA}
+					466 = {add_core_of = USA}
+					276 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion2
+	GER_usa_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 683
+					owns_state = 682
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 683
+						owns_state = 682
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 683
+						owns_state = 682
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 683
+						owns_state = 682
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 683
+				transfer_state = 682
+				hidden_effect = { 
+					683 = {add_core_of = USA}
+					682 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion3
+	GER_usa_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 467
+					owns_state = 469
+					owns_state = 472
+					owns_state = 470
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 467
+						owns_state = 757
+						owns_state = 472
+						owns_state = 470
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 467
+						owns_state = 469
+						owns_state = 472
+						owns_state = 470
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 467
+						owns_state = 469
+						owns_state = 472
+						owns_state = 470
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 467
+				transfer_state = 469
+				transfer_state = 472
+				transfer_state = 470
+				hidden_effect = { 
+					467 = {add_core_of = USA}
+					469 = {add_core_of = USA}
+					472 = {add_core_of = USA}
+					470 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion4
+	GER_usa_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 473
+					owns_state = 471
+					owns_state = 740
+					owns_state = 739
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 473
+						owns_state = 471
+						owns_state = 740
+						owns_state = 739
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 473
+						owns_state = 471
+						owns_state = 740
+						owns_state = 739
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 473
+						owns_state = 471
+						owns_state = 740
+						owns_state = 739
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 473
+				transfer_state = 471
+				transfer_state = 740
+				transfer_state = 739
+				hidden_effect = { 
+					473 = {add_core_of = USA}
+					471 = {add_core_of = USA}
+					740 = {add_core_of = USA}
+					739 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion5
+	GER_usa_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 484
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 484
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 484
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 484
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 484
+				hidden_effect = { 
+					484 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion6
+	GER_usa_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 480
+					owns_state = 481
+					owns_state = 482
+					owns_state = 483
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 480
+						owns_state = 481
+						owns_state = 482
+						owns_state = 483
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 480
+						owns_state = 481
+						owns_state = 482
+						owns_state = 483
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 480
+						owns_state = 481
+						owns_state = 482
+						owns_state = 483
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 480
+				transfer_state = 481
+				transfer_state = 482
+				transfer_state = 483
+				hidden_effect = { 
+					480 = {add_core_of = USA}
+					481 = {add_core_of = USA}
+					482 = {add_core_of = USA}
+					483 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion7
+	GER_usa_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 478
+					owns_state = 479
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 478
+						owns_state = 479
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 478
+						owns_state = 479
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 478
+						owns_state = 479
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 478
+				transfer_state = 479
+				hidden_effect = { 
+					478 = {add_core_of = USA}
+					479 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion8
+	GER_usa_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 685
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 685
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 685
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 685
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 685
+				hidden_effect = { 
+					685 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+		#Amerika expansion9
+	GER_usa_expansion9 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 463
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 463
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 463
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 463
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 463
+				hidden_effect = { 
+					463 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion10
+	GER_usa_expansion10 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 629
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 629
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 629
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 629
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 629
+				hidden_effect = { 
+					629 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+	#Amerika expansion11
+	GER_usa_expansion11 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 101
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 101
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 101
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 101
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = USA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			USA = {
+				transfer_state = 101
+				hidden_effect = { 
+					101 = {add_core_of = USA}
+				}
+			}
+		}
+	}
+}
+
+GER_reichmex_category = {
+
+	#Zentralamerika expansion0
+	GER_mex_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 313
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 313
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 313
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 313
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 313
+				hidden_effect = { 
+					313 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion1
+	GER_mex_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 312
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 312
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 312
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 312
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 312
+				hidden_effect = { 
+					312 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion2
+	GER_mex_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 311
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 311
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 311
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 311
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 311
+				hidden_effect = { 
+					311 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion3
+	GER_mex_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 314
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 314
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 314
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 314
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 314
+				hidden_effect = { 
+					314 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion4
+	GER_mex_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 317
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 317
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 317
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 317
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 317
+				hidden_effect = { 
+					317 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion5
+	GER_mex_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 316
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 316
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 316
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 316
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 316
+				hidden_effect = { 
+					316 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+
+	#Zentralamerika expansion6
+	GER_mex_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 304
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 304
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 304
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 304
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = MEX
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			MEX = {
+				transfer_state = 304
+				hidden_effect = { 
+					304 = {add_core_of = MEX}
+				}
+			}
+		}
+	}
+}
+
+GER_reichbra_category = {
+
+	#Südamerika expansion0
+	GER_bra_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 487
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 487
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 487
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 487
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = BRA
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			BRA = {
+				transfer_state = 487
+				hidden_effect = { 
+					487 = {add_core_of = BRA}
+				}
+			}
+		}
+	}
+}
+
+ 
+
+	
+GER_reicharg_category = {
+	#Argentina expansion0
+	GER_arg_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 688
+							owns_state = 301
+					}
+						AND = {
+							controls_state = 688
+							controls_state = 301
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 688
+							owns_state = 301
+					}
+						AND = {
+							controls_state = 688
+							controls_state = 301
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ARG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			301 = {add_core_of = ARG}
+			688 = {add_core_of = ARG}
+			}
+			ARG = {
+				transfer_state = 301
+				transfer_state = 688
+			}
+		}
+	}
+	GER_arg_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 300
+					}
+						AND = {
+							controls_state = 300
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 300
+					}
+						AND = {
+							controls_state = 300
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = ARG
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			300 = {add_core_of = ARG}
+			}
+			ARG = {
+				transfer_state = 300
+			}
+		}
+	}
+}
+
+GER_reichchl_category = {
+	#Chile expansion0
+	GER_chl_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 302
+					}
+						AND = {
+							controls_state = 302
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 302
+					}
+						AND = {
+							controls_state = 302
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			302 = {add_core_of = CHL}
+			}
+			CHL = {
+				transfer_state = 302
+			}
+		}
+	}
+	GER_chl_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 492
+							owns_state = 494
+							owns_state = 303
+							owns_state = 490
+							owns_state = 491
+					}
+						AND = {
+							controls_state = 492
+							controls_state = 494
+							controls_state = 303
+							controls_state = 490
+							controls_state = 491
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 492
+							owns_state = 494
+							owns_state = 303
+							owns_state = 490
+							owns_state = 491
+					}
+						AND = {
+							controls_state = 492
+							controls_state = 494
+							controls_state = 303
+							controls_state = 490
+							controls_state = 491
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CHL
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			492 = {add_core_of = CHL}
+			494 = {add_core_of = CHL}
+			303 = {add_core_of = CHL}
+			490 = {add_core_of = CHL}
+			491 = {add_core_of = CHL}
+			}
+			CHL = {
+				transfer_state = 492
+				transfer_state = 494
+				transfer_state = 303
+				transfer_state = 490
+				transfer_state = 491
+			}
+		}
+	}
+}
+
+GER_reichven_category = {
+	#Chile expansion0
+	GER_ven_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 486
+							owns_state = 306
+							owns_state = 493
+					}
+						AND = {
+							controls_state = 486
+							controls_state = 306
+							controls_state = 493
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 486
+							owns_state = 306
+							owns_state = 493
+					}
+						AND = {
+							controls_state = 486
+							controls_state = 306
+							controls_state = 493
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = VEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			486 = {add_core_of = VEN}
+			306 = {add_core_of = VEN}
+			491 = {add_core_of = VEN}
+			}
+			VEN = {
+				transfer_state = 486
+				transfer_state = 306
+				transfer_state = 493
+			}
+		}
+	}
+	GER_ven_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+			OR = { 
+				GER = {
+					OR = {
+						AND = { 
+							owns_state = 305
+							owns_state = 649
+					}
+						AND = {
+							controls_state = 305
+							controls_state = 649
+						}
+					}
+				}
+				any_other_country = {
+					AND = { 
+						is_subject_of = GER
+						OR = {
+							AND = { 
+							owns_state = 305
+							owns_state = 649
+					}
+						AND = {
+							controls_state = 305
+							controls_state = 649
+							}
+						}
+					}
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = VEN
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			hidden_effect = {
+			305 = {add_core_of = VEN}
+			649 = {add_core_of = VEN}
+			}
+			VEN = {
+				transfer_state = 305
+				transfer_state = 649
+			}
+		}
+	}
+}
+
+GER_reichcub_category = {
+
+	#Karibik expansion0
+	GER_cub_expansion0 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 690
+					owns_state = 693
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 690
+						owns_state = 693
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 690
+						owns_state = 693
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 690
+						owns_state = 693
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 690
+				transfer_state = 693
+				hidden_effect = { 
+					690 = {add_core_of = CUB}
+					693 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion1
+	GER_cub_expansion1 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 689
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 689
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 689
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 689
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 689
+				hidden_effect = { 
+					689 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion2
+	GER_cub_expansion2 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 318
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 318
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 318
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 318
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 318
+				hidden_effect = { 
+					318 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion3
+	GER_cub_expansion3 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 319
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 319
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 319
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 319
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 319
+				hidden_effect = { 
+					319 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion4
+	GER_cub_expansion4 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 686
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 686
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 686
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 686
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 686
+				hidden_effect = { 
+					686 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion5
+	GER_cub_expansion5 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 694
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 694
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 694
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 694
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 694
+				hidden_effect = { 
+					694 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion6
+	GER_cub_expansion6 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 308
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 308
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 308
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 308
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 308
+				hidden_effect = { 
+					308 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion7
+	GER_cub_expansion7 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 692
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 692
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 692
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 692
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 692
+				hidden_effect = { 
+					692 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion8
+	GER_cub_expansion8 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 691
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 691
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 691
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 691
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 691
+				hidden_effect = { 
+					691 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion9
+	GER_cub_expansion9 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 695
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 695
+				}
+			}
+		}
+		visible = {
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 695
+				hidden_effect = { 
+					695 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion10
+	GER_cub_expansion10 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 310
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 310
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 310
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 310
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 310
+				hidden_effect = { 
+					310 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion11
+	GER_cub_expansion11 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 309
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 309
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 309
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 309
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 309
+				hidden_effect = { 
+					309 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+
+	#Karibik expansion12
+	GER_cub_expansion12 = {
+		icon = infiltrate_state
+
+		fire_only_once = yes
+	
+		available = {
+				tag = GER 
+				OR = {
+					GER = {
+					owns_state = 687
+				}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 687
+				}
+			}
+		}
+		visible = {
+				OR = {
+					GER = {
+						owns_state = 687
+					}
+					any_other_country = {
+						is_subject_of = GER
+						owns_state = 687
+					}
+				}
+				original_tag = GER
+				has_government = fascism
+				any_country_with_original_tag = {
+					original_tag_to_check = CUB
+					is_subject_of = GER
+					}
+				}
+		complete_effect = {
+			CUB = {
+				transfer_state = 687
+				hidden_effect = { 
+					687 = {add_core_of = CUB}
+				}
+			}
+		}
+	}
+}
+
+#GER_gp_reichskommissariats_ost = {
+#
+#		#Poland released
+#	#who'd want to release them anyway am i right?
+#	GER_gp_reichskommissariat_poland = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 10
+#					owns_state = 92
+#					owns_state = 90
+#					owns_state = 88
+#					owns_state = 89
+#					owns_state = 91
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 10
+#					owns_state = 92
+#					owns_state = 90
+#					owns_state = 88
+#					owns_state = 89
+#					owns_state = 91
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 10
+#					owns_state = 92
+#					owns_state = 90
+#					owns_state = 88
+#					owns_state = 89
+#					owns_state = 91
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 10
+#					owns_state = 92
+#					owns_state = 90
+#					owns_state = 88
+#					owns_state = 89
+#					owns_state = 91
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			POL = {
+#				create_country_leader = {
+#					name = "Hans Frank"
+#					desc = "POLITICS_HANS_FRANK_DESC"
+#					picture = "gfx/leaders/GER/Portrait_Hans_Frank.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#					}
+#				}
+#				transfer_state = 10
+#				transfer_state = 92
+#				transfer_state = 90
+#				transfer_state = 88
+#				transfer_state = 89
+#				transfer_state = 91
+#			}
+#			set_autonomy = {
+#						target = POL
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				POL = {
+#				set_cosmetic_tag = POL_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = POL
+#				}
+#			}
+#		}
+#	}
+#
+#	#Czechoslovakia released
+#	GER_gp_reichskommissariat_czechoslovakia = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 9
+#					owns_state = 75
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 9
+#						owns_state = 75
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 9
+#					owns_state = 75
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 9
+#						owns_state = 75
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			CZE = {
+#				create_country_leader = {
+#					name = "Reinhard Heydrich"
+#					desc = "POLITICS_REINHARD_HEYDRICH_DESC"
+#					picture = "gfx/leaders/GER/Portrait_Reinhard_Heydrich.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#					}
+#				}
+#				transfer_state = 9
+#				transfer_state = 75
+#			}
+#			set_autonomy = {
+#						target = CZE
+#						autonomy_state = autonomy_reichsprotectorate
+#					}			
+#			hidden_effect = {
+#				CZE = {
+#					load_focus_tree = generic_focus
+#					remove_ideas = {
+#						CZE_divided_nation
+#						CZE_skoda_works
+#						FRA_army_of_aggression_focus
+#						CZE_german_millitary_cooperation_focus
+#						foreign_expeditions_focus
+#						CZE_planning_bonus
+#						CZE_industrial_legacy_idea
+#						CZE_export_focus1
+#						CZE_export_focus2
+#						CZE_export_focus3
+#						CZE_fortification_focus
+#						CZE_fortification_focus2
+#						CZE_fortification_focus3
+#						CZE_fortification_focus4
+#						communist_influence
+#						CZE_democratic_bastion
+#						CZE_beacon_of_liberty
+#						CZE_czech_fascism
+#						CZE_czech_fascism_idea
+#						CZE_national_fascism_idea
+#						CZE_war_college_idea
+#						CZE_air_focus
+#						CZE_naval_focus
+#						}
+#					set_cosmetic_tag = CZE_GER
+#					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#			}
+#		}
+#	}
+#
+#		#Belarus released
+#		GER_gp_reichskommissariat_belarus = {
+#			icon = ger_reichskommissariats
+#	
+#			fire_only_once = yes
+#		
+#			available = {
+#					tag = GER 
+#					OR = {
+#						GER = {
+#						owns_state = 94
+#						owns_state = 95
+#						owns_state = 96
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 94
+#							owns_state = 95
+#							owns_state = 96
+#					}
+#				}
+#			}
+#			visible = {
+#					original_tag = GER
+#					has_government = fascism
+#					OR = {
+#						GER = {
+#						owns_state = 94
+#						owns_state = 95
+#						owns_state = 96
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 94
+#							owns_state = 95
+#							owns_state = 96
+#					}
+#				}
+#					}
+#			complete_effect = {
+#				BLR = {
+#					create_country_leader = {
+#							name = "Hinrich Lohse"
+#							desc = "POLITICS_HINRICH_LOHSE_DESC"
+#							picture = "gfx/leaders/GER/Portrait_Hinrich_Lohse.dds"
+#							expire = "1965.1.1"
+#							ideology = nazism
+#							traits = {
+#							}
+#						}
+#					transfer_state = 94
+#					transfer_state = 95
+#					transfer_state = 96
+#				}
+#				set_autonomy = {
+#							target = BLR
+#							autonomy_state = autonomy_reichskommissariat
+#						}			
+#				hidden_effect = {
+#					BLR = {
+#						set_cosmetic_tag = BLR_GER
+#						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#					}
+#					GER = {
+#					#puppet = BLR
+#					}
+#				}
+#			}
+#		}
+#		
+#		#Ukraine released
+#		GER_gp_reichskommissariat_ukraine = {
+#			icon = ger_reichskommissariats
+#	
+#			fire_only_once = yes
+#		
+#			available = {
+#					tag = GER 
+#					OR = {
+#						GER = {
+#						owns_state = 93
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 93
+#					}
+#				}
+#			}
+#			visible = {
+#					OR = {
+#						GER = {
+#						owns_state = 93
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 93
+#					}
+#				}
+#					original_tag = GER
+#					has_government = fascism
+#					}
+#			complete_effect = {
+#				UKR = {
+#					create_country_leader = {
+#							name = "Erich Koch"
+#							desc = "POLITICS_ERICH_KOCH_DESC"
+#							picture = "gfx/leaders/GER/Portrait_Erich_Koch.dds"
+#							expire = "1965.1.1"
+#							ideology = nazism
+#							traits = {
+#						}
+#					}
+#					transfer_state = 93
+#				}
+#				set_autonomy = {
+#							target = UKR
+#							autonomy_state = autonomy_reichskommissariat
+#						}			
+#				hidden_effect = {
+#					UKR = {
+#						set_cosmetic_tag = UKR_GER
+#						set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#					}
+#					GER = {
+#					#puppet = UKR
+#					}
+#				}
+#			}
+#		}
+#	
+#	#Moscow released
+#		GER_gp_reichskommissariat_moskowien = {
+#			icon = ger_reichskommissariats
+#	
+#			fire_only_once = yes
+#		
+#			available = {
+#					tag = GER 
+#					OR = {
+#						GER = {
+#						owns_state = 219
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 219
+#					}
+#				}
+#			}
+#			visible = {
+#					original_tag = GER
+#					has_government = fascism
+#					OR = {
+#						GER = {
+#						owns_state = 219
+#					}
+#						any_other_country = {
+#							is_subject_of = GER
+#							owns_state = 219
+#					}
+#				}
+#					}
+#			complete_effect = {
+#				SOV = {
+#				create_country_leader = {
+#						name = "Siegfried Kasche"
+#						desc = "POLITICS_SIEGFRIED_KASCHE_DESC"
+#						picture = "gfx/leaders/GER/Portrait_Siegfried_Kasche.dds"
+#						expire = "1965.1.1"
+#						ideology = nazism
+#						traits = {
+#							}
+#						}
+#					}
+#				set_autonomy = {
+#							target = SOV
+#							autonomy_state = autonomy_reichskommissariat
+#						}			
+#				hidden_effect = {
+#					SOV = {
+#					remove_ideas = {
+#						trotskyite_plot
+#						home_of_revolution
+#						rehabilitated_military_focus
+#						peoples_commissariat_focus
+#						officers_purged_7
+#						nkvd
+#						nkvd_2
+#						smersh
+#						partisan_suppression_focus
+#						progress_cult_focus
+#						SOV_collectivist_propaganda
+#						militarized_schools
+#						workers_culture
+#						socialist_science_focus 
+#						}
+#					load_focus_tree = generic_focus
+#					set_cosmetic_tag = SOV_GER
+#					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#					}
+#					GER = {
+#					release_puppet = SOV
+#					}
+#					set_autonomy = {
+#						target = SOV
+#						autonomy_state = autonomy_reichskommissariat
+#					}
+#				}
+#			}
+#		}
+#
+#	#Kaukasus released
+#	GER_gp_reichskommissariat_kaukasia = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 231
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 231
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 231
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 231
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			GEO = {
+#				create_country_leader = {
+#						name = "Alfred Rosenberg"
+#						desc = "POLITICS_ALFRED_ROSENBERG_DESC"
+#						picture = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+#						expire = "1965.1.1"
+#						ideology = nazism
+#						traits = {
+#						}
+#					}
+#				transfer_state = 231
+#			}
+#			set_autonomy = {
+#						target = GEO
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				GEO = {
+#					set_cosmetic_tag = GEO_GER
+#					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = GEO
+#				}
+#			}
+#		}
+#	}
+#	
+#	#Ural released
+#	GER_gp_reichskommissariat_ural = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 516
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 516
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 516
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 516
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			WSI = {
+#				create_country_leader = {
+#					name = "Erhard Milch"
+#					desc = "POLITICS_ERHARD_MILCH_DESC"
+#					picture = "gfx/leaders/GER/Portrait_Germany_Erhard_Milch.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#						}
+#					}
+#				transfer_state = 516
+#			}
+#			set_autonomy = {
+#						target = WSI
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				WSI = {
+#				set_cosmetic_tag = WSI_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = WSI
+#				}
+#			}
+#		}
+#	}
+#	
+#	#Kazakstan released
+#	GER_gp_reichskommissariat_turkestan = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 588
+#					owns_state = 583
+#					owns_state = 590
+#					owns_state = 402
+#					owns_state = 406
+#					owns_state = 407
+#					owns_state = 587
+#					owns_state = 404
+#					owns_state = 589
+#					owns_state = 586
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 588
+#					owns_state = 583
+#					owns_state = 590
+#					owns_state = 402
+#					owns_state = 406
+#					owns_state = 407
+#					owns_state = 587
+#					owns_state = 404
+#					owns_state = 589
+#					owns_state = 586
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 588
+#					owns_state = 583
+#					owns_state = 590
+#					owns_state = 402
+#					owns_state = 406
+#					owns_state = 407
+#					owns_state = 587
+#					owns_state = 404
+#					owns_state = 589
+#					owns_state = 586
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 588
+#						owns_state = 583
+#						owns_state = 590
+#						owns_state = 402
+#						owns_state = 406
+#						owns_state = 407
+#						owns_state = 587
+#						owns_state = 404
+#						owns_state = 589
+#						owns_state = 586
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			KAZ = {
+#				create_country_leader = {
+#					name = "Werner Kempf"
+#					desc = "POLITICS_WERNER_KEMPF_DESC"
+#					picture = "gfx/leaders/GER/Portrait_Germany_Werner_Kempf.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#					}
+#				}
+#				transfer_state = 588
+#				transfer_state = 583
+#				transfer_state = 590
+#				transfer_state = 402
+#				transfer_state = 406
+#				transfer_state = 407
+#				transfer_state = 587
+#				transfer_state = 404
+#				transfer_state = 589
+#				transfer_state = 586
+#			}
+#			set_autonomy = {
+#						target = KAZ
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				KAZ = {
+#				set_cosmetic_tag = KAZ_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = KAZ
+#				}
+#			}
+#		}
+#	}
+#	
+#	#Siberian released
+#	GER_gp_reichskommissariat_siberian = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 644
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 644
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 644
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 644
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			ESI = {
+#				create_country_leader = {
+#					name = "Hans-Karl Freiherr von Esebeck"
+#					desc = "POLITICS_HANS-KARL_FREIHERR_VON_ESEBECK_DESC"
+#					picture = "gfx/leaders/GER/Portrait_Germany_Hans-Karl_Freiherr_von_Esebeck.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#					}
+#				}
+#				transfer_state = 644
+#			}
+#			set_autonomy = {
+#						target = ESI
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				ESI = {
+#				set_cosmetic_tag = ESI_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = ESI
+#				}
+#			}
+#		}
+#	}
+#}
+#
+#GER_gp_reichskommissariats_west = { 
+#
+#	#Denmark released
+#	GER_gp_reichskommissariat_denmark = {
+#		icon = ger_reichskommissariats
+#	
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 99
+#					owns_state = 37
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 99
+#						owns_state = 37
+#				}
+#			}
+#		}
+#		visible = {
+#				OR = {
+#					GER = {
+#					owns_state = 99
+#					owns_state = 37
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 99
+#						owns_state = 37
+#				}
+#			}
+#				original_tag = GER
+#				has_government = fascism
+#				}
+#		complete_effect = {
+#			DEN = {
+#				transfer_state = 99
+#				transfer_state = 37
+#			}
+#			set_autonomy = {
+#						target = DEN
+#						autonomy_state = autonomy_reichsprotectorate
+#					}			
+#			hidden_effect = {
+#				DEN = {
+#					set_cosmetic_tag = DEN_GER
+#					set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				#puppet = DEN
+#				}
+#			}
+#		}
+#	}
+#
+# #Belgium released
+# GER_gp_reichskommissariat_belgium = {
+#	icon = ger_reichskommissariats
+#
+#	fire_only_once = yes
+#
+#	available = {
+#			tag = GER 
+#			OR = {
+#				GER = {
+#				owns_state = 34
+#				owns_state = 6
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 34
+#					owns_state = 6
+#			}
+#		}
+#	}
+#	visible = {
+#			OR = {
+#				GER = {
+#				owns_state = 34
+#				owns_state = 6
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 34
+#					owns_state = 6
+#			}
+#		}
+#			original_tag = GER
+#			has_government = fascism
+#			}
+#	complete_effect = {
+#		BEL = {
+#			create_country_leader = {
+#				name = "Josef Grohe"
+#				desc = "POLITICS_JOSEF_GROHE_DESC"
+#				picture = "gfx/leaders/GER/Portrait_Josef_Grohe.dds"
+#				expire = "1965.1.1"
+#				ideology = nazism
+#				traits = {
+#				}
+#			}
+#			transfer_state = 34
+#			transfer_state = 6
+#		}
+#		set_autonomy = {
+#					target = BEL
+#					autonomy_state = autonomy_reichskommissariat
+#				}			
+#		hidden_effect = {
+#			BEL = {
+#			set_cosmetic_tag = BEL_GER
+#			set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#			}
+#			GER = {
+#			#puppet = POL
+#			}
+#		}
+#	}
+# }
+#
+# #Netherlands released
+# GER_gp_reichskommissariat_netherlands = {
+#	icon = ger_reichskommissariats
+#
+#	fire_only_once = yes
+#
+#	available = {
+#			tag = GER 
+#			OR = {
+#				GER = {
+#				owns_state = 7
+#				owns_state = 35
+#				owns_state = 36
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 7
+#					owns_state = 35
+#					owns_state = 36
+#			}	
+#		}
+#	}
+#	visible = {
+#			OR = {
+#				GER = {
+#				owns_state = 7
+#				owns_state = 35
+#				owns_state = 36
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 7
+#					owns_state = 35
+#					owns_state = 36
+#			}
+#		}
+#			original_tag = GER
+#			has_government = fascism
+#			}
+#	complete_effect = {
+#		HOL = {
+#			create_country_leader = {
+#				name = "Arthur Seyss-Inquart"
+#				desc = "POLITICS_ARTHUR_SEYSS-INQUART_DESC"
+#				picture = "gfx/leaders/GER/Portrait_Arthur_SeyssInquart.dds"
+#				expire = "1965.1.1"
+#				ideology = nazism
+#				traits = {
+#				}
+#			}
+#			transfer_state = 7
+#			transfer_state = 35
+#			transfer_state = 36
+#		}
+#		set_autonomy = {
+#					target = HOL
+#					autonomy_state = autonomy_reichsprotectorate
+#				}			
+#		hidden_effect = {
+#			HOL = {
+#				load_focus_tree = generic_focus
+#				remove_ideas = {
+#					HOL_wilhelmina
+#					HOL_aloof_neutrality
+#					Hol_shell_shocked_spectator_5
+#					Hol_shell_shocked_spectator_4
+#					Hol_shell_shocked_spectator_3
+#					Hol_shell_shocked_spectator_2
+#					Hol_shell_shocked_spectator_1
+#					HOL_de_crisisjaren_5
+#					HOL_de_crisisjaren_4
+#					HOL_de_crisisjaren_3
+#					HOL_de_crisisjaren_2
+#					HOL_de_crisisjaren_1
+#					HOL_weak_government
+#					HOL_curtail_colonial_autonomy_overlord
+#					HOL_expand_the_colonial_army
+#					HOL_the_foundations_of_defense
+#					HOL_liberation
+#					HOL_make_use_of_our_riches
+#					HOL_domestic_vehicle_designs
+#					HOL_domestic_jet_engine_designs_1
+#					HOL_domestic_jet_engine_designs_2
+#					HOL_friesland_agricultural_impetus
+#					HOL_naval_heritage
+#					HOL_modernize_the_air_fleet
+#					HOL_production_under_license
+#					HOL_light_tanks_for_the_colonies
+#					HOL_anti_tank_guns_for_the_continent
+#					HOL_prepare_the_inundation_lines
+#					HOL_volk_en_vaderland
+#					HOL_de_jeugdstorm
+#					HOL_implement_the_program
+#					HOL_imperial_ambitions
+#					HOL_assume_the_naval_burden
+#					HOL_soviet_technical_teams
+#					HOL_bastion_of_true_communism
+#					HOL_enemies_on_all_fronts
+#					HOL_haven_of_tolerance
+#					HOL_french_military_mission
+#					HOL_mobilize_the_masses
+#					HOL_red_is_the_new_orange
+#					HOL_unity_through_democracy
+#					HOL_responsibility_for_our_own_defense
+#					HOL_lessons_from_the_low_countries
+#					HOL_de_vaarplicht
+#					HOL_depillarization
+#					HOL_combined_chiefs_of_staff_representation
+#					HOL_the_fourth_ally
+#					HOL_allied_technological_developments
+#					HOL_legacy_of_the_de_zeven_provincien_mutiny
+#					HOL_oranje_boven_2
+#					HOL_red_is_the_new_orange
+#
+#					}
+#				set_cosmetic_tag = HOL_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#			}
+#		}
+#	}
+# }
+
+#	#Italy released
+#	GER_gp_reichskommissariat_italy = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 2
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 2
+#				}
+#			}
+#		}
+#		visible = {
+#				original_tag = GER
+#				has_government = fascism
+#				OR = {
+#					GER = {
+#					owns_state = 2
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 2
+#				}
+#			}
+#				}
+#		complete_effect = {
+#			set_autonomy = {
+#						target = ITA
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				ITA = {
+#				remove_ideas = {
+#					victor_emmanuel
+#					vittoria_mutilata
+#					MTG_naval_treaty_adherent
+#					ITA_german_millitary_cooperation_focus
+#					}
+#				load_focus_tree = generic_focus
+#				set_cosmetic_tag = ITA_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				create_country_leader = {
+#					name = "Giovanni Messe"
+#					desc = "POLITICS_GIOVANNI_MESSE_DESC"
+#					picture = "gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+#					expire = "1965.1.1"
+#					ideology = nazism
+#					traits = {
+#					}
+#				}
+#				}
+#				GER = {
+#				release_puppet = ITA
+#				}
+#				set_autonomy = {
+#					target = ITA
+#					autonomy_state = autonomy_reichskommissariat
+#				}
+#			}
+#		}
+#	}
+
+#	#France released
+#	GER_gp_reichskommissariat_france = {
+#		icon = ger_reichskommissariats
+#
+#		fire_only_once = yes
+#	
+#		available = {
+#				tag = GER 
+#				OR = {
+#					GER = {
+#					owns_state = 16
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 16
+#				}
+#			}
+#		}
+#		visible = {
+#				original_tag = GER
+#				has_government = fascism
+#				OR = {
+#					GER = {
+#					owns_state = 16
+#				}
+#					any_other_country = {
+#						is_subject_of = GER
+#						owns_state = 16
+#				}
+#			}
+#				}
+#		complete_effect = {
+#			set_autonomy = {
+#						target = FRA
+#						autonomy_state = autonomy_reichskommissariat
+#					}			
+#			hidden_effect = {
+#				FRA = {
+#				remove_ideas = {
+#					trotskyite_plot
+#					home_of_revolution
+#					rehabilitated_military_focus
+#					peoples_commissariat_focus
+#					officers_purged_7
+#					nkvd
+#					nkvd_2
+#					smersh
+#					partisan_suppression_focus
+#					progress_cult_focus
+#					SOV_collectivist_propaganda
+#					militarized_schools
+#					workers_culture
+#					socialist_science_focus 
+#					}
+#				load_focus_tree = generic_focus
+#				set_cosmetic_tag = FRA_GER
+#				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#				}
+#				GER = {
+#				release_puppet = FRA
+#				}
+#				set_autonomy = {
+#					target = FRA
+#					autonomy_state = autonomy_reichskommissariat
+#				}
+#			}
+#		}
+#	}
+#
+# #England released
+# GER_gp_reichskommissariat_england = {
+#	icon = ger_reichskommissariats
+#
+#	fire_only_once = yes
+#
+#	available = {
+#			tag = GER 
+#			OR = {
+#				GER = {
+#				owns_state = 126
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 126
+#			}
+#		}
+#	}
+#	visible = {
+#			original_tag = GER
+#			has_government = fascism
+#			OR = {
+#				GER = {
+#				owns_state = 126
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 126
+#			}
+#		}
+#			}
+#	complete_effect = {
+#		set_autonomy = {
+#					target = ENG
+#					autonomy_state = autonomy_reichskommissariat
+#				}			
+#		hidden_effect = {
+#			ENG = {
+#			remove_ideas = {
+#				MTG_naval_treaty_adherent
+#				stiff_upper_lip
+#				ENG_the_war_to_end_all_wars
+#				george_v
+#				officers_purged_7
+#				nkvd
+#				nkvd_2
+#				smersh
+#				partisan_suppression_focus
+#				progress_cult_focus
+#				SOV_collectivist_propaganda
+#				militarized_schools
+#				workers_culture
+#				socialist_science_focus 
+#				}
+#			load_focus_tree = generic_focus
+#			set_cosmetic_tag = ENG_GER
+#			set_party_name = { ideology = fascism long_name = "British Union of National Socialists" name = "BUNS"}
+#			}
+#			GER = {
+#			release_puppet = ENG
+#			}
+#			set_autonomy = {
+#				target = ENG
+#				autonomy_state = autonomy_reichskommissariat
+#			}
+#		}
+#	}
+# }
+#
+# #Spain released
+# GER_gp_reichskommissariat_spain = {
+#	icon = ger_reichskommissariats
+#
+#	fire_only_once = yes
+#
+#	available = {
+#			tag = GER 
+#			OR = {
+#				GER = {
+#				owns_state = 41
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 41
+#			}
+#		}
+#	}
+#	visible = {
+#			original_tag = GER
+#			has_government = fascism
+#			OR = {
+#				GER = {
+#				owns_state = 41
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 41
+#			}
+#		}
+#			}
+#	complete_effect = {
+#		set_autonomy = {
+#					target = SPR
+#					autonomy_state = autonomy_reichskommissariat
+#				}			
+#		hidden_effect = {
+#			SPR = {
+#			remove_ideas = {
+#				SPA_carlism_1
+#				SPR_military_disloyalty
+#				SPR_political_violence
+#				SPR_national_strikes_3
+#				SPR_national_strikes_2
+#				SPR_national_strikes_1
+#				}
+#			load_focus_tree = generic_focus
+#			set_cosmetic_tag = SPA_GER
+#			set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#			}
+#			GER = {
+#			release_puppet = SPR
+#			}
+#			set_autonomy = {
+#				target = SPR
+#				autonomy_state = autonomy_reichskommissariat
+#			}
+#		}
+#	}
+# }
+#
+# #Siberian released
+# GER_gp_reichskommissariat_siberian = {
+#	icon = ger_reichskommissariats
+#
+#	fire_only_once = yes
+#
+#	available = {
+#			tag = GER 
+#			OR = {
+#				GER = {
+#				owns_state = 644
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 644
+#			}
+#		}
+#	}
+#	visible = {
+#			OR = {
+#				GER = {
+#				owns_state = 644
+#			}
+#				any_other_country = {
+#					is_subject_of = GER
+#					owns_state = 644
+#			}
+#		}
+#			original_tag = GER
+#			has_government = fascism
+#			}
+#	complete_effect = {
+#		ESI = {
+#			create_country_leader = {
+#				name = "Hans-Karl Freiherr von Esebeck"
+#				desc = "POLITICS_HANS-KARL_FREIHERR_VON_ESEBECK_DESC"
+#				picture = "gfx/leaders/GER/Portrait_Germany_Hans-Karl_Freiherr_von_Esebeck.dds"
+#				expire = "1965.1.1"
+#				ideology = nazism
+#				traits = {
+#				}
+#			}
+#			transfer_state = 644
+#		}
+#		set_autonomy = {
+#					target = ESI
+#					autonomy_state = autonomy_reichskommissariat
+#				}			
+#		hidden_effect = {
+#			ESI = {
+#			set_cosmetic_tag = ESI_GER
+#			set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+#			}
+#			GER = {
+#			#puppet = ESI
+#			}
+#		}
+#	}
+# }
+#}

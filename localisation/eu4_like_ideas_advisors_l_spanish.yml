@@ -1,0 +1,27 @@
+﻿l_spanish:
+ # Advisors:
+ idea_cost_modifier_reduction_trait: "Scientist"
+ idea_cost_modifier_reduction_trait_desc: "A scientist that is able to reduce idea cost because of his work."
+ 
+ generic_minister_ideas_bonus_staunch_monarchist: "Monarchist Politician"
+ generic_minister_ideas_bonus_communist_revolutionary: "Communist Politician"
+ generic_minister_ideas_bonus_fascist_demagogue: "Fascist Politician"
+ generic_minister_ideas_bonus_democratic_reformer: "Democratic Politician"
+ generic_minister_ideas_bonus_silent_workhorse: "Silent Workhorse"
+ generic_minister_ideas_bonus_captain_of_industry: "Industrial Lobbyist"
+ generic_minister_ideas_bonus_war_industrialist: "War Industrialist"
+ 
+ minister_ideas_bonus_staunch_monarchist: "Monárquico acérrimo"
+ minister_ideas_bonus_staunch_monarchist_desc: "Este político cree que un gobernante hereditario es un símbolo poderoso que une al país."
+ minister_ideas_bonus_communist_revolutionary: "Revolucionario comunista"
+ minister_ideas_bonus_communist_revolutionary_desc: "Un partidario de la revolución internacional que espera contribuir a la transición comunista del país y, con el tiempo, del mundo."
+ minister_ideas_bonus_fascist_demagogue: "Demagogo fascista"
+ minister_ideas_bonus_fascist_demagogue_desc: "Este político, motivado por la voluntad de unir a la gente bajo un estado fuerte, hace uso de una retórica nacionalista y militarista."
+ minister_ideas_bonus_democratic_reformer: "Reformista democrático"
+ minister_ideas_bonus_democratic_reformer_desc: "Este político es un firme defensor del derecho de las personas a gobernarse a sí mismas. Su máxima prioridad sería darle el poder al pueblo y lograr que gobierne el país con su mandato."
+ minister_ideas_bonus_silent_workhorse: "Bestia de carga silenciosa"
+ minister_ideas_bonus_captain_of_industry: "Capitán industrial"
+ minister_ideas_bonus_war_industrialist: "Industrial de guerra"
+ 
+ HAS_NOT_COMPLETED_ALL_IDEA_GROUPS: "Can still unlock ideas"
+ 

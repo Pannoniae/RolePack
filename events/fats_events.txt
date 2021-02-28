@@ -1,0 +1,254 @@
+add_namespace = fats
+
+country_event = {
+	id = fats.1
+	title = fats.1.t
+	desc = fats.1.desc
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = { # Curses!
+		name = fats.1.a
+	}
+}
+
+country_event = {
+	id = fats.2
+	title = fats.2.t
+	desc = fats.2.desc
+	picture = GFX_report_event_german_troops
+	
+	is_triggered_only = yes
+	
+	option = { # ohshitohshitohshit
+		name = fats.2.a
+	}
+}
+
+country_event = {
+	id = fats.3
+	title = fats.3.t
+	desc = fats.3.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.3.a
+		country_event = {
+			id = fats.4
+		}
+	}
+	
+	option = {
+		name = fats.3.b
+		set_country_flag = toolpack_q1_right
+		country_event = {
+			id = fats.4
+		}
+	}
+	
+	option = {
+		name = fats.3.c
+		country_event = {
+			id = fats.4
+		}
+	}
+	
+	option = {
+		name = fats.3.d
+		country_event = {
+			id = fats.4
+		}
+	}
+}
+
+country_event = {
+	id = fats.4
+	title = fats.4.t
+	desc = fats.4.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.4.a
+		country_event = {
+			id = fats.5
+		}
+	}
+	
+	option = {
+		name = fats.4.b
+		set_country_flag = toolpack_q2_right
+		country_event = {
+			id = fats.5
+		}
+	}
+	
+	option = {
+		name = fats.4.c
+		country_event = {
+			id = fats.5
+		}
+	}
+	
+	option = {
+		name = fats.4.d
+		country_event = {
+			id = fats.5
+		}
+	}
+}
+
+country_event = {
+	id = fats.5
+	title = fats.5.t
+	desc = fats.5.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.5.a
+		set_country_flag = toolpack_q3_right
+		country_event = {
+			id = fats.6
+		}
+	}
+	
+	option = {
+		name = fats.5.b
+		country_event = {
+			id = fats.6
+		}
+	}
+	
+	option = {
+		name = fats.5.c
+		country_event = {
+			id = fats.6
+		}
+	}
+	
+	option = {
+		name = fats.5.d
+		country_event = {
+			id = fats.6
+		}
+	}
+}
+
+country_event = {
+	id = fats.6
+	title = fats.6.t
+	desc = fats.6.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.6.a
+		country_event = {
+			id = fats.7
+		}
+	}
+	
+	option = {
+		name = fats.6.b
+		country_event = {
+			id = fats.7
+		}
+	}
+	
+	option = {
+		name = fats.6.c
+		set_country_flag = toolpack_q4_right
+		country_event = {
+			id = fats.7
+		}
+	}
+	
+	option = {
+		name = fats.6.d
+		country_event = {
+			id = fats.7
+		}
+	}
+}
+
+country_event = {
+	id = fats.7
+	title = fats.7.t
+	desc = fats.7.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.7.a
+		country_event = {
+			id = fats.8
+		}
+	}
+	
+	option = {
+		name = fats.7.b
+		set_country_flag = toolpack_q5_right
+		country_event = {
+			id = fats.8
+		}
+	}
+	
+	option = {
+		name = fats.7.c
+		country_event = {
+			id = fats.8
+		}
+	}
+	
+	option = {
+		name = fats.7.d
+		country_event = {
+			id = fats.8
+		}
+	}
+}
+
+country_event = {
+	id = fats.8
+	title = fats.8.t
+	desc = fats.8.desc
+	picture = GFX_report_event_spain_civil_war_soldiers
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = fats.8.a
+	}
+	
+	option = {
+		name = fats.8.b
+	}
+	
+	option = {
+		name = fats.8.c
+	}
+	
+	option = {
+		name = fats.8.d
+		hidden_effect = {
+			if = {
+				limit = {
+					has_country_flag = toolpack_q1_right
+					has_country_flag = toolpack_q2_right
+					has_country_flag = toolpack_q3_right
+					has_country_flag = toolpack_q4_right
+					has_country_flag = toolpack_q5_right
+				}
+				set_country_flag = toolpack_allowed
+			}
+		}
+	}
+}

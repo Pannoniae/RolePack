@@ -1,0 +1,3 @@
+WSI = "countries/West Siberia.txt"
+ESI = "countries/East Siberia.txt"
+BUR = "countries/Burgundy.txt"
