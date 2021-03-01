@@ -136,7 +136,7 @@ ideas = {
 		}
 	############
 
-			HUN_Army_research_boost = {
+		HUN_army_research_boost = {
 			
 			picture = generic_production_bonus
 			
