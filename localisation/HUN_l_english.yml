@@ -195,7 +195,7 @@
  HUN_intervention_desc:0 "There are many conflicts brewing in Europe. We must intervene in them in order to protect our security."
  HUN_hungarian_volunteers:0 "Hungarian Volunteer Forces"
  
- HUN_hungarian_production:0 "Hungarian Production"
+ HUN_Hungarian_production:0 "Hungarian Production"
  HUN_increase_army_production:0 "Produce Arms for Export"
  HUN_increase_army_production_desc:0 "We cannot stand alone. We must produce weapons to influence conflicts in Europe in our favour."
  
@@ -205,5 +205,8 @@
  HUN_army_research:0 "Quality"
  HUN_army_research_desc:0 "Hungary is a small country. We simply cannot afford to produce substandard stuff - our weapons' quality must be the finest to distinguish ourselves from other nations."
  HUN_army_research_boost:0 "Army Research"
+ 
+ HUN_Improve_Railways:0 "Improve Railways"
+ HUN_Improve_Railways_desc:0 "We have to improve our Penis."
  
  
