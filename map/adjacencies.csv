@@ -150,6 +150,9 @@ From;To;Type;Through;start_x;start_y;stop_x;stop_y;adjacency_rule_name;Comment
 5407;2400;;-1;-1;-1;-1;-1;GIBRALTAR_STRAIT;Gibraltar South
 2455;2506;;-1;-1;-1;-1;-1;DANISH_BELTS_STRAIT;Øresund
 5412;7678;;-1;-1;-1;-1;-1;BOSPHORUS_STRAIT;Bosphorus
+4135;9945;sea;5407;-1;-1;-1;-1;;Gibraltar-Tanqier
+4985;5074;sea;2776;-1;-1;-1;-1;;F_Somaliland-Aden
+10904;7982;sea;2919;-1;-1;-1;-1;;Persian Gulf
 1658;10588;impassable;-1;-1;-1;-1;-1;;Mount Elbert
 10825;1991;impassable;-1;-1;-1;-1;-1;;Himalayas
 10825;8029;impassable;-1;-1;-1;-1;-1;;Himalayas
