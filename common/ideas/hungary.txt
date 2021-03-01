@@ -134,6 +134,21 @@ ideas = {
 					industrial_capacity_factory = 0.05
 			}
 		}
+	############
+
+			HUN_Army_research_boost = {
+			
+			picture = generic_production_bonus
+			
+			allowed_civil_war = {
+				has_government = democratic
+				}
+			
+			modifier = {
+					research_speed_factor = 0.05
+			}
+		}	
+		
 		
 		HUN_resilience = {
 		
