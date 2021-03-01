@@ -1,0 +1,25 @@
+state={
+	id=860
+	name="STATE_860"
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			12049 = {
+				naval_base = 2
+			}
+			4073 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = EGY
+
+	}
+	provinces={
+		1155 4073 9947 12049 
+	}
+	manpower=1347976
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}
