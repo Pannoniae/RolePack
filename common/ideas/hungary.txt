@@ -102,8 +102,8 @@ ideas = {
 			
 			modifier = {
 				democratic_drift = 0.1
-				stability_factor = 0.15
-				political_power_factor = 0.2
+				stability_factor = 0.1
+				political_power_factor = 0.1
 			}
 		}
 			HUN_Hungarian_volunteers = {
@@ -130,11 +130,10 @@ ideas = {
 			
 			modifier = {
 					production_factory_max_efficiency_factor = 0.05
-					war_support_factor = 0.1
+					war_support_factor = 0.05
 					industrial_capacity_factory = 0.05
 			}
 		}
-	############
 
 		HUN_army_research_boost = {
 			
@@ -148,8 +147,7 @@ ideas = {
 					research_speed_factor = 0.05
 			}
 		}	
-		
-		
+			
 		HUN_resilience = {
 		
 			picture = MEX_politicised_army

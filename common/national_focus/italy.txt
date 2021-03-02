@@ -19,7 +19,7 @@ focus_tree = {
 		y = 0
 		cost = 5
 		mutually_exclusive = {
-			focus = ITA_leave_the_league_of_nations focus = ITA_assasinate_mussolini
+			focus = ITA_leave_the_league_of_nations
 		}
 		available_if_capitulated = yes
 		available = {
@@ -251,38 +251,13 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER }
 	}
-	focus = {
-	
-		id = ITA_assasinate_mussolini
-		icon = GFX_goal_italy_leave_the_league_of_nations
-		cost = 5
-		mutually_exclusive = {
-			focus = ITA_royal_intervention focus = ITA_leave_the_league_of_nations
-		}
-		ai_will_do = {
-			factor = 120
-			modifier = {
-				factor = 2
-				date > 1938.1.1
-			}
-		}
-		x = 53
-		y = 0
-
-		completion_reward = {
-			ITA = {
-			
-			}
-		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
-	}
 	
 	focus = {
 		id = ITA_leave_the_league_of_nations
 		icon = GFX_goal_italy_leave_the_league_of_nations
 		cost = 5
 		mutually_exclusive = {
-			focus = ITA_royal_intervention focus = ITA_assasinate_mussolini
+			focus = ITA_royal_intervention
 		}
 		ai_will_do = {
 			factor = 120

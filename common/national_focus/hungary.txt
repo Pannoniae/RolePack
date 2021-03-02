@@ -114,6 +114,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = HUN_democracy
 			set_party_name = { ideology = democratic long_name = HUN_democratic_party_long name = HUN_democratic_party }
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.035
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -190,6 +194,8 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = neutrality_idea
+			add_stability = 0.05
+			add_war_support = -0.05
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -198,7 +204,7 @@ focus_tree = {
 		id = HUN_improve_democratic_institutions
 		icon = GFX_goal_generic_generic_political
 		prerequisite = { focus = HUN_focus_neutrality focus = HUN_intervention}
-		x = -3
+		x = -2
 		y = 1
 		relative_position_id = HUN_focus_neutrality
 
@@ -232,7 +238,7 @@ focus_tree = {
 		id = HUN_election_reform
 		icon = GFX_goal_generic_peaceful_diplomacy
 		prerequisite = { focus = HUN_improve_democratic_institutions }
-		x = -3
+		x = -2
 		y = 2
 		relative_position_id = HUN_focus_neutrality
 
@@ -266,7 +272,7 @@ focus_tree = {
 		id = HUN_implement_direct_voting
 		icon = GFX_focus_usa_voter_registration_act
 		prerequisite = { focus = HUN_election_reform }
-		x = -3
+		x = -2
 		y = 3
 		relative_position_id = HUN_focus_neutrality
 
@@ -335,7 +341,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_focus_neutrality
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -398,7 +404,7 @@ focus_tree = {
 		y = 3
 		relative_position_id = HUN_focus_neutrality
 
-		cost = 10
+		cost = 6
 
 		ai_will_do = {
 			factor = 80
@@ -501,7 +507,7 @@ focus_tree = {
 		y = 2
 		relative_position_id = HUN_focus_neutrality
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 80
@@ -668,11 +674,10 @@ focus_tree = {
 	focus = {
 		id = HUN_revoke_the_jewish_laws
 		icon = GFX_focus_research
-		prerequisite = { focus = HUN_election_reform }
-		prerequisite = { focus = HUN_begin_rearmament }
-		x = 0
-		y = 3
-		relative_position_id = HUN_focus_neutrality
+		prerequisite = { focus = HUN_focus_neutrality focus = HUN_intervention}
+		x = 2
+		y = 1
+		relative_position_id = HUN_intervention
 
 		cost = 10
 
@@ -732,6 +737,8 @@ focus_tree = {
 			completion_reward = {
 				set_rule = { can_send_volunteers = yes }
 				add_ideas = HUN_Hungarian_volunteers
+				add_war_support = 0.05
+				add_stability = -0.05
 			}
 		}
 	
@@ -846,7 +853,7 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
-#####
+
 	focus = {
 		id = HUN_Improve_Railways
 		icon = GFX_goal_generic_construct_infrastructure
@@ -891,6 +898,9 @@ focus_tree = {
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
+##
+
+##
 	############################
 	##### BALANCED BUDGET ######
 	############################
