@@ -28,3 +28,12 @@ NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.2 -- base compliance grow
 NDefines.NAir.AIR_WING_MAX_SIZE = 1600
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
+
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 31 --20 
+NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.1, 0.05, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
+
+NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
+NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
+NDefines_Graphics.NGraphics.MAP_BUILDINGS_SHRINK_DISTANCE = 100				-- 180
+
+NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 3 --12 Y E E T

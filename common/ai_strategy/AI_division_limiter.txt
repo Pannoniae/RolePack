@@ -13,7 +13,7 @@ division_limiter = {
 			upper_limit = num_of_factories
 		}
 		multiply_temp_variable = {
-			upper_limit = 1.15
+			upper_limit = 0.85
 		}
 		if = {
 			limit = {
@@ -31,14 +31,6 @@ division_limiter = {
 				upper_limit = 1.15
 			}
 		}
-		if = {
-			limit = {
-				threat > 0.75
-			}
-			multiply_temp_variable = {
-				upper_limit = 1.05
-			}
-		}
 		check_variable = {
 			num_divisions > upper_limit
 		}
@@ -48,73 +40,73 @@ division_limiter = {
 	ai_strategy = {
 		type = build_army
 		id = cavalry
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = garrison
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = suppression
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = paratroopers
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = mountaineers
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = marines
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = armor
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = light_armor
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = heavy_armor
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = medium_armor
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = modern_armor
-		value = -300
+		value = -3000
 	}
 
 	ai_strategy = {
 		type = build_army
 		id = infantry
-		value = -300
+		value = -3000
 	}
 
 }
