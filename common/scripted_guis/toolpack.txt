@@ -100,33 +100,6 @@ scripted_gui = {
 					set_global_flag = tpt_window_a
 				}
 			}
-			dst_A_open_click = {
-				if = {
-					limit = { NOT = { has_country_flag = dst_A_enabled } }
-					set_country_flag = dst_A_enabled
-				}
-				else = {
-					clr_country_flag = dst_A_enabled
-				}
-			}
-			dst_B_open_click = {
-				if = {
-					limit = { NOT = { has_country_flag = dst_B_enabled } }
-					set_country_flag = dst_B_enabled
-				}
-				else = {
-					clr_country_flag = dst_B_enabled
-				}
-			}
-			sst_open_click = {
-				if = {
-					limit = { NOT = { has_country_flag = sst_enabled } }
-					set_country_flag = sst_enabled
-				}
-				else = {
-					clr_country_flag = sst_enabled
-				}
-			}
 			bst_open_click = {
 				if = {
 					limit = { NOT = { has_country_flag = bst_enabled } }
@@ -203,24 +176,6 @@ scripted_gui = {
 				NOT = { has_country_flag = tp_page_2 }
 			}
 			tpt_title_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			dst_A_open_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			dst_A_title_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			dst_B_open_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			dst_B_title_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			sst_open_visible = {
-				NOT = { has_country_flag = tp_page_2 }
-			}
-			sst_title_visible = {
 				NOT = { has_country_flag = tp_page_2 }
 			}
 			bst_open_visible = {
@@ -336,38 +291,11 @@ scripted_gui = {
 			tcw_cancel_button_click = {
 				clr_country_flag = tp_open_confirmation_window
 				tcw_clear_all_global_confirms = yes
-				every_country = { clr_country_flag = sst_ship_deletion_target }
-				every_country = { clr_country_flag = dsta_unit_deletion_target }
-				every_country = { clr_country_flag = dstb_unit_deletion_target }
 			}
 			tcw_confirm_button_click = {
 				if = {
 					limit = { has_global_flag = tpt_confirm_faction_dismantling }
 					every_country = { dismantle_faction = yes }
-				}
-				if = {
-					limit = { has_global_flag = dst_a_confirm_unit_deletion }
-					random_country = { 
-						limit = { has_country_flag = dsta_unit_deletion_target }
-						clr_country_flag = dsta_unit_deletion_target
-						dst_a_delete_units = yes
-					}
-				}
-				if = {
-					limit = { has_global_flag = dst_b_confirm_unit_deletion }
-					random_country = { 
-						limit = { has_country_flag = dstb_unit_deletion_target }
-						clr_country_flag = dstb_unit_deletion_target
-						dst_b_delete_units = yes
-					}
-				}
-				if = {
-					limit = { has_global_flag = sst_confirm_ship_deletion }
-					random_country = { 
-						limit = { has_country_flag = sst_ship_deletion_target }
-						sst_destroy_ship = yes
-						clr_country_flag = sst_ship_deletion_target
-					}
 				}
 				tcw_clear_all_global_confirms = yes
 				clr_country_flag = tp_open_confirmation_window
