@@ -11,8 +11,8 @@ NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_DIPLOMACY = 1.0
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_DIPLOMACY_ON_INTEL_LEDGER = 1.0
 NDefines_Graphics.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 0.8
 NDefines_Graphics.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.8
-NDefines_Graphics.NMapMode.MAP_MODE_TERRAIN_TRANSPARENCY = 1.0
-NDefines_Graphics.NMapMode.MAP_MODE_NAVAL_TERRAIN_TRANSPARENCY = 1.0
+--NDefines_Graphics.NMapMode.MAP_MODE_TERRAIN_TRANSPARENCY = 1.0
+--NDefines_Graphics.NMapMode.MAP_MODE_NAVAL_TERRAIN_TRANSPARENCY = 1.0
 NDefines.NMilitary.BASE_COMBAT_WIDTH = 96                        -- base combat width
 NDefines.NMilitary.ADDITIONAL_COMBAT_WIDTH = 48                  -- more opened up by support attack
 NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -1
@@ -62,11 +62,11 @@ NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_LOW = 0.0 -- thic
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_COUNTRY_HIGH = 35.0
 NDefines_Graphics.NGraphics.GRADIENT_BORDERS_THICKNESS_STATE = 1.0
 
-NDefines.NGraphics.MOON_HEIGHT = 600 -- higher means softer shadows and more intense light
-NDefines.NGraphics.SUN_HEIGHT  = 1200 -- higher means softer shadows and more intense light
-NDefines.NGraphics.SUN_LATITUDE  = 295 --usually 848
-NDefines.NGraphics.SUN_INTENSITY = 1.0 -- 0.4 usually 1
-NDefines.NGraphics.MOON_INTENSITY = 1.0 --Usually 2.5
+--NDefines.NGraphics.MOON_HEIGHT = 600 -- higher means softer shadows and more intense light
+--NDefines.NGraphics.SUN_HEIGHT  = 1200 -- higher means softer shadows and more intense light
+--NDefines.NGraphics.SUN_LATITUDE  = 295 --usually 848
+--NDefines.NGraphics.SUN_INTENSITY = 1.0 -- 0.4 usually 1
+--NDefines.NGraphics.MOON_INTENSITY = 1.0 --Usually 2.5
 
 NDefines.NGame.COMBAT_LOG_MAX_MONTHS = 3 --12 Y E E T
 
