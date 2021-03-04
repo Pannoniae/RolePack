@@ -291,6 +291,7 @@ categories =  {
 
 			}
 		}
+
 		naval_mine_hit_chance = -0.5
 	}
 }
