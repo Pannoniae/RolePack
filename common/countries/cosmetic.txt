@@ -1324,8 +1324,8 @@ ARG = {
 	color_ui = rgb { 189 204 255 }
 }
 AST = {
-	color = rgb { 57 143 97 }
-	color_ui = rgb { 74 186 126 }
+	color = rgb { 57 143 117 }
+	color_ui = rgb { 74 186 156 }
 }
 BHU = {
 	color = rgb { 172 122 88 }
@@ -1340,8 +1340,8 @@ BRA = {
 	color_ui = rgb { 99 189 82 }
 }
 CAN = {
-	color = rgb { 119 48 39 }
-	color_ui = rgb { 155 62 51 }
+	color = rgb { 149 48 39 }
+	color_ui = rgb { 185 62 51 }
 }
 CHI = {
 	color = hsv { 0.18 0.6 0.9 } #255 244 190
