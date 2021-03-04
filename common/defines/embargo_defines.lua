@@ -1,3 +1,3 @@
 -- Embargo defines values
-
-NDefines.NDiplomacy.MIN_TRUST_VALUE = -500			-- max value for embargo, vanilla -100
+NDefines.NTrade.BASE_TRADE_FACTOR = 50
+NDefines.NTrade.PARTY_SUPPORT_TRADE_FACTOR = 20
