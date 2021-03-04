@@ -1,0 +1,2042 @@
+on_actions = {
+	#used when puppeting in a peace conference
+	#ROOT = nation being puppeted, FROM = overlord
+	on_puppet = {
+		effect = {
+	#BENELUX
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LUX
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LUX_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BEL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BEL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Grohe"
+					desc = "POLITICS_JOSEF_GROHE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Grohe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = HOL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = HOL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Arthur Seyss-Inquart"
+					desc = "POLITICS_ARTHUR_SEYSS-INQUART_DESC"
+					picture = "gfx/leaders/GER/Portrait_Arthur_SeyssInquart.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#BENELUX
+	#EASTERN EUROPE AND BALTICS
+	#POLAND
+			if = {
+				limit = {
+					AND = { 
+						TAG = POL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = POL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"}
+				set_capital = 88
+				create_country_leader = {
+					name = "Hans Frank"
+					desc = "POLITICS_HANS_FRANK_DESC"
+					picture = "gfx/leaders/GER/Portrait_Hans_Frank.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ESTONIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = EST
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = EST_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#LATVIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAT
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LAT_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#LITHUANIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LIT
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LIT_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BELARUS
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BLR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BLR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Hinrich Lohse"
+					desc = "POLITICS_HINRICH_LOHSE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Hinrich_Lohse.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#UKRAINE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = UKR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = UKR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erich Koch"
+					desc = "POLITICS_ERICH_KOCH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Erich_Koch.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CZECHOSLOVAKIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = CZE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CZE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Reinhard Heydrich"
+					desc = "POLITICS_REINHARD_HEYDRICH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Reinhard_Heydrich.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#EASTERN EUROPE AND BALTICS
+	#SCANDINAVIA
+	#DENMARK
+			if = {
+				limit = { 
+					AND = { 
+						TAG = DEN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = DEN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NORWAY
+			if = {
+				limit = { 
+					AND = { 
+						TAG = NOR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NOR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Terboven"
+					desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#SWEDEN
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SWE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SWE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#FINLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FIN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FIN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ICELAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ICE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ICE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SCANDINAVIA
+	#BALKANS
+	#HUNGARY
+			if = {
+				limit = { 
+					AND = { 
+						TAG = HUN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = HUN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Ferenc Szálasi"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "gfx/leaders/HUN/Portrait_Hungary_Ferenc_Szalasi.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ROMANIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ROM
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ROM_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BULGARIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BUL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BUL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#YUGOSLAVIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = YUG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = YUG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#CROATIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = CRO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CRO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#MONTENEGRO
+			if = {
+				limit = { 
+					AND = { 
+						TAG = MON
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MON_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#MACEDONIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = MAC
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MAC_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BOSNIA-HERZEGOVINA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BOS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BOS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SERBIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SER
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ALBANIA
+			if = {
+				limit = {
+					AND = {
+						TAG = ALB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ALB_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BALKANS
+	#WESTERN EUROPE
+	#FRANCE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#VICHY FRANCE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA_VICHY
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ENGLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ENG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ENG_GER
+				set_party_name = { ideology = fascism long_name = "British Union of National Socialists" name = "BUNS"}
+			}
+	#SCOTLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SCO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SCO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#WALES
+			if = {
+				limit = {
+					AND = {
+						TAG = WLS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = WLS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#IRELAND
+			if = {
+				limit = {
+					AND = {
+						TAG = IRE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = IRE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NORTHERN IRELAND
+			if = {
+				limit = {
+					AND = {
+						TAG = NIR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NIR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#PORTUGAL
+			if = {
+				limit = {
+					AND = {
+						TAG = POR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = POR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+
+		
+	
+	#WESTERN EUROPE
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPA_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPB_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPR_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPC
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPC_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPD
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPD_GER
+			}
+	#SPAIN
+	#SOUTHERN EUROPE
+	#SWITZERLAND
+			if = {
+				limit = {
+					AND = {
+						TAG = SWI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SWI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#AUSTRIA
+			if = {
+				limit = {
+					AND = {
+						TAG = AUS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = AUS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ITALY
+			if = {
+				limit = {
+					AND = {
+						TAG = ITA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ITA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Giovanni Messe"
+						desc = "POLITICS_GIOVANNI_MESSE_DESC"
+						picture = "gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#GREECE
+			if = {
+				limit = {
+					AND = {
+						TAG = GRE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = GRE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SOUTHERN EUROPE
+	#AFRICA
+	#KENYA - OSTAFRIKA - EAST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = KEN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = KEN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#ZIMBABWE - SUDOSTAFRIKA - SOUTH EAST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = ZIM
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ZIM_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#ALGERIA - NORDAFRIKA - NORTH AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = ALG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ALG_GER 
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+				create_country_leader = {
+					name = "Walter Nehring"
+					desc = "POLITICS_WALTER_NEHRING_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CONGO - MITTELAFRIKA - MIDDLE AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = COG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = COG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+				create_country_leader = {
+					name = "Hermann Göring"
+					desc = "POLITICS_HERMANN_GORING_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Goring.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#NUMIBIA - SUDWESTAFRIKA - SOUTH-WEST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = NMB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NMB_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#AFRICA
+	#USSR
+	#RUSSIA
+			if = {
+				limit = {
+					AND = {
+						TAG = SOV
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SOV_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Siegfried Kasche "
+					desc = "POLITICS_SIEGFRIED_KASCHE _DESC"
+					picture = "gfx/leaders/GER/Portrait_Siegfried_Kasche.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#GEORGIA
+			if = {
+				limit = {
+					AND = {
+						TAG = GEO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = GEO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Alfred Rosenberg"
+					desc = "POLITICS_ALFRED_ROSENBERG_DESC"
+					picture = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#KAZAKHSTAN
+			if = {
+				limit = {
+					AND = {
+						TAG = KAZ
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = KAZ_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Werner Kempf"
+					desc = "POLITICS_WERNER_KEMPF_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Werner_Kempf.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#WEST SIBERIA
+			if = {
+				limit = {
+					AND = {
+						TAG = WSI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = WSI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erhard Milch"
+					desc = "POLITICS_ERHARD_MILCH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erhard_Milch.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#EAST SIBERIA
+			if = {
+				limit = {
+					AND = {
+						TAG = ESI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ESI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Hans-Karl Freiherr von Esebeck"
+					desc = "POLITICS_HANS-KARL_FREIHERR_VON_ESEBECK_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Hans-Karl_Freiherr_von_Esebeck.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#USSR
+	#ASIA
+	#TURKEY
+			if = {
+				limit = {
+					AND = {
+						TAG = TUR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = TUR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#JAPAN
+			if = {
+				limit = {
+					AND = {
+						TAG = JAP
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = JAP_GER
+				set_party_name = { ideology = fascism long_name = "Japanese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Kurt Student"
+					desc = "POLITICS_KURT_STUDENT_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CHINA
+			if = {
+				limit = {
+					AND = {
+						TAG = CHI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CHI_GER
+				set_party_name = { ideology = fascism long_name = "Chinese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Gerd von Rundstedt"
+						desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#PRC
+			if = {
+				limit = {
+					AND = {
+						TAG = PRC
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PRC_GER
+				set_party_name = { ideology = fascism long_name = "Chinese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Gerd von Rundstedt"
+						desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#INDIA
+			if = {
+				limit = {
+					AND = {
+						TAG = RAJ
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = RAJ_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Herman Hoth"
+					desc = "POLITICS_HERMAN_HOTH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Herman_Hoth.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#SIAM
+			if = {
+				limit = {
+					AND = {
+						TAG = SIA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SIA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#INDONESIA
+			if = {
+				limit = {
+					AND = {
+						TAG = INS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = INS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Wolfram Freiherr von Richthofen"
+					desc = "POLITICS_WOLRFRAM_FREIHERR_VON_RICHTHOFEN_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#MALAYSIA
+			if = {
+				limit = {
+					AND = {
+						TAG = MAL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MAL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#PHILIPPINES
+			if = {
+				limit = {
+					AND = {
+						TAG = PHI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PHI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#AUSTRALIA
+			if = {
+				limit = {
+					AND = {
+						TAG = AST
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = AST_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NEW ZEALAND
+			if = {
+				limit = {
+					AND = {
+						TAG = NZL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NZL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ASIA
+	#AMERICA
+	#NORTH AMERICA
+	#CANADA
+			if = {
+				limit = {
+					AND = {
+						TAG = CAN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CAN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#UNITED STATES
+			if = {
+				limit = {
+					AND = {
+						TAG = USA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = USA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erwin Rommel"
+					desc = "POLITICS_ERWIN_ROMMEL_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#MEXICO
+			if = {
+				limit = {
+					AND = {
+						TAG = MEX
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MEX_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Hermann Boehm"
+						desc = "POLITICS_HERMANN_BOEHM_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#NORTH AMERICA
+	#CENTRAL AMERICA
+	#CUBA
+			if = {
+				limit = {
+					AND = {
+						TAG = CUB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CUB_GER 
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Wilhelm Marschall"
+						desc = "POLITICS_WILHELM_MARSCHALL_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#PANAMA
+			if = {
+				limit = {
+					AND = {
+						TAG = PAN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PAN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#CENTRAL AMERICA
+	#SOUTH AMERICA
+	#BRAZIL
+			if = {
+				limit = {
+					AND = {
+						TAG = BRA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Dietrich"
+					desc = "POLITICS_JOSEF_DIETRICH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ARGENTINA
+			if = {
+				limit = {
+					AND = {
+						TAG = ARG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ARG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				
+			}
+	#COLOMBIA
+			if = {
+				limit = {
+					AND = {
+						TAG = COL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = COL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SOUTH AMERICA
+	#AMERICA
+		}
+	}
+
+	#used when puppeting through the occupied territories menu during peace time (or when releasing from non-core but owned territory, f.e. Russia releasing Ukraine)
+	#ROOT = nation being released, FROM = overlord
+	on_release_as_puppet = {
+		effect = {
+	#BENELUX
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LUX
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LUX_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BEL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BEL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Grohe"
+					desc = "POLITICS_JOSEF_GROHE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Grohe.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = HOL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = HOL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Arthur Seyss-Inquart"
+					desc = "POLITICS_ARTHUR_SEYSS-INQUART_DESC"
+					picture = "gfx/leaders/GER/Portrait_Arthur_SeyssInquart.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#BENELUX
+	#EASTERN EUROPE AND BALTICS
+	#POLAND
+			if = {
+				limit = {
+					AND = { 
+						TAG = POL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = POL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Military Administration"}
+				set_capital = 88
+				create_country_leader = {
+					name = "Hans Frank"
+					desc = "POLITICS_HANS_FRANK_DESC"
+					picture = "gfx/leaders/GER/Portrait_Hans_Frank.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ESTONIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = EST
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = EST_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#LATVIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LAT
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LAT_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#LITHUANIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = LIT
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = LIT_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BELARUS
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BLR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BLR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Hinrich Lohse"
+					desc = "POLITICS_HINRICH_LOHSE_DESC"
+					picture = "gfx/leaders/GER/Portrait_Hinrich_Lohse.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#UKRAINE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = UKR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = UKR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erich Koch"
+					desc = "POLITICS_ERICH_KOCH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Erich_Koch.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CZECHOSLOVAKIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = CZE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CZE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Reinhard Heydrich"
+					desc = "POLITICS_REINHARD_HEYDRICH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Reinhard_Heydrich.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#EASTERN EUROPE AND BALTICS
+	#SCANDINAVIA
+	#DENMARK
+			if = {
+				limit = { 
+					AND = { 
+						TAG = DEN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = DEN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NORWAY
+			if = {
+				limit = { 
+					AND = { 
+						TAG = NOR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NOR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Terboven"
+					desc = "POLITICS_JOSEF_TERBOVEN_DESC"
+					picture = "gfx/leaders/GER/Portrait_Josef_Terboven.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#SWEDEN
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SWE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SWE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#FINLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FIN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FIN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ICELAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ICE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ICE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SCANDINAVIA
+	#BALKANS
+	#HUNGARY
+			if = {
+				limit = { 
+					AND = { 
+						TAG = HUN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = HUN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Ferenc Szálasi"
+					desc = "POLITICS_FERENC_SZALASI_DESC"
+					picture = "gfx/leaders/HUN/Portrait_Hungary_Ferenc_Szalasi.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ROMANIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ROM
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ROM_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BULGARIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = BUL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BUL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#YUGOSLAVIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = YUG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = YUG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#CROATIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = CRO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CRO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SERBIA
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SER
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SER_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ALBANIA
+			if = {
+				limit = {
+					AND = {
+						TAG = ALB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ALB_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#BALKANS
+	#WESTERN EUROPE
+	#FRANCE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#VICHY FRANCE
+			if = {
+				limit = { 
+					AND = { 
+						TAG = FRA_VICHY
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = FRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ENGLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ENG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ENG_GER
+				set_party_name = { ideology = fascism long_name = "British Union of National Socialists" name = "BUNS"}
+			}
+	#SCOTLAND
+			if = {
+				limit = { 
+					AND = { 
+						TAG = SCO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SCO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#WALES
+			if = {
+				limit = {
+					AND = {
+						TAG = WLS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = WLS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#IRELAND
+			if = {
+				limit = {
+					AND = {
+						TAG = IRE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = IRE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NORTHERN IRELAND
+			if = {
+				limit = {
+					AND = {
+						TAG = NIR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NIR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#PORTUGAL
+			if = {
+				limit = {
+					AND = {
+						TAG = POR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = POR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+
+		
+	
+	#WESTERN EUROPE
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPA_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPB_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPR_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPC
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPC_GER
+			}
+	#SPAIN
+			if = {
+				limit = {
+					AND = {
+						TAG = SPD
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SPD_GER
+			}
+	#SPAIN
+	#SOUTHERN EUROPE
+	#SWITZERLAND
+			if = {
+				limit = {
+					AND = {
+						TAG = SWI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SWI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#AUSTRIA
+			if = {
+				limit = {
+					AND = {
+						TAG = AUS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = AUS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ITALY
+			if = {
+				limit = {
+					AND = {
+						TAG = ITA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ITA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Giovanni Messe"
+						desc = "POLITICS_GIOVANNI_MESSE_DESC"
+						picture = "gfx/leaders/ITA/Portrait_Italy_Giovanni_Messe.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#GREECE
+			if = {
+				limit = {
+					AND = {
+						TAG = GRE
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = GRE_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SOUTHERN EUROPE
+	#AFRICA
+	#KENYA - OSTAFRIKA - EAST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = KEN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = KEN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#ZIMBABWE - SUDOSTAFRIKA - SOUTH EAST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = ZIM
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ZIM_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#ALGERIA - NORDAFRIKA - NORTH AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = ALG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ALG_GER 
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+				create_country_leader = {
+					name = "Walter Nehring"
+					desc = "POLITICS_WALTER_NEHRING_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_5.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CONGO - MITTELAFRIKA - MIDDLE AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = COG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = COG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+				create_country_leader = {
+					name = "Hermann Göring"
+					desc = "POLITICS_HERMANN_GORING_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Goring.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#NUMIBIA - SUDWESTAFRIKA - SOUTH-WEST AFRICA
+			if = {
+				limit = {
+					AND = {
+						TAG = NMB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NMB_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Colonial Administration"}
+			}
+	#AFRICA
+	#USSR
+	#RUSSIA
+			if = {
+				limit = {
+					AND = {
+						TAG = SOV
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SOV_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Siegfried Kasche "
+					desc = "POLITICS_SIEGFRIED_KASCHE _DESC"
+					picture = "gfx/leaders/GER/Portrait_Siegfried_Kasche.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#GEORGIA
+			if = {
+				limit = {
+					AND = {
+						TAG = GEO
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = GEO_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Alfred Rosenberg"
+					desc = "POLITICS_ALFRED_ROSENBERG_DESC"
+					picture = "gfx/leaders/GER/Portrait_Alfred_Rosenberg.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#KAZAKHSTAN
+			if = {
+				limit = {
+					AND = {
+						TAG = KAZ
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = KAZ_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Werner Kempf"
+					desc = "POLITICS_WERNER_KEMPF_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Werner_Kempf.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#WEST SIBERIA
+			if = {
+				limit = {
+					AND = {
+						TAG = WSI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = WSI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erhard Milch"
+					desc = "POLITICS_ERHARD_MILCH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erhard_Milch.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#EAST SIBERIA
+			if = {
+				limit = {
+					AND = {
+						TAG = ESI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ESI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Hans-Karl Freiherr von Esebeck"
+					desc = "POLITICS_HANS-KARL_FREIHERR_VON_ESEBECK_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Hans-Karl_Freiherr_von_Esebeck.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#USSR
+	#ASIA
+	#TURKEY
+			if = {
+				limit = {
+					AND = {
+						TAG = TUR
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = TUR_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#JAPAN
+			if = {
+				limit = {
+					AND = {
+						TAG = JAP
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = JAP_GER
+				set_party_name = { ideology = fascism long_name = "Japanese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Kurt Student"
+					desc = "POLITICS_KURT_STUDENT_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Kurt_Student.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#CHINA
+			if = {
+				limit = {
+					AND = {
+						TAG = CHI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CHI_GER
+				set_party_name = { ideology = fascism long_name = "Chinese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Gerd von Rundstedt"
+						desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#PRC
+			if = {
+				limit = {
+					AND = {
+						TAG = PRC
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PRC_GER
+				set_party_name = { ideology = fascism long_name = "Chinese National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Gerd von Rundstedt"
+						desc = "POLITICS_GERD_VON_RUNDSTEDT_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Gerd_von_Rundstedt.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#INDIA
+			if = {
+				limit = {
+					AND = {
+						TAG = RAJ
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = RAJ_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Herman Hoth"
+					desc = "POLITICS_HERMAN_HOTH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Herman_Hoth.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#SIAM
+			if = {
+				limit = {
+					AND = {
+						TAG = SIA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = SIA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#INDONESIA
+			if = {
+				limit = {
+					AND = {
+						TAG = INS
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = INS_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Wolfram Freiherr von Richthofen"
+					desc = "POLITICS_WOLRFRAM_FREIHERR_VON_RICHTHOFEN_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Wolfram_Freiherr_von_Richthofen.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#MALAYSIA
+			if = {
+				limit = {
+					AND = {
+						TAG = MAL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MAL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#PHILIPPINES
+			if = {
+				limit = {
+					AND = {
+						TAG = PHI
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PHI_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#AUSTRALIA
+			if = {
+				limit = {
+					AND = {
+						TAG = AST
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = AST_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#NEW ZEALAND
+			if = {
+				limit = {
+					AND = {
+						TAG = NZL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = NZL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#ASIA
+	#AMERICA
+	#NORTH AMERICA
+	#CANADA
+			if = {
+				limit = {
+					AND = {
+						TAG = CAN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CAN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#UNITED STATES
+			if = {
+				limit = {
+					AND = {
+						TAG = USA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = USA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Erwin Rommel"
+					desc = "POLITICS_ERWIN_ROMMEL_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Erwin_Rommel.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#MEXICO
+			if = {
+				limit = {
+					AND = {
+						TAG = MEX
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = MEX_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Hermann Boehm"
+						desc = "POLITICS_HERMANN_BOEHM_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Hermann_Boehm.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#NORTH AMERICA
+	#CENTRAL AMERICA
+	#CUBA
+			if = {
+				limit = {
+					AND = {
+						TAG = CUB
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = CUB_GER 
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+						name = "Wilhelm Marschall"
+						desc = "POLITICS_WILHELM_MARSCHALL_DESC"
+						picture = "gfx/leaders/GER/Portrait_Germany_Wilhelm_Marschall.dds"
+						expire = "1965.1.1"
+						ideology = nazism
+						traits = {
+						}
+					}
+			}
+	#PANAMA
+			if = {
+				limit = {
+					AND = {
+						TAG = PAN
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = PAN_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#CENTRAL AMERICA
+	#SOUTH AMERICA
+	#BRAZIL
+			if = {
+				limit = {
+					AND = {
+						TAG = BRA
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = BRA_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				create_country_leader = {
+					name = "Josef Dietrich"
+					desc = "POLITICS_JOSEF_DIETRICH_DESC"
+					picture = "gfx/leaders/GER/Portrait_Germany_Josef_Dietrich.dds"
+					expire = "1965.1.1"
+					ideology = nazism
+					traits = {
+					}
+				}
+			}
+	#ARGENTINA
+			if = {
+				limit = {
+					AND = {
+						TAG = ARG
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = ARG_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+				
+			}
+	#COLOMBIA
+			if = {
+				limit = {
+					AND = {
+						TAG = COL
+						is_subject_of = GER
+						}
+					 }
+				set_cosmetic_tag = COL_GER
+				set_party_name = { ideology = fascism long_name = "National Socialist Party" name = "Civil Administration"}
+			}
+	#SOUTH AMERICA
+	#AMERICA
+		}
+	}
+}

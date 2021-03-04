@@ -16,4 +16,8 @@ spriteTypes = {
 		name = "GFX_idea_gottlob_berger"
 		texturefile = "gfx/interface/ideas/idea_gottlob_berger.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_joachim_von_ribbentrop_bur"
+		texturefile = "gfx/interface/ideas/idea_joachim_von_ribbentrop.dds"
+	}
 }
