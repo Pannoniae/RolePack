@@ -13,7 +13,7 @@ division_limiter = {
 			upper_limit = num_of_factories
 		}
 		multiply_temp_variable = {
-			upper_limit = 0.85
+			upper_limit = 0.5
 		}
 		if = {
 			limit = {

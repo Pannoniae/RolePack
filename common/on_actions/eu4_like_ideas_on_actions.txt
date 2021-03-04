@@ -272,7 +272,7 @@ on_actions = {
 	}
     
     # no need for daily update
-	on_weekly = {
+	on_monthly = {
 		effect = {
 			# Remove National Idea Bonuses, if necessary (e.g. for civil wars)
 			if = {
@@ -348,7 +348,11 @@ on_actions = {
 				add_research_slot = -1
 				clr_country_flag = national_ideas_23_4
 			}
-
+		}
+	}
+	
+	on_weekly = {
+		effect = {
 			# Show Alerts:
 			refresh_eu4_like_alerts = yes
 		}

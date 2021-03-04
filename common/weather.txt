@@ -104,11 +104,17 @@ settings = {
   }
 
   # Performance tweaking
+  #performance = {
+  #  provinces_per_update = 584
+  #  regions_per_update = 7
+  #  init_run_passes = 14
+  #  texture_refresh_freq = 2.0
+  #}
   performance = {
-    provinces_per_update = 584
-    regions_per_update = 7
-    init_run_passes = 14
-    texture_refresh_freq = 2.0
+    provinces_per_update = 292
+    regions_per_update = 3
+    init_run_passes = 7
+    texture_refresh_freq = 1.0
   }
 }
 
