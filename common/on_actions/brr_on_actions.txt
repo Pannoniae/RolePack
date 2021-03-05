@@ -1,66 +1,42 @@
 on_actions = {
 
-  on_startup = {
+	on_startup = {
 
-    effect = {
+		effect = {
 
-      every_country = {
-        limit = {
-          NOT = { has_country_flag = bonus_research_slot_assigned }
-        }
-        country_event = { id = bonus_research_slot.100 }
-      }
-
-      if = {
-        limit = {
-          has_game_rule = {
-            rule = bonus_research_zeitgeist_rule
-            option = RULE_OPTION_YES
-          }
-        }
-        every_country = {
-          limit = {
-            has_dlc = "Together for Victory"
-            #NOT = { is_in_tech_sharing_group = zeitgeist_research }
-          }
-        }
-        add_to_tech_sharing_group = zeitgeist_research
-      }
+			every_country = {
+				limit = {
+					NOT = { has_country_flag = bonus_research_slot_assigned }
+				}
+				country_event = { id = bonus_research_slot.100 }
+			}
+			every_country = {
+				#NOT = { is_in_tech_sharing_group = zeitgeist_research }
+			add_to_tech_sharing_group = zeitgeist_research
+			}
+			add_to_tech_sharing_group = zeitgeist_research
+		  }
 
     }
-
-  }
     
-  # skimp on daily updates for perf
-  on_monthly_GER = {
+	# skimp on daily updates for perf
+	on_monthly_GER = {
 
-    effect = {
+		effect = {
 
-      every_country = {
-        limit = {
-          NOT = { has_country_flag = bonus_research_slot_assigned }
-        }
-        country_event = { id = bonus_research_slot.100 }
-      }
+		  every_country = {
+			limit = {
+			  NOT = { has_country_flag = bonus_research_slot_assigned }
+			}
+			country_event = { id = bonus_research_slot.100 }
+		  }
+		   every_country = {
+				#NOT = { is_in_tech_sharing_group = zeitgeist_research }
+			  add_to_tech_sharing_group = zeitgeist_research
+			}
+			add_to_tech_sharing_group = zeitgeist_research
+		}
 
-      if = {
-        limit = {
-          has_game_rule = {
-            rule = bonus_research_zeitgeist_rule
-            option = RULE_OPTION_YES
-          }
-        }
-        every_country = {
-          limit = {
-            has_dlc = "Together for Victory"
-            #NOT = { is_in_tech_sharing_group = zeitgeist_research }
-          }
-        }
-        add_to_tech_sharing_group = zeitgeist_research
-      }
-
-    }
-
-  }
+	}
 
 }
