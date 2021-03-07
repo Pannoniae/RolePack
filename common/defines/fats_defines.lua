@@ -75,6 +75,7 @@ NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
     360.0/360.0, 0.0, 1.0,    --White
     360.0/360.0, 0.0, 0,    --black
 }
+
 NDefines_Graphics.NGraphics.AIRBASE_ICON_DISTANCE_CUTOFF = 600
 NDefines_Graphics.NGraphics.NAVALBASE_ICON_DISTANCE_CUTOFF = 600
 NDefines_Graphics.NGraphics.RADAR_ICON_DISTANCE_CUTOFF = 600
