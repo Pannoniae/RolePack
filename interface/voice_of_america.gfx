@@ -22,46 +22,14 @@ spriteTypes = {
 
 
 			spriteType = {
-		name = "GFX_radio_kyiv_album_art"
-		texturefile = "gfx/radio_kyiv_album_art.tga"
-		noOfFrames = 2
-	}	
-
-
-			spriteType = {
 		name = "GFX_new_orlean_radio_album_art"
 		texturefile = "gfx/new_orlean_radio_album_art.tga"
 		noOfFrames = 2
-	}	
-
-
-	spriteType = {
-		name = "GFX_radio_the_south_album_art"
-		texturefile = "gfx/radio_the_south_album_art.tga"
-		noOfFrames = 2
-	}	
-
-	spriteType = {
-		name = "GFX_caribbean_radio_album_art"
-		texturefile = "gfx/caribbean_radio_album_art.tga"
-		noOfFrames = 2
-	}	
+	}			
 
 	spriteType = {
 		name = "GFX_hot_jazz_radio_album_art"
 		texturefile = "gfx/hot_jazz_radio_album_art.tga"
 		noOfFrames = 2
-	}	
-
-	spriteType = {
-		name = "GFX_honolulu_radio_album_art"
-		texturefile = "gfx/honolulu_radio_album_art.tga"
-		noOfFrames = 2
-	}	
-
-	spriteType = {
-		name = "GFX_workers_radio_album_art"
-		texturefile = "gfx/workers_radio_album_art.tga"
-		noOfFrames = 2
-	}	
-
+	}
+	}
