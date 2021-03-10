@@ -2353,12 +2353,12 @@ kur_liberation_status = {
 central_american_unification_status = {
 	name = "CENTRAL_AMERICA_UNIFICATION_STATUS"
 	group = "RULE_GROUP_GAME_SETUP"
-	default = {
+	option = {
 		name = DEFAULT
 		text = "RULE_OPTION_DEFAULT"
 		desc = "RULE_OPTION_DEFAULT_FRAGMENTATION_DESC"
 	}
-	option = {
+	default = {
 		name = HON_CENTRAL_AMERICA_UNIFIED
 		text = "RULE_OPTION_HON_CENTRAL_AMERICA_UNIFIED"
 		desc = "RULE_OPTION_HON_CENTRAL_AMERICA_UNIFIED_DESC"
