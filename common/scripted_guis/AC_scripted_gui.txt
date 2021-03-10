@@ -16,7 +16,7 @@ scripted_gui = {
 
 			THIS = { free_building_slots = { building = infrastructure size < 10 include_locked = no } } # not impassable state
 
-			CONTROLLER = {
+			controller = {
 				ROOT = { is_in_array = { array = AC_construction_permissions value = PREV.id } }
 				NOT = { has_war_with = ROOT }
 			}

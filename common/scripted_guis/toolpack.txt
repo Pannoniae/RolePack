@@ -128,15 +128,6 @@ scripted_gui = {
 					clr_country_flag = mst_S_enabled
 				}
 			}
-			rmt_open_click = {
-				if = {
-					limit = { NOT = { has_country_flag = rmt_enabled } }
-					set_country_flag = rmt_enabled
-				}
-				else = {
-					clr_country_flag = rmt_enabled
-				}
-			}
 		}
 
 		triggers = {
@@ -194,12 +185,6 @@ scripted_gui = {
 				has_country_flag = tp_page_2
 			}
 			mst_S_title_visible = {
-				has_country_flag = tp_page_2
-			}
-			rmt_open_visible = {
-				has_country_flag = tp_page_2
-			}
-			rmt_title_visible = {
 				has_country_flag = tp_page_2
 			}
 		}

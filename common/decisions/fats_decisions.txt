@@ -22,9 +22,8 @@ toolpack_decisions = {
 				}
 			}
 			NOT = {
-				any_country = {
-					has_country_flag = toolpack_allowed
-				}
+				has_country_flag = toolpack_allowed
+				has_country_flag = scum
 			}
 		}	
 		available = {
@@ -34,9 +33,8 @@ toolpack_decisions = {
 				}
 			}
             NOT = {
-				any_country = {
-					has_country_flag = toolpack_allowed
-				}
+				has_country_flag = toolpack_allowed
+				has_country_flag = scum
 			}
         }
 		complete_effect = {
