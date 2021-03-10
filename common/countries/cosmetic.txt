@@ -1327,6 +1327,10 @@ AST = {
 	color = rgb { 57 143 117 }
 	color_ui = rgb { 74 186 156 }
 }
+BHU = {
+	color = rgb { 172 122 88 }
+	color_ui = rgb { 172 122 88 }
+}
 BOL = {
 	color = hsv { 0.1 0.47 0.8 } #255 180 136
 	color_ui = rgb { 255 234 177 }
@@ -1351,9 +1355,25 @@ COL = {
 	color = rgb { 222 187 91 }
 	color_ui = rgb { 255 243 118 }
 }
+COS = {
+	color = rgb { 152 128 43 }
+	color_ui = rgb { 152 128 43 }
+}
+ECU = {
+	color = rgb { 249 146 98 }
+	color_ui = rgb { 255 190 127 }
+}
+ELS = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
 ETH = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
+}
+GUA = {
+	color = rgb { 72 49 112 }
+	color_ui = rgb { 72 49 112 }
 }
 HON = {
 	color = rgb { 128 145 65 }
@@ -1375,7 +1395,19 @@ MEX = {
 	color = rgb { 104 152 83 }
 	color_ui = rgb { 135 198 108 }
 }
+NEP = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+NIC = {
+	color = rgb { 146 179 191 }
+	color_ui = rgb { 146 179 191 }
+}
 NZL = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+PAN = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
@@ -1411,6 +1443,10 @@ TIB = {
 	color = rgb { 80 115 45}
 	color_ui = rgb { 222 247 198 }
 }
+URG = {
+	color = rgb { 171 190 152 }
+	color_ui = rgb { 222 247 198 }
+}
 VEN = {
 	color = rgb { 171 190 152 }
 	color_ui = rgb { 222 247 198 }
@@ -1443,6 +1479,22 @@ PAR = {
 CUB = {
 	color = rgb { 140 65 166 }
 	color_ui = rgb { 140 65 166 }
+}
+DOM = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+HAI = {
+	color = rgb { 174 113 113 }
+	color_ui = rgb { 174 113 113 }
+}
+YEM = {
+	color = rgb { 155 101 107 }
+	color_ui = rgb { 202 131 139 }
+}
+OMA = {
+	color = rgb { 155 101 107 }
+	color_ui = rgb { 202 131 139 }
 }
 SLO = {
 	color = rgb { 158  161  188 }
@@ -1750,6 +1802,10 @@ AST_color = {
 	color = rgb { 57 143 97 }
 	color_ui = rgb { 74 186 126 }
 }
+BHU_color = {
+	color = rgb { 172 122 88 }
+	color_ui = rgb { 172 122 88 }
+}
 BOL_color = {
 	color = hsv { 0.1 0.47 0.8 } #255 180 136
 	color_ui = rgb { 255 234 177 }
@@ -1774,13 +1830,25 @@ COL_color = {
 	color = rgb { 222 187 91 }
 	color_ui = rgb { 255 243 118 }
 }
+COS_color = {
+	color = rgb { 152 128 43 }
+	color_ui = rgb { 152 128 43 }
+}
 ECU_color = {
 	color = rgb { 249 146 98 }
 	color_ui = rgb { 255 190 127 }
 }
+ELS_color = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
 ETH_color = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
+}
+GUA_color = {
+	color = rgb { 72 49 112 }
+	color_ui = rgb { 72 49 112 }
 }
 HON_color = {
 	color = rgb { 128 145 65 }
@@ -1802,7 +1870,19 @@ MEX_color = {
 	color = rgb { 104 152 83 }
 	color_ui = rgb { 135 198 108 }
 }
+NEP_color = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+NIC_color = {
+	color = rgb { 146 179 191 }
+	color_ui = rgb { 146 179 191 }
+}
 NZL_color = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+PAN_color = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
@@ -1874,6 +1954,22 @@ PAR_color = {
 CUB_color = {
 	color = rgb { 140 65 166 }
 	color_ui = rgb { 140 65 166 }
+}
+DOM_color = {
+	color = rgb { 152 130 191 }
+	color_ui = rgb { 198 169 248 }
+}
+HAI_color = {
+	color = rgb { 174 113 113 }
+	color_ui = rgb { 174 113 113 }
+}
+YEM_color = {
+	color = rgb { 155 101 107 }
+	color_ui = rgb { 202 131 139 }
+}
+OMA_color = {
+	color = rgb { 155 101 107 }
+	color_ui = rgb { 202 131 139 }
 }
 SLO_color = {
 	color = rgb { 158  161  188 }

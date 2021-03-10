@@ -1,13 +1,13 @@
 eu4_like_ideas_rule_show_introduction = {
 	name = "EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION"
 	group = "EU4_LIKE_IDEAS_RULES"
-	option = {
+	default = {
 		name = "YES"
 		desc = "YES_EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION_DESC"
 		text = "YES"
 		allow_achievements = yes
 	}
-	default = {
+	option = {
 		name = "NO"
 		desc = "NO_EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION_DESC"
 		text = "NO"

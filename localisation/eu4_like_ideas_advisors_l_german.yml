@@ -1,0 +1,27 @@
+﻿l_german:
+ # Advisors:
+ idea_cost_modifier_reduction_trait: "Wissenschaftler"
+ idea_cost_modifier_reduction_trait_desc: "Ein Wissenschaftler ist in der Lage aufgrund seiner Arbeit die Ideenkosten zu reduzieren."
+ 
+ generic_minister_ideas_bonus_staunch_monarchist: "Monarchistischer Politiker"
+ generic_minister_ideas_bonus_communist_revolutionary: "Kommunistischer Politiker"
+ generic_minister_ideas_bonus_fascist_demagogue: "Faschistischer Politiker"
+ generic_minister_ideas_bonus_democratic_reformer: "Demokratischer Politiker"
+ generic_minister_ideas_bonus_silent_workhorse: "Unscheinbares Arbeitstier"
+ generic_minister_ideas_bonus_captain_of_industry: "Industrieller Lobbyist"
+ generic_minister_ideas_bonus_war_industrialist: "Kriegswirtschaftler"
+ 
+ minister_ideas_bonus_staunch_monarchist: "Überzeugter Monarchist"
+ minister_ideas_bonus_staunch_monarchist_desc: "Dieser Politiker glaubt, dass ein Erbmonarch ein mächtiges Symbol darstellt, welches das Land eint."
+ minister_ideas_bonus_communist_revolutionary: "Kommunistischer Revolutionär"
+ minister_ideas_bonus_communist_revolutionary_desc: "Ein Anhänger der internationalen Revolution, in der Hoffnung auf den Wandel des Landes und letztendlich der Welt in eine kommunistische Gesellschaft."
+ minister_ideas_bonus_fascist_demagogue: "Faschistischer Demagoge"
+ minister_ideas_bonus_fascist_demagogue_desc: "Getrieben von der Idee, das Volk unter einem starken Staat zu vereinen, betont dieser Politiker die nationalistische und militärische Rhetorik."
+ minister_ideas_bonus_democratic_reformer: "Demokratischer Reformer"
+ minister_ideas_bonus_democratic_reformer_desc: "Fest davon überzeugt, dass das Volk sich selbst regieren sollte, sieht dieser Politiker die oberste Priorität darin, es dazu zu ermächtigen. Er zielt darauf ab, dass das Land durch das Mandat des Volkes regiert wird."
+ minister_ideas_bonus_silent_workhorse: "Unscheinbares Arbeitstier"
+ minister_ideas_bonus_captain_of_industry: "Führender Industrieller"
+ minister_ideas_bonus_war_industrialist: "Kriegswirtschaftler"
+ 
+ HAS_NOT_COMPLETED_ALL_IDEA_GROUPS: "Kann noch Ideen freischalten"
+ 

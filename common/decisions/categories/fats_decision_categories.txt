@@ -1,21 +1,3 @@
 toolpack_decisions = {
-
-	icon = hol_gateway_to_europe
-
-	picture = GFX_decision_cat_picture_gateway_to_europe
-	priority = {
-		base = 10
-	}
-
-	visible_when_empty = yes
 	
-	custom_icon = {
-		tag = HUN
-		value = toolpack_retards_value
-		desc = toolpack_retards_value_desc
-
-		visible = {
-			always = yes
-		}
-	}
 }

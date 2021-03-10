@@ -36,7 +36,6 @@ country_event = {
 	
 	option = {
 		name = fats.3.a
-		set_country_flag = toolpack_q1_right
 		country_event = {
 			id = fats.4
 		}
@@ -44,6 +43,7 @@ country_event = {
 	
 	option = {
 		name = fats.3.b
+		set_country_flag = toolpack_q1_right
 		country_event = {
 			id = fats.4
 		}
@@ -81,6 +81,7 @@ country_event = {
 	
 	option = {
 		name = fats.4.b
+		set_country_flag = toolpack_q2_right
 		country_event = {
 			id = fats.5
 		}
@@ -88,7 +89,6 @@ country_event = {
 	
 	option = {
 		name = fats.4.c
-		set_country_flag = toolpack_q2_right
 		country_event = {
 			id = fats.5
 		}
@@ -112,6 +112,7 @@ country_event = {
 	
 	option = {
 		name = fats.5.a
+		set_country_flag = toolpack_q3_right
 		country_event = {
 			id = fats.6
 		}
@@ -133,7 +134,6 @@ country_event = {
 	
 	option = {
 		name = fats.5.d
-		set_country_flag = toolpack_q3_right
 		country_event = {
 			id = fats.6
 		}
@@ -226,20 +226,18 @@ country_event = {
 	
 	option = {
 		name = fats.8.a
-		add_to_variable = { fails = 1 }
-		if = {
-			limit = {
-				check_variable = { fails > 4 }
-			}
-			set_country_flag = scum
-			country_event = {
-				id = fats.43
-			}
-		}
 	}
 	
 	option = {
 		name = fats.8.b
+	}
+	
+	option = {
+		name = fats.8.c
+	}
+	
+	option = {
+		name = fats.8.d
 		hidden_effect = {
 			if = {
 				limit = {
@@ -250,61 +248,7 @@ country_event = {
 					has_country_flag = toolpack_q5_right
 				}
 				set_country_flag = toolpack_allowed
-				add_to_variable = { global.toolpack_retards = 1 }
-			}
-			else = {
-				add_to_variable = { fails = 1 }
-				if = {
-				limit = {
-					check_variable = { fails > 4 }
-				}
-				set_country_flag = scum
-				country_event = {
-					id = fats.43
-				}
-			}
 			}
 		}
-	}
-	
-	option = {
-		name = fats.8.c
-		add_to_variable = { fails = 1 }
-		if = {
-			limit = {
-				check_variable = { fails > 4 }
-			}
-			set_country_flag = scum
-			country_event = {
-				id = fats.43
-			}
-		}
-	}
-	
-	option = {
-		name = fats.8.d
-		add_to_variable = { fails = 1 }
-		if = {
-			limit = {
-				check_variable = { fails > 4 }
-			}
-			set_country_flag = scum
-			country_event = {
-				id = fats.43
-			}
-		}
-	}
-}
-
-country_event = {
-	id = fats.43
-	title = fats.43.t
-	desc = fats.43.desc
-	picture = GFX_report_event_spain_civil_war_soldiers
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = fats.43.a
 	}
 }

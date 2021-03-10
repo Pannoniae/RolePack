@@ -63,6 +63,10 @@ scripted_diplomatic_actions = {
 				ROOT = { has_opinion = { target = PREV value < -50 } }
 				add = 100
 			}			
+			modifier = {		#We dont trade with our enemies
+				has_war_with = ROOT
+				add = 1000
+			}			
 			modifier = {		#Retaliate with a counter embargo
 				ROOT = { is_in_array = { array = FROM.embargoed_countries value = ROOT.id } }
 				add = 100
@@ -144,7 +148,11 @@ scripted_diplomatic_actions = {
 			modifier = {	#If relations are really low dont remove the embargo
 				ROOT = { NOT = { has_opinion = { target = PREV value > -50 } } }
 				add = -1000
-			}		
+			}
+			modifier = {		#We dont trade with our enemies
+				ROOT = { has_war_with = PREV }
+				add = -1000
+			}			
 			modifier = {		#Retaliate with a counter embargo
 				THIS = {
 					NOT = {

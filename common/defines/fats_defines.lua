@@ -13,8 +13,8 @@ NDefines_Graphics.NGraphics.COUNTRY_COLOR_SATURATION_MODIFIER = 0.8
 NDefines_Graphics.NGraphics.COUNTRY_COLOR_BRIGHTNESS_MODIFIER = 0.8
 --NDefines_Graphics.NMapMode.MAP_MODE_TERRAIN_TRANSPARENCY = 1.0
 --NDefines_Graphics.NMapMode.MAP_MODE_NAVAL_TERRAIN_TRANSPARENCY = 1.0
-NDefines.NMilitary.BASE_COMBAT_WIDTH = 80                        -- base combat width
-NDefines.NMilitary.ADDITIONAL_COMBAT_WIDTH = 40                  -- more opened up by support attack
+NDefines.NMilitary.BASE_COMBAT_WIDTH = 96                        -- base combat width
+NDefines.NMilitary.ADDITIONAL_COMBAT_WIDTH = 48                  -- more opened up by support attack
 NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY = -1
 NDefines.NMilitary.COMBAT_OVER_WIDTH_PENALTY_MAX = -0.33
 NDefines.NTechnology.MIN_RESEARCH_SPEED = 0.01
@@ -30,7 +30,7 @@ NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
 
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 31 --20 
---NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.125, 0.025, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
+NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.125, 0.025, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
 
 NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
 NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
