@@ -1,0 +1,127 @@
+music_station = "dixie_radio"
+
+music = {
+	song = "flight_of_doodles"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "to_arms_in_dixie"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "god_save_the_south"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_yellow_rose_of_texas"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "goober_peas"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_valiant_conscript"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "I_can_whip_the_scoundrel"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_southern_wagon"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "lorena"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_bonnie_blue_flag"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "oh_im_good_old_rebel"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "stonewalls_jackson_way"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "rebel_soldier"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "riding_a_raid"
+
+	chance = {
+		factor = 1
+
+	}
+}

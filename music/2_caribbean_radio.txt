@@ -1,0 +1,136 @@
+music_station = "caribbean_radio"
+
+music = {
+	song = "amor"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "you_were_never_lovelier"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "boogie_woogie_conga"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "vira_y_vira"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "bruca_maniqua"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "speak_n_spanish"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "calientito"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "peanut_vendor"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "conga"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "panama"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "cuban_amapola"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "international_rumba"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "cuban_perfidia"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "cui_cui"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "cuban_pete"
+
+	chance = {
+		factor = 1
+
+	}
+}

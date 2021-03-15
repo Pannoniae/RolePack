@@ -1,15 +1,6 @@
 music_station = "american_forces_network"
 
 music = {
-	song = "american_patrol"
-
-	chance = {
-		factor = 1
-
-	}
-}
-
-music = {
 	song = "yankee_doodle"
 
 	chance = {
@@ -263,6 +254,60 @@ music = {
 
 music = {
 	song = "king_cotton"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "american_patrol_march"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "dixie_land"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "remember_pearl_harbor"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_big_red_one_song"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_liberty_bell"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
+	song = "the_liberty_song"
 
 	chance = {
 		factor = 1

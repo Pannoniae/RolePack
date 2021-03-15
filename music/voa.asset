@@ -1,12 +1,6 @@
 # AFN
 
 music = {
-	name = "american_patrol"
-	file = "american_patrol.ogg"
-	volume = 1
-}
-
-music = {
 	name = "yankee_doodle"
 	file = "yankee_doodle.ogg"
 	volume = 1
@@ -181,7 +175,50 @@ music = {
 	volume = 1
 }
 
+
+music = {
+	name = "american_patrol_march"
+	file = "american_patrol_march.ogg"
+	volume = 1
+}
+
+music = {
+	name = "dixie_land"
+	file = "dixie_land.ogg"
+	volume = 1
+}
+
+music = {
+	name = "remember_pearl_harbor"
+	file = "remember_pearl_harbor.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_big_red_one_song"
+	file = "the_big_red_one_song.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_liberty_bell"
+	file = "the_liberty_bell.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_liberty_song"
+	file = "the_liberty_song.ogg"
+	volume = 1
+}
+
 # NYC radio
+
+music = {
+	name = "american_patrol"
+	file = "american_patrol.ogg"
+	volume = 1
+}
 
 music = {
 	name = "a_string_of_pearls"
@@ -662,6 +699,298 @@ music = {
 	volume = 1
 }
 
+# The South
+
+music = {
+	name = "are_you_from_dixie"
+	file = "are_you_from_dixie.ogg"
+	volume = 1
+}
+
+music = {
+	name = "you_are_my_sunshine"
+	file = "you_are_my_sunshine.ogg"
+	volume = 1
+}
+
+music = {
+	name = "fannie_moore"
+	file = "fannie_moore.ogg"
+	volume = 1
+}
+
+music = {
+	name = "wine_women_and_song"
+	file = "wine_women_and_song.ogg"
+	volume = 1
+}
+
+music = {
+	name = "hackberry_hop"
+	file = "hackberry_hop.ogg"
+	volume = 1
+}
+
+music = {
+	name = "whoopie_ti_yi_yo"
+	file = "whoopie_ti_yi_yo.ogg"
+	volume = 1
+}
+
+music = {
+	name = "home_on_the_range"
+	file = "home_on_the_range.ogg"
+	volume = 1
+}
+
+music = {
+	name = "when_they_play_rural_rhythm"
+	file = "when_they_play_rural_rhythm.ogg"
+	volume = 1
+}
+
+music = {
+	name = "i_aint_got_no_home"
+	file = "i_aint_got_no_home.ogg"
+	volume = 1
+}
+
+music = {
+	name = "i_aint_got_nobody"
+	file = "i_aint_got_nobody.ogg"
+	volume = 1
+}
+
+music = {
+	name = "trouble_mind"
+	file = "trouble_in_mind.ogg"
+	volume = 1
+}
+
+music = {
+	name = "ida_red"
+	file = "ida_red.ogg"
+	volume = 1
+}
+
+music = {
+	name = "this_land_is_your_land"
+	file = "this_land_is_your_land.ogg"
+	volume = 1
+}
+
+music = {
+	name = "im_sending_you_red_roses"
+	file = "im_sending_you_red_roses.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_lone_star_trail"
+	file = "the_lone_star_trail.ogg"
+	volume = 1
+}
+
+music = {
+	name = "jesse_james"
+	file = "jesse_james.ogg"
+	volume = 1
+}
+
+music = {
+	name = "sweet_betsey_from_pike"
+	file = "sweet_betsey_from_pike.ogg"
+	volume = 1
+}
+
+music = {
+	name = "jesus_christ"
+	file = "jesus_christ.ogg"
+	volume = 1
+}
+
+music = {
+	name = "steel_guitar_rag"
+	file = "steel_guitar_rag.ogg"
+	volume = 1
+}
+
+music = {
+	name = "kelly_waltz"
+	file = "kelly_waltz.ogg"
+	volume = 1
+}
+
+music = {
+	name = "stay_a_little_longer"
+	file = "stay_a_little_longer.ogg"
+	volume = 1
+}
+
+music = {
+	name = "lost_train_blues"
+	file = "lost_train_blues.ogg"
+	volume = 1
+}
+
+music = {
+	name = "silver_bells"
+	file = "silver_bells.ogg"
+	volume = 1
+}
+
+music = {
+	name = "ma_valse_favori"
+	file = "ma_valse_favori.ogg"
+	volume = 1
+}
+
+music = {
+	name = "pine_grove_boogie"
+	file = "pine_grove_boogie.ogg"
+	volume = 1
+}
+
+music = {
+	name = "maidens_prayers"
+	file = "maidens_prayers.ogg"
+	volume = 1
+}
+
+music = {
+	name = "pin_solitaire"
+	file = "pin_solitaire.ogg"
+	volume = 1
+}
+
+music = {
+	name = "moon_over_montana"
+	file = "moon_over_montana.ogg"
+	volume = 1
+}
+
+music = {
+	name = "pastures_of_plenty"
+	file = "pastures_of_plenty.ogg"
+	volume = 1
+}
+
+music = {
+	name = "new_san_antonio_rose"
+	file = "new_san_antonio_rose.ogg"
+	volume = 1
+}
+
+music = {
+	name = "ill_get_along_somehow"
+	file = "ill_get_along_somehow.ogg"
+	volume = 1
+}
+
+music = {
+	name = "walking_the_floor_over_you"
+	file = "walking_the_floor_over_you.ogg"
+	volume = 1
+}
+
+# Caribbean
+
+music = {
+	name = "amor"
+	file = "amor.ogg"
+	volume = 1
+}
+
+music = {
+	name = "amor"
+	file = "amor.ogg"
+	volume = 1
+}
+
+music = {
+	name = "you_were_never_lovelier"
+	file = "you_were_never_lovelier.ogg"
+	volume = 1
+}
+
+music = {
+	name = "boogie_woogie_conga"
+	file = "boogie_woogie_conga.ogg"
+	volume = 1
+}
+
+music = {
+	name = "vira_y_vira"
+	file = "vira_y_vira.ogg"
+	volume = 1
+}
+
+music = {
+	name = "bruca_maniqua"
+	file = "bruca_maniqua.ogg"
+	volume = 1
+}
+
+music = {
+	name = "speak_n_spanish"
+	file = "speak_n_spanish.ogg"
+	volume = 1
+}
+
+music = {
+	name = "calientito"
+	file = "calientito.ogg"
+	volume = 1
+}
+
+music = {
+	name = "peanut_vendor"
+	file = "peanut_vendor.ogg"
+	volume = 1
+}
+
+music = {
+	name = "conga"
+	file = "conga.ogg"
+	volume = 1
+}
+
+music = {
+	name = "panama"
+	file = "panama.ogg"
+	volume = 1
+}
+
+music = {
+	name = "cuban_amapola"
+	file = "cuban_amapola.ogg"
+	volume = 1
+}
+
+music = {
+	name = "international_rumba"
+	file = "international_rumba.ogg"
+	volume = 1
+}
+
+music = {
+	name = "cuban_perfidia"
+	file = "cuban_perfidia.ogg"
+	volume = 1
+}
+
+music = {
+	name = "cui_cui"
+	file = "cui_cui.ogg"
+	volume = 1
+}
+
+music = {
+	name = "cuban_pete"
+	file = "cuban_pete.ogg"
+	volume = 1
+}
+
 # Hot Jazz
 
 music = {
@@ -787,5 +1116,275 @@ music = {
 music = {
 	name = "in_the_valley_of_the_moon"
 	file = "in_the_valley_of_the_moon.ogg"
+	volume = 1
+}
+
+# Hawaii
+
+music = {
+	name = "aloha_oe"
+	file = "aloha_oe.ogg"
+	volume = 1
+}
+
+music = {
+	name = "ukulele_lady"
+	file = "ukulele_lady.ogg"
+	volume = 1
+}
+
+music = {
+	name = "do_the_hula_tou"
+	file = "do_the_hula_tou.ogg"
+	volume = 1
+}
+
+music = {
+	name = "tropic_trade_winds"
+	file = "tropic_trade_winds.ogg"
+	volume = 1
+}
+
+music = {
+	name = "hawaiian_cowboy"
+	file = "hawaiian_cowboy.ogg"
+	volume = 1
+}
+
+music = {
+	name = "sweet_leilani"
+	file = "sweet_leilani.ogg"
+	volume = 1
+}
+
+music = {
+	name = "hawaiian_war_chant"
+	file = "hawaiian_war_chant.ogg"
+	volume = 1
+}
+
+music = {
+	name = "my_little_grass_shack_in_kealekekua"
+	file = "my_little_grass_shack_in_kealekekua.ogg"
+	volume = 1
+}
+
+music = {
+	name = "heat_wave"
+	file = "heat_wave.ogg"
+	volume = 1
+}
+
+music = {
+	name = "malihini_mele"
+	file = "malihini_mele.ogg"
+	volume = 1
+}
+
+music = {
+	name = "honolulu_baby"
+	file = "honolulu_baby.ogg"
+	volume = 1
+}
+
+music = {
+	name = "la_rosita"
+	file = "la_rosita.ogg"
+	volume = 1
+}
+
+music = {
+	name = "honolulu_how_do_you_do"
+	file = "honolulu_how_do_you_do.ogg"
+	volume = 1
+}
+
+music = {
+	name = "i_wonder_where_my_little_hula_girl_has_gone"
+	file = "i_wonder_where_my_little_hula_girl_has_gone.ogg"
+	volume = 1
+}
+
+music = {
+	name = "hula_girl"
+	file = "hula_girl.ogg"
+	volume = 1
+}
+
+# Leftists
+
+music = {
+	name = "16tonn_robeson"
+	file = "16tonn_robeson.ogg"
+	volume = 1
+}
+
+music = {
+	name = "comintern_eng"
+	file = "comintern_eng.ogg"
+	volume = 1
+}
+
+music = {
+	name = "wide_is_my_motherland"
+	file = "wide_is_my_motherland_eng.ogg"
+	volume = 1
+}
+
+music = {
+	name = "inter_eng"
+	file = "inter_eng.ogg"
+	volume = 1
+}
+
+music = {
+	name = "united_front_song"
+	file = "united_front_song.ogg"
+	volume = 1
+}
+
+music = {
+	name = "joehill"
+	file = "joehill.ogg"
+	volume = 1
+}
+
+music = {
+	name = "trees"
+	file = "trees.ogg"
+	volume = 1
+}
+
+music = {
+	name = "johnhenr"
+	file = "johnhenr.ogg"
+	volume = 1
+}
+
+music = {
+	name = "thepeatb"
+	file = "thepeatb.ogg"
+	volume = 1
+}
+
+music = {
+	name = "lincolne"
+	file = "lincolne.ogg"
+	volume = 1
+}
+
+music = {
+	name = "redflag"
+	file = "redflag.ogg"
+	volume = 1
+}
+
+music = {
+	name = "missisip"
+	file = "missisip.ogg"
+	volume = 1
+}
+
+music = {
+	name = "preacher_and_slave"
+	file = "preacher_and_slave.ogg"
+	volume = 1
+}
+
+music = {
+	name = "no_depression_in_heaven"
+	file = "no_depression_in_heaven.ogg"
+	volume = 1
+}
+
+music = {
+	name = "old_man_river"
+	file = "old_man_river.ogg"
+	volume = 1
+}
+
+# Dixie
+
+music = {
+	name = "flight_of_doodles"
+	file = "flight_of_doodles.ogg"
+	volume = 1
+}
+
+music = {
+	name = "to_arms_in_dixie"
+	file = "to_arms_in_dixie.ogg"
+	volume = 1
+}
+
+music = {
+	name = "god_save_the_south"
+	file = "god_save_the_south.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_yellow_rose_of_texas"
+	file = "the_yellow_rose_of_texas.ogg"
+	volume = 1
+}
+
+music = {
+	name = "goober_peas"
+	file = "goober_peas.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_valiant_conscript"
+	file = "the_valiant_conscript.ogg"
+	volume = 1
+}
+
+music = {
+	name = "I_can_whip_the_scoundrel"
+	file = "I_can_whip_the_scoundrel.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_southern_wagon"
+	file = "the_southern_wagon.ogg"
+	volume = 1
+}
+
+music = {
+	name = "lorena"
+	file = "lorena.ogg"
+	volume = 1
+}
+
+music = {
+	name = "the_bonnie_blue_flag"
+	file = "the_bonnie_blue_flag.ogg"
+	volume = 1
+}
+
+music = {
+	name = "oh_im_good_old_rebel"
+	file = "oh_im_good_old_rebel.ogg"
+	volume = 1
+}
+
+music = {
+	name = "stonewalls_jackson_way"
+	file = "stonewalls_jackson_way.ogg"
+	volume = 1
+}
+
+music = {
+	name = "rebel_soldier"
+	file = "rebel_soldier.ogg"
+	volume = 1
+}
+
+music = {
+	name = "riding_a_raid"
+	file = "riding_a_raid.ogg"
 	volume = 1
 }

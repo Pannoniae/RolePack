@@ -19,6 +19,15 @@ music = {
 }
 
 music = {
+	song = "american_patrol"
+
+	chance = {
+		factor = 1
+
+	}
+}
+
+music = {
 	song = "pensylvania_6_5000"
 
 	chance = {
