@@ -72,9 +72,27 @@ on_actions = {
 	#		
 	#	}
 	#}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						is_ai = no
+					}
+				}
+				set_global_flag = warred
+			}
+		}
+	}
 	on_leave_faction = {
 		effect = {
 			remove_from_tech_sharing_group = continuous_tech_share
+		}
+	}
+	on_daily = {
+		effect = {
+			# TODO the state control mechanic
+			f_state_check = yes
 		}
 	}
 	on_weekly_GER = { # Count all allies buffed to shit. If more than 3, make global alliance

@@ -22,15 +22,14 @@ NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 150
 NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 150
 NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 150
 NDefines.NCountry.STATE_VALUE_NON_CORE_STATE_FRACTION = 1.0
+NDefines.NBuildings.OWNER_CHANGE_EXTRA_SHARED_SLOTS_FACTOR = 1.0
 
 NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.2 -- base compliance grow
 
 NDefines.NAir.AIR_WING_MAX_SIZE = 1600
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
-
-NDefines.NCountry.EVENT_PROCESS_OFFSET = 5 --20 
---NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.125, 0.025, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
+NDefines.NFocus.FOCUS_POINT_DAYS = 5
 
 --NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
 --NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 
@@ -64,9 +63,13 @@ NDefines.NProduction.CAPITULATE_FUEL_RATIO = 0.75
 
 NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5
 
+
+-- "perf"
 NDefines.NAI.PLAN_FRONT_SECTION_MAX_LENGTH = 4			-- When a front is longer than this it will be split in two sections for the AI
 NDefines.NAI.PLAN_FRONT_SECTION_MIN_LENGTH = 1			-- When two front sections together are this short they will be merged for the AI
 NDefines.NCountry.INTERPOLATED_FRONT_STEPS_SHORT = 1
+NDefines.NCountry.EVENT_PROCESS_OFFSET = 5 --20 
+--NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.125, 0.025, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
 
 NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
     0.0/360.0, 1.0, 1.0,    --red
