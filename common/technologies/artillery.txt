@@ -163,7 +163,9 @@ technologies = {
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 		}
-		
+		category_spg_armor = {
+			soft_attack = 0.05
+		}
 		path = {
 			leads_to_tech = artillery3
 			research_cost_coeff = 1
@@ -218,6 +220,9 @@ technologies = {
 		mot_artillery_brigade = {
 			soft_attack = 0.1
 		}
+		category_spg_armor = {
+			soft_attack = 0.05
+		}
 		
 		path = {
 			leads_to_tech = artillery4
@@ -258,6 +263,9 @@ technologies = {
 			artillery_equipment_3
 		}
 		
+		category_spg_armor = {
+			soft_attack = 0.05
+		}
 		path = {
 			leads_to_tech = artillery5
 			research_cost_coeff = 1
@@ -309,6 +317,9 @@ technologies = {
 		}
 		mot_artillery_brigade = {
 			soft_attack = 0.1			  
+		}
+		category_spg_armor = {
+			soft_attack = 0.05
 		}
 		path = {
 			leads_to_tech = artillery_a
@@ -677,7 +688,9 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_anti_air_3
 		}
-		
+		category_spaa_armor = {
+			soft_attack = 0.05
+		}
 		path = {
 			leads_to_tech = antiair3
 			research_cost_coeff = 1
@@ -725,7 +738,10 @@ technologies = {
 		mot_anti_air_brigade = {
 			air_attack = 0.1
 		}
-		
+		category_spaa_armor = {
+			air_attack = 0.1
+			soft_attack = 0.05
+		}
 		tech_air_damage_factor = -0.02
 
 		path = {
@@ -774,6 +790,10 @@ technologies = {
 		}
 		mot_anti_air_brigade = {
 			air_attack = 0.1
+		}
+		category_spaa_armor = {
+			air_attack = 0.1
+			soft_attack = 0.05
 		}
 
 		tech_air_damage_factor = -0.02
@@ -827,7 +847,9 @@ technologies = {
 		enable_equipment_modules = { 
 			ship_anti_air_4
 		}
-		
+		category_spaa_armor = {
+			soft_attack = 0.05
+		}
 		path = {
 			leads_to_tech = antiair_a
 			research_cost_coeff = 1
@@ -959,7 +981,10 @@ technologies = {
 			hard_attack = 0.1
 			ap_attack = 0.2
 		}
-		
+		category_spat_armor = {
+			hard_attack = 0.05
+			ap_attack = 0.15
+		}
 		path = {
 			leads_to_tech = antitank2
 			research_cost_coeff = 1
@@ -1021,6 +1046,10 @@ technologies = {
 			anti_tank_equipment_2
 		}
 		
+		category_spat_armor = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
 		#anti_tank = {
 		#	hard_attack = 0.1
 		#	ap_attack = 0.05
@@ -1109,7 +1138,10 @@ technologies = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 		}
-		
+		category_spat_armor = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
 		path = {
 			leads_to_tech = antitank4
 			research_cost_coeff = 1
@@ -1184,7 +1216,10 @@ technologies = {
 			hard_attack = 0.1
 			ap_attack = 0.1
 		}
-	
+		category_spat_armor = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
 		path = {
 			leads_to_tech = antitank5
 			research_cost_coeff = 1
@@ -1246,6 +1281,10 @@ technologies = {
 			anti_tank_equipment_3
 		}	
 			
+		category_spat_armor = {
+			hard_attack = 0.05
+			ap_attack = 0.1
+		}
 		#anti_tank = {
 		#	hard_attack = 0.1
 		#	ap_attack = 0.05
