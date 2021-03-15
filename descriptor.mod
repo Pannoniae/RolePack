@@ -1,4 +1,4 @@
-version="1.10.4"
+version="1.10.3"
 tags={
 	"Alternative History"
 	"Balance"
@@ -10,7 +10,7 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-name="RolePack Lite"
+name="RolePack"
 picture="1956.png"
 supported_version="1.10.*"
-remote_file_id="2425987235"
+remote_file_id="2052827022"

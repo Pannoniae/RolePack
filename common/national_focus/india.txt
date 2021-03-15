@@ -3,6 +3,12 @@ focus_tree = {
 	
 	country = {
 		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = RAJ
+			has_dlc = "Together for Victory"
+		}
 
 		#modifier = {
 		#	add = 10
@@ -326,21 +332,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				swap_ideas = {
-					remove_idea = RAJ_agrarian_society
-					add_idea = RAJ_agrarian_society2
-				}	
-			}	
-			else = {
-				swap_ideas = {
-					remove_idea = RAJ_agrarian_economy
-					add_idea = RAJ_agrarian_economy_1
-				}	
-			}		
+			swap_ideas = {
+				remove_idea = RAJ_agrarian_society
+				add_idea = RAJ_agrarian_society2
+			}			
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}	
@@ -584,13 +579,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 25
-			modifier = {
-				factor = 0
-				has_game_rule = { 
-					rule = RAJ_AI_BEHAVIOR
-					option = FREE_INDIA 
-				}
-			}
 		}
 
 		available = {
@@ -649,32 +637,21 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
+			if =  {
 				limit = {
-					has_dlc = "Together for Victory"
+					has_idea = RAJ_marginalized_muslim_community_angry
 				}
-				if =  {
-					limit = {
-						has_idea = RAJ_marginalized_muslim_community_angry
-					}
-					swap_ideas = {
-						add_idea = RAJ_marginalized_muslim_community_happy
-						remove_idea = RAJ_marginalized_muslim_community_angry
-					}
-				}
-	
-				else = {
-					swap_ideas = {
-						add_idea = RAJ_marginalized_muslim_community_happy
-						remove_idea = RAJ_marginalized_muslim_community
-					}				
+				swap_ideas = {
+					add_idea = RAJ_marginalized_muslim_community_happy
+					remove_idea = RAJ_marginalized_muslim_community_angry
 				}
 			}
+
 			else = {
 				swap_ideas = {
-					remove_idea = RAJ_Caste_Debuff_2
-					add_idea = RAJ_Caste_Debuff_1
-				}
+					add_idea = RAJ_marginalized_muslim_community_happy
+					remove_idea = RAJ_marginalized_muslim_community
+				}				
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_MANPOWER }
@@ -905,7 +882,6 @@ focus_tree = {
 			is_subject = no
 			is_in_faction = no
 			communism > 0.5
-			has_civil_war = no
 		}
 
 		completion_reward = {
@@ -1041,14 +1017,7 @@ focus_tree = {
 		cost = 10
 
 		ai_will_do = {
-			factor = 50
-			modifier = {
-				factor = 0
-				has_game_rule = { 
-					rule = RAJ_AI_BEHAVIOR
-					option = FREE_INDIA_MARXIST 
-				}
-			}
+			factor = 25
 		}
 
 		available = {
@@ -1063,12 +1032,6 @@ focus_tree = {
 						is_puppet_of = JAP
 					}
 				}
-			}
-			if = {
-				limit = {
-					has_cosmetic_tag = RAJ_AH
-				}
-				has_government = fascism
 			}
 		}
 
@@ -1086,20 +1049,9 @@ focus_tree = {
 
 		completion_reward = {
 			add_timed_idea = { idea = nationalism days = 1500 }
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				swap_ideas = {
-					add_idea = RAJ_marginalized_muslim_community_angry
-					remove_idea = RAJ_marginalized_muslim_community
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = RAJ_Caste_Debuff_2
-					add_idea = RAJ_Caste_Debuff_3
-				}
+			swap_ideas = {
+				add_idea = RAJ_marginalized_muslim_community_angry
+				remove_idea = RAJ_marginalized_muslim_community
 			}
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_TFV_AUTONOMY FOCUS_FILTER_MANPOWER FOCUS_FILTER_WAR_SUPPORT }
@@ -1271,21 +1223,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			if = {
-				limit = {
-					has_dlc = "Together for Victory"
-				}
-				swap_ideas = {
-					remove_idea = RAJ_agrarian_society
-					add_idea = RAJ_agrarian_society2
-				}	
-			}	
-			else = {
-				swap_ideas = {
-					remove_idea = RAJ_agrarian_economy
-					add_idea = RAJ_agrarian_economy_1
-				}	
-			}		
+			swap_ideas = {
+				remove_idea = RAJ_agrarian_society
+				add_idea = RAJ_agrarian_society2
+			}			
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}		
@@ -1417,7 +1358,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = RAJ_join_the_axis
-		icon = GFX_goal_generic_the_axis
+		icon = GFX_r56_goal_generic_the_axis
 		prerequisite = {focus = RAJ_militarized_hindutva }
 		mutually_exclusive = { focus = RAJ_reactivate_our_japanese_contacts }
 
@@ -2159,10 +2100,6 @@ focus_tree = {
 		}
 
 		cost = 10
-
-		allow_branch = {
-			has_dlc = "Together for Victory"
-		}
 
 		ai_will_do = {
 			factor = 20
@@ -3004,7 +2941,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-
+			swap_ideas = {
+				remove_idea = RAJ_agrarian_society
+				add_idea = RAJ_agrarian_society2
+			}			
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}	
@@ -4058,10 +3998,6 @@ focus_tree = {
 
 		}
 
-		allow_branch = {
-			has_dlc = "Together for Victory"
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -4965,10 +4901,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 7
-		}
-		
-		allow_branch = {
-			has_dlc = "Together for Victory"
 		}
 
 		available = {

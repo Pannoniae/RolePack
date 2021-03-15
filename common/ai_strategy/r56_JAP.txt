@@ -30,79 +30,79 @@ JAP_you_gonna_stop_befriending_these_tags_its_not_your_mo = {
 	abort_when_not_enabled = yes
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "GUA"	
 		value = -50
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "HON"	
 		value = -50
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "HUN"	
-		value = -100
+		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "MEX"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "NIC"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "PAN"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "COS"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "COL"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "VEN"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "PRU"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "ECU"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "CHL"	
 		value = -75
 	}
 
 	ai_strategy = {
-		type = alliance
+		type = befriend
 		id = "BOL"	
 		value = -75
 	}
@@ -124,7 +124,6 @@ JAP_help_SIA_not_get_beaten_so_easy = {
 					has_war_with = MAL
 					has_war_with = FRI
 					has_war_with = INS
-					has_war_with = YUN
 				}
 			}
 		}
@@ -132,15 +131,16 @@ JAP_help_SIA_not_get_beaten_so_easy = {
 			is_fully_controlled_by = JAP
 		}
 		SIA = {
-			exists = yes
-			has_capitulated = no
+			AND = {
+				exists = yes
+				has_government = fascism
+			}
 			OR = {
 				has_war_with = RAJ
 				has_war_with = FRI
 				has_war_with = MAL
 				has_war_with = FRI
 				has_war_with = INS
-				has_war_with = YUN
 			}
 		}
 	}
@@ -155,15 +155,9 @@ JAP_help_SIA_not_get_beaten_so_easy = {
 	}
 
 	ai_strategy = {
-		type = force_defend_ally_borders
-		value = 51
-		target = burma_front
-	}
-
-	ai_strategy = {
         type = area_priority
         id = burma_front
-        value = 25
+        value = 20
 	}
 	
 	ai_strategy = {

@@ -269,10 +269,7 @@ ITA_hold_africa = {
 		tag = ITA
 		any_allied_country = {
 			is_major = yes
-			OR = {
-				has_war_with = ENG
-				has_war_with = FRA
-			}
+			has_war_with = ITA
 		}
 		ROOT = {
 			has_full_control_of_state = 158 #The Something has gone wrong vs France Check
@@ -281,14 +278,12 @@ ITA_hold_africa = {
 			NOT = { country_exists = ETH }
 			ETH = { is_puppet_of = ITA }
 		}
-		date < 1943.1.1
+		date < 1941.1.1
 	}
-
 	abort = {
 		any_owned_state = { is_core_of = ITA NOT = { is_controlled_by = ITA } }
+		date > 1941.1.1
 	}
-
-	abort_when_not_enabled = yes
 
 	ai_strategy = {
 		type = area_priority
@@ -301,7 +296,6 @@ ITA_hold_africa = {
 		id = africa
 		value = 180
 	}
-
 	ai_strategy = {
         type = area_priority
         id = suez
@@ -311,7 +305,7 @@ ITA_hold_africa = {
     ai_strategy = {
 		type = front_unit_request
 		area = africa
-		value = 70
+		value = 60
 	}
 
 	ai_strategy = {

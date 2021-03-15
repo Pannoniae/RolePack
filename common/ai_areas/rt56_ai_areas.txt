@@ -75,10 +75,4 @@ areas = {
         }
 	}
 
-	northern_france_bel_front = {
-		strategic_regions = {
-			19
-			5
-        }
-	}
 }

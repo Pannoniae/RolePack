@@ -3601,9 +3601,6 @@ focus_tree = {
 				}
 			cancel_if_invalid = no
 			available = {
-					ROOT = {
-				 		r56_script_i_am_sane = yes
-					}
 					CZE = {
 							exists = yes
 							custom_trigger_tooltip = {
@@ -3611,20 +3608,8 @@ focus_tree = {
 									is_alone_or_in_faction_at_peace_with_GER = yes
 								}
 						}
-						has_army_manpower = {
+					has_army_manpower = {
 							size > 599999
-						}
-						if = {
-							limit = { #Prevents AI germany from taking this focus in a badspot in non historical
-								ROOT = {
-									is_ai = yes
-								}
-								is_historical_focus_on = no
-							}
-							strength_ratio = {
-								tag = CZE
-								ratio > 1
-							}
 						}
 				}
 			bypass = {
@@ -3695,7 +3680,7 @@ focus_tree = {
 	focus = {
 		id = GER_demand_sudetenland
 		icon = GFX_goal_ger_fate_of_czech
-		cost = 10
+		cost = 8.00
 		prerequisite = {
 			focus = GER_anschluss
 		}
@@ -3830,7 +3815,7 @@ focus_tree = {
 		available = {
 			r56_script_i_am_sane = yes
 			has_army_manpower = {
-					size > 649999
+					size > 599999
 				}
 			CZE = {
 				r56_script_target_is_sane = yes
@@ -4537,17 +4522,6 @@ focus_tree = {
 		will_lead_to_war_with = POL
 		available = {
 			r56_script_i_am_sane = yes
-			OR = {
-				has_army_manpower = {
-					size > 849999
-				}
-
-				strength_ratio = {
-					tag = POL
-					ratio > 1
-				}
-
-			}
 			NOT = {
 				has_global_flag = r56_DNZ_prussia_legacy
 			}
@@ -5220,7 +5194,7 @@ focus_tree = {
 	focus = {
 		id = GER_anti_comitern_pact
 		icon = GFX_goal_attack_communists
-		cost = 5
+		cost = 1
 		prerequisite = {
 			focus = GER_rhineland
 		}
@@ -5239,7 +5213,7 @@ focus_tree = {
 					has_war_with = SOV
 				}
 			ai_will_do = {
-					factor = 9.5
+					factor = 9
 					modifier = {
 							factor = 3
 							SOV = {
@@ -5251,7 +5225,7 @@ focus_tree = {
 						}
 				}
 			completion_reward = {
-				add_political_power = 75
+				add_political_power = 50
 					SOV = {
 							add_opinion_modifier = {
 									target = ROOT
