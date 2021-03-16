@@ -67,7 +67,6 @@ NDefines.NProduction.CAPITULATE_STOCKPILES_RATIO = 0.75
 NDefines.NProduction.CAPITULATE_FUEL_RATIO = 0.75
 
 NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 2.5
-NDefines.NFocus.FOCUS_POINT_DAYS = 5
 
 NDefines_Graphics.NGraphics.COMMANDGROUP_PRESET_COLORS_HSV = {
     0.0/360.0, 1.0, 1.0,    --red
