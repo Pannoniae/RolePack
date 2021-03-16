@@ -285,28 +285,6 @@ guiTypes = {
 
 ### RMT ###
 
-		buttonType = {
-			name = "rmt_open"
-			quadTextureSprite = "GFX_generic_text_bg_203"
-			position = { x = 25 y = 70 }
-			shortcut = "ctrl+alt+a"
-			clicksound = click_ok
-			oversound = ui_menu_over
-		}
-		
-		instantTextboxType = {
-			position = {x = 0 y = 74 }
-			name = "rmt_title"
-			font = "hoi_18mbs"
-			text = "[RMT_ACTIVITY]"
-			maxWidth = 250
-			maxHeight = 23
-			format = center
-			alwaystransparent = yes
-		}
-
-
-
 
 	}
 
