@@ -171,10 +171,10 @@ on_actions = {
 	}
     on_daily_RAJ = {
 		effect = {
-			every_country = {
-				# TODO the state control mechanic
-				f_state_check = yes
-			}
+			#every_country = {
+			#	# TODO the state control mechanic
+			#	f_state_check = yes
+			#}
 			if = {
 				limit = {
 					has_country_flag = raj_election_over

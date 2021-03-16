@@ -89,12 +89,12 @@ on_actions = {
 			remove_from_tech_sharing_group = continuous_tech_share
 		}
 	}
-	on_daily = {
-		effect = {
-			# TODO the state control mechanic
-			f_state_check = yes
-		}
-	}
+	#on_daily = {
+	#	effect = {
+	#		# TODO the state control mechanic
+	#		#f_state_check = yes
+	#	}
+	#}
 	on_weekly_GER = { # Count all allies buffed to shit. If more than 3, make global alliance
 		effect = {
 			#every_country = {
