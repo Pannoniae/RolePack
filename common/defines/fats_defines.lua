@@ -29,6 +29,10 @@ NDefines.NAir.AIR_WING_MAX_SIZE = 1600
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
 
+NDefines.NMilitary.SLOWEST_SPEED = 1
+NDefines.NMilitary.NUKE_MIN_DAMAGE_PERCENT = 0.75			
+NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 1.25
+
 NDefines.NCountry.EVENT_PROCESS_OFFSET = 31 --20 
 --NDefines.NGame.GAME_SPEED_SECONDS = { 1.0, 0.25, 0.125, 0.025, 0.0 } --{2.0, 0.5, 0.2, 0.1, 0.0}
 

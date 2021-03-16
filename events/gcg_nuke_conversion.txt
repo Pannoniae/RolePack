@@ -1,0 +1,170 @@
+﻿add_namespace = gcg_nuke_conversion
+
+
+country_event = { ## 100 kt conversion ##
+	id = gcg_nuke_conversion.1
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { check_variable = { gcg_100kt_currently_converting = 0 } } add_to_variable = { var = gcg_100kt value = 1 } }
+	if = { limit = { check_variable = { gcg_100kt_converting_que = 0 } check_variable = { gcg_100kt_currently_converting = 0 } } clr_country_flag = gcg_is_converting_100kt set_variable = { gcg_100kt_currently_converting = -92 } }
+	if = { limit = { check_variable = { gcg_100kt_converting_que > 0 } check_variable = { gcg_100kt_currently_converting = 0 }  } set_variable = { gcg_100kt_currently_converting = -90 } add_to_variable = { var = gcg_100kt_converting_que value = -1 } }
+	if = { limit = { NOT = { check_variable = { gcg_100kt_currently_converting = -92 } check_variable = { gcg_100kt_currently_converting = 2 } } } add_to_variable = { var = gcg_100kt_currently_converting value = 2 }  }
+	if = { limit = { OR = { check_variable = { gcg_100kt_converting_que > 0 } NOT = { check_variable = { gcg_100kt_currently_converting = -92 } } } } country_event = { id = gcg_nuke_conversion.1 days = 1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+country_event = { ## 100 kt conversion trigger stuff ##
+	id = gcg_nuke_conversion.2
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { NOT = { has_country_flag = gcg_100_kt_first_con } has_tech = gcg_100_kt_research } set_variable = { gcg_100kt_currently_converting = -88 } set_country_flag = gcg_100_kt_first_con }
+	if = { limit = { NOT = { has_country_flag = gcg_is_converting_100kt } } country_event = { id = gcg_nuke_conversion.1 days = 0 } set_country_flag = gcg_is_converting_100kt set_variable = { gcg_100kt_currently_converting = -88 } add_to_variable = { var = gcg_100kt_converting_que value = -1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+	
+	
+	
+	
+	country_event = { ## 250 kt conversion ##
+	id = gcg_nuke_conversion.3
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { check_variable = { gcg_250kt_currently_converting = 0 } } add_to_variable = { var = gcg_250kt value = 1 } }
+	if = { limit = { check_variable = { gcg_250kt_converting_que = 0 } check_variable = { gcg_250kt_currently_converting = 0 } } clr_country_flag = gcg_is_converting_250kt set_variable = { gcg_250kt_currently_converting = -92 } }
+	if = { limit = { check_variable = { gcg_250kt_converting_que > 0 } check_variable = { gcg_250kt_currently_converting = 0 }  } set_variable = { gcg_250kt_currently_converting = -90 } add_to_variable = { var = gcg_250kt_converting_que value = -1 } }
+	if = { limit = { NOT = { check_variable = { gcg_250kt_currently_converting = -92 } check_variable = { gcg_250kt_currently_converting = 2 } } } add_to_variable = { var = gcg_250kt_currently_converting value = 1 }  }
+	if = { limit = { OR = { check_variable = { gcg_250kt_converting_que > 0 } NOT = { check_variable = { gcg_250kt_currently_converting = -92 } } } } country_event = { id = gcg_nuke_conversion.3 days = 1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+country_event = { ## 250 kt conversion trigger stuff ##
+	id = gcg_nuke_conversion.4
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { NOT = { has_country_flag = gcg_250_kt_first_con } has_tech = gcg_250_kt_research } set_variable = { gcg_250kt_currently_converting = -88 } set_country_flag = gcg_250_kt_first_con }
+	if = { limit = { NOT = { has_country_flag = gcg_is_converting_250kt } } country_event = { id = gcg_nuke_conversion.3 days = 0 } set_country_flag = gcg_is_converting_250kt set_variable = { gcg_250kt_currently_converting = -88 } add_to_variable = { var = gcg_250kt_converting_que value = -1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+country_event = { ## 5mt conversion ##
+	id = gcg_nuke_conversion.5
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { check_variable = { gcg_5000kt_currently_converting = 0 } } add_to_variable = { var = gcg_5000kt value = 1 } }
+	if = { limit = { check_variable = { gcg_5000kt_converting_que = 0 } check_variable = { gcg_5000kt_currently_converting = 0 } } clr_country_flag = gcg_is_converting_5000kt set_variable = { gcg_5000kt_currently_converting = -92 } }
+	if = { limit = { check_variable = { gcg_5000kt_converting_que > 0 } check_variable = { gcg_5000kt_currently_converting = 0 }  } set_variable = { gcg_5000kt_currently_converting = -90 } add_to_variable = { var = gcg_5000kt_converting_que value = -1 } }
+	if = { limit = { NOT = { check_variable = { gcg_5000kt_currently_converting = -92 } check_variable = { gcg_5000kt_currently_converting = 2 } } } add_to_variable = { var = gcg_5000kt_currently_converting value = 0.5 }  }
+	if = { limit = { OR = { check_variable = { gcg_5000kt_converting_que > 0 } NOT = { check_variable = { gcg_5000kt_currently_converting = -92 } } } } country_event = { id = gcg_nuke_conversion.5 days = 1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+country_event = { ## 5mt conversion trigger stuff ##
+	id = gcg_nuke_conversion.6
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { NOT = { has_country_flag = gcg_5000_kt_first_con } has_tech = gcg_5_mt_bomb } set_variable = { gcg_5000kt_currently_converting = -88 } set_country_flag = gcg_5000_kt_first_con }
+	if = { limit = { NOT = { has_country_flag = gcg_is_converting_5000kt } } country_event = { id = gcg_nuke_conversion.5 days = 0 } set_country_flag = gcg_is_converting_5000kt set_variable = { gcg_5000kt_currently_converting = -88 } add_to_variable = { var = gcg_5000kt_converting_que value = -1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+
+
+country_event = { ## 50mt conversion ##
+	id = gcg_nuke_conversion.7
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { check_variable = { gcg_50000kt_currently_converting = 0 } } add_to_variable = { var = gcg_50000kt value = 1 } }
+	if = { limit = { check_variable = { gcg_50000kt_converting_que = 0 } check_variable = { gcg_50000kt_currently_converting = 0 } } clr_country_flag = gcg_is_converting_50000kt set_variable = { gcg_50000kt_currently_converting = -92 } }
+	if = { limit = { check_variable = { gcg_50000kt_converting_que > 0 } check_variable = { gcg_50000kt_currently_converting = 0 }  } set_variable = { gcg_50000kt_currently_converting = -90 } add_to_variable = { var = gcg_50000kt_converting_que value = -1 } }
+	if = { limit = { NOT = { check_variable = { gcg_50000kt_currently_converting = -92 } check_variable = { gcg_50000kt_currently_converting = 2 } } } add_to_variable = { var = gcg_50000kt_currently_converting value = 0.5 }  }
+	if = { limit = { OR = { check_variable = { gcg_50000kt_converting_que > 0 } NOT = { check_variable = { gcg_50000kt_currently_converting = -92 } } } } country_event = { id = gcg_nuke_conversion.7 days = 1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+
+country_event = { ## 50mt conversion trigger stuff ##
+	id = gcg_nuke_conversion.8
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { NOT = { has_country_flag = gcg_50000_kt_first_con } has_tech = gcg_50_mt_bomb } set_variable = { gcg_50000kt_currently_converting = -88 } set_country_flag = gcg_50000_kt_first_con }
+	if = { limit = { NOT = { has_country_flag = gcg_is_converting_50000kt } } country_event = { id = gcg_nuke_conversion.7 days = 0 } set_country_flag = gcg_is_converting_50000kt set_variable = { gcg_50000kt_currently_converting = -88 } add_to_variable = { var = gcg_50000kt_converting_que value = -1 } }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+	

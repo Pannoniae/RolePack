@@ -1,0 +1,64 @@
+﻿add_namespace = gcg_revolt_notifications
+
+country_event = {
+	id = gcg_revolt_notifications.1
+	#picture =
+	title = gcg_revolt_notifications.1.t
+	desc = gcg_revolt_notifications.1.d
+	
+	is_triggered_only = yes
+
+	
+			option = {
+			name = gcg_revolt_notifications.1.a
+		}
+		
+	}
+	
+country_event = {
+	id = gcg_revolt_notifications.2
+	#picture =
+	title = gcg_revolt_notifications.2.t
+	desc = gcg_revolt_notifications.2.d
+	
+	is_triggered_only = yes
+
+	
+			option = {
+			name = gcg_revolt_notifications.1.a
+		}
+		
+	}
+	
+country_event = {
+	id = gcg_revolt_notifications.3
+	#picture =
+	title = gcg_revolt_notifications.3.t
+	desc = gcg_revolt_notifications.3.d
+	
+	is_triggered_only = yes
+
+	
+			option = {
+			name = gcg_revolt_notifications.1.a
+		}
+		
+	}
+	
+country_event = {
+	id = gcg_revolt_notifications.4
+	#picture =
+	title = gcg_revolt_notifications.4.t
+	desc = gcg_revolt_notifications.4.d
+	
+	is_triggered_only = yes
+
+	
+			option = {
+			name = gcg_revolt_notifications.1.a
+		}
+		
+	}
+	
+
+		

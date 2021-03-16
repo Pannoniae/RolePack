@@ -1,0 +1,85 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_state_subversion_background_medium"
+		textureFile = "gfx/interface/GFX_state_subversion_background_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_state_population_background_medium"
+		textureFile = "gfx/interface/GFX_state_population_background_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_action_button_availiable_medium"
+		textureFile = "gfx/interface/GFX_action_button_availiable_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_action_button_disabled_medium"
+		textureFile = "gfx/interface/GFX_action_button_disabled_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_state_population_title_medium"
+		textureFile = "gfx/interface/GFX_state_population_title_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_state_population_devider_medium"
+		textureFile = "gfx/interface/GFX_state_population_devider_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_radiation_background_medium"
+		textureFile = "gfx/interface/GFX_radiation_background_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_devider_state_pop_medium"
+		textureFile = "gfx/interface/GFX_devider_state_pop_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_upgrade_state_medium"
+		textureFile = "gfx/interface/GFX_upgrade_state_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_upgrade_state_not_availiable_medium"
+		textureFile = "gfx/interface/GFX_upgrade_state_not_availiable_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_upgrade_state_level_medium"
+		textureFile = "gfx/interface/GFX_upgrade_state_level_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_upgrade_state_level_not_avaliable_medium"
+		textureFile = "gfx/interface/GFX_upgrade_state_level_not_avaliable_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_downgrade_state_level_medium"
+		textureFile = "gfx/interface/GFX_downgrade_state_level_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_downgrade_state_level_not_possible_medium"
+		textureFile = "gfx/interface/GFX_downgrade_state_level_not_possible_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_devider_2_medium"
+		textureFile = "gfx/interface/GFX_gcg_devider_2_medium.dds"   
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_devider_3_medium"
+		textureFile = "gfx/interface/GFX_gcg_devider_3_medium.dds"   
+	}
+	
+	
+	
+}

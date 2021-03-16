@@ -1,0 +1,283 @@
+spriteTypes = {	
+	
+	## tech&equipment icons
+	
+	spriteType = {
+		name = "GFX_gcg_ger_engineering_equipment_medium"
+		textureFile = "gfx/interface/tech/gcg_engineering_equipment.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_counter_fortifications_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_counter_fortifications_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_combat_engineering_I_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_combat_engineering_I_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_combat_engineering_II_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_combat_engineering_I_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_combat_engineering_III_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_combat_engineering_I_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_combat_engineering_IV_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_combat_engineering_I_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_flame_trower_equipment_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_flame_trower_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_shaped_explosives_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_shaped_explosives_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_river_crossing_detatchment_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_river_crossing_detatchment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_staff_company_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_staff_company_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_staff_company_I_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_staff_company_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_staff_company_II_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_staff_company_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_infantry_equipment_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_infantry_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_infantry_equipment_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_infantry_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_sniper_companies_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_sniper_companies_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_sniper_sections_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_sniper_companies_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_intergrated_snipers_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_sniper_companies_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_heavy_equipment_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_heavy_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_body_armour_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_heavy_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_body_armour_I_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_heavy_equipment_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_specialized_artillery_units_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_specialized_artillery_units_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_railway_gun_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_railway_gun_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_heavy_artillery_battery_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_specialized_artillery_units_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_heavy_artillery_battery_upgrade_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_specialized_artillery_units_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_heavy_artillery_battery_I_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_specialized_artillery_units_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_operations_unit_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_operations_unit_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_operations_jungle_operations_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_operations_unit_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_operations_urban_operations_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_operations_unit_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_operations_desert_operations_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_operations_unit_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_special_operations_mountain_operations_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_special_operations_unit_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_volssturmgewehr_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_volssturmgewehr_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_ss_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_ss_i_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_ss_mot_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_ss_mech_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_volkssturm_medium"  
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_volkssturmgewehr_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_ss_ii_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_ss_iii_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_gcg_ger_the_ss_iiii_medium"
+		textureFile = "gfx/interface/tech/GFX_gcg_ger_the_ss_medium.dds"
+	}
+	
+	
+	
+	
+	
+	
+	
+
+
+	## item sizes
+	
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	##
+	
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_gcg_expanded_units_ger_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+}

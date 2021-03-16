@@ -1,0 +1,606 @@
+scripted_gui = {
+
+		nuclear_button = {
+		context_type = selected_state_context
+		
+		window_name = "gcg_nuclear_button_window"
+		
+		parent_window_token = selected_state_view
+		
+		visible = {
+            always = yes
+		}
+
+		effects = {
+			icon_gcg_nuke_window_command_click = {
+			
+				if = {
+					limit = { check_variable = { PREV.ROOT.gcg_nukewindow = 0 } }
+					set_variable = { PREV.ROOT.gcg_nukewindow = 1 }
+				}
+				else = {
+				if = {
+						limit = { check_variable = { PREV.ROOT.gcg_nukewindow > 0.9 } }
+						set_variable = { PREV.ROOT.gcg_nukewindow = 0 }
+						set_variable = { PREV.ROOT.gcg_rocket_nukewindow = 0 }
+						set_variable = { PREV.ROOT.gcg_conversion_nukewindow = 0 }
+						
+			}
+		}
+		}
+	}
+}
+
+		gcg_nuke = {
+		context_type = selected_state_context
+		
+		window_name = "gcg_nuke_window"
+		
+		visible = {
+            check_variable = { PREV.ROOT.gcg_nukewindow > 0.1 } 
+		}
+		
+		triggers = {
+		gcg_nuke_button_close_visible = { check_variable = { PREV.ROOT.gcg_rocket_nukewindow < 0.1 } check_variable = { PREV.ROOT.gcg_conversion_nukewindow < 0.1 } }
+           #gcg_100_kilotonnes_visible = {
+           #    THIS = { any_state = { is_controlled_by = PREV.ROOT distance_to = { value < 1000 target = PREV } } }
+           # }
+        }
+		
+		
+		
+		
+		effects = {
+			gcg_ballistic_missile_box_click = {
+				if = {
+					limit = { check_variable = { PREV.ROOT.gcg_rocket_nukewindow = 0 } }
+					set_variable = { PREV.ROOT.gcg_rocket_nukewindow = 1 }
+				}
+				else = {
+				if = {
+						limit = { check_variable = { PREV.ROOT.gcg_rocket_nukewindow > 0.9 } }
+						set_variable = { PREV.ROOT.gcg_rocket_nukewindow = 0 }
+			}
+		}
+	}
+	
+	gcg_conversion_box_click = {
+				if = {
+					limit = { check_variable = { PREV.ROOT.gcg_conversion_nukewindow = 0 } }
+					set_variable = { PREV.ROOT.gcg_conversion_nukewindow = 1 }
+				}
+				else = {
+				if = {
+						limit = { check_variable = { PREV.ROOT.gcg_conversion_nukewindow > 0.9 } }
+						set_variable = { PREV.ROOT.gcg_conversion_nukewindow = 0 }
+			}
+		}
+	}
+			
+			
+			gcg_nuke_button_close_click = {
+				set_variable = { PREV.ROOT.gcg_nukewindow = 0 }
+			}
+			
+		}
+		
+		#ai_enabled = {
+		#	always = yes
+		#}
+		
+		#ai_weights = {
+		#	
+		#}
+			
+		
+		#triggers = {
+		#}
+	}
+	
+	
+	gcg_ballistic_nuke = {
+		context_type = selected_state_context
+		
+		window_name = "gcg_rocket_nuke_window"
+		
+		visible = {
+            check_variable = { PREV.ROOT.gcg_rocket_nukewindow > 0.1 } 
+		}
+		
+		triggers = {
+           gcg_balistic_100kt_safety_visible = {
+              OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety = 0 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety = 0 }
+						}
+					}
+           }
+		   
+		   gcg_balistic_100kt_launch_visible = {
+               OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety = 1 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety = 1 }
+						}
+					}
+           }
+		   
+		   
+		   gcg_balistic_250kt_safety_visible = {
+              OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety25 = 0 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety25 = 0 }
+						}
+					}
+           }
+		   
+		   gcg_balistic_250kt_launch_visible = {
+               OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety25 = 1 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety25 = 1 }
+						}
+					}
+           }
+		   
+		   
+		   gcg_balistic_5000kt_safety_visible = {
+              OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety5m = 0 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety5m = 0 }
+						}
+					}
+           }
+		   
+		   gcg_balistic_5000kt_launch_visible = {
+               OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety5m = 1 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety5m = 1 }
+						}
+					}
+           }
+		   
+		   ##
+		   
+		    gcg_balistic_50000kt_safety_visible = {
+              OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety50m = 0 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety50m = 0 }
+						}
+					}
+           }
+		   
+		   gcg_balistic_50000kt_launch_visible = {
+               OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety50m = 1 }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+			check_variable = { PREV.ROOT.gcg_nuclear_safety50m = 1 }
+						}
+					}
+           }
+		   
+		
+        }
+		
+		
+		
+		
+		effects = {
+			gcg_balistic_100kt_launch_click = {
+				if = { limit = { check_variable = { FROM.ROOT.gcg_100kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				subtract_from_variable = {
+				var = FROM.ROOT.gcg_100kt
+				value = 1
+				}
+				
+				FROM.ROOT = {
+				launch_nuke = {
+				state = PREV.FROM.FROM
+				use_nuke = no
+				} 
+				}
+				set_variable = { PREV.FROM.FROM.100kt_casualties = 1 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety = 0 }
+				
+				}
+			}
+			
+			gcg_balistic_100kt_safety_click = {
+			if = { limit = { check_variable = { FROM.ROOT.gcg_100kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety = 1 }
+				}
+			}
+
+			gcg_balistic_250kt_launch_click = {
+				if = { limit = { check_variable = { FROM.ROOT.gcg_250kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				subtract_from_variable = {
+				var = FROM.ROOT.gcg_250kt
+				value = 1
+				}
+				
+				FROM.ROOT = {
+				launch_nuke = {
+				state = PREV.FROM.FROM
+				use_nuke = no
+				} 
+				}
+				set_variable = { PREV.FROM.FROM.250kt_casualties = 1 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety25 = 0 }
+				
+				}
+			}
+			
+			gcg_balistic_250kt_safety_click = {
+			if = { limit = { check_variable = { FROM.ROOT.gcg_250kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety25 = 1 }
+				}
+			}
+			
+			gcg_balistic_5000kt_launch_click = {
+				if = { limit = { check_variable = { FROM.ROOT.gcg_5000kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				subtract_from_variable = {
+				var = FROM.ROOT.gcg_5000kt
+				value = 1
+				}
+				
+				FROM.ROOT = {
+				launch_nuke = {
+				state = PREV.FROM.FROM
+				use_nuke = no
+				} 
+				}
+				set_variable = { PREV.FROM.FROM.5000kt_casualties = 1 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety5m = 0 }
+				
+				}
+			}
+			
+			##
+			gcg_balistic_5000kt_safety_click = {
+			if = { limit = { check_variable = { FROM.ROOT.gcg_5000kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety5m = 1 }
+				}
+			}
+			
+			gcg_balistic_50000kt_launch_click = {
+				if = { limit = { check_variable = { FROM.ROOT.gcg_50000kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				subtract_from_variable = {
+				var = FROM.ROOT.gcg_50000kt
+				value = 1
+				}
+				
+				FROM.ROOT = {
+				launch_nuke = {
+				state = PREV.FROM.FROM
+				use_nuke = no
+				} 
+				}
+				set_variable = { PREV.FROM.FROM.50000kt_casualties = 1 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety50m = 0 }
+				
+				}
+			}
+			
+			gcg_balistic_50000kt_safety_click = {
+			if = { limit = { check_variable = { FROM.ROOT.gcg_50000kt > 0 } THIS.controller = { has_war_with = PREV.ROOT } }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety50m = 1 }
+				}
+			}
+			
+			gcg_ballistic_nuke_button_close_click = {
+				set_variable = { PREV.ROOT.gcg_rocket_nukewindow = 0 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety = 0 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety5m = 0 }
+				set_variable = { PREV.ROOT.gcg_nuclear_safety25 = 0 }
+			}
+			
+		}
+		
+		#ai_enabled = {
+		#	always = yes
+		#}
+		
+		#ai_weights = {
+		#	
+		#}
+			
+		
+		triggers = {
+			gcg_range_hide_box_visible = {
+            OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+						}
+					}
+            }
+			
+			gcg_ballistic_in_range_visible = {
+            OR = {
+					AND = {
+			PREV.ROOT = { has_tech = improved_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 640 target = PREV } } }
+				}
+					AND = {
+			PREV.ROOT = { has_tech = advanced_rocket_engines }
+			THIS = { any_state = { rocket_site > 0 is_controlled_by = PREV.ROOT distance_to = { value < 11000 target = PREV } } }
+						}
+					}
+            }	
+		}
+	}
+	
+	
+	gcg_conversion_box_nuke = {
+		context_type = player_context
+		
+		window_name = "gcg_conversion_box_window"
+		
+		visible = {
+            check_variable = { gcg_conversion_nukewindow > 0.1 } 
+		}
+		
+		triggers = {
+           #gcg_convert_100_kt_visible = {
+            #  always = no
+            #}
+			
+			#gcg_100kt_production_bar_visible = {
+			 #check_variable = { gcg_100kt_currently_converting > 0 } 
+          #}
+
+		   
+		   
+        }
+		
+		properties = {
+			gcg_100kt_production_bar_progress_bar = {
+				x = gcg_100kt_currently_converting
+			}
+			
+			gcg_250kt_production_bar_progress_bar = {
+				x = gcg_250kt_currently_converting
+			}
+			
+			gcg_5000kt_production_bar_progress_bar = {
+				x = gcg_5000kt_currently_converting
+			}
+			
+			gcg_50000kt_production_bar_progress_bar = {
+				x = gcg_50000kt_currently_converting
+			}
+		}
+		
+		
+		effects = {
+			
+			gcg_convert_100_kt_add_click = {
+			if = { limit = { num_of_nukes > 0 has_tech = gcg_100_kt_research } 
+				add_to_variable = { var = gcg_100kt_converting_que value = 1 } 
+				add_nuclear_bombs = -1
+				country_event = { id = gcg_nuke_conversion.2 days = 0 }
+				} 
+				
+			}
+			
+			gcg_convert_100_kt_add_control_click = {
+			if = { limit = { num_of_nukes > 4 has_tech = gcg_100_kt_research } 
+				add_to_variable = { var = gcg_100kt_converting_que value = 5 } 
+				add_nuclear_bombs = -5
+				country_event = { id = gcg_nuke_conversion.2 days = 0 }
+				}
+		
+
+			}
+			
+			
+			
+			gcg_convert_100_kt_subtract_click = {
+			if = { limit = { check_variable = { gcg_100kt_converting_que > 0 } }
+				add_to_variable = { gcg_100kt_converting_que = -1 }
+				add_nuclear_bombs = 1
+				}
+			}
+			
+			gcg_convert_100_kt_subtract_control_click = {
+			if = { limit = { check_variable = { gcg_100kt_converting_que > 4 } }
+				add_to_variable = { gcg_100kt_converting_que = -5 }
+				add_nuclear_bombs = 5
+				}
+			}
+			
+			
+			
+			gcg_convert_250_kt_add_click = {
+			if = { limit = { num_of_nukes > 1 has_tech = gcg_250_kt_research } 
+				add_to_variable = { var = gcg_250kt_converting_que value = 1 } 
+				add_nuclear_bombs = -2
+				country_event = { id = gcg_nuke_conversion.4 days = 0 }
+				} 
+				
+			}
+			
+			gcg_convert_250_kt_add_control_click = {
+			if = { limit = { num_of_nukes > 9 has_tech = gcg_250_kt_research } 
+				add_to_variable = { var = gcg_250kt_converting_que value = 5 } 
+				add_nuclear_bombs = -10
+				country_event = { id = gcg_nuke_conversion.4 days = 0 }
+				}
+		
+
+			}
+			
+			
+			
+			gcg_convert_250_kt_subtract_click = {
+			if = { limit = { check_variable = { gcg_250kt_converting_que > 0 } }
+				add_to_variable = { gcg_250kt_converting_que = -1 }
+				add_nuclear_bombs = 2
+				}
+			}
+			
+			gcg_convert_250_kt_subtract_control_click = {
+			if = { limit = { check_variable = { gcg_250kt_converting_que > 4 } }
+				add_to_variable = { gcg_250kt_converting_que = -5 }
+				add_nuclear_bombs = 10
+				}
+			}
+			
+			
+			
+			gcg_convert_5000_kt_add_click = {
+			if = { limit = { num_of_nukes > 4 has_tech = gcg_5_mt_bomb } 
+				add_to_variable = { var = gcg_5000kt_converting_que value = 1 } 
+				add_nuclear_bombs = -5
+				country_event = { id = gcg_nuke_conversion.6 days = 0 }
+				} 
+				
+			}
+			
+			gcg_convert_5000_kt_add_control_click = {
+			if = { limit = { num_of_nukes > 24 has_tech = gcg_5_mt_bomb } 
+				add_to_variable = { var = gcg_5000kt_converting_que value = 5 } 
+				add_nuclear_bombs = -25
+				country_event = { id = gcg_nuke_conversion.6 days = 0 }
+				}
+		
+
+			}
+			
+			
+			
+			gcg_convert_5000_kt_subtract_click = {
+			if = { limit = { check_variable = { gcg_5000kt_converting_que > 0 } }
+				add_to_variable = { gcg_5000kt_converting_que = -1 }
+				add_nuclear_bombs = 5
+				}
+			}
+			
+			gcg_convert_5000_kt_subtract_control_click = {
+			if = { limit = { check_variable = { gcg_5000kt_converting_que > 4 } }
+				add_to_variable = { gcg_5000kt_converting_que = -5 }
+				add_nuclear_bombs = 25
+				}
+			}
+			
+			
+			
+			gcg_convert_50000_kt_add_click = {
+			if = { limit = { num_of_nukes > 14 has_tech = gcg_50_mt_bomb } 
+				add_to_variable = { var = gcg_50000kt_converting_que value = 1 } 
+				add_nuclear_bombs = -15
+				country_event = { id = gcg_nuke_conversion.8 days = 0 }
+				} 
+				
+			}
+			
+			gcg_convert_50000_kt_add_control_click = {
+			if = { limit = { num_of_nukes > 74 has_tech = gcg_50_mt_bomb } 
+				add_to_variable = { var = gcg_50000kt_converting_que value = 5 } 
+				add_nuclear_bombs = -75
+				country_event = { id = gcg_nuke_conversion.6 days = 0 }
+				}
+		
+
+			}
+			
+			
+			
+			gcg_convert_50000_kt_subtract_click = {
+			if = { limit = { check_variable = { gcg_50000kt_converting_que > 0 } }
+				add_to_variable = { gcg_5000kt_converting_que = -1 }
+				add_nuclear_bombs = 15
+				}
+			}
+			
+			gcg_convert_50000_kt_subtract_control_click = {
+			if = { limit = { check_variable = { gcg_50000kt_converting_que > 4 } }
+				add_to_variable = { gcg_50000kt_converting_que = -5 }
+				add_nuclear_bombs = 75
+				}
+			}
+						
+			
+			gcg_ballistic_nuke_button_close_click = {
+				set_variable = { gcg_conversion_nukewindow = 0 }
+			}
+			
+		}
+		
+		#ai_enabled = {
+		#	always = yes
+		#}
+		
+		#ai_weights = {
+		#	
+		#}
+			
+		
+		#triggers = {
+		#	
+		#}
+	}
+	
+
+
+
+}
+
+

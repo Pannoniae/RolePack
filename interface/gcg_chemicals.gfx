@@ -1,0 +1,301 @@
+spriteTypes = {	
+
+	
+	spriteType = {
+	name = "GFX_gcg_chemical_warfare_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_chemical_warfare_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_thermonuclear_research_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_thermonuclear_research_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_100_kt_research_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_100_kt_research_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_50_mt_bomb_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_100_kt_research_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_ap_mines_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_ap_mines_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_at_mines_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_at_mines_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_traps_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_traps_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_improvised_traps_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_traps_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_250_kt_research_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_100_kt_research_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_h_bomb_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/gcg_h_bomb.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_5_mt_bomb_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_100_kt_research_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_chemical_defence_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_chemical_defence_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_artillery_chemicals_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_artillery_chemicals_medium.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_ability_chlorine_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_chlorine_attack_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_phosgene_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	
+	spriteType = {
+		name = "GFX_ability_phosgene_attack_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_mustard_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_mustard_attack_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_Sarin_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_Sarin_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_sarin_attack_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_vx_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_vx_attack_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_Sarin_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_phosgene_attack_Artillery_enemy_protected"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_phosgene_artillery_attack"
+		texturefile = "gfx/interface/chemical_attack_ability_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ability_gcg_white_phos"
+		texturefile = "gfx/interface/GFX_ability_gcg_white_phos.dds"
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_white_phos_arty_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_white_phos_arty_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_news_event_chem_attack"
+	texturefile = "gfx/interface/events/GFX_news_event_chem_attack.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_phosgene_arty_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_phosgene_arty_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_gas_masks_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_gas_masks_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_full_body_suit_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_full_body_suit_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_weaponization_of_chemicals_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_weaponization_of_chemicals_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_advanced_chemical_refining_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_weaponization_of_chemicals_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_organophosphorus_substances_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_organophosphorus_substances_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_mask_breakers_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_mask_breakers_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_vx_substances_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_vx_substances_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_blister_gas_research_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_blister_gas_research_medium.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_gcg_Sulfur_refining_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_Sulfur_refining_medium.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_gcg_vesicant_chemical_warfare_agents_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_vesicant_chemical_warfare_agents_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_chlorine_refining_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_chlorine_refining_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_chlorine_gas_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_chlorine_gas_medium.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_gcg_phosgene_medium"
+	texturefile = "gfx/interface/chemicalwartechimages/GFX_gcg_phosgene_medium.dds"		
+	}
+	
+	spriteType = {
+		name = "GFX_chemicals_techtree_bg"
+		textureFile = "gfx//interface//techtree//GFX_chemicals_techtree_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_gcgchemicals_folder_tab"
+		texturefile = "gfx//interface//techtree//techtree_chemical_war.dds"
+		noOfFrames = 2		
+	}
+
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_small_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_gcgchemicals_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+	
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_technology_gcgchemicals_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}	
+	
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_gcgchemicals_folder_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	
+}

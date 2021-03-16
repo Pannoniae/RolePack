@@ -1,0 +1,388 @@
+﻿###########################
+# startup Event
+###########################
+
+add_namespace = gcg_nuclearstartup
+
+
+country_event = {
+	id = gcg_nuclearstartup.1
+	title = gcg_nuclearstartup.1.t
+	desc = gcg_nuclearstartup.1.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.1.a
+		set_global_flag = gcg_startup_event
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.2 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		set_global_flag = gcg_disable_unique_units
+		every_country = { set_technology = { gcg_staff_company = 1 } }
+		set_global_flag = no_staff_units
+	}
+
+
+}
+
+country_event = {
+	id = gcg_nuclearstartup.2
+	title = gcg_nuclearstartup.2.t
+	desc = gcg_nuclearstartup.2.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.2.a
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.3 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.b
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.9 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.c
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.10 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+
+
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.7 days = 0 } }
+	}
+
+
+}
+
+country_event = {
+	id = gcg_nuclearstartup.3
+	title = gcg_nuclearstartup.3.t
+	desc = gcg_nuclearstartup.3.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.3.a
+		set_global_flag = gcg_startup_event
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.1 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.b
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.9 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.c
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.10 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.7 days = 0 } }
+	}
+
+
+}
+
+
+country_event = {
+	id = gcg_nuclearstartup.4
+	title = gcg_nuclearstartup.4.t
+	desc = gcg_nuclearstartup.4.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.3.a
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.1 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.4.a
+		set_global_flag = gcg_radiation_startup_event
+		set_global_flag = gcg_debug_nuclear_apocalypse
+		every_country = { add_nuclear_bombs = 100 }
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		}
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.7 days = 0 } }
+		
+		set_technology = {
+		experimental_rockets = 1
+		}
+		
+		set_technology = {
+		rocket_engines = 1
+		}
+		
+		set_technology = {
+		improved_rocket_engines = 1
+		}
+		
+		set_technology = {
+		advanced_rocket_engines = 1
+		}
+		
+		set_technology = {
+		gcg_100_kt_research = 1
+		}
+
+		set_technology = {
+		nukes = 1
+		}
+
+		set_technology = {
+		nuclear_reactor = 1
+		}		}
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.4.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.7 days = 0 } }
+	}
+
+
+}
+
+
+
+country_event = {
+	id = gcg_nuclearstartup.5
+	title = gcg_nuclearstartup.5.t
+	desc = gcg_nuclearstartup.5.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.3.a
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.1 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.7 days = 0 } }
+	}
+
+
+}
+
+#country_event = {
+#	id = gcg_nuclearstartup.6
+#	title = gcg_nuclearstartup.6.t
+#	desc = gcg_nuclearstartup.6.d
+#	is_triggered_only = yes
+#
+#	
+#	option = {
+#		name = gcg_nuclearstartup.6.a
+#		every_state = { set_variable = { gcg_state_difficulty = -1000 } add_to_variable = { gcg_state_revolt_risk = -1000 } }
+#		country_event = { id = gcg_nuclearstartup.7 days = 0 }
+#		every_country = { limit = { is_ai = no NOT = { has_global_flag = gcg_only_once } } country_event = { id = gcg_state_subversion.7 days = 5 } country_event = { id = gcg_state_revolt.1 days = 0 }
+#							}
+#	}
+#	
+#		option = {
+#		name = gcg_nuclearstartup.6.e
+#		every_state = { set_variable = { gcg_state_difficulty = -25 } add_to_variable = { gcg_state_revolt_risk = -25 } }
+#		country_event = { id = gcg_nuclearstartup.7 days = 0 }
+#		every_country = { limit = { is_ai = no NOT = { has_global_flag = gcg_only_once } } country_event = { id = gcg_state_subversion.7 days = 5 } country_event = { id = gcg_state_revolt.1 days = 0 }
+#							}
+#	}
+#	
+#	option = {
+#		name = gcg_nuclearstartup.6.c
+#		country_event = { id = gcg_nuclearstartup.7 days = 0 }
+#		every_country = { limit = { is_ai = no NOT = { has_global_flag = gcg_only_once } } country_event = { id = gcg_state_subversion.7 days = 5 } country_event = { id = gcg_state_revolt.1 days = 0 }
+#							}
+#	}
+#	
+#	option = {
+#		name = gcg_nuclearstartup.6.f
+#		every_state = { set_variable = { gcg_state_difficulty = 25 } add_to_variable = { gcg_state_revolt_risk = 25 } }
+#		country_event = { id = gcg_nuclearstartup.7 days = 0 }
+#		every_country = { limit = { is_ai = no NOT = { has_global_flag = gcg_only_once } } country_event = { id = gcg_state_subversion.7 days = 5 } country_event = { id = gcg_state_revolt.1 days = 0 }
+#							}
+#	}
+#
+#
+#}
+
+country_event = {
+	id = gcg_nuclearstartup.7
+	title = gcg_nuclearstartup.7.t
+	desc = gcg_nuclearstartup.7.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.7.a
+		IF = { LIMIT = { GER = { has_government = fascism is_ai = no } } GER = { set_country_flag = gcg_germany_fascist set_technology = { gcg_ger_the_ss = 1 } load_oob = "gcg_ger_spawn_units" }  } 
+		IF = { LIMIT = { GER = { has_government = fascism is_ai = yes } } GER = { set_country_flag = gcg_germany_fascist set_technology = { gcg_ger_the_ss = 1 } load_oob = "gcg_gerai_spawn_units" load_oob = "gcg_gerai_spawn_units" }  } 
+		IF = { LIMIT = { SOV = { has_government = communism is_ai = no } } SOV = { set_country_flag = gcg_russia_communist } SOV = { set_technology = { gcg_sov_nkvd = 1 gcg_sov_guards_rifle = 1 } load_oob = "gcg_sov_spawn_units" } }
+		IF = { LIMIT = { SOV = { has_government = communism is_ai = yes } } SOV = { set_country_flag = gcg_russia_communist } SOV = { set_technology = { gcg_sov_nkvd = 1 gcg_sov_guards_rifle = 1 } load_oob = "gcg_sovai_spawn_units" load_oob = "gcg_sovai_spawn_units" } }
+		ITA = { load_oob = "gcg_ita_gas" }
+		every_country = { set_technology = { gcg_staff_company = 1 } }
+		ENG = { set_country_flag = gcg_is_united_kingdom }
+		set_global_flag = gcg_enable_unique_units
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.11 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.7.b
+		set_global_flag = gcg_disable_unique_units
+		every_country = { set_technology = { gcg_staff_company = 1 } }
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.11 } }
+		ITA = { load_oob = "gcg_ita_gas" }
+	}
+
+
+}
+
+
+country_event = {
+	id = gcg_nuclearstartup.8
+	title = gcg_nuclearstartup.8.t
+	desc = gcg_nuclearstartup.8.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.8.a
+		set_global_flag = gcg_unique_units_cheating_ai
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.8.b
+		set_global_flag = gcg_unique_units_disable_cheating_ai
+	}
+
+
+}
+
+
+country_event = {
+	id = gcg_nuclearstartup.9
+	title = gcg_nuclearstartup.9.t
+	desc = gcg_nuclearstartup.9.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.3.a
+		set_global_flag = gcg_startup_event
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.1 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.9.b
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.2 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.c
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.10 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.6 days = 0 } }
+	}
+
+
+}
+
+country_event = {
+	id = gcg_nuclearstartup.10
+	title = gcg_nuclearstartup.10.t
+	desc = gcg_nuclearstartup.10.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = gcg_nuclearstartup.3.a
+		set_global_flag = gcg_startup_event
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.1 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.2.b
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.9 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.10.c
+		ROOT = { country_event = { days = 0 id = gcg_nuclearstartup.2 } }
+	}
+	
+	option = {
+		name = gcg_nuclearstartup.1.b
+		set_global_flag = gcg_radiation_startup_event
+		every_country = {
+		set_technology = {
+		gcg_nbc_minor_tech = 1
+		} }
+		if = { limit = { NOT = { has_global_flag = gcg_startup_settings } } set_global_flag = gcg_startup_settings country_event = { id = gcg_nuclearstartup.6 days = 0 } }
+	}
+
+
+}
+
+
+country_event = {
+	id = gcg_nuclearstartup.11
+	title = gcg_nuclearstartup.11.t
+	desc = gcg_nuclearstartup.11.d
+	is_triggered_only = yes
+
+	
+	option = {
+		name = Enable
+	}
+	
+	option = {
+		name = Disable
+		set_global_flag = no_staff_units
+	}
+	
+	
+}
+
+

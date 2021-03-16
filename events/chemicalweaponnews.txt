@@ -1,0 +1,54 @@
+﻿add_namespace = gcg_chemicals
+
+news_event = {
+	id = gcg_chemicals.1
+	picture = GFX_news_event_chem_attack
+	title = gcg_chemicals.t
+	desc = gcg_chemicals.d
+
+	major = yes
+	
+	is_triggered_only = yes
+
+	
+
+
+	
+			option = {
+			name = gcg_chemicals.a
+			set_global_flag = gcg_first_use_chemical_weapons
+		}
+		
+	} 
+	
+country_event = {
+	id = gcg_chemicals.2
+	#picture = GFX_news_event_nuke
+
+	trigger = {
+	is_ai = no
+	}
+	
+	mean_time_to_happen = {
+	days = 5
+	}
+	
+	hidden = yes
+	
+	immediate = {
+	every_unit_leader = { remove_unit_leader_trait = gcg_cold_calculations }
+	every_unit_leader = { remove_unit_leader_trait = gcg_white_phos_trait }
+	every_unit_leader = { remove_unit_leader_trait = gcg_has_nkvd_in_corps_trait }
+	every_unit_leader = { remove_unit_leader_trait = gcg_has_sipo_in_corps_trait }
+	every_unit_leader = { limit = { check_variable = { num_units_on_climate@cold_climate > 2 } set_temp_variable = { temp = avg_units_acclimation@cold_climate } divide_temp_variable = { temp =  num_units } check_variable = { temp < 0.5 } } add_unit_leader_trait = gcg_cold_calculations  }
+	every_unit_leader = { limit = { set_temp_variable = { temp2 = 0 } add_to_temp_variable = { temp2 = num_equipment@heavy_tank_artillery_equipment } add_to_temp_variable = { temp2 = num_equipment@artillery_equipment } add_to_temp_variable = { temp2 = num_equipment@super_heavy_tank_artillery_equipment } add_to_temp_variable = { temp2 = num_equipment@modern_tank_artillery_equipment } add_to_temp_variable = { temp2 = num_equipment@medium_tank_artillery_equipment } add_to_temp_variable = { temp2 = num_equipment@light_tank_artillery_equipment } check_variable = { temp2 > 48 } } add_unit_leader_trait = gcg_white_phos_trait }
+
+	every_unit_leader = { limit = { set_temp_variable = { temp2 = 0 } add_to_temp_variable = { temp2 = num_battalions_with_type@gcg_sipo } check_variable = { temp2 > 5 } } add_unit_leader_trait = gcg_has_sipo_in_corps_trait }
+	every_unit_leader = { limit = { set_temp_variable = { temp2 = 0 } add_to_temp_variable = { temp2 = num_battalions_with_type@gcg_nkvd } check_variable = { temp2 > 5 } } add_unit_leader_trait = gcg_has_nkvd_in_corps_trait }
+	}
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+		}
+	
