@@ -1,0 +1,297 @@
+﻿add_namespace = gcg_state_revolt
+
+
+state_event = {#set state revolt risk chance#
+	id = gcg_state_revolt.1
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	if = { limit = { NOT = { has_global_flag = gcg_only_once }  }
+	set_global_flag = gcg_only_once
+		every_country = { 
+			every_state = { 
+				limit = { is_controlled_by = PREV }
+				##stability
+					set_variable = { gcg_state_revolt_risk = 0 } 
+					set_variable = { gcg_stability_tooltip = 0 } 
+					subtract_from_variable = { gcg_state_revolt_risk = PREV.stability } 
+					subtract_from_variable = { gcg_stability_tooltip = PREV.stability } 
+					multiply_variable = { gcg_state_revolt_risk = 100 } 
+					multiply_variable = { gcg_stability_tooltip = 100 }
+						}
+					}
+			every_country = {  
+			##offensive war?
+			if = { limit = { THIS = { has_offensive_war = yes } } every_state = { limit = { is_controlled_by = PREV } set_variable = { gcg_warsupport_offensive_war = 20 } add_to_variable = { gcg_state_revolt_risk = 20 } } }
+			if = { limit = { THIS = { has_offensive_war = yes } has_government = fascism } every_state = { limit = { is_controlled_by = PREV is_core_of = PREV } set_variable = { gcg_warsupport_offensive_war = 10 } add_to_variable = { gcg_state_revolt_risk = -10 } } }
+			if = { limit = { THIS = { has_offensive_war = yes } has_government = communism } every_state = { limit = { is_controlled_by = PREV is_core_of = PREV } set_variable = { gcg_warsupport_offensive_war = 15 } add_to_variable = { gcg_state_revolt_risk = -5 } } }
+			##defensive war?
+			if = { limit = { THIS = { has_offensive_war = no has_war = yes } } every_state = { limit = { is_controlled_by = PREV } set_variable = { gcg_warsupport_defensive_war = 20 } add_to_variable = { gcg_state_revolt_risk = -20 } } }
+			if = { limit = { THIS = { has_offensive_war = no has_war = yes has_government = democratic } } every_state = { limit = { is_controlled_by = PREV is_core_of = PREV } set_variable = { gcg_warsupport_defensive_war = 35 } add_to_variable = { gcg_state_revolt_risk = -35 } } }
+			}
+
+			every_country = { 
+			every_state = { 
+				limit = { is_controlled_by = PREV is_core_of = PREV }
+				##is core
+					add_to_variable = { gcg_state_revolt_risk = -15 } 
+					set_variable = { gcg_non_core_tooltip = -15 } 
+						}
+					
+					}
+					
+				every_country = { 
+				every_state = { 
+				limit = { is_controlled_by = PREV NOT = { is_core_of = PREV } }
+				##is non core
+					add_to_variable = { gcg_state_revolt_risk = 25 } 
+					set_variable = { gcg_non_core_tooltip = 25 } 
+						}
+					
+					}
+					
+				
+				
+			every_country = {
+			every_state = { 
+			limit = { is_controlled_by = PREV }
+			##state resistance
+				set_variable = { gcg_state_resistance = 0 } 
+				add_to_variable = { gcg_state_resistance = THIS.resistance } 
+				multiply_variable = { gcg_state_resistance = 50 }
+				add_to_variable = { gcg_state_revolt_risk = gcg_state_resistance } 
+						}
+					
+					}
+					
+			#ruiling party support		
+			every_country = {
+			every_state = { limit = { is_controlled_by = PREV is_core_of = PREV } set_variable = { gcg_ruiling_party_support = 0 } subtract_from_variable = { gcg_ruiling_party_support = PREV.party_popularity@ruling_party } divide_variable = { gcg_ruiling_party_support = 10 } add_to_variable = { gcg_state_revolt_risk = gcg_ruiling_party_support } }
+					
+					}
+					
+			#manpower laws		
+			every_country = {
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = disarmed_nation } } set_variable = { gcg_conscription_laws = -8.5 } add_to_variable = { gcg_state_revolt_risk = -8.5 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = volunteer_only } } set_variable = { gcg_conscription_laws = -6 } add_to_variable = { gcg_state_revolt_risk = -6 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = limited_conscription } } set_variable = { gcg_conscription_laws = -3.5 } add_to_variable = { gcg_state_revolt_risk = -3.5 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = extensive_conscription } } set_variable = { gcg_conscription_laws = -1 } add_to_variable = { gcg_state_revolt_risk = -1 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = service_by_requirement } } set_variable = { gcg_conscription_laws = 1.5 } add_to_variable = { gcg_state_revolt_risk = 1.5 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = all_adults_serve } } set_variable = { gcg_conscription_laws = 4 } add_to_variable = { gcg_state_revolt_risk = 4 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = scraping_the_barrel } } set_variable = { gcg_conscription_laws = 6.5 } add_to_variable = { gcg_state_revolt_risk = 6.5 } }
+					
+					}
+					
+			#factory laws		
+			every_country = {
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = undisturbed_isolation } } set_variable = { gcg_industrial_laws = -7.5 } add_to_variable = { gcg_state_revolt_risk = -7.5 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = isolation } } set_variable = { gcg_industrial_laws = 0 } add_to_variable = { gcg_state_revolt_risk = 0 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = civilian_economy } } set_variable = { gcg_industrial_laws = -4 } add_to_variable = { gcg_state_revolt_risk = -4 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = low_economic_mobilisation } } set_variable = { gcg_industrial_laws = -2 } add_to_variable = { gcg_state_revolt_risk = -2 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = partial_economic_mobilisation } } set_variable = { gcg_industrial_laws = 0 } add_to_variable = { gcg_state_revolt_risk = 0 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = war_economy } } set_variable = { gcg_industrial_laws = 2 } add_to_variable = { gcg_state_revolt_risk = 2 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = tot_economic_mobilisation } } set_variable = { gcg_industrial_laws = 4 } add_to_variable = { gcg_state_revolt_risk = 4 } }
+					
+					}
+					
+			#export laws		
+			every_country = {
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = free_trade } } set_variable = { gcg_export_laws = -5 } add_to_variable = { gcg_state_revolt_risk = -5 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = export_focus } } set_variable = { gcg_export_laws = -2 } add_to_variable = { gcg_state_revolt_risk = -2 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = limited_exports } } set_variable = { gcg_export_laws = 1 } add_to_variable = { gcg_state_revolt_risk = 1 } }
+			every_state = { limit = { is_controlled_by = PREV PREV = { has_idea = closed_economy } } set_variable = { gcg_export_laws = 4 } add_to_variable = { gcg_state_revolt_risk = 4 } }
+			
+					}
+					
+			#State manpower	
+			every_country = {
+			every_state = { limit = { is_controlled_by = PREV } set_variable = { gcg_population_debuff = state_population_k } divide_variable = { gcg_population_debuff = 2000 } add_to_variable = { gcg_state_revolt_risk = gcg_population_debuff } } #clamp_variable = { var = gcg_population_debuff min = 0.1 max = 10 }
+			
+					}
+					
+			#set war exhaustion
+			every_country = { limit = { not = { has_country_flag = gcg_war_exhaustion_calc } } set_country_flag = gcg_war_exhaustion_calc set_variable = { gcg_war_exhaustion_var = 0 } }
+				
+			#war exhaustion add
+			every_country = {
+			limit = { has_war = yes } add_to_variable = { gcg_war_exhaustion_var = 0.055 } 
+			
+					}
+					
+			#war exhaustion remove
+			every_country = {
+			limit = { has_war = no } add_to_variable = { gcg_war_exhaustion_var = -0.8 }
+					}
+					
+			#war exhaustion min/max cap
+			every_country = {
+			if = { limit = { has_war = no check_variable = { gcg_war_exhaustion_var < 0 } } set_variable = { gcg_war_exhaustion_var = 0 } }
+			if = { limit = { has_war = yes check_variable = { gcg_war_exhaustion_var > 25 } } set_variable = { gcg_war_exhaustion_var = 25 } }
+			every_state = { limit = { is_controlled_by = PREV } add_to_variable = { gcg_state_revolt_risk = PREV.gcg_war_exhaustion_var } set_variable = { gcg_war_exhaustion_var_state = PREV.gcg_war_exhaustion_var } }
+					}
+					
+			#lower state discontent
+			every_country = {
+				every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_up_downgrade > 0.8 } } add_to_variable = { gcg_state_up_downgrade = -1 } }
+				every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_up_downgrade < 0 } } add_to_variable = { gcg_state_up_downgrade = 1 } }
+				every_state = { limit = { is_controlled_by = PREV } add_to_variable = { gcg_state_revolt_risk = gcg_state_up_downgrade } }
+					}
+					
+			
+			#difficulty gcg_state_difficulty
+			every_state = {  add_to_variable = { gcg_state_revolt_risk = gcg_state_difficulty } }
+			
+			#capitals cant revolt
+			every_country = { every_state = { limit = { is_controlled_by = PREV is_capital = yes } set_variable = { gcg_is_capital = -200 } add_to_variable = { gcg_state_revolt_risk = gcg_is_capital } } }
+			#remove capital buff from occupied countries
+			every_country = { every_state = { limit = { is_controlled_by = PREV is_capital = no } set_variable = { gcg_is_capital = 0 } add_to_variable = { gcg_state_revolt_risk = gcg_is_capital } } }
+				
+			#state recently changed owners
+			#decrease buff
+			every_country = { every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_controller_changed_var_state < 0 } } add_to_variable = { gcg_controller_changed_var_state = 0.5 } } }
+			#add to revolt risk
+			every_country = { every_state = { limit = { is_controlled_by = PREV } add_to_variable = { gcg_state_revolt_risk = gcg_controller_changed_var_state } } }
+			
+			
+			
+			every_country = {
+			#cap  -100	
+			every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_revolt_risk < -100 } } set_variable = { gcg_state_revolt_risk = -100} }
+			#cap + 75
+			every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_revolt_risk > 75 } } set_variable = { gcg_state_revolt_risk = 75} }
+					}
+
+			every_country = { limit = { is_ai = no } country_event = { id = gcg_state_revolt.1 days = 7 } }
+			every_country = { limit = { is_ai = no } country_event = { id = gcg_state_revolt.2 days = 1 } }
+			
+			#prevent rebels warring themselfs
+			RE1 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE2 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE3 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE4 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE5 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE6 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE7 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE8 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			RE9 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			R10 = { set_country_flag = gcg_are_rebels add_ideas = gcg_rebels_idea }
+			
+			#state recently Revolted decrease
+			every_country = { every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_recently_revolted < 0 } } add_to_variable = { gcg_state_recently_revolted = 5 } add_to_variable = { gcg_state_revolt_risk = gcg_state_recently_revolted } } }
+
+			
+					
+			#revolt
+			every_country = { every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_revolt_risk > 0 } } set_variable = { gcg_spawn_revolt = 0 } add_to_variable = { gcg_spawn_revolt = gcg_state_revolt_risk } set_variable = { gcg_spawn_revolt_calc = random } multiply_variable = { gcg_spawn_revolt_calc = 100 } } }
+			every_country = { every_state = { limit = { is_controlled_by = PREV check_variable = { gcg_state_revolt_risk > gcg_spawn_revolt_calc } }  
+			#revolt states
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE1 has_war_with = RE2 has_war_with = RE3 has_war_with = RE4 has_war_with = RE5 } } check_variable = { global.re1_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { NOT = { is_core_of = PREV } } } PREV = { set_variable = { gcg_disloyal_state = PREV.id } country_event = { id = gcg_revolt_notifications.1 days = 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } set_variable = { global.re1_revolting = 1 } RE1 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "Rebels" } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE1 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE1 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE1 } } }
+			IF = { limit = { check_variable = { global.re1_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE1 = { has_war_with = PREV } THIS = { NOT = { is_core_of = PREV } } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { country_event = { id = gcg_revolt_notifications.2 days = 0 } } RE1 = { transfer_state = PREV } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE1 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE1 } } }
+			
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE1 has_war_with = RE2 has_war_with = RE3 has_war_with = RE4 has_war_with = RE5  } } check_variable = { global.re2_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { NOT = { is_core_of = PREV } } } PREV = { set_variable = { gcg_disloyal_state = PREV.id } country_event = { id = gcg_revolt_notifications.1 days = 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } set_variable = { global.re2_revolting = 1 } RE2 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "Rebels" } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } }
+			IF = { limit = { check_variable = { global.re2_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE2 = { has_war_with = PREV } THIS = { NOT = { is_core_of = PREV } } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { country_event = { id = gcg_revolt_notifications.2 days = 0 } } RE2 = { transfer_state = PREV } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE2 } } }
+			
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE1 has_war_with = RE2 has_war_with = RE3 has_war_with = RE4 has_war_with = RE5 } } check_variable = { global.re3_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { NOT = { is_core_of = PREV } } } PREV = { set_variable = { gcg_disloyal_state = PREV.id } country_event = { id = gcg_revolt_notifications.1 days = 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } set_variable = { global.re3_revolting = 1 } RE3 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "Rebels" } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } }
+			IF = { limit = { check_variable = { global.re3_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE3 = { has_war_with = PREV } THIS = { NOT = { is_core_of = PREV } } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { country_event = { id = gcg_revolt_notifications.2 days = 0 } } RE3 = { transfer_state = PREV } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE3 } } }
+			
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE1 has_war_with = RE2 has_war_with = RE3 has_war_with = RE4 has_war_with = RE5 } } check_variable = { global.re4_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { NOT = { is_core_of = PREV } } } PREV = { set_variable = { gcg_disloyal_state = PREV.id } country_event = { id = gcg_revolt_notifications.1 days = 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } set_variable = { global.re4_revolting = 1 } RE4 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "Rebels" } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } }THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } } }
+			IF = { limit = { check_variable = { global.re4_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE4 = { has_war_with = PREV } THIS = { NOT = { is_core_of = PREV } } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { country_event = { id = gcg_revolt_notifications.2 days = 0 } } RE4 = { transfer_state = PREV } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE4 } } }
+			
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE1 has_war_with = RE2 has_war_with = RE3 has_war_with = RE4 has_war_with = RE5 } } check_variable = { global.re5_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { NOT = { is_core_of = PREV } } } PREV = { set_variable = { gcg_disloyal_state = PREV.id } country_event = { id = gcg_revolt_notifications.1 days = 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } set_variable = { global.re5_revolting = 1 } RE5 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "Rebels" } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } }
+			IF = { limit = { check_variable = { global.re5_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE5 = { has_war_with = PREV } THIS = { NOT = { is_core_of = PREV } } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { country_event = { id = gcg_revolt_notifications.2 days = 0 } } RE5 = { transfer_state = PREV } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } THIS = { create_unit = { division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 0.4 start_equipment_factor = 1" owner = RE5 } } }
+			
+			#riot states
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE6 has_war_with = RE7 } } check_variable = { global.re6_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { is_core_of = PREV  } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { set_variable = { gcg_riot_state = PREV.id } country_event = { id = gcg_revolt_notifications.3 days = 0 } } set_variable = { global.re6_revolting = 1 } RE6 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "riot" } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE6 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE6 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE6 } } }
+			IF = { limit = { check_variable = { global.re6_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE6 = { has_war_with = PREV } THIS = { is_core_of = PREV } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } RE6 = { transfer_state = PREV } PREV = { country_event = { id = gcg_revolt_notifications.4 days = 0 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE6 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE6 } } }
+			
+			IF = { limit = { PREV = { NOT = { has_country_flag = gcg_are_rebels has_war_with = RE6 has_war_with = RE7 } } check_variable = { global.re7_revolting = 0 } PREV = { num_of_controlled_states > 1 } THIS = { is_core_of = PREV  } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } PREV = { set_variable = { gcg_riot_state = PREV.id } country_event = { id = gcg_revolt_notifications.3 days = 0 } } set_variable = { global.re7_revolting = 1 } RE7 = { transfer_state = PREV declare_war_on = { target = PREV.PREV type = annex_everything } load_oob = "riot" } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } }  }
+			IF = { limit = { check_variable = { global.re7_revolting = 1 } PREV = { num_of_controlled_states > 1 } RE7 = { has_war_with = PREV } THIS = { is_core_of = PREV } } THIS = { add_to_variable = { gcg_state_recently_revolted = -100 } } RE7 = { transfer_state = PREV } PREV = { country_event = { id = gcg_revolt_notifications.4 days = 0 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } THIS = { create_unit = { division = "name = \"Riot\" division_template = \"Riot\" start_experience_factor = 0.2 start_equipment_factor = 1" owner = RE7 } } }
+			
+							} 
+					}
+			
+			
+					
+			}
+			
+			#ai upgrade states
+			if = { limit = { check_variable = { global.gcg_ai_state_upgrade_start < 0.5 } } set_variable = { global.gcg_ai_state_upgrade_start = 1 } set_variable = { global.gcg_ai_upgrade_clock = 0 } }
+			if = { limit = { check_variable = { global.gcg_ai_state_upgrade_start > 0.5 } } add_to_variable = { global.gcg_ai_upgrade_clock = 0.075 } }
+			if = { limit = { check_variable = { global.gcg_ai_upgrade_clock > 1 } } set_variable = { global.gcg_ai_upgrade_clock = 0 } random_country = { country_event = { id = gcg_state_upgrade_ai.1 days = 0 } } }
+			
+			
+			#prevent multiple wars for one tag		
+			IF = { limit = { NOT = { country_exists = RE1 } } set_variable = { global.re1_revolting = 0 } }
+			IF = { limit = { country_exists = RE1 } set_variable = { global.re1_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE2 } } set_variable = { global.re2_revolting = 0 } }
+			IF = { limit = { country_exists = RE2 } set_variable = { global.re2_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE3 } } set_variable = { global.re3_revolting = 0 } }
+			IF = { limit = { country_exists = RE3 } set_variable = { global.re3_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE4 } } set_variable = { global.re4_revolting = 0 } }
+			IF = { limit = { country_exists = RE4 } set_variable = { global.re4_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE5 } } set_variable = { global.re5_revolting = 0 } }
+			IF = { limit = { country_exists = RE5 } set_variable = { global.re5_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE6 } } set_variable = { global.re6_revolting = 0 } }
+			IF = { limit = { country_exists = RE6 } set_variable = { global.re6_revolting = 1 } }
+			
+			IF = { limit = { NOT = { country_exists = RE7 } } set_variable = { global.re7_revolting = 0 } }
+			IF = { limit = { country_exists = RE7 } set_variable = { global.re7_revolting = 1 } }
+				}
+			#gcg_state_ethnicity
+			#IF = { limit = {  }  }
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+state_event = {
+	id = gcg_state_revolt.2
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = {
+	clr_global_flag = gcg_only_once
+	}
+	
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+
+state_event = {
+	id = gcg_state_revolt.3
+	#picture = GFX_news_event_nuke
+
+	is_triggered_only = yes
+	
+	hidden = yes
+	
+	immediate = { #PREV = { has_country_flag = gcg_revolt }
+			#every_country = { every_state = { limit = { check_variable = { gcg_state_recently_revolted < 0 } } THIS = { add_to_variable = { gcg_state_recently_revolted = 5 } } THIS = { add_to_variable = { gcg_state_revolt_risk = gcg_state_recently_revolted } } } }
+			50 = { set_variable = { gcg_state_revolt_risk = 5 } }
+			} 
+			
+	
+	
+	
+	
+	
+			option = { 
+			#name = gcg_chemicals.a 
+			}
+}
+

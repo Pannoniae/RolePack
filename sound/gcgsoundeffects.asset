@@ -1,0 +1,31 @@
+
+sound = {
+	name = "gcg_nuclear_launch_file"
+	file = "gcg_nuclear_launch_file.wav"
+}
+
+soundeffect =
+{
+	name = "gcg_nuclear_launch"
+	volume = 1
+	sounds = {
+		sound = gcg_nuclear_launch_file
+	}
+	volume = 0.7
+}
+
+
+sound = {
+	name = "gcg_mines_file"
+	file = "gcg_mines.wav"
+}
+
+soundeffect =
+{
+	name = "gcg_mines"
+	volume = 1
+	sounds = {
+		sound = gcg_mines_file
+	}
+	volume = 0.7
+}

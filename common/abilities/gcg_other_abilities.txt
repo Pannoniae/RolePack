@@ -1,0 +1,81 @@
+ability = {
+
+gcg_no_step_back = {
+        name = "Not one step back!"
+        desc = gcg_nosb_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+		
+		
+        type = army_leader
+        
+        allowed = {
+		has_trait = gcg_has_nkvd_in_corps_trait			
+        }
+		
+		one_time_effect = {
+			add_temporary_buff_to_units = {
+				combat_defense = 0.15
+				combat_entrenchment = 0.15
+				org_damage_multiplier = -0.75
+				cannot_retreat_while_defending = 1.0
+				str_damage_multiplier = 0.75
+				days = 5
+				tooltip = gcg_nosb_ability_desc
+			}
+		}
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        cost = 0.05
+        duration = 120
+        unit_modifiers = {
+			attrition = 0.10
+			unit_upkeep_attrition_factor = 0.05
+        }
+    }
+
+
+gcg_execute_deserters = {
+        name = "Execute defeatists!"
+        desc = gcg_ed_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+		
+		
+        type = army_leader
+        
+        allowed = {
+		has_trait = gcg_has_sipo_in_corps_trait			
+        }
+		
+		one_time_effect = {
+			add_temporary_buff_to_units = {
+				combat_defense = 0.15
+				combat_entrenchment = 0.15
+				org_damage_multiplier = -0.75
+				cannot_retreat_while_defending = 1.0
+				str_damage_multiplier = 0.75
+				days = 5
+				tooltip = gcg_ed_ability_desc
+			}
+		}
+        
+        ai_will_do = {
+            factor = 1
+        }
+        
+        cost = 0.05
+        duration = 120
+        unit_modifiers = {
+			attrition = 0.10
+			unit_upkeep_attrition_factor = 0.05
+        }
+    }
+	
+	
+}

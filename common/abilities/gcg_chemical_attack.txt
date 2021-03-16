@@ -1,0 +1,988 @@
+ability = {
+chlorine_attack = {
+        name = "Chlorine Attack"
+        desc = chlorine_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+		
+		
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations 
+		has_trait = gcg_using_phosgene_trait
+		has_trait = gcg_using_mustard_trait
+		has_trait = gcg_using_vx_trait
+		has_trait = gcg_using_phosgene_artillery_trait
+		has_trait = gcg_using_sarin_trait
+		}
+			OWNER = {
+				has_equipment = { gcg_chlorine_gas_eq > 49 }
+				OR = {
+				NOT = { any_enemy_country = { has_tech = gcg_gas_masks } }
+				has_tech = gcg_mask_breakers
+				}
+            }
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_chlorine_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.05 org_damage_multiplier = 0.10 combat_defense = 0.75 combat_offense = 0.50 
+				days = 4
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_chlorine_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.35
+			unit_upkeep_attrition_factor = 0.25
+        }
+    }
+	
+	chlorine_attack_enemy_protected = {
+        name = "Chlorine Attack Weakened"
+        desc = chlorine_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = { 
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_mustard_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_sarin_trait
+			}
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_gas_masks }
+				has_equipment = { gcg_chlorine_gas_eq > 49 }
+				NOT = { has_tech = gcg_mask_breakers }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_chlorine_gas_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			}
+			
+
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_chlorine_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.05 org_damage_multiplier = 0.05 combat_defense = 0.15 combat_offense = 0.05 
+				days = 4
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_chlorine_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.35
+			unit_upkeep_attrition_factor = 0.25
+        }
+    }
+	
+	
+	
+	
+	phosgene_attack = {
+        name = "Phosgene Attack"
+        desc = Phosgene_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations 
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_mustard_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_sarin_trait
+		}
+			OWNER = {
+				has_equipment = { gcg_phosgene_gas_eq > 49 }
+				OR = {
+				NOT = { any_enemy_country = { has_tech = gcg_gas_masks } }
+				has_tech = gcg_mask_breakers
+				}
+            }
+			
+        }
+		
+		
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_phosgene_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.07 org_damage_multiplier = 0.10 combat_defense = 1.10 combat_offense = 0.85 
+				days = 4
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_phosgene_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.45
+			unit_upkeep_attrition_factor = 0.35
+        }
+    }
+	
+	phosgene_attack_enemy_protected = {
+        name = "Phosgene Attack Weakened"
+        desc = phosgene_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = { 
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_mustard_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_sarin_trait
+			}
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_gas_masks }
+				has_equipment = { gcg_phosgene_gas_eq > 49 }
+				NOT = { has_tech = gcg_mask_breakers }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_phosgene_gas_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			}
+			
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_phosgene_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.07 org_damage_multiplier = 0.05 combat_defense = 0.25 combat_offense = 0.10 
+				days = 4
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_phosgene_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.45
+			unit_upkeep_attrition_factor = 0.35
+        }
+    }
+	
+	
+	mustard_attack = {
+        name = "Mustard Gas Attack"
+        desc = mustard_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_sarin_trait
+		}
+			OWNER = {
+				has_equipment = { gcg_mustard_gas_eq > 49 }
+				OR = {
+				NOT = { any_enemy_country = { has_tech = gcg_full_body_suit } }
+				has_tech = gcg_mask_breakers
+				}
+            }
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_mustard_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.10 org_damage_multiplier = 0.12 combat_defense = 1.25 combat_offense = 0.95 
+				days = 5
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_mustard_trait
+			days = 5
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 120
+        unit_modifiers = {
+			attrition = 0.50
+			unit_upkeep_attrition_factor = 0.40
+        }
+    }
+	
+	
+	mustard_attack_enemy_protected = {
+        name = "Mustard Gas Attack Weakened"
+        desc = mustard_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = {
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_sarin_trait
+			}
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_full_body_suit }
+				has_equipment = { gcg_mustard_gas_eq > 49 }
+				NOT = { has_tech = gcg_mask_breakers }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_mustard_gas_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			}
+			
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_mustard_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.07 org_damage_multiplier = 0.10 combat_defense = 0.45 combat_offense = 0.20 
+				days = 5
+			}
+			
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_mustard_trait
+			days = 5
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 120
+        unit_modifiers = {
+			attrition = 0.50
+			unit_upkeep_attrition_factor = 0.40
+        }
+    }
+	
+	
+	Sarin_attack = {
+        name = "Sarin Gas Attack"
+        desc = Sarin_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations 
+		has_trait = gcg_using_chlorine_trait
+		has_trait = gcg_using_phosgene_trait
+		has_trait = gcg_using_vx_trait
+		has_trait = gcg_using_phosgene_artillery_trait
+		has_trait = gcg_using_mustard_trait
+		}
+			OWNER = {
+				has_equipment = { gcg_sarin_gas_eq > 49 }
+				NOT = { any_enemy_country = { has_tech = gcg_full_body_suit } }
+            }
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_sarin_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.10 org_damage_multiplier = 0.10 combat_defense = 1.35 combat_offense = 1.12 
+				days = 4
+			}
+			
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_sarin_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.50
+			unit_upkeep_attrition_factor = 0.40
+        }
+    }
+	
+	sarin_attack_enemy_protected = {
+        name = "Sarin Gas Attack Weakened"
+        desc = sarin_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = {  
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_mustard_trait
+			}
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_full_body_suit }
+				has_equipment = { gcg_sarin_gas_eq > 49 }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_sarin_gas_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			}
+			
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_sarin_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.07 org_damage_multiplier = 0.10 combat_defense = 0.50 combat_offense = 0.25 
+				days = 5
+			}
+			
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_sarin_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 120
+        unit_modifiers = {
+			attrition = 0.50
+			unit_upkeep_attrition_factor = 0.40
+        }
+    }
+	
+	vx_attack = {
+        name = "VX Attack"
+        desc = vx_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations 
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_sarin_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_mustard_trait
+		
+		}
+			OWNER = {
+				has_equipment = { gcg_vx_gas_eq > 49 }
+				NOT = { any_enemy_country = { has_tech = gcg_full_body_suit } }
+				
+            }
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_vx_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 28
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.15 org_damage_multiplier = 0.14 combat_defense = 2.20 combat_offense = 1.85 
+				days = 3
+			}
+			
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_vx_trait
+			days = 3
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 72
+        unit_modifiers = {
+			attrition = 1.25
+			unit_upkeep_attrition_factor = 0.90
+        }
+    }
+	
+	vx_attack_enemy_protected = {
+        name = "VX Gas Attack Weakened"
+        desc = vx_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = { 
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_sarin_trait
+			has_trait = gcg_using_phosgene_artillery_trait
+			has_trait = gcg_using_mustard_trait
+			}
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_full_body_suit }
+				has_equipment = { gcg_vx_gas_eq > 49 }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_vx_gas_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			}
+			
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_vx_gas_eq amount = -50  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = -0.10 org_damage_multiplier = 0.12 combat_defense = 0.85 combat_offense = 0.45 
+				days = 3
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_vx_trait
+			days = 3
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 72
+        unit_modifiers = {
+			attrition = 1.25
+			unit_upkeep_attrition_factor = 0.90
+        }
+    }
+	
+	
+	gcg_white_phos = {
+        name = "White Phosphorus"
+        desc = White_phos_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			OWNER = {
+				has_equipment = { gcg_white_phos_eq > 75 }
+				}
+			has_trait = gcg_white_phos_trait
+			}
+			
+			
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_white_phos_eq amount = -75  }
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = 0.03 combat_defense = 0.15 combat_offense = 0.35 
+				days = 12
+			}
+				
+        }
+        
+        ai_will_do = {
+            factor = 8
+        }
+        
+        cost = 0.05
+        duration = 288
+    }
+	
+	
+	phosgene_artillery_attack = {
+        name = "Phosgene Artillery Attack"
+        desc = Phosgene_ability_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		NOT = { has_trait = gcg_cold_calculations 
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_sarin_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_mustard_trait
+			}
+		has_trait = gcg_white_phos_trait
+			OWNER = {
+				has_equipment = { gcg_phosgene_arty_eq > 74 }
+				OR = {
+				NOT = { any_enemy_country = { has_tech = gcg_gas_masks } }
+				has_tech = gcg_mask_breakers
+				}
+            }
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_phosgene_arty_eq amount = -75  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = 0.07 org_damage_multiplier = 0.12 combat_defense = 0.35 combat_offense = 0.95 
+				days = 4
+			}
+			
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_phosgene_artillery_trait
+			days = 4
+			}
+			
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.10
+			unit_upkeep_attrition_factor = 0.10
+        }
+    }
+	
+	
+	phosgene_attack_Artillery_enemy_protected = {
+        name = "Phosgene Artillery Attack Weakened"
+        desc = phosgene_ability_weak_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+			NOT = {
+			has_trait = gcg_using_chlorine_trait
+			has_trait = gcg_using_phosgene_trait
+			has_trait = gcg_using_sarin_trait
+			has_trait = gcg_using_vx_trait
+			has_trait = gcg_using_mustard_trait
+			}
+			has_trait = gcg_white_phos_trait
+			OR = {
+			OWNER = {
+				AND = {
+				any_enemy_country = { has_tech = gcg_gas_masks }
+				has_equipment = { gcg_phosgene_arty_eq > 74 }
+				NOT = { has_tech = gcg_mask_breakers }
+				}
+            }
+			
+			AND = { 
+			OWNER = { has_equipment = { gcg_phosgene_arty_eq > 49 } }
+			has_trait = gcg_cold_calculations }
+			
+			}
+			
+			
+			
+        }
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_phosgene_arty_eq amount = -75  }
+				if = { limit = { NOT = { has_global_flag = gcg_first_use_chemical_weapons } } set_global_flag = gcg_first_use_chemical_weapons news_event = { id = gcg_chemicals.1 days = 1 } }
+				add_timed_idea = {
+    			idea = gcg_recently_used_chemical_weapons
+   				days = 21
+				}
+					
+				}
+				
+				add_temporary_buff_to_units = {
+				combat_breakthrough = 0.02 org_damage_multiplier = 0.05 combat_defense = 0.25 combat_offense = 0.10 
+				days = 4
+			}
+			add_timed_unit_leader_trait = {
+			trait = gcg_using_phosgene_artillery_trait
+			days = 4
+			}
+        }
+        
+        ai_will_do = {
+            factor = 0
+			modifier = {
+			factor = 10
+			has_global_flag = gcg_first_use_chemical_weapons
+			}
+        }
+        
+        cost = 0.10
+        duration = 96
+        unit_modifiers = {
+			attrition = 0.075
+			unit_upkeep_attrition_factor = 0.05
+        }
+    }
+	
+	
+	gcg_ap_mines = {
+        name = "Mines!"
+        desc = gcg_mines_desc
+        
+        sound_effect = gcg_mines
+        
+        type = army_leader
+        
+        allowed = {
+		always = yes
+			OWNER = {
+				AND = {
+				#has_tech = gcg_gas_masks 
+				has_equipment = { gcg_ap_mine_eq > 499 }
+				}
+            }
+		}
+        
+		
+		one_time_effect = {
+			OWNER = {
+				add_equipment_to_stockpile = { type = gcg_ap_mine_eq amount = -500  }					
+				}
+				add_temporary_buff_to_units = {
+				combat_entrenchment = 0.15
+				days = 10
+			}
+        }
+		
+        cost = 0.075
+        duration = 240
+         unit_modifiers = {
+			jungle = {
+				attack = -0.35
+				defence = 0.25
+				movement = -0.15
+			}
+			marsh = {
+				attack = -0.35
+				defence = 0.35
+				movement = -0.15
+			}
+			forest = {
+				attack = -0.20
+				defence = 0.25
+				movement = -0.15
+			}
+			desert = {
+				attack = -0.45
+				defence = 0.30
+				movement = -0.15
+			}
+			
+			plains = {
+				attack = -0.45
+				defence = 0.30
+				movement = -0.15
+			}
+			
+			hills = {
+				attack = -0.05
+				defence = 0.25
+				movement = -0.15
+			}
+			
+			mountain = {
+				attack = -0.35
+				defence = 0.35
+				movement = -0.25
+			}
+			
+			urban = {
+				attack = -0.45
+				defence = 0.75
+				movement = -0.20
+			}
+			ap_attack = 2.5
+        }
+		
+		ai_will_do = {
+            factor = 5
+        }
+    }
+	
+	
+	gcg_improvised_traps = {
+        name = "Improvised Traps"
+        desc = gcg_improvised_traps_desc
+        
+        sound_effect = command_power_ability_special
+        
+        type = army_leader
+        
+        allowed = {
+		always = yes
+			OWNER = {
+				AND = {
+				has_tech = gcg_improvised_traps 
+				}
+            }
+		}
+  
+		
+        cost = 0.10
+        duration = 168
+         unit_modifiers = {
+			jungle = {
+				attack = -0.20
+				defence = 0.75
+				movement = -0.15
+			}
+			marsh = {
+				attack = -0.15
+				defence = 0.30
+				movement = -0.15
+			}
+			forest = {
+				attack = -0.07
+				defence = 0.20
+				movement = -0.15
+			}
+			urban = {
+				attack = -0.15
+				defence = 0.35
+				movement = -0.15
+			}
+        }
+		
+		ai_will_do = {
+            factor = 5
+        }
+    }
+	
+}

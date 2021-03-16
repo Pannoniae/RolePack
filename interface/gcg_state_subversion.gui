@@ -1,0 +1,921 @@
+guiTypes = {
+
+
+containerWindowType = {
+		name = "gcg_state_subversion_tab_window"
+		position = { x = 469 y = -23 }
+		iconType ={
+			name ="gcg_subv_button_bg"
+			#spriteType = "GFX_generic_box"
+			position = { x=18 y=-5 }
+		}
+		
+		#iconType = {
+		#	name ="gcg_nuclear_button_icon" 
+		#	spriteType = "GFX_nuke_button_2"
+		#	position = { x= -40 y = 25 }
+		#}
+
+		#instantTextBoxType = {
+		#	name ="gcg_nuke_icon_text"
+		#	position = { x= 46 y = 4 }
+		#	font = "hoi_18mbs"
+		#	format = center
+		#	maxWidth = 65
+		#	maxHeight = 24
+		#	fixedsize = yes
+		#	
+		#	pdx_tooltip = "gcg_nuke_icon_tooltip"
+		#}
+		
+
+		buttonType = {
+			name = "gcg_state_population_button"
+			position = { x= -40 y = 25 }   
+			spriteType = "GFX_state_population_background_medium"
+			pdx_tooltip = "population_tab_wip"
+		}
+		
+		
+	}
+	
+	
+	
+	containerWindowType = {
+		name = "gcg_subversion_window"
+		position = { x = 432 y = 5 }	
+		size = { width=202 height=300 }
+		#verticalScrollbar = "right_vertical_slider"
+		show_sound = open_sub_window
+		moveable = no
+		margin = { top = 0 bottom = 10}	
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window2_1b_border"
+		}
+		
+		buttonType = {
+			name = "gcg_scorched_earth_button"
+			position = { x= 10 y = 32 } 
+			spriteType = "GFX_action_button_availiable_medium"  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_scorched_earth_core_state_button"
+			position = { x= 10 y = 32 } 
+			spriteType = "GFX_action_button_availiable_medium"  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_local_support_button"   
+			position = { x= 10 y = 60 } 
+			spriteType = "GFX_action_button_availiable_medium"  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_disrupt_supplies_button"   
+			position = { x= 10 y = 88 } 
+			spriteType = "GFX_action_button_availiable_medium"  
+			pdx_tooltip = "gcg_disrupt_supplies_tooltip"
+		}
+		
+		containerWindowType = {
+		name = "gcg_scorched_earth_not_aval"
+	    position = { x = 10 y = 32 }
+		iconType ={
+			name ="gcg_scorched_earth_not_aval_0"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+
+		iconType ={
+			name ="gcg_scorched_earth_not_aval_1"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_scorched_earth_not_aval_2"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_scorched_earth_not_aval_3"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		} 
+		
+		containerWindowType = {
+		name = "gcg_local_support_not_aval"
+	    position = { x= 10 y = 60 }
+		iconType ={
+			name ="gcg_local_support_not_aval_0"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+
+		iconType ={
+			name ="gcg_local_support_not_aval_1"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_local_support_not_aval_2"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_local_support_not_aval_3"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_local_support_not_aval_4"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_local_support_not_aval_5"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		
+		} 
+		
+		containerWindowType = {
+		name = "gcg_disrupt_supplyline_not_aval"
+	    position = { x= 10 y = 88 }
+		iconType ={
+			name ="gcg_disrupt_supplyline_not_aval_0"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_disrupt_supplyline_not_aval_1"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_disrupt_supplyline_not_aval_2"
+			spriteType = "GFX_action_button_disabled_medium"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+
+		
+		
+		} 
+		
+		
+		instantTextboxType = {
+			name = "gcg_scorched_earth_text"
+			position = { x = -5 y = 38 }
+			font = "hoi_18b"
+			text = "Scorched Earth" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_scorched_earth_tooltip"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_disrupt_supplies_text"
+			position = { x = -5 y = 95 }
+			font = "hoi_18b"
+			text = "Disrupt Supply Lines" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_disrupt_supplies_tooltip"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_any_ideas_text"
+			position = { x = 30 y = 150 }
+			font = "hoi_18b"
+			text = "if you have ideas what more to add here post a comment, not espionage, as that will be an entirely different mechanic." 
+			maxWidth = 140
+			maxHeight = 28
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "gcg_local_support_text"
+			position = { x = -5 y = 66 }
+			font = "hoi_18b"
+			text = "Gather Local Support" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_local_support_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_subversion_button_close"
+			position = { x = -35 y = 2 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+	
+	## state population
+		containerWindowType = {
+		name = "gcg_population_window"
+		position = { x = 432 y = 5 }	
+		size = { width=600 height=230 }
+		#verticalScrollbar = "right_vertical_slider"
+		show_sound = open_sub_window
+		moveable = no
+		margin = { top = 0 bottom = 10}	
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_window2_1b_border"
+		}
+		
+		containerWindowType = {
+		name = "gcg_population_background"
+	    position = { x = 10 y = 82 }
+		size = { width=568 height=455 }
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_plain_bg"
+		}
+		
+		}
+		
+		containerWindowType = {
+		name = "gcg_population_title"
+	    position = { x = 170 y = 10 }
+		iconType ={
+			name ="gcg_population_title_0"
+			spriteType = "GFX_state_population_title_medium"
+			position = { x=0 y=0 }  
+		}
+		
+		iconType ={
+			name ="GFX_state_pop_tab_devider_medium"
+			spriteType = "GFX_devider_state_pop_medium"
+			position = { x=88 y=73 }  
+		}
+
+		iconType ={
+			name ="gcg_population_title_1"
+			spriteType = "GFX_state_population_devider_medium"
+			position = { x=-176 y=60 }  
+		}
+		
+		}
+		
+		containerWindowType = {
+		name = "gcg_population_title_box"
+	    position = { x = 32 y = 97 }
+		
+		iconType ={
+			name ="gcg_population_title_box_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+		}
+			
+		
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_manpower_text"
+			position = { x = -5 y = 100 }
+			font = "hoi_18b"
+			text = "State Population" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_population_tt"
+		}
+		
+		
+		containerWindowType = {
+		name = "gcg_population_state_number_k_box"  
+	    position = { x = 165 y = 97 }
+		
+		iconType ={
+			name ="gcg_population_state_number_k_box_0"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_population_state_number_k"
+			position = {x = -64 y = 3 }
+			font = "hoi_18b"
+			text = "[?gcg_state_population]K" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_population_tt"
+		}
+			
+		
+		}
+		
+		
+		
+		
+		containerWindowType = {
+		name = "gcg_dominant_ethnicity_box"
+	    position = { x = 32 y = 125 }
+		
+		iconType ={
+			name ="gcg_dominant_ethnicity_box_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+		}
+			
+		
+		}
+		
+		instantTextboxType = {
+			name = "gcg_dominant_ethnicity_text"
+			position = { x = -5 y = 127 }
+			font = "hoi_18b"
+			text = "Dominant Ethnicity" 
+			maxWidth = 200
+			maxHeight = 28
+			format = center  
+			pdx_tooltip = "gcg_dominant_ethnicity_tt"
+		}
+		
+		
+		containerWindowType = {
+		name = "gcg_dominant_ethnicity_number_box"
+	    position = { x = 165 y = 125 }  
+		
+		iconType ={
+			name ="gcg_dominant_ethnicity_box_0"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_dominant_ethnicity_box_text"
+			position = {x = -64 y = 3 }
+			font = "hoi_18b"
+			text = "[?FROM.FROM.gcg_state_ethnicity.GetAdjective]"  #[from.from.controller.GetAdjective] [?gcg_state_ethnicity] ##works [?FROM.FROM.gcg_state_ethnicity.GetAdjective] ##
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_dominant_ethnicity_tt"
+		}
+			
+		
+		}
+		
+		
+		containerWindowType = {
+		name = "gcg_state_loyalty_box"
+	    position = { x = 165 y = 153 }  
+		
+		iconType ={
+			name ="gcg_state_loyalty_name_box"
+			spriteType = "GFX_generic_box_125"
+			position = { x=-133 y=0 }  
+		}
+		
+		iconType ={
+			name ="gcg_state_loyalty_box_0"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=0 y=0 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_loyalty_stable_box_text"
+			position = {x = -64 y = 3 }
+			font = "hoi_18b"
+			text = "gcg_state_loyalty_stable_tt"  #            ~          
+			maxWidth = 200         
+			maxHeight = 28    
+			format = center 
+			pdx_tooltip = "gcg_state_revolt_risk_modifiers"
+		}
+		  
+		instantTextboxType = {
+			name = "gcg_state_loyalty_dangerous_box_text"
+			position = {x = -64 y = 3 }
+			font = "hoi_18b"
+			text = "gcg_state_loyalty_dangerous_tt"  #        
+			maxWidth = 200 
+			maxHeight = 28                           
+			format = center
+			pdx_tooltip = "gcg_state_revolt_risk_modifiers"  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_loyalty_box_title"
+			position = {x = -170 y = 3 }
+			font = "hoi_18b"
+			text = "Revolt Risk"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_revolt_risk"
+		}
+			
+		
+		}
+		
+		
+		
+		containerWindowType = {
+		name = "gcg_state_catagory_box"
+	    position = { x = 300 y = 97 }  
+		
+		iconType ={
+			name ="gcg_state_catagory_box_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_catagory_box_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "State Category"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_text"
+		}
+			
+		
+		}
+		
+		containerWindowType = {
+		name = "gcg_state_catagory_text_box"
+	    position = { x = 440 y = 97 }  
+		
+		iconType ={
+			name ="gcg_state_catagory_text_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+			pdx_tooltip = "gcg_state_catagory_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_wasteland_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Wasteland"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_wasteland_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_enclave_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Enclave"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_enclave_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_pastoral_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Pastoral"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_pastoral_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_rural_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Rural"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_rural_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_tiny_island_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Tiny Island"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_tiny_island_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_small_island_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Small Island"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_small_island_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_town_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Town"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_town_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_large_town_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Large Town"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_large_town_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_city_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "City"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_city_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_large_city_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Large City"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_large_city_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_metropolis_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Metropolis"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_metropolis_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_cat_megalopolis_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "Megalopolis"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_catagory_megalopolis_text"
+		}
+			
+		
+		}
+		
+		
+		containerWindowType = {
+		name = "gcg_state_level_box"
+	    position = { x = 300 y = 125 }  
+		
+		iconType ={
+			name ="gcg_state_level_box_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_level_box_0_text"
+			position = {x = -50 y = 3 }
+			font = "hoi_18b"
+			text = "State Level"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_level_text"
+		}  
+		
+		}
+		
+		containerWindowType = {
+		name = "gcg_state_level_number_box"
+	    position = { x = 440 y = 125 }  
+		
+		iconType ={
+			name ="gcg_state_level_number_box_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=0 y=0 }  
+		}
+		instantTextboxType = {
+			name = "gcg_state_level_number_box_text"
+			position = {x = -40 y = 3 }
+			font = "hoi_18b"
+			text = "[?gcg_state_level]"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_state_level_text"
+		}
+		
+		iconType ={
+			name ="gcg_upgrade_state_not_availiable"
+			spriteType = "GFX_upgrade_state_not_availiable_medium"
+			position = { x= 70 y = 45 }  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button2"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button3"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		buttonType = {
+			name = "gcg_upgrade_state_button10"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button4"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button5"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button6"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button7"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button8"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_upgrade_state_button9"   
+			position = { x= 70 y = 45 } 
+			spriteType = "GFX_upgrade_state_medium"  
+			pdx_tooltip = "gcg_upgrade_the_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_level_up_state_button"   
+			position = { x= -60 y = 45 } 
+			spriteType = "GFX_upgrade_state_level_medium"  
+			pdx_tooltip = "gcg_level_up_state_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_level_up_state_not_availiable"
+			spriteType = "GFX_upgrade_state_level_not_avaliable_medium"
+			position = { x= -60 y = 45 }
+			pdx_tooltip = "gcg_level_up_state_tooltip"			  
+		}
+		
+		iconType ={
+			name ="gcg_devider_2"
+			spriteType = "GFX_gcg_devider_2_medium"
+			position = { x= -165 y = 90 }
+		}
+		
+		iconType ={
+			name ="gcg_devider_3"
+			spriteType = "GFX_gcg_devider_3_medium"
+			position = { x= -430 y = 90 }  
+		}
+		
+		iconType ={
+			name ="gcg_level_up_state_not_availiable2"   
+			spriteType = "GFX_upgrade_state_level_not_avaliable_medium"
+			position = { x= -60 y = 45 }  
+			pdx_tooltip = "gcg_level_up_state_tooltip"
+		}
+		
+		buttonType = {
+			name = "gcg_level_down_state_button"   
+			position = { x= -140 y = 45 } 
+			spriteType = "GFX_downgrade_state_level_medium"  
+			pdx_tooltip = "gcg_level_down_state_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_level_down_state_not_availiable"
+			spriteType = "GFX_downgrade_state_level_not_possible_medium"
+			position = { x= -140 y = 45 }  
+			pdx_tooltip = "gcg_level_down_state_tooltip"
+		}
+		
+		iconType ={
+			name ="gcg_level_down_state_not_availiable2"
+			spriteType = "GFX_downgrade_state_level_not_possible_medium"
+			position = { x= -140 y = 45 }  
+			pdx_tooltip = "gcg_level_down_state_tooltip"
+		}
+		
+		}
+		
+#		containerWindowType = {
+#		name = "gcg_population_composition_box"
+#	    position = { x = 60 y = 197 }  
+#		iconType ={
+#			name ="gcg_population_composition_box_0"
+#			spriteType = "SandboxFloaterBackground"
+#			position = { x=-20 y=27 }  
+#		}
+#
+		#}
+		
+		containerWindowType = {
+		name = "gcg_move_population_tab"
+	    position = { x = 300 y = 125 }  
+		
+		#iconType ={
+		#	name ="gcg_move_population_tab_0"
+		#	spriteType = "GFX_generic_box_125"
+		#	position = { x=0 y=0 }  
+		#}
+		
+		instantTextboxType = {
+			name = "gcg_move_population_tab_0_text"
+			position = {x = 30 y = 105 }
+			font = "hoi_18b"
+			text = "Population Options"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_move_population_text"
+		}
+			
+		
+		}
+		
+		
+		containerWindowType = {
+		name = "gcg_population_ethnicity_tab"
+	    position = { x = 5 y = 125 }  
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_0"
+			spriteType = "GFX_generic_box_125"
+			position = { x=27 y=126 }  
+		}
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_1"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=159 y=126 }  
+		}
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_2"
+			spriteType = "GFX_generic_box_125"
+			position = { x=27 y=156 }  
+		}
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_3"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=159 y=156 }  
+		}
+		
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_4"
+			spriteType = "GFX_generic_box_125"
+			position = { x=27 y=186 }  
+		}
+		
+		iconType ={
+			name ="gcg_population_ethnicity_tab_5"
+			spriteType = "GFX_generic_box_smallest"
+			position = { x=159 y=186 }  
+		}
+		
+		instantTextboxType = {
+			name = "gcg_population_ethnicity_tab_text"
+			position = {x = 30 y = 105 }
+			font = "hoi_18b"
+			text = "Population Composition"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+			pdx_tooltip = "gcg_population_ethnicity_text"
+		}
+		
+		instantTextboxType = {
+			name = "gcg_state_race_text"
+			position = {x = -10 y = 130 }
+			font = "hoi_18b"
+			text = "[?FROM.FROM.gcg_state_ethnicity.GetAdjective]"  
+			maxWidth = 200
+			maxHeight = 28
+			format = center
+		}
+			
+		
+		}
+		
+		
+		
+		buttonType = {
+			name = "gcg_population_button_close"
+			position = { x = -35 y = 2 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+
+
+
+	
+}
