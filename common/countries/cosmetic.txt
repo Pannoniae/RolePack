@@ -1436,10 +1436,6 @@ TAN = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
 }
-PAR = {
-	color = rgb { 57 113 228 }
-	color_ui = rgb { 74 147 255 }
-}
 CUB = {
 	color = rgb { 140 65 166 }
 	color_ui = rgb { 140 65 166 }
@@ -1866,10 +1862,6 @@ MEN_color = {
 TAN_color = {
 	color = rgb { 152 130 191 }
 	color_ui = rgb { 198 169 248 }
-}
-PAR_color = {
-	color = rgb { 57 113 228 }
-	color_ui = rgb { 74 147 255 }
 }
 CUB_color = {
 	color = rgb { 140 65 166 }
