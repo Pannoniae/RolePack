@@ -10,7 +10,7 @@ tags={
 	"National Focuses"
 	"Technologies"
 }
-name="RolePack Lite"
+name="RolePack - Res Publica"
 picture="1956.png"
 supported_version="1.10.*"
 remote_file_id="2425987235"
