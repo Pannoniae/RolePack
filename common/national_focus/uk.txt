@@ -6966,7 +6966,7 @@ focus_tree = {
 						}
 					}
 				}
-				country_event = { id = mtg_britain.82 hours = 6 }
+				country_event = { id = IMPFED_events.82 hours = 6 }
 				hidden_effect = { news_event = { id = mtg_news.13 days = 1 } }
 			}
 			custom_effect_tooltip = ENG_imperial_conference_tt
@@ -7091,6 +7091,31 @@ focus_tree = {
 						}
 					}
 				}
+			if = {
+					limit = {
+						IRE = { has_country_flag = ENG_accepted_federation }
+					}
+					IRE = {
+						OR = {
+							AND = {
+								is_subject_of = ENG
+								OR = {
+									has_autonomy_state = autonomy_integrated_puppet
+									has_autonomy_state = autonomy_reichskommissariat
+								}
+							}
+							AND = {
+								exists = no
+								NOT = {
+									any_state = {
+										is_core_of = IRE
+										NOT = { is_owned_by = ROOT }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			else_if = {
 				limit = {
@@ -7184,6 +7209,28 @@ focus_tree = {
 								any_state = {
 									is_core_of = NZL
 									NOT = { is_owned_by = ROOT }
+								}
+							}
+						}
+					}
+				}
+			if = {
+					limit = {
+						IRE = { has_country_flag = ENG_accepted_federation }
+					}
+					IRE = {
+						OR = {
+							AND = {
+								is_subject_of = ENG
+								has_autonomy_state = autonomy_integrated_puppet
+							}
+							AND = {
+								exists = no
+								NOT = {
+									any_state = {
+										is_core_of = IRE
+										NOT = { is_owned_by = ROOT }
+									}
 								}
 							}
 						}
@@ -7288,6 +7335,28 @@ focus_tree = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						IRE = { has_country_flag = ENG_accepted_federation }
+					}
+					IRE = {
+						OR = {
+							AND = {
+								is_subject_of = ENG
+								has_autonomy_state = autonomy_reichskommissariat
+							}
+							AND = {
+								exists = no
+								NOT = {
+									any_state = {
+										is_core_of = IRE
+										NOT = { is_owned_by = ROOT }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			else = {
 				CAN = {
@@ -7382,6 +7451,28 @@ focus_tree = {
 						}
 					}
 				}
+				if = {
+					limit = {
+						IRE = { has_country_flag = ENG_accepted_federation }
+					}
+					IRE = {
+						OR = {
+							AND = {
+								is_subject_of = ENG
+								compare_autonomy_progress_ratio < 0.1
+							}
+							AND = {
+								exists = no
+								NOT = {
+									any_state = {
+										is_core_of = IRE
+										NOT = { is_owned_by = ROOT }
+									}
+								}
+							}
+						}
+					}
+				}
 			}
 			if = {
 				limit = {
@@ -7407,7 +7498,8 @@ focus_tree = {
 			#modifier = {
 			#	factor = 0
 			#}
-		}	
+		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}	
 		completion_reward = {
 			if = {
 				limit = {
@@ -7454,6 +7546,7 @@ focus_tree = {
 			if = {
 				limit = {
 					SAF = { has_completed_focus = SAF_police_windhoek }
+					NOT = { SAF = { has_completed_focus = SAF_suppress_the_stormjaers } }
 				}
 				every_state = {
 					limit = {
@@ -7465,6 +7558,17 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					SAF = { has_completed_focus = SAF_suppress_the_stormjaers }
+				}
+				every_state = {
+					limit = {
+						is_core_of = SAF
+					}
+					add_core_of = ENG
+				}
+			}	
+			if = {
+				limit = {
 					RAJ = { has_country_flag = ENG_accepted_federation }
 				}
 				RAJ = {
@@ -7472,10 +7576,76 @@ focus_tree = {
 						set_nationality = ENG
 					}
 				}
+				if = {
+					limit = {
+						RAJ = {
+							NOT = { has_completed_focus = RAJ_chindits }
+						}
+					}			
+					create_corps_commander = {
+						name = "Orde Wingate"
+						gfx = "GFX_RAJ_orde_wingate"
+						traits = { jungle_rat commando  }
+						skill = 4
+						attack_skill = 3
+						defense_skill = 3
+						planning_skill = 2
+						logistics_skill = 5
+					}
+				}	
+				if = {
+					limit = {
+						RAJ = {
+							NOT = { has_completed_focus = RAJ_an_indian_sandhurst }
+						}
+					}			
+					create_corps_commander = {
+						name = "Kodandera Madappa Cariappa"
+						gfx = "GFX_RAJ_kodandera_madappa_cariappa"
+						traits = { career_officer skilled_staffer  }
+						skill = 4
+						attack_skill = 2
+						defense_skill = 4
+						planning_skill = 3
+						logistics_skill = 4
+					}
+					create_corps_commander = {
+						name = "Kodandera Subayya Thimayya"
+						gfx = "GFX_RAJ_kodendera_subayya_thimayya"
+						traits = { jungle_rat  }
+						skill = 3
+						attack_skill = 3
+						defense_skill = 2
+						planning_skill = 1
+						logistics_skill = 4
+					}
+					create_corps_commander = {
+						name = "Jayanto Nath Chaudhuri"
+						gfx = "GFX_RAJ_jayanto_nath_chaudhuri"
+						traits = { panzer_leader  }
+						skill = 3
+						attack_skill = 4
+						defense_skill = 1
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}				
 				annex_country = {
 				    target = RAJ
 				    transfer_troops = yes
 				}
+				every_state = {
+					limit = {
+						is_core_of = RAJ
+						NOT = {
+							OR = {
+								state = 288
+								state = 640
+							}
+						}
+					}
+					add_core_of = ENG
+				}	
 			}
 			AST = {
 				every_unit_leader = {
@@ -7491,6 +7661,23 @@ focus_tree = {
 					is_core_of = AST
 				}
 				add_core_of = ENG
+			}
+			if = {
+					limit = {
+						AST = {
+							NOT = { has_completed_focus =  AST_promote_reservists }
+						}
+					}
+					create_corps_commander = {
+						name = "Iven Mackay"
+						gfx = "GFX_AST_iven_mackay"
+						traits = {  }
+						skill = 3
+						attack_skill = 2
+						defense_skill = 2
+						planning_skill = 3
+						logistics_skill = 3
+					}
 			}
 			NZL = {
 				every_unit_leader = {
@@ -7516,10 +7703,2625 @@ focus_tree = {
 			    target = MAL
 			    transfer_troops = yes
 			}
+			if = {
+				limit = {
+					IRE = { has_country_flag = ENG_accepted_federation }
+				}
+				IRE = {
+					every_unit_leader = {
+						set_nationality = ENG
+					}
+				}
+				annex_country = {
+				    target = IRE
+				    transfer_troops = yes
+				}
+				every_state = {
+					limit = {
+						is_core_of = IRE
+					}
+					add_core_of = ENG
+				}	
+			}
+			add_country_leader_trait = federation_architecht_uk
+		}
+	}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}
 
+### IMPERIAL FEDERATION FOCUS TREE - FOR LATE GAME ###
+	
+	focus = {
+		id = IMPFED_the_federal_state
+		prerequisite = { focus = ENG_imperial_federation }
+		available = {
+			always = yes
+		}
+		cost = 10
+		icon = GFX_focus_IMPFED_commonwealth_unity
+		x = 0
+		y = 2
+		relative_position_id = ENG_imperial_federation
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT}
+		completion_reward = {
+			add_political_power = 300
+			add_stability = 0.15
+			add_war_support = 0.15
+		}
+	}
+
+	focus = {
+		id = IMPFED_focus_industrial_development_programme
+		prerequisite = { focus = IMPFED_the_federal_state }
+		available = {
+			always = yes
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -6
+		y = 1
+		relative_position_id = IMPFED_the_federal_state
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			unlock_decision_category_tooltip = IMPFED_industrial_development_programme
+		}
+	}
+	# WESTERN FOCUS #
+	focus = {
+		id = IMPFED_develop_west_indies
+		prerequisite = { focus = IMPFED_focus_industrial_development_programme }
+		available = {
+			689 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			690 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			691 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_production
+		x = -4
+		y = 1
+		relative_position_id = IMPFED_focus_industrial_development_programme
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		bypass = {
+			689 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+				any_province_building_level = {
+					province = {
+						id = 12304
+					}	
+					building = naval_base
+					level > 9
+				}
+			}
+			690 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+				any_province_building_level = {
+					province = {
+						id = 10254
+					}	
+					building = naval_base
+					level > 9
+				}
+			}
+			691 = {
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+				any_province_building_level = {
+					province = {
+						id = 3284
+					}	
+					building = naval_base
+					level > 9
+				}
+			}
+		}
+		
+		completion_reward = {
+			689 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+					province = 12304
+				}
+			}
+			690 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 10254
+				}
+			}
+			691 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3284
+				}
+			}	
+		}	
+	}	
+	
+	focus = {
+		id = IMPFED_west_indies_industry
+		prerequisite = { focus = IMPFED_develop_west_indies }
+		available = {
+			689 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			690 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			691 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			692 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			308 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_develop_west_indies
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			689 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			690 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			691 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			692 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			308 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}	
+	}			
+	
+	focus = {
+		id = IMPFED_request_west_indies_mandate
+		prerequisite = { focus = IMPFED_west_indies_industry }
+		available = {
+			689 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			690 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			691 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			692 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			308 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		cost = 5
+		bypass = {
+			all_state = {
+				region = 53
+				is_owned_by = ROOT
+			}
+		}
+		icon = GFX_focus_IMPFED_west_indies_mandate
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_west_indies_industry
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			add_political_power = 120
+			unlock_decision_category_tooltip = IMPFED_request_west_indies_mandate
+		}	
+	}		
+
+	focus = {
+		id = IMPFED_protect_centroamerica
+		prerequisite = { focus = IMPFED_request_west_indies_mandate }
+		available = {
+			NOT = {
+				313 = { is_owned_by = ROOT }
+				314 = { is_owned_by = ROOT }
+				312 = { is_owned_by = ROOT }
+				317 = { is_owned_by = ROOT }
+				316 = { is_owned_by = ROOT }
+				304 = { is_owned_by = ROOT }
+			}	
+		}
+		
+		cost = 10
+		bypass = {
+				313 = { is_owned_by = ROOT }
+				314 = { is_owned_by = ROOT }
+				312 = { is_owned_by = ROOT }
+				317 = { is_owned_by = ROOT }
+				316 = { is_owned_by = ROOT }
+				304 = { is_owned_by = ROOT }
+		}	
+		
+		icon = GFX_focus_IMPFED_centroamerica
+		x = -1
+		y = 1
+		relative_position_id = IMPFED_request_west_indies_mandate
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = GUA
+				}
+				GUA = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = HON
+				}
+				HON = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = ELS
+				}
+				ELS = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}
+			
+			if = {
+				limit = {
+					country_exists = NIC
+				}
+				NIC = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = COS
+				}
+				COS = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}
+			if = {
+				limit = {
+					country_exists = PAN
+				}
+				PAN = {
+					country_event = {
+						id = IMPFED_events.19
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}
+			}	
+			if = {
+				limit = {
+					NOT = { country_exists = GUA }
+				}
+				313 = {
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = HON }
+				}
+				312 = {
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = ELS }
+				}
+				314 = {
+					add_claim_by = ROOT
+				}
+			}
+			
+			if = {
+				limit = {
+					NOT = { country_exists = NIC }
+				}
+				317 = {
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = COS }
+				}
+				316 = {
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = { country_exists = PAN }
+				}
+				304 = {
+					add_claim_by = ROOT
+				}
+			}
+		}	
+	}			
+		
+	focus = {
+		id = IMPFED_panama_canal
+		prerequisite = { focus = IMPFED_request_west_indies_mandate }
+		available = {
+			NOT = {
+				685 = { is_owned_by = ROOT }
+			}	
+		}
+		
+		cost = 5
+		
+		bypass = {
+			 685 = { is_owned_by = ROOT }
+		} 
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = IMPFED_request_west_indies_mandate
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {	
+			country_event = IMPFED_events.20
+		}
+	}			
+	# CENTRAL FOCUS #
+	focus = {
+		id = IMPFED_develop_egypt
+		prerequisite = { focus = IMPFED_focus_industrial_development_programme }
+		available = {
+			447 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			446 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			456 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_focus_industrial_development_programme
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			447 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					447 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				447 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			446 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					446 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				446 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			456 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}	
+	}		
+	focus = {
+		id = IMPFED_eastern_mediterranean_investments
+		prerequisite = { focus = IMPFED_develop_egypt }
+		available = {
+			183 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			116 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			454 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_production2
+		x = -1
+		y = 1
+		relative_position_id = IMPFED_develop_egypt
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			183 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					183 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				183 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					183 = {
+						any_province_building_level = {
+							province = {
+								id = 7193
+							}	
+							building = naval_base
+							level < 10
+						}
+					}	
+				}
+				183 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 7183
+						instant_build = yes
+					}
+				}
+			}
+					
+			116 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {	
+					116  {
+						any_province_building_level = {
+							province = {
+								id = 12003
+							}	
+							building = naval_base
+							level < 10
+						}
+					}	
+				}
+				116 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 12003
+						instant_build = yes
+					}
+				}
+			}
+			454 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}	
+	}		
+
+	focus = {
+		id = IMPFED_reorganise_rhodesia
+		prerequisite = { focus = IMPFED_develop_egypt }
+		available = {
+			545 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			771 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			770 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 10
+		icon = GFX_focus_IMPFED_rhodesia
+		x = 1
+		y = 1
+		relative_position_id = IMPFED_develop_egypt
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			545 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					545 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+				
+					}
+				}
+				545 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+					
+			771 = {
+				add_resource = {
+					type = tungsten
+					amount = 4
+				}	
+				add_resource = {
+					type = chromium
+					amount = 17
+				}	
+			}
+			if = {
+				limit = {
+					545 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+				
+					}
+				}
+				545 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			770 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}	
+		}	
+	}			
+	focus = {
+		id = IMPFED_west_african_investment
+		prerequisite = { focus = IMPFED_reorganise_rhodesia  focus = IMPFED_eastern_mediterranean_investments }
+		available = {
+			558 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			274 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			700 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 1
+		relative_position_id = IMPFED_reorganise_rhodesia
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			558 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = rubber
+					amount = 2
+				}	
+			}
+			if = {
+				limit = {
+					558 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+				
+					}
+				}
+				558 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			
+			if = {
+				limit = {	
+					558 = {
+						any_province_building_level = {
+							province = {
+								id = 2050
+							}	
+							building = naval_base
+							level < 10
+						}
+					}	
+				}
+				558 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 2050
+						instant_build = yes
+					}
+				}
+			}		
+			274 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					274 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				274 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					274 = {
+						any_province_building_level = {
+							province = {
+								id = 10862
+							}	
+							building = naval_base
+							level < 10
+						}
+					}	
+				}
+				274 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 10862
+						instant_build = yes
+					}
+				}
+			}
+			700 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}	
+			if = {
+				limit = {
+					700 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				700 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					700 = {
+						any_province_building_level = {
+							province = {
+								id = 2038
+							}	
+							building = naval_base
+							level < 10
+						}
+					}	
+				}
+				700 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 2038
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}				
+		
+	focus = {
+		id = IMPFED_zanzibar_dockyards
+		prerequisite = { focus = IMPFED_west_african_investment  }
+		mutually_exclusive = { focus = IMPFED_kenyan_arms }
+		available = {
+			546 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = -1
+		y = 1
+		relative_position_id = IMPFED_west_african_investment
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			546 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}	
+			}
+			if = {
+				limit = {
+					546 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+				
+					}
+				}
+				546 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			
+			if = {
+				limit = {	
+					546 = {
+						any_province_building_level = {
+							province = {
+								id = 2196
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				546 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 2196
+						instant_build = yes
+					}
+				}
+			}		
+			if = {
+				limit = {
+					547 = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				547 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {
+					548 = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				548 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+		}	
+	}	
+	focus = {
+		id = IMPFED_kenyan_arms
+		prerequisite = { focus = IMPFED_west_african_investment  }
+		mutually_exclusive = { focus = IMPFED_zanzibar_dockyards }
+		available = {
+			547 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		relative_position_id = IMPFED_west_african_investment
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			547 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}	
+			}
+			if = {
+				limit = {
+					547 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+				
+					}
+				}
+				547 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			
+			if = {
+				limit = {	
+					547 = {
+						any_province_building_level = {
+							province = {
+								id = 5210
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				547 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 5210
+						instant_build = yes
+					}
+				}
+			}		
+			if = {
+				limit = {
+					546 = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				546 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {
+					548 = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+				
+					}
+				}
+				548 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+		}	
+	}		
+	# EASTERN FOCUS #
+	focus = {
+		id = IMPFED_aden_colonies
+		prerequisite = { focus = IMPFED_focus_industrial_development_programme }
+		available = {
+			659 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			269 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_civilian
+		x = 4
+		y = 1
+		relative_position_id = IMPFED_focus_industrial_development_programme
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			659 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					659 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				659 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					659 = {
+						any_province_building_level = {
+							province = {
+								id = 5074
+							}	
+							building = naval_base
+							level < 8
+						}
+					}	
+				}
+				659 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 5074
+						instant_build = yes
+					}
+				}
+			}		
+			if = {
+				limit = {	
+					659 = {
+						any_province_building_level = {
+							province = {
+								id = 5074
+							}	
+							building = coastal_bunker
+							level < 8
+						}
+					}	
+				}
+				659 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 2
+						province = 5074
+						instant_build = yes
+					}
+				}
+			}	
+			269 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = {	
+					269 = {
+						any_province_building_level = {
+							province = {
+								id = 10833
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				269 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 10833
+						instant_build = yes
+					}
+				}
+			}		
+			if = {
+				limit = {	
+					269 = {
+						any_province_building_level = {
+							province = {
+								id = 10833
+							}	
+							building = coastal_bunker
+							level < 9
+						}
+					}	
+				}
+				269 = {
+					add_building_construction = {
+						type = coastal_bunker
+						level = 1
+						province = 10833
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}		
+	focus = {
+		id = IMPFED_arab_protectorates
+		prerequisite = { focus = IMPFED_aden_colonies }
+		available = {
+			659 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			455 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+			658 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			765 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			656 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		
+		cost = 10
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 2
+		y = 1
+		relative_position_id = IMPFED_aden_colonies
+		
+		ai_will_do = {
+			factor = 1
+		}
+		bypass = {
+			294 = {
+				is_owned_by = ROOT
+			}
+			293 = {
+				is_owned_by = ROOT
+			}
+			678 = {
+				is_owned_by = ROOT
+			}
+			292 = {
+				is_owned_by = ROOT
+			}
+			679 = {
+				is_owned_by = ROOT
+			}
+		}	
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			if = {
+				limit = {
+					OR = {
+						country_exists = SAU
+						country_exists = OMA
+						country_exists = YEM
+					}
+				}
+				country_event = {
+					id = IMPFED_events.28
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = SAU
+					}	
+				}
+				every_state = {
+					limit = {
+						is_core_of = SAU
+					}
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = OMA
+					}	
+				}
+				every_state = {
+					limit = {
+						is_core_of = OMA
+					}
+					add_claim_by = ROOT
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = YEM
+					}	
+				}
+				every_state = {
+					limit = {
+						is_core_of = YEM
+					}
+					add_claim_by = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = IMPFED_india_development_1
+		prerequisite = { focus = IMPFED_aden_colonies }
+		available = {
+			422 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			429 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			428 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_aden_colonies
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			422 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					422 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				422 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					422 = {
+						any_province_building_level = {
+							province = {
+								id = 10201
+							}	
+							building = naval_base
+							level < 8
+						}
+					}	
+				}
+				422 = {
+					add_building_construction = {
+						type = naval_base
+						level = 2
+						province = 10201
+						instant_build = yes
+					}
+				}
+			}		
+			429 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {	
+					429 = {
+						any_province_building_level = {
+							province = {
+								id = 1349
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				429 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 1349
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					429 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				429 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}		
+			428 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {	
+					428 = {
+						any_province_building_level = {
+							province = {
+								id = 1349
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				428 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 1349
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					428 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				428 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}			
+		}	
+	}			
+	focus = {
+		id = IMPFED_india_development_2
+		prerequisite = { focus = IMPFED_india_development_1 }
+		available = {
+			439 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			438 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			423 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+			431 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		cost = 5
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_india_development_1
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			439 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					439 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				439 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			438 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					438 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				438 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}		
+			423 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {	
+					423 = {
+						any_province_building_level = {
+							province = {
+								id = 10278
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				423 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 10278
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					423 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				423 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}
+			431 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					431 = {
+						free_building_slots = {
+							building = infrastructure
+							size < 1
+						}
+				
+					}
+				}
+				431 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}	
+			}	
+			if = {
+				limit = {	
+					431 = {
+						any_province_building_level = {
+							province = {
+								id = 4245
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				431 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 4245
+						instant_build = yes
+					}
+				}
+			}		
+		}	
+	}			
+	focus = {
+		id = IMPFED_return_the_enclaves
+		prerequisite = { focus = IMPFED_india_development_1 }
+		available = {
+			425 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			423 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		cost = 10
+		
+		bypass = {
+			321 = {
+				is_owned_by = ROOT
+			}
+			320 = {
+				is_owned_by = ROOT
+			}	
+		}	
+		
+		icon = GFX_focus_rom_royal_dictatorship
+		x = -2
+		y = 1
+		relative_position_id = IMPFED_india_development_1
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						321 = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				321 = {
+					owner = {
+						country_event = {
+							id = IMPFED_events.32
+							days = 1
+						}
+					}
+				}
+			}	
+			if = {
+				limit = {
+					NOT = {
+						320 = {
+							is_owned_by = ROOT
+						}
+					}
+				}
+				320 = {
+					owner = {
+						country_event = {
+							id = IMPFED_events.32
+							days = 1
+						}
+					}
+				}
+			}
+		}	
+	}			
+	focus = {
+		id = IMPFED_himalayan_protectorates
+		prerequisite = { focus = IMPFED_india_development_1 }
+		available = {
+			439 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			438 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			435 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}		
+			431 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			432 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		cost = 10
+		
+		bypass = {
+			323 = {
+				is_owned_by = ROOT
+			}
+			324 = {
+				is_owned_by = ROOT
+			}	
+		}	
+		
+		icon = GFX_focus_generic_home_defense
+		x = 2
+		y = 1
+		relative_position_id = IMPFED_india_development_1
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			if = {
+				limit = {
+					country_exists = NEP
+				}
+				NEP = {
+					country_event = {
+						id = IMPFED_events.35
+						days = 1
+					}
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}	
+			}
+			if = {
+				limit = {
+					country_exists = NEP
+				}
+				BHU = {
+					country_event = {
+						id = IMPFED_events.35
+						days = 1
+					}
+					
+					add_opinion_modifier = {
+						target = ENG
+						modifier = ENG_diplomatic_pressure
+					}
+				}	
+			}
+			if = {
+				limit = {
+					NOT = {
+						country_exists = NEP
+					}
+				}
+				323 = {
+					add_claim_by = ROOT
+				}
+			}	
+			if = {
+				limit = {
+					NOT = {
+						country_exists = BHU
+					}
+				}
+				324 = {
+					add_claim_by = ROOT
+				}
+			}
+		}	
+	}			
+	focus = {
+		id = IMPFED_malay_investments
+		prerequisite = { focus = IMPFED_india_development_2 }
+		available = {
+			336 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			333 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		cost = 5
+			
+		
+		icon = GFX_goal_generic_oil_refinery
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_india_development_2
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		
+		completion_reward = {
+			336 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			if = {
+				limit = {
+					336 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+				
+					}
+				}
+				336 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					336 = {
+						any_province_building_level = {
+							province = {
+								id = 12299
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				336 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 12299
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					333 = {
+						free_building_slots = {
+							building = infrastructure
+							size > 2
+						}
+				
+					}
+				}
+				333 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			if = {
+				limit = {	
+					333 = {
+						any_province_building_level = {
+							province = {
+								id = 7371
+							}	
+							building = naval_base
+							level < 9
+						}
+					}	
+				}
+				333 = {
+					add_building_construction = {
+						type = naval_base
+						level = 1
+						province = 7371
+						instant_build = yes
+					}
+				}
+			}
+		}	
+	}				
+	focus = {
+		id = IMPFED_deal_with_siam
+		prerequisite = { focus = IMPFED_malay_investments }
+		available = {
+			336 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			288 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			640 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		cost = 10
+		
+		bypass = {
+			OR ={
+				NOT = {
+					country_exists = SIA
+				}
+				has_war_with = SIA
+			}	
+		}
+		
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -2
+		y = 1
+		relative_position_id = IMPFED_malay_investments
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			country_event = {
+				id = IMPFED_events.36
+			}	
+		}	
+	}				
+	focus = {
+		id = IMPFED_protect_the_crown_jewel
+		prerequisite = { focus = IMPFED_malay_investments }
+		available = {
+			444 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			445 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+			442 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+			640 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}
+		}
+		cost = 10
+		
+		bypass = {
+			OR ={
+				NOT = {
+					country_exists = YUN
+				}
+				has_war_with = YUN
+				YUN = {
+					is_subject_of = ROOT
+				}
+			}	
+			OR ={
+				NOT = {
+					country_exists = GXC
+				}
+				has_war_with = GXC
+				GXC = {
+					is_subject_of = ROOT
+				}
+			}	
+			OR ={
+				NOT = {
+					country_exists = PER
+				}
+				has_war_with = PER
+				PER = {
+					is_subject_of = ROOT
+				}
+			}	
+			OR ={
+				NOT = {
+					country_exists = AFG
+				}
+				has_war_with = AFG
+				AFG = {
+					is_subject_of = ROOT
+				}
+			}	
+		}
+		
+		icon = GFX_focus_RAJ_indian_gentlemen_offcers
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_malay_investments
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			unlock_decision_category_tooltip = IMPFED_indian_sphere	
+		}	
+	}		
+	focus = {
+		id = IMPFED_request_west_papua
+		prerequisite = { focus = IMPFED_malay_investments }
+		available = {
+			523 = {
+				is_owned_and_controlled_by = ROOT
+				is_core_of = ROOT
+			}	
+		}
+		
+		bypass = {
+			669 = {
+				is_owned_by = ROOT
+			}	
+		}
+		cost = 10
+		
+		icon = GFX_goal_generic_alliance
+		x = 2
+		y = 1
+		relative_position_id = IMPFED_malay_investments
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		
+		
+		completion_reward = {
+			669 = {
+				add_core_of = PNG
+			}
+			if = {
+				limit = {
+					669 = {
+						owner = {
+							is_subject = yes
+						}
+					}	
+				}
+				669 = {
+					owner = {
+						OVERLORD = {
+							country_event = {
+								id = IMPFED_events.43
+							}
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					669 = {
+						owner = {
+							is_subject = no
+						}
+					}
+				}
+				669 = {
+					owner = {
+						country_event = {
+							id = IMPFED_events.43
+						}
+					}	
+				}
+			}
+		}	
+	}	
+	# NATIONAL BRANCH
+	focus = {
+		id = IMPFED_focus_scientific_research_centres
+		prerequisite = { focus = IMPFED_the_federal_state }
+		available = {
+			always = yes
+		}
+		
+		cost = 10
+		icon = GFX_focus_research2
+		x = 5
+		y = 1
+		relative_position_id = IMPFED_the_federal_state
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_colonial_elite
+				add_idea = IMPFED_research_centres
+			}	
+		}
+	}
+	focus = {
+		id = IMPFED_focus_ministry_of_personnell
+		prerequisite = { focus = IMPFED_focus_scientific_research_centres }
+		available = {
+			always = yes
+		}
+		
+		cost = 10
+		icon = GFX_goal_generic_improve_relations
+		x = -1
+		y = 1
+		relative_position_id = IMPFED_focus_scientific_research_centres
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = IMPFED_personnell_acquisition
+		}
+	}
+	focus = {
+		id = IMPFED_focus_forward_together
+		prerequisite = { focus = IMPFED_focus_scientific_research_centres }
+		available = {
+			always = yes
+		}
+		
+		cost = 10
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+		relative_position_id = IMPFED_focus_scientific_research_centres
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_ideas = IMPFED_forward_together
+		}
+	}
+	
+	focus = {
+		id = IMPFED_export_our_expertise
+		prerequisite = { focus = IMPFED_focus_forward_together }
+		prerequisite = { focus = IMPFED_focus_ministry_of_personnell }
+		mutually_exclusive = { focus = IMPFED_focus_hegemony }
+		mutually_exclusive = { focus = IMPFED_maintain_imperial_integrity }
+		mutually_exclusive = { focus = IMPFED_focus_world_revolution }
+		available = {
+			has_government = democratic
+		}
+		
+		cost = 5
+		icon = GFX_goal_support_democracy
+		x = -2
+		y = 1
+		relative_position_id = IMPFED_focus_ministry_of_personnell
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			unlock_decision_category_tooltip = IMPFED_share_our_expertise
+		}
+	}
+	focus = {
+		id = IMPFED_maintain_imperial_integrity
+		prerequisite = { focus = IMPFED_focus_forward_together }
+		prerequisite = { focus = IMPFED_focus_ministry_of_personnell }
+		mutually_exclusive = { focus = IMPFED_export_our_expertise }
+		mutually_exclusive = { focus = IMPFED_focus_hegemony }
+		mutually_exclusive = { focus = IMPFED_focus_world_revolution }
+		available = {
+			has_government = neutrality
+		}
+		
+		cost = 5
+		icon = GFX_focus_generic_home_defense
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_focus_ministry_of_personnell
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_ideas = IMPFED_maintain_integrety
+		}
+	}
+	focus = {
+		id = IMPFED_focus_hegemony
+		prerequisite = { focus = IMPFED_focus_forward_together }
+		prerequisite = { focus = IMPFED_focus_ministry_of_personnell }
+		mutually_exclusive = { focus = IMPFED_maintain_imperial_integrity }
+		mutually_exclusive = { focus = IMPFED_export_our_expertise }
+		mutually_exclusive = { focus = IMPFED_focus_world_revolution }
+		available = {
+			has_government = fascism
+		}
+		
+		cost = 5
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 1
+		relative_position_id = IMPFED_focus_forward_together
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			add_ideas = IMPFED_hegemony
+			remove_ideas = stiff_upper_lip
+			if = {
+				limit = { is_in_faction = yes }
+				leave_faction = yes
+			}
+			set_rule = { can_create_factions = no }
+			set_rule = { can_join_factions = no }
+			every_other_country = {
+				limit = {
+					NOT = { is_puppet_of = ROOT }
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = IMPFED_bad_ambitions
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo
+				}
+			}	
+		}
+	}
+	focus = {
+		id = IMPFED_focus_world_revolution
+		prerequisite = { focus = IMPFED_focus_forward_together }
+		prerequisite = { focus = IMPFED_focus_ministry_of_personnell }
+		mutually_exclusive = { focus = IMPFED_maintain_imperial_integrity }
+		mutually_exclusive = { focus = IMPFED_export_our_expertise }
+		mutually_exclusive = { focus = IMPFED_focus_hegemony }
+		available = {
+			has_government = communism
+		}
+		
+		cost = 5
+		icon = GFX_goal_support_communism
+		x = 2
+		y = 1
+		relative_position_id = IMPFED_focus_forward_together
+		
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			unlock_decision_category_tooltip = IMPFED_world_revolution	
+			add_ideas = IMPFED_world_revolution_idea
+			every_other_country = {
+				limit = {
+					OR = {	
+						NOT = { is_puppet_of = ROOT }
+						NOT = { has_government = communism }
+					}	
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = IMPFED_world_revolution_opinion
+				}
+			}	
+		}
+	}
 	### DEMOCRATIC BRANCH - STEADY AS SHE GOES ###
 
 	focus = {

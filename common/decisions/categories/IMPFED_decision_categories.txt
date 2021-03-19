@@ -1,0 +1,126 @@
+IMPFED_unit_naming = {
+	visible = {
+		tag = ENG
+		has_completed_focus = ENG_imperial_federation
+	}
+}	
+IMPFED_expand_the_federation = {
+	visible = {
+		tag = ENG
+		has_completed_focus = ENG_imperial_federation
+	}
+}	
+IMPFED_industrial_development_programme = {
+	visible = {
+		tag = ENG
+		has_completed_focus = IMPFED_focus_industrial_development_programme
+	}
+}	
+IMPFED_request_west_indies_mandate = {
+	visible = {
+		tag = ENG
+		has_completed_focus = IMPFED_request_west_indies_mandate
+	}
+}
+IMPFED_share_our_expertise = {
+	visible = {
+		tag = ENG
+		has_completed_focus = IMPFED_export_our_expertise
+	}
+}
+IMPFED_integrating_colonies_shared_expertise = {
+	visible = {
+		has_country_flag = ENG_offered_federation_assistance
+	}
+}
+IMPFED_world_revolution = {
+	visible = {
+		tag = ENG
+		has_completed_focus = IMPFED_focus_world_revolution
+	}
+}
+
+ENG_move_to_secure_the_dominions_neutrality = {
+	
+	icon = eng_move_to_secure_the_dominions
+
+	allowed = {
+		original_tag = ENG
+	}
+	visible = {
+			OR = {
+				has_country_flag = ENG_abdication_crisis_morganatic_marriage
+				has_country_flag = ENG_abdication_crisis_normal_marriage
+				has_country_flag = edward_viii_married_wallis_simpson
+			}	
+			NOT = { 
+				OR = {
+					has_completed_focus = ENG_organize_the_blackshirts
+					has_completed_focus = ENG_concessions_to_the_trade_unions
+					has_country_flag = ENG_abdication_crisis_changed_mind
+				}
+			}
+			OR = {
+				CAN = { is_subject_of = ENG }
+				SAF = { is_subject_of = ENG }
+				AST = { is_subject_of = ENG }
+				NZL = { is_subject_of = ENG }
+				RAJ = { is_subject_of = ENG }
+			}	
+	}	
+}
+IMPFED_appeal_to_imperial_loyalists = {
+	
+	icon = eng_appeal_to_imperial_loyalists
+
+	allowed = {
+		OR = {
+			original_tag = ENG
+			original_tag = CAN
+			original_tag = SAF
+			original_tag = RAJ
+			original_tag = AST
+			original_tag = NZL
+		}
+	}
+}
+IMPFED_indian_sphere = {
+	visible = {
+		tag = ENG
+		has_completed_focus = IMPFED_protect_the_crown_jewel
+	}
+}
+
+IMFPED_commonwealth_research_decisions = {
+	visible = {
+		tag = ENG
+		OR = {
+			AND = {
+				NOT = {
+					is_in_tech_sharing_group = commonwealth_research
+				}	
+				OR = {
+					CAN = { is_subject_of = ENG }
+					SAF = { is_subject_of = ENG }
+					AST = { is_subject_of = ENG }
+					NZL = { is_subject_of = ENG }
+					RAJ = { is_subject_of = ENG }
+				}
+			}
+			is_in_tech_sharing_group = commonwealth_research
+			any_country = {
+				OR = {
+					has_country_flag = IMPFED_diplo_puppeted
+					tag = CAN
+					tag = SAF
+					tag = AST
+					tag = NZL
+					tag = RAJ
+				}
+				NOT = { is_in_tech_sharing_group = commonwealth_research }
+			}
+		}
+	}
+}	
+			
+						

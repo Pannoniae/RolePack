@@ -1,0 +1,20 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_focus_IMPFED_centroamerica"
+		texturefile = "gfx//interface//goals//IMPFED_central_america.tga"
+	}	
+	SpriteType = {
+		name = "GFX_focus_IMPFED_west_indies_mandate"
+		texturefile = "gfx//interface//goals//west_indian_mandate.tga"
+	}	
+	SpriteType = {
+		name = "GFX_focus_IMPFED_commonwealth_unity"
+		texturefile = "gfx//interface//goals//commonwealth_unity.tga"
+	}	
+	
+	SpriteType = {
+		name = "GFX_focus_IMPFED_rhodesia"
+		texturefile = "gfx//interface//goals//IMPFED_rhodesia.tga"
+	}	
+}	

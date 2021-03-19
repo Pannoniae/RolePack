@@ -1,0 +1,23 @@
+opinion_modifiers = {
+	ENG_diplomatic_pressure = {
+		value = 50
+	}
+	
+	ENG_extensive_diplomatic_pressure = {
+		value = 75
+	}
+
+	ENG_attended_conference = {
+		value = 10
+	}
+	
+	ENG_denied_west_indies_mandate = {
+		value = -10
+	}
+	IMPFED_bad_ambitions = {
+		value = -100
+	}
+	IMPFED_world_revolution_opinion = {
+		value = -50
+	}
+}

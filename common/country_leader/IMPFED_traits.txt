@@ -1,0 +1,75 @@
+leader_traits = {	
+	federation_architecht_canada = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_india = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_australia = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_new_zealand = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_south_africa = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_arabia = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_persia = {
+		random = no
+		political_power_factor = 0.05
+		non_core_manpower = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	federation_architecht_uk = {
+		random = no
+		subjects_autonomy_gain  = -0.1
+		non_core_manpower = 0.01
+		compliance_gain = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
