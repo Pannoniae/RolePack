@@ -3511,3 +3511,35 @@ NFL_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }
 }
+MON_Imperial = {
+	color = rgb { 130 180 240 } 
+	color_ui = rgb { 130 180 240 }
+}
+MON_Theocracy = {
+	color = rgb { 204  184  177 }
+	color_ui = rgb { 204  184  177 }
+}
+MON_white_russia = {
+	color = rgb { 224  228  255 }
+	color_ui = rgb { 224  228  255 }
+}
+MON_russia = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+MON_tsardom = {
+    color = rgb { 72 143 68 }
+    color_ui = rgb { 72 143 68 }
+}
+MEN_mil_gov = {
+    color = rgb { 19 52 129 }
+    color_ui = rgb { 19 52 129 }
+}
+MEN_mengjiang_tag = {
+    color = rgb { 19 52 129 }
+    color_ui = rgb { 19 52 129 }
+}
+MEN_is_mongolia = {
+    color = rgb { 19 52 129 }
+    color_ui = rgb { 19 52 129 }
+}

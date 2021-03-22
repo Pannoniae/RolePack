@@ -112,3 +112,15 @@ integration_mongolian_lands_category = {
 	}
 	icon = generic_independence
 }
+MON_weapon_purchases_category = {
+	
+	icon = generic_arms_trade
+
+	allowed = {
+		original_tag = MON
+	}
+
+	visible = {
+		has_completed_focus = MON_purchase_weapons
+	}
+}

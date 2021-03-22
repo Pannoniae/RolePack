@@ -1,30 +1,337 @@
 ideas = {
 
+	country = {
+
+
+		MEN_nomadic_society = {#Pretty much the same as the idea of the other mongolia
+
+			picture = hol_shell_shocked_spectator
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.10
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+		}
+
+
+		MEN_force_nomads_factories_idea = {
+
+			picture = hol_shell_shocked_spectator
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = -0.05
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				cavalry_attack_factor = 0.05
+				cavalry_defence_factor = 0.05
+			}
+		}
+
+
+		MEN_nomad_cooperation_idea = {
+
+			picture = hol_shell_shocked_spectator
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = -0.10
+				consumer_goods_factor = -0.05
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+		}
+
+		MEN_bad_army_idea = {
+
+			picture = tfv_can_conscription_crisis
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = -0.2
+				army_morale_factor = -0.2
+				training_time_army_factor = 0.25
+			}
+		}
+
+		MON_china_war_idea = {
+
+			picture = chi_warlord_integration
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = PRC
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = SHX
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = XSM
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = YUN
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = GXC
+				attack_bonus_against = 0.1
+			}
+
+			targeted_modifier = {
+				tag = SIK
+				attack_bonus_against = 0.1
+			}
+		}
+
+
+		MEN_japanese_settlers_idea = {
+
+			picture = prc_low_popular_support3
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				monthly_population = 0.5
+				industrial_capacity_factory = 0.05
+			}
+		}
+
+
+		MEN_recruit_levies_idea = {
+
+			picture = MEX_politicised_army
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = -0.05
+			}
+		}
+
+		MEN_mongolian_military_staff_idea = {
+
+			picture = tur_kemalist_officers
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = 0.1
+			}
+		}
+
+
+		MEN_mongolian_military_staff2_idea = {
+
+			picture = tur_kemalist_officers
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = 0.1
+				army_speed_factor = 0.1
+			}
+		}
+
+		MEN_japanese_military_staff_idea = {
+
+			picture = tur_kemalist_officers
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.1
+			}
+		}
+
+
+		MEN_japanese_military_staff2_idea = {
+
+			picture = tur_kemalist_officers
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.1
+			}
+
+			research_bonus = {
+				land_doctrine = 0.1
+			}
+		}
+
+		MEN_han_infantry_idea = {
+
+			picture = chi_army_corruption3
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_attack_factor = 0.2
+				army_defence_factor = 0.2
+				cavalry_attack_factor = -0.1
+				cavalry_defence_factor = -0.1
+			}
+
+		}
+
+		MEN_mongol_cavalry_idea = {
+
+			picture = FRA_army_of_aggression_focus
+
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+			}
+		}
+
+
+		MEN_buryat_migration_idea = {
+
+			picture = chi_army_corruption
+			allowed = {
+				original_tag = MEN
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				weekly_manpower = 150
+			}
+		}
+
+		MEN_military_staff_has_problems = {
+
+			picture = chi_incompetent_officers
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				planning_speed = -0.05
+			}
+
+			research_bonus = {
+				land_doctrine = -0.15
+			}
+
+		}
+
+	}
+
 	political_advisor = {
 
-		MEN_megata_toshiro = {
-
-			picture = generic_political_advisor_asia_2
-			
-			allowed = {
-				original_tag = MEN
-			}
-			
-			traits = { armaments_organizer }
-		}
-
-		MEN_nalan_kang_an = {
-
-			picture = generic_political_advisor_asia_3
-				
-			allowed = {
-				original_tag = MEN
-			}
-			
-			traits = { fortification_engineer }
-		}
-
-		MEN_songgotu_zhanshan = {
+		MEN_yondonwangchug = {
 
 			picture = generic_political_advisor_asia_1
 			
@@ -32,15 +339,132 @@ ideas = {
 				original_tag = MEN
 			}
 			
+			available = {
+				has_country_flag = MEN_established_mil_gov_flag
+				NOT = { has_country_flag = MEN_death_of_yondonwangchug }
+			}
+
+			ai_will_do = {
+				factor = 100
+			}
+			
+			traits = { nationalist_symbol }
+		}
+
+		MEN_yu_pinqing = {
+
+			picture = generic_navy_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
 			traits = { captain_of_industry }
+		}
+
+		MEN_wu_heling = {
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { tenacious_negotiator }
+		}
+
+
+		MEN_altanochir2 = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { irredentist_academic }
+		}
+
+		MEN_xia_gong = {
+
+			picture = generic_army_asia_2
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			available = {
+				has_country_flag = MEN_has_formed_megjiang_flag
+			}
+			
+			traits = { eager_collaborator }
+		}
+
+		MEN_cui_xiaoqian = {#Will be made available through megjiang bank focus 
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = MEN
+			}
+
+			available = {
+				has_completed_focus = MEN_bank_of_mengjiang
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+			traits = { financial_expert }
+		}
+
+		MEN_serengdongrub = {
+
+			picture = generic_air_asia_1
+			
+			allowed = {
+				original_tag = MEN
+			}
+
+			available = {
+				has_government = communism
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+			
+			traits = { communist_revolutionary }
 		}
 	}	
 
 	army_chief = {
 
 		MEN_li_shouxin = {
+
+			picture = generic_army_asia_1
 			
-			picture = generic_army_asia_2
+			allowed = {
+				original_tag = MEN
+			}
+
+			cost = 50
+
+			available = {
+ 				has_completed_focus = MEN_mengjiang_national_army
+			}
+			
+			traits = { army_chief_drill_3 }
+			
+			ai_will_do = {
+				factor = 100
+			}
+		}
+
+		MEN_guan_xingde = {
+			
+			picture = generic_army_asia_4
 
 			allowed = {
 				original_tag = MEN
@@ -73,45 +497,69 @@ ideas = {
 
 	}
 
-	navy_chief = {
-	
-		MEN_navy_chief = {
 
-			picture = generic_navy_asia_3
-			
-			allowed = {
-				original_tag = MAN
-			}
-			
-			traits = { navy_chief_decisive_battle_1 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
-	}
 	high_command = {
 
-		MEN_altanochir = { #MEN_yonimitsu_kasahara
+		MEN_altanochir = {
 			ledger = army
 
-			picture = generic_army_asia_6
+			picture = generic_army_asia_2
 			
 			allowed = {
 				original_tag = MEN
 			}
 			
 			traits = { army_cavalry_2 }
+
+			available = {
+				NOT = { has_country_flag = MEN_altanochir_left_flag }
+			}
 			
 			ai_will_do = {
-				factor = 1
+				factor = 10
+			}
+		}
+
+		MEN_jodbajab = {
+			ledger = army
+
+			picture = generic_army_asia_7
+			
+			allowed = {
+				original_tag = MEN
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		MEN_wang_ying = {
+			ledger = army
+
+			picture = generic_army_asia_4
+			
+			allowed = {
+				original_tag = MEN
+			}
+
+			available = {
+				has_completed_focus = MEN_chinese_collaborators
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 10
 			}
 		}
 
 		MEN_kyoiji_tomonaga = {
 			ledger = army
 
-			picture = generic_air_asia_2
+			picture = generic_army_asia_3
 			
 			allowed = {
 				original_tag = MEN
@@ -123,30 +571,14 @@ ideas = {
 				factor = 1
 			}
 		}
-
-		MEN_hesehn_tiemei = {
-			ledger = army
-
-			picture = generic_army_asia_1
-			
-			allowed = {
-				original_tag = MEN
-			}
-			
-			traits = { army_logistics_2 }
-			
-			ai_will_do = {
-				factor = 1
-			}
-		}
 	}
 
 
 
 	theorist = {
-		MEN_hikojiro_muratani = { #Japs who helped them and was quite sympathetic to them, even to their demands of more autonomy. replace #MEN_hung_zhehuang
-
+		MEN_hung_zhehuang = {
 			ledger = army
+
 			picture = generic_army_asia_1
 			
 			allowed = {

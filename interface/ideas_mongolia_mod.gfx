@@ -1,0 +1,6 @@
+spriteTypes = {	
+	spriteType = {
+		name = "GFX_idea_mon_jebtsundamba_khutughtu"
+		texturefile = "gfx/interface/ideas/mon_jebtsundamba_khutughtu.dds"
+	}	
+}

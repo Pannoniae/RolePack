@@ -13,6 +13,10 @@ set_technology = {
 set_country_flag = started_out_as_landlocked
 add_ideas = {
 	limited_conscription
+	limited_exports
+	MON_nomadic_society 
+	MON_buddhism_surpressed 
+	MON_underdeveloped_agrarian_economy 
 }
 
 1939.1.1 = {
@@ -20,16 +24,6 @@ add_ideas = {
 	add_political_power = 1198
 	
 	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = construction_effort_2
-	complete_national_focus = production_effort_2
-	complete_national_focus = infrastructure_effort
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
 	
 	oob = "MON_1939"
 	set_technology = {
@@ -77,7 +71,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = marxism
 	traits = {
-		#
+		appeaser
 	}
 }
 
@@ -115,7 +109,42 @@ create_field_marshal = { #Ranked Marshall and was leader of the Mongolian People
 		expire = "1965.1.1"
 		ideology = stalinism
 		traits = {
-			#
+			staunch_stalinist
 		}
 	}
+}
+create_field_marshal = {
+	name = "Gelegdorjiin Demid"
+	id = 5001
+	portrait_path = "gfx/leaders/MON/Portrait_MON_gelegdorjiin_demid.dds"
+	traits = { inspirational_leader politically_connected media_personality }
+	skill = 2
+
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_field_marshal = {
+	name = "Khorloogiin Choibalsan"
+	id = 5002
+	portrait_path = "gfx/leaders/MON/Portrait_MON_khorloogiin_choibalsan.dds"
+	traits = { war_hero harsh_leader }
+	skill = 2
+
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Jaija Bataar"
+	portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_warlord1.dds"
+	traits = { trait_reckless }
+	skill = 1
+
+  	attack_skill = 1
+  	defense_skill = 1
+  	planning_skill = 1
+  	logistics_skill = 1
 }

@@ -1,0 +1,1146 @@
+ideas = {
+
+	country = {
+
+
+		MON_buddhism_surpressed = {
+
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = -0.25
+				war_support_factor = -0.10
+			}
+		}
+
+		MON_buddhism_surpressed_less = {
+
+			picture = generic_oppression
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+
+		MON_buddhism_allowed_idea = {
+
+			picture = generic_neutrality_drift_bonus
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = 0.1
+			}
+		}
+
+
+		MON_buddhism_empowered_idea = {
+
+			picture = generic_constitutional_guarantees
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = -0.2
+				conscription_factor = -0.1
+				consumer_goods_factor = -0.1
+				stability_factor = 0.2
+			}
+		}
+
+		MON_nomadic_society = {
+
+			picture = hol_shell_shocked_spectator
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.10
+				cavalry_attack_factor = 0.1
+				cavalry_defence_factor = 0.1
+			}
+		}
+
+		MON_nomadic_society_stronger = {
+
+			picture = hol_shell_shocked_spectator
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = -0.10
+				cavalry_attack_factor = 0.2
+				cavalry_defence_factor = 0.2
+			}
+		}
+
+		MON_underdeveloped_agrarian_economy = {
+
+			picture = generic_agrarian_society
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				research_speed_factor = -0.15
+				industrial_capacity_factory = -0.2
+			}
+		}
+
+
+		MON_developing_agrarian_economy = {
+
+			picture = generic_agrarian_reform
+
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.075
+				research_speed_factor = -0.075
+				industrial_capacity_factory = -0.1
+			}
+		}
+
+		MON_buryat_migration_idea = {
+
+			picture = chi_army_corruption
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				weekly_manpower = 150
+			}
+		}
+
+		MON_purges = {
+
+			picture = generic_purge
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				stability_weekly = -0.005
+				military_leader_cost_factor = 0.5
+				max_command_power = -50
+				command_power_gain_mult = -0.2
+				planning_speed = -0.1
+				max_planning = -0.1
+			}
+		}
+
+		MON_disown_nobles_idea = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+
+		MON_new_officers_idea = {
+
+			picture = generic_volunteer_expedition_bonus
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				military_leader_cost_factor = -0.25
+				command_power_gain_mult = 0.1
+				planning_speed = 0.1
+			}
+		}
+
+		MON_soviet_aid_idea = {
+
+			picture = eng_spirit_of_the_industrial_revolution
+
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+
+		MON_soviets_supply_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = tur_sub_zero_survival_training
+
+			removal_cost = -1
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.15
+				attrition = -0.05
+				consumer_goods_factor = 0.03
+			}
+		}
+
+
+		MON_soviets_supply_mongolia_idea = {
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = can_wartime_prices_and_trade_board
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		MON_red_army_officer_schools1 = {
+
+			picture = saf_soviet_advisers
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_org_Factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+
+		MON_red_army_officer_schools2 = {
+
+			picture = saf_soviet_advisers
+			allowed = {
+				original_tag = MON
+				has_government = communism
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				army_leader_start_planning_level = 1
+				army_org_Factor = 0.05
+				training_time_army_factor = -0.1
+			}
+		}
+
+		MON_native_army_idea = {
+
+			picture = chi_army_corruption2
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				conscription = 0.05
+			}
+		}
+
+		MON_modern_military_idea = {
+
+			picture = generic_manpower_bonus
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.05
+				max_planning = 0.05
+				army_armor_attack_factor = 0.1
+				army_artillery_attack_factor = 0.1
+			}
+		}
+
+		MON_cavalry_traditions_idea = {
+
+			picture = raj_indian_gentlemen_officers
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				cavalry_attack_factor = 0.15
+				cavalry_defence_factor = 0.15
+				army_speed_factor = 0.15
+			}
+		}
+
+		MON_yassa_idea = {
+
+			picture = tur_sectarian_woes
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				non_core_manpower = 0.1
+				compliance_gain = 0.1
+			}
+		}
+
+		MON_prepare_reconquest_idea = {
+
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.25
+				defense_bonus_against = 0.25
+			}
+
+		}
+
+		MON_infiltration_campaign_idea = {
+
+			picture = anti_soviet_pact
+			allowed = {
+				original_tag = SOV
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			targeted_modifier = {
+				tag = MON
+				attack_bonus_against = -0.5
+				defense_bonus_against = -0.5
+			}
+
+		}
+
+		MON_coalition_idea = {
+
+			picture = generic_disjointed_gov
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				political_power_gain = -0.2
+				democratic_drift = 0.01
+				neutrality_drift = 0.02
+			}
+		}
+
+		MON_ending_one_party_idea = {
+
+			picture = generic_democratic_drift_bonus
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			modifier = {
+				communism_drift = -0.1
+				democratic_drift = 0.1
+			}
+		}
+
+		MON_open_monasteries_idea = {
+
+			picture = jap_supremacy_of_will
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				neutrality_drift = 0.1
+			}
+		}
+
+		MON_jebtsundamba_khutughtu_idea = {
+
+			picture = mon_jebtsundamba_khutughtu
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				stability_factor = 0.2
+			}
+		}
+
+		MON_defender_buddhism_idea = {
+
+			picture = chi_war_of_resistance3
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				justify_war_goal_time = -0.4
+				generate_wargoal_tension = -0.8
+				stability_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		MON_defender_buddhism_ally_idea = {
+
+			picture = chi_war_of_resistance3
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				generate_wargoal_tension = -0.5
+				stability_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		MON_fanatism_army_idea = {
+
+			picture = FRA_scw_intervention_republicans_focus
+			allowed = {
+				original_tag = MON
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			modifier = {
+				army_morale_factor = 0.1
+				war_support_factor = 0.10
+				conscription_factor = 0.10
+			}
+		}
+	}
+
+	political_advisor = {
+
+		MON_dansrabilegyin_dogsam = {
+
+			picture = generic_political_advisor_asia_2
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				NOT = { has_completed_focus = MON_finish_purges }
+				NOT = { has_completed_focus = MON_crackdown_on_communists }
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+
+		MON_peljidiin_genden = {
+
+			picture = generic_political_advisor_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				NOT = { has_completed_focus = MON_stalinism_in_mongolia }
+				OR = {
+					has_government = communism 
+					has_completed_focus = MON_reformation_social_democracy
+				}
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+
+		MON_darizavyn_losol = {
+
+			picture = generic_army_asia_6
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				NOT = { has_completed_focus = MON_finish_purges }
+				NOT = { has_completed_focus = MON_crackdown_on_communists }
+			}
+			
+			traits = { captain_of_industry }
+		}
+
+		MON_banzarjavyn_baasanjav = {
+
+			picture = generic_air_asia_1
+				
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				NOT = { has_completed_focus = MON_finish_purges }
+				NOT = { has_completed_focus = MON_crackdown_on_communists }
+				has_government = communism 
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
+		MON_suekhbaataryn_yanjmaa = {
+
+			picture = generic_political_advisor_female_asia
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				has_completed_focus = MON_women_education
+			}
+			
+			traits = { popular_figurehead }
+		}
+
+		MON_dorjjavyn_luvsansharav = {
+
+			picture = generic_army_asia_4
+
+			available = {
+				has_government = communism 
+				NOT = { has_completed_focus = MON_crackdown_on_communists }
+			}
+				
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { prince_of_terror }
+		}
+
+		MON_yumjaagiin_tsedenbal = {
+
+			picture = generic_army_asia_1
+
+			available = {
+				has_completed_focus = MON_finish_purges 
+			}
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { financial_expert }
+		}
+
+		MON_bazaryn_shirendev = {
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { education_reformer }
+		}
+
+		MON_jamsrangiin_tseveen = {
+
+			picture = generic_political_advisor_asia_1
+
+			available = {
+				has_completed_focus = MON_stop_censorship
+				NOT = { has_country_leader = { ruling_only = yes name = "Jamsrangiin Tseveen" } }
+			}
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { democratic_reformer }
+		}
+
+		MON_byambyn_rinchen = {
+
+			picture = generic_political_advisor_asia_1
+
+			available = {
+				has_completed_focus = MON_celebrate_genghis
+			}
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { the_academic }
+		}
+
+
+		MON_agvan_dorzhiev = {
+
+			picture = generic_air_asia_1
+
+			available = {
+				has_completed_focus = MON_buddhism_government
+			}
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { tenacious_negotiator }
+		}
+
+		MON_ivan_ilyin = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				has_completed_focus = MON_invite_white_russians
+				has_government = fascism
+			}
+			
+			traits = { syncretic_revanchist }
+		}
+
+		MON_puravyn_dambadarzh = {
+		
+			picture = generic_army_asia_5
+
+			available = {
+				has_intelligence_agency = yes
+			}
+			
+			allowed = {
+				original_tag = MON
+				has_dlc = "La Resistance" 
+			}
+			
+			traits = { head_of_intelligence }
+
+		}
+
+	}
+
+	aircraft_manufacturer = { 
+			
+		designer = yes
+		
+		miat_mongolian_airlines = {
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			available = {
+				has_completed_focus = MON_build_airports
+			}
+
+			cost = 50
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+    			picture = generic_air_manufacturer_3
+			
+			traits = { light_aircraft_manufacturer }
+			
+			equipment_bonus = {
+				
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}	
+
+	army_chief = {
+		
+		MON_horloogiyn_choybalsan = {
+			
+			picture = generic_army_asia_2
+
+			allowed = {
+				original_tag = MON
+			}
+
+
+			available = {
+				NOT = { has_completed_focus = MON_crackdown_on_communists }
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+
+		MON_gelegdorjiin_demid = {
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			available = {
+				NOT = { has_completed_focus = MON_stalinism_in_mongolia }
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+
+		MON_li_shouxin = {
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = MON
+			}
+
+			cost = 75
+
+			available = {
+				NOT = { has_government = communism }
+				MEN = { exists = no }
+			}
+			
+			traits = { army_chief_drill_3 }
+			
+			ai_will_do = {
+				factor = 7
+			}
+		}
+
+	}
+
+	air_chief = {
+		
+
+		MON_gomgchigryn_bumtsend = {
+			
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_sukhbaataryn_yanjmaa = {
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+
+		MON_vg_pyrselov = {
+			
+			picture = generic_navy_asia_1
+
+			allowed = {
+				original_tag = MON
+			}
+					
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_dashdorj = {
+			
+			picture = generic_navy_asia_3
+
+			allowed = {
+				original_tag = MON
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	high_command = {
+
+		MON_rinchingiin_elbegdorj = {
+			ledger = army
+
+			picture = generic_army_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MON_gonchigiin_bumtsend = {
+			ledger = army
+
+			picture = generic_army_asia_6
+
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { guerilla_warfare_expert }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_jantsankhorloo = {
+			ledger = army
+
+			picture = generic_army_asia_2
+
+			available = {
+				NOT = { has_completed_focus = MON_stalinism_in_mongolia }
+			}
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { army_artillery_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_dashiin_damba = {
+			ledger = army
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { army_chief_organizational_1 }#Originally for chief of army but anyway
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		MON_butochiyn_tsog = {
+			ledger = army
+
+			picture = generic_army_asia_7
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 10
+			}
+		}
+		
+		MON_chimid = {
+			ledger = army
+
+			picture = generic_army_asia_1
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { army_concealment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_buyannmeh = {
+			ledger = air
+
+			picture = generic_air_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { air_strategic_bombing_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		MON_haidav = {
+			ledger = navy
+
+			picture = generic_navy_asia_1
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			traits = { navy_naval_air_defense_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+
+
+	theorist = {
+		MON_dagva = {
+			ledger = army
+
+			picture = generic_army_asia_5
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		MON_ganbaatar = { 
+			ledger = navy
+
+			picture = generic_navy_asia_3
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+
+		MON_ulanhu = {
+			ledger = air
+
+			picture = generic_air_asia_2
+			
+			allowed = {
+				original_tag = MON
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+
+	}
+
+
+
+}

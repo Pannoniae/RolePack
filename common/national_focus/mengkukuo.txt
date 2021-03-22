@@ -1,5 +1,5 @@
-focus_tree = {
-	id = Mengkukuo_focus
+﻿focus_tree = {
+	id = mengkukuo_focus
 	
 	country = {
 		factor = 0
@@ -8,176 +8,1517 @@ focus_tree = {
 			add = 10
 			tag = MEN
 		}
+		
+		modifier = {
+			add = 10
+			original_tag = MEN
+		}
 	}
-	default = no
+
+	continuous_focus_position = { x = 50 y = 1200 }
 	
-	reset_on_civilwar = no
+	default = no
 
 	focus = {
-		id = men_goverment
-
-		icon = GFX_focus_generic_self_management
-		
-		
-		x = 5
+		id = MEN_establish_mil_gov
+		icon = GFX_goal_generic_political_pressure
+		x = 3
 		y = 0
-	
-		cost = 9
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }	
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }	
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			drop_cosmetic_tag = yes
+			set_cosmetic_tag = MEN_mil_gov
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.10
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			OVERLORD = { set_autonomy = { target = MEN autonomy_state = autonomy_free } }
+			if = { 
+				limit = { 
+					NOT = { has_country_flag = MEN_death_of_yondonwangchug }
+				}
+				add_ideas = MEN_yondonwangchug 
+			}
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+					not = { has_dlc = "Waking the Tiger" }
+				}
+				JAP = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_dominion
+						freedom_level = 0.2
+					}
+				}
+			}
+			if = {
+				limit = { 
+					not = {
+						has_dlc = "Waking the Tiger"
+						has_dlc = "Together for Victory"
+					}
+				}
+				JAP = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_puppet
+						freedom_level = 0.2
+					}
+				}
+			}
+			if = {
+				limit = { 
+					has_dlc = "Waking the Tiger"
+				}
+				JAP = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_wtt_imperial_associate 
+						freedom_level = 0.2
+					}
+				}
+			}
+			hidden_effect = {
+				set_country_flag = MEN_established_mil_gov_flag
+				CHI = {
+					add_opinion_modifier = { target = MEN modifier = hostile_status }
+				}
+				MEN = {
+					add_opinion_modifier = { target = CHI modifier = hostile_status }
+				}
+				MEN = {
+					add_opinion_modifier = { target = JAP modifier = ENG_imperial_loyalist }
+				}
+				JAP = {
+					add_opinion_modifier = { target = MEN modifier = ENG_imperial_loyalist }
+				}
+				JAP = {
+					add_ai_strategy = {
+						type = befriend
+						id = "MEN"			
+						value = 100
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "MEN"			
+						value = 100
+					}	
+				}
+				MEN = {
+					add_ai_strategy = {
+						type = befriend
+						id = "JAP"
+						value = 100
+					}
+					add_ai_strategy = {
+						type = alliance
+						id = "JAP"			
+						value = 100
+					}	
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_invade_suiyuan
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = MEN_establish_mil_gov
+		}
+		will_lead_to_war_with = SHX
+		relative_position_id = MEN_establish_mil_gov
+		
+		cost = 10
+		ai_will_do = {
+			factor = 100
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			621 = { add_core_of = ROOT }
+			746 = { add_core_of = ROOT }
+			unlock_decision_category_tooltip = MEN_invasion_category 
+		}
+	}
+
+	focus = {
+		id = MEN_attack_bandits
+		icon = GFX_focus_prc_infiltration
+		x = -1
+		y = 1
+		prerequisite = { 
+			focus = MEN_invade_suiyuan
+		}
+		relative_position_id = MEN_invade_suiyuan
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = MEN_promote_pan_mongolism
+		icon = GFX_focus_generic_support_the_left_right
+		x = 1
+		y = 1
+		prerequisite = { 
+			focus = MEN_invade_suiyuan
+		}
+		relative_position_id = MEN_invade_suiyuan
+		
+		cost = 10
+		ai_will_do = {
+			factor = 5
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = MEN_claim_ningxia
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0
+		y = 2
+		will_lead_to_war_with = XSM
+		prerequisite = { focus = MEN_attack_bandits }
+		prerequisite = { focus = MEN_promote_pan_mongolism }
+		relative_position_id = MEN_invade_suiyuan
+		
+		cost = 10
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				OR = {
+					event_target:WTT_current_china_leader = { has_war_with = JAP }
+					event_target:WTT_communist_china = { has_war_with = JAP }
+				}
+				factor = 100
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 616
+			add_state_claim = 756
+			unlock_decision_tooltip = MEN_claim_ningxia_decision 
+			unlock_decision_tooltip = MEN_core_western_territories 
+		}
+	}
+
+	focus = {
+		id = MEN_china_war
+		icon = GFX_focus_attack_china
+		x = 0
+		y = 1
+		prerequisite = { focus = MEN_claim_ningxia }
+		relative_position_id = MEN_claim_ningxia
+		
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				event_target:WTT_current_china_leader = { has_war_with = MEN }
+				event_target:WTT_communist_china = { has_war_with = MEN }
+			}	
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_ideas = MON_china_war_idea 
+		}
+	}
+
+	focus = {
+		id = MEN_mongolia_war
+		icon = GFX_goal_generic_war_with_comintern
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = MEN_mongolia_diplomacy }
+		prerequisite = { focus = MEN_china_war }
+		relative_position_id = MEN_china_war
+		
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			330 = { add_core_of = ROOT }
+			create_wargoal = {
+				type = annex_everything
+				target = MON
+				expire = 0
+			}
+			unlock_decision_tooltip = MEN_become_mongolia 		
+		}
+	}
+
+	focus = {
+		id = MEN_mongolia_diplomacy
+		icon = GFX_goal_generic_improve_relations
+		x = 1
+		y = 1
+		mutually_exclusive = { focus = MEN_mongolia_war }
+		prerequisite = { focus = MEN_china_war }
+		relative_position_id = MEN_china_war
+
+		available = {
+			MON = { NOT = { has_government = communism } }
+			MON = { NOT = { has_completed_focus = MON_russia_survives } }
+			NOT = { has_war_with = MON }	
+		}
+
+		
+		cost = 5
+		ai_will_do = {
+			factor = 100
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			MON = { country_event = mengkukuo.14 }	
+			unlock_decision_tooltip = MEN_become_mongolia 		
+		}
+	}
+
+	focus = {
+		id = MEN_expand_to_qinghai
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 0
+		y = 2
+		prerequisite = { focus = MEN_mongolia_war focus = MEN_mongolia_diplomacy }
+		relative_position_id = MEN_china_war
+
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			add_state_claim = 604
+			add_state_claim = 760
+			add_state_claim = 759
+			add_state_claim = 755
+			add_state_claim = 283
+			add_state_claim = 753
+			add_state_claim = 754
+			add_state_claim = 622
+			unlock_decision_tooltip = MEN_core_qinghai 	
+		}
+	}
+
+	focus = {
+		id = MEN_greater_autonomy
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = MEN_cooperate_with_the_new_republic }
+		prerequisite = { focus = MEN_expand_to_qinghai }
+		relative_position_id = MEN_expand_to_qinghai
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		
+		bypass = {
+			is_subject = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }					
+		}
+	}
+
+	focus = {
+		id = MEN_cooperate_with_the_new_republic
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 1
+		y = 1
+		mutually_exclusive = { focus = MEN_greater_autonomy }
+		prerequisite = { focus = MEN_expand_to_qinghai }
+		relative_position_id = MEN_expand_to_qinghai
+
+		available = {
+			event_target:WTT_current_china_leader = {
+				exists = yes
+				has_government = fascism
+				is_in_faction_with = JAP
+				is_subject_of = JAP
+			}
+			NOT = { MEN = { has_war_with = event_target:WTT_current_china_leader } }	
+			NOT = { MEN = { has_war_with = JAP } }				
+		}
+
+		
+		cost = 10
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = yes
+		completion_reward = {
+			OVERLORD = { set_autonomy = { target = ROOT autonomy_state = autonomy_free } }
+			remove_ideas = MON_china_war_idea 
+			if = {
+				limit = {
+					has_dlc = "Together for Victory"
+					NOT = { has_dlc = "Death or Dishonor" }
+				}
+				event_target:WTT_current_china_leader = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_dominion
+						freedom_level = 0.10
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_dlc = "Death or Dishonor" 
+				}
+				event_target:WTT_current_china_leader = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_satellite
+						freedom_level = 0.10
+					}
+				}
+			}	
+			else_if = {
+				limit = {
+					NOT = { has_dlc = "Together for Victory" }
+					NOT = { has_dlc = "Death or Dishonor" }
+				}
+				event_target:WTT_current_china_leader = {
+					set_autonomy = {
+						target = MEN
+						autonomous_state = autonomy_puppet
+						freedom_level = 0.30
+					}
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = MEN_war_time_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 8
+		y = 0
+
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
-		
-		completion_reward = {
-			612 = {
-					add_extra_state_shared_building_slots = 1
-				  }
-			611 = {
-					add_building_construction = {
-					type = bunker
-					level = 1
-					province = 11752
+
+		available = {
+			has_country_flag = MEN_established_mil_gov_flag	
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no	
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
 					instant_build = yes
 				}
-					add_extra_state_shared_building_slots = 1
-			}
-			add_political_power = 100
-			hidden_effect = {
-			add_stability = 0.01
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_fully_controlled_by = ROOT
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
+
 	focus = {
-		id = men_jap
-
-		icon = GFX_focus_chi_collaboration_with_the_japanese
-		
-		mutually_exclusive = { focus = men_own }
-
-		prerequisite = { focus = men_goverment }
-		
-		x = -2
+		id = MEN_japanese_investment
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = MEN_war_time_industry }
+		x = 0
 		y = 1
-		
-		relative_position_id = men_goverment
+		relative_position_id = MEN_war_time_industry
+		cost = 10
+		ai_will_do = {
+			base = 5
+		}
 
-		cost = 1
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		available = {
+			NOT = { has_war_with = JAP }
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = export_focus
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = MEN_open_mines
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = MEN_japanese_investment }
+		x = -1
+		y = 1
+		relative_position_id = MEN_japanese_investment
+		cost = 10
+		ai_will_do = {
+			base = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				unlock_decision_category_tooltip = MEN_iron_rights_category
+			} 
+			611 = { 
+				add_resource = { 
+					type = steel
+					amount = 7
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_bank_of_mengjiang
+		icon = GFX_focus_mex_privatisation
+		prerequisite = { focus = MEN_japanese_investment }
+		x = 1
+		y = 1
+		relative_position_id = MEN_japanese_investment
+		cost = 10
+		ai_will_do = {
+			base = 5
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = 0.1
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = MEN_cui_xiaoqian 
+		}
+	}
+
+	focus = {
+		id = MEN_japanese_settlers
+		icon = GFX_focus_jap_pacific_guardian
+		prerequisite = { focus = MEN_open_mines focus = MEN_bank_of_mengjiang }
+		x = 0
+		y = 2
+		available = {
+			NOT = { has_war_with = JAP }
+		}
+		relative_position_id = MEN_japanese_investment
+		cost = 10
+		ai_will_do = {
+			base = 6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = MEN_japanese_settlers_idea
+			611 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			612 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_victory_points = {
+				province = 11752
+				value = 2
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_central_academy_of_kalgan
+		icon = GFX_focus_research
+		x = 0
+		y = 1
+		prerequisite = { 
+			focus = MEN_japanese_settlers
+		}
+		relative_position_id = MEN_japanese_settlers
+		
+		cost = 10
+		ai_will_do = {
+			factor = 6
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MEN_develop_banners
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = MEN_central_academy_of_kalgan }
+		mutually_exclusive = { focus = MEN_connect_banners }
+		x = -1
+		y = 1
+		relative_position_id = MEN_central_academy_of_kalgan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				611 = {
+					is_fully_controlled_by = ROOT
+				}
+				612 = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { 611 = { is_fully_controlled_by = ROOT } }
+				611 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { 612 = { is_fully_controlled_by = ROOT } }
+				612 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { 621 = { is_fully_controlled_by = ROOT } }
+				621 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { 746 = { is_fully_controlled_by = ROOT } }
+				746 = {
+					add_extra_state_shared_building_slots = 1
+				} 
+			}
+			if = {
+				limit = { 330 = { is_fully_controlled_by = ROOT } }
+				330 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { 616 = { is_fully_controlled_by = ROOT } }
+				616 = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			if = {
+				limit = { 756 = { is_fully_controlled_by = ROOT } }
+				756 = {
+					add_extra_state_shared_building_slots = 1
+				} 
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_connect_banners
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = MEN_central_academy_of_kalgan }
+		mutually_exclusive = { focus = MEN_develop_banners }
+		x = 1
+		y = 1
+		relative_position_id = MEN_central_academy_of_kalgan
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR = {
+				611 = {
+					is_fully_controlled_by = ROOT
+				}
+				612 = {
+					is_fully_controlled_by = ROOT
+				}
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			if = {
+				limit = { 611 = { is_fully_controlled_by = ROOT } }
+				611 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 612 = { is_fully_controlled_by = ROOT } }
+				612 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 621 = { is_fully_controlled_by = ROOT } }
+				621 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 746 = { is_fully_controlled_by = ROOT } }
+				746 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				} 
+			}
+			if = {
+				limit = { 330 = { is_fully_controlled_by = ROOT } }
+				330 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 616 = { is_fully_controlled_by = ROOT } }
+				616 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = { 756 = { is_fully_controlled_by = ROOT } }
+				756 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				} 
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_educate_the_countryside
+		icon = GFX_focus_research2
+		x = 0
+		y = 2
+		prerequisite = { focus = MEN_develop_banners focus = MEN_connect_banners }
+		relative_position_id = MEN_central_academy_of_kalgan
+		
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = MEN_force_nomads_into_factories
+		icon = GFX_goal_reichsautobahn
+		prerequisite = { focus = MEN_educate_the_countryside }
+		mutually_exclusive = { focus = MEN_nomad_syncretism }
+		x = -1
+		y = 1
+		relative_position_id = MEN_educate_the_countryside
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MEN_nomadic_society 
+				add_idea = MEN_force_nomads_factories_idea 
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_nomad_syncretism
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = MEN_educate_the_countryside }
+		mutually_exclusive = { focus = MEN_force_nomads_into_factories }
+		x = 1
+		y = 1
+		relative_position_id = MEN_educate_the_countryside
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+
+		}
+
+		complete_tooltip = {
+			random_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = MEN_nomadic_society 
+				add_idea = MEN_nomad_cooperation_idea 
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = MEN_mengjiang_national_army
+		icon = GFX_focus_secret_rearmament
+		x = 13
+		y = 0
+
+		cost = 5
+
+		available = {
+			has_country_flag = MEN_established_mil_gov_flag	
+		}
+
+		ai_will_do = {
+			factor = 10
+		}	
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15	
+			create_field_marshal = {
+				name = "Li Shouxin"
+				portrait_path = "gfx/leaders/MEN/Portrait_MEN_li_shouxin.dds"
+				traits = { career_officer infantry_officer unyielding_defender }
+				skill = 2
+				attack_skill = 3
+				defense_skill = 3
+				planning_skill = 2
+				logistics_skill = 2
+			}
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = MEN_li_shouxin 
+		}
+	}
+
+	focus = {
+		id = MEN_recruit_levies
+		icon = GFX_focus_generic_manpower
+		prerequisite = { focus = MEN_mengjiang_national_army }
+		x = 0
+		y = 1
+		relative_position_id = MEN_mengjiang_national_army
+		cost = 10
+		ai_will_do = {
+			base = 7
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = MEN_recruit_levies_idea 
+		}
+	}
+
+	focus = {
+		id = MEN_mongolian_military_staff
+		icon = GFX_focus_generic_military_mission
+		prerequisite = { focus = MEN_recruit_levies }
+		mutually_exclusive = { focus = MEN_japanese_military_staff }
+		x = -1
+		y = 1
+		relative_position_id = MEN_recruit_levies 
+
+		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
-		
-		completion_reward = {
-			hidden_effect = {			  
-				if = {
-					limit = {
-						SHX = {
-							exists = yes
-							is_neighbor_of = ROOT
-						}
-					}
-					SHX = { transfer_state = 621 }
-				}
-				retire_country_leader = yes
-				drop_cosmetic_tag = yes
-				set_cosmetic_tag = MAGmen
-				set_politics = {
-					ruling_party = fascism
-					last_election = "1936.1.1"
-					election_frequency = 48
-					elections_allowed = no
-				}
-				set_popularities = {
-					fascism = 95
-					neutrality = 5
-				}
 
-				add_ai_strategy = {
-					type = building_target
-					id = infrastructure
-					value = 7
-				}
+		bypass = {
 
-				create_country_leader = {
-				name = "Prince Demchugdongrub"
-				desc = "POLITICS_DEMCHUGDONGRUB_DESC"
-				picture = "GFX_portrait_men_demchugdongrub"
-				expire = "1965.1.1"
-				ideology = rexism
-				traits = {
-				spirit_of_genghis
-					}
-				}
-			}			
-			CHI = {
-				end_puppet = MEN
-				country_event = { id = men.22 }	
-			}
-			JAP = {
-				puppet = MEN 
-				country_event = { id = men.11 }
-			}
-			load_focus_tree = generic_focus	
 		}
-		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = MEN_mongolian_military_staff_idea 			
+		}
 	}
+
 	focus = {
-		id = men_own
-
-		icon = GFX_goal_generic_demand_territory
-
-		mutually_exclusive = { focus = men_jap }
-		
-		prerequisite = { focus = men_goverment }
-		
-		x = 2
+		id = MEN_improve_mongolian_tactics
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = MEN_mongolian_military_staff }
+		x = 0
 		y = 1
-		
-		relative_position_id = men_goverment
+		relative_position_id = MEN_mongolian_military_staff
 
-		cost = 1
+		cost = 10
 
 		ai_will_do = {
-			factor = 0.1 
-			modifier = {
-				is_historical_focus_on = yes
-				factor = 0
-			}
-			modifier = {
-				factor = 0
-				JAP = {
-					is_ai = no
-				}
-			}
-			modifier = {
-				AND = {
-					is_historical_focus_on = no
-					CHI = {
-						is_ai = no
-					}
-					JAP = {
-						is_ai = yes
-					}
-				}
-				add = 1
-			}
+			factor = 10
 		}
-		
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
 		completion_reward = {
-			add_political_power = 25
-			CHI = {
-					end_puppet = men
-				    country_event = { id = men.22 }
-				  }
-			load_focus_tree = generic_focus
+			swap_ideas = {
+				remove_idea = MEN_mongolian_military_staff_idea 
+				add_idea = MEN_mongolian_military_staff2_idea 
+			}		
+		}
+	}
+
+
+	focus = {
+		id = MEN_japanese_military_staff 
+		icon = GFX_focus_generic_japanese_imperial_glory
+		prerequisite = { focus = MEN_recruit_levies }
+		mutually_exclusive = { focus = MEN_mongolian_military_staff }
+		x = 1
+		y = 1
+		relative_position_id = MEN_recruit_levies 
+
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }	
+		}
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = MEN_japanese_military_staff_idea 			
+		}
+	}
+
+	focus = {
+		id = MEN_adopt_japanese_tactics
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = MEN_japanese_military_staff }
+		x = 0
+		y = 1
+		relative_position_id = MEN_japanese_military_staff 
+
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }	
+		}
+
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			swap_ideas = {
+				remove_idea = MEN_japanese_military_staff_idea 
+				add_idea = MEN_japanese_military_staff2_idea 
+			}	
 			hidden_effect = {
-			add_stability = 0.1
-			drop_cosmetic_tag = yes
-			set_cosmetic_tag = MAGmen
+				set_rule = {
+					can_use_kamikaze_pilots = yes
+				}
+			}
+			custom_effect_tooltip = kamikaze_focus_tooltip	
+		}
+	}
+
+	focus = {
+		id = MEN_reorganize_the_army
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = MEN_adopt_japanese_tactics focus = MEN_improve_mongolian_tactics }
+		x = 0
+		y = 3
+		relative_position_id = MEN_recruit_levies
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			remove_ideas = MEN_bad_army_idea
+		}
+	}
+
+	focus = {
+		id = MEN_get_japanese_equipment
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = MEN_reorganize_the_army }
+		x = 0
+		y = 1
+		relative_position_id = MEN_reorganize_the_army
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+		}
+
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {	
+			unlock_decision_category_tooltip = MEN_japanese_arms_category 			
+		}
+	}
+
+	focus = {#Shamelessy copied from my other focus tree
+		id = MEN_utilise_camels
+		icon = GFX_goal_generic_cavalry
+		prerequisite = { focus = MEN_get_japanese_equipment }
+		x = -1
+		y = 1
+		relative_position_id = MEN_get_japanese_equipment
+		cost = 5
+		ai_will_do = {
+			base = 10
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "Battle for the Bosporus"
+				}
+				custom_effect_tooltip = TUR_unlock_camelry_effect_tt
+				hidden_effect = { set_technology = { camelry = 1 } } 
+				custom_effect_tooltip = mongolia_tt13
+				hidden_effect = { set_technology = { MON_camels = 1 } }
+			}
+			else = {
+				custom_effect_tooltip = mongolia_tt13
+				hidden_effect = { set_technology = { MON_no_camels = 1 } }
 			}
 		}
-		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = MEN_chinese_collaborators
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = MEN_get_japanese_equipment }
+		x = 1
+		y = 1
+		relative_position_id = MEN_get_japanese_equipment
+		cost = 10
+		ai_will_do = {
+			base = 100
+		}
+
+		available = {
+			OR = {
+				event_target:WTT_current_china_leader = { has_war_with = MEN }
+				event_target:WTT_communist_china = { has_war_with = MEN }
+			}	
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = available_chief_of_army
+			show_ideas_tooltip = MEN_wang_ying 
+			create_corps_commander = {
+				name = "Wang Ying"
+				portrait_path = "gfx/leaders/Asia/Portrait_Asia_Generic_land_4.dds"
+				traits = { career_officer cavalry_officer cavalry_leader }
+				skill = 2
+				attack_skill = 2
+				defense_skill = 1
+				planning_skill = 2
+				logistics_skill = 3
+			}
+			add_manpower = 6000
+			division_template = {
+					name = "Grand Han Righteous Army"
+					priority = 1
+					division_names_group = MEN_INF_01 
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { ROOT = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"1. Grand Han Righteous Army\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 1.5" 
+						owner = MEN
+					}
+					create_unit = {
+						division = "name = \"2. Grand Han Righteous Army\" division_template = \"Grand Han Righteous Army\" start_experience_factor = 1.5" 
+						owner = MEN
+					}
+				}	
+		}
+	}
+
+	focus = {
+		id = MEN_mongol_cavalry
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = MEN_utilise_camels }
+		prerequisite = { focus = MEN_chinese_collaborators }
+		mutually_exclusive = { focus = MEN_han_infantry }
+		x = 0
+		y = 1
+		relative_position_id = MEN_utilise_camels
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 14
+				has_completed_focus = MEN_improve_mongolian_tactics
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = MEN_mongol_cavalry_idea 						
+		}
+	}
+
+	focus = {
+		id = MEN_han_infantry 
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = MEN_chinese_collaborators }
+		prerequisite = { focus = MEN_utilise_camels }
+		mutually_exclusive = { focus = MEN_mongol_cavalry }
+		x = 0
+		y = 1
+		relative_position_id = MEN_chinese_collaborators
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 6
+				has_completed_focus = MEN_adopt_japanese_tactics
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = MEN_han_infantry_idea 						
+		}
 	}
 }
-#localization in kmt file

@@ -1,0 +1,735 @@
+MEN_invasion_category = {
+	MEN_invade_suiyuan = {#Supposed to be a 50% Chance to win this, if won you get ordos and suiyuan, if not you can retake later
+		icon = generic_ignite_civil_war		
+
+		available = {
+			MEN = { NOT = { has_non_aggression_pact_with = SHX } }
+			divisions_in_state = {
+				state = 611	
+				size > 2
+			}
+		}
+
+		visible = {
+			NOT = { owns_state = 621 }
+			NOT = { owns_state = 746 }
+			NOT = { has_country_flag = MEN_sucessful_invasion }
+			owns_state = 611
+			SHX = { exists = yes }
+			NOT = { has_war_with = SHX }
+			SHX = {
+				NOT = {
+					is_subject_of = MEN
+				}
+				NOT = {
+					is_in_faction_with = MEN
+				}
+				owns_state = 621
+				owns_state = 746
+			}
+			NOT = {
+				is_subject_of = SHX
+			}
+
+		}
+
+		highlight_state_targets = {
+			state = 611
+			state = 621
+			state = 746
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		fixed_random_seed = no
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 15
+		days_re_enable = 15
+
+		remove_effect = {
+			SHX = {
+				country_event = { id = mengkukuo.3 days = 1 }
+			}
+		}
+	}
+
+	MEN_claim_ningxia_decision = {
+		icon = generic_ignite_civil_war
+
+		available = {
+			has_completed_focus = MEN_claim_ningxia
+			MEN = { NOT = { has_non_aggression_pact_with = XSM } }
+			divisions_in_state = {
+				state = 621	
+				size > 1
+			}
+			divisions_in_state = {
+				state = 746	
+				size > 1
+			}
+		}
+
+		visible = {
+			NOT = { has_country_flag = MEN_sucessful_invasion_ningxia }
+			NOT = { owns_state = 616 }
+			owns_state = 621
+			owns_state = 746
+			XSM = {
+				NOT = {
+					is_subject_of = MEN
+				}
+				NOT = {
+					is_in_faction_with = MEN
+				}
+				owns_state = 616
+			}
+			NOT = {
+				is_subject_of = XSM
+			}
+
+		}
+
+		highlight_state_targets = {
+			state = 616
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		fixed_random_seed = no
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 15
+		days_re_enable = 15
+
+		remove_effect = {
+			XSM = {
+				country_event = { id = mengkukuo.9 days = 1 }
+			}
+		}
+	}
+
+	MEN_take_suiyuan = {
+		icon = border_war
+
+		available = {
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 621
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 621 }
+		}
+
+		highlight_state_targets = {
+			state = 621
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 621
+		}
+	}
+
+	MEN_take_ordos = {
+		icon = border_war
+
+		available = {
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 746
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 746 }
+		}
+
+		highlight_state_targets = {
+			state = 746
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 746
+		}
+	}
+
+	MEN_take_ningxia = {
+		icon = border_war
+
+		available = {
+			has_completed_focus = MEN_claim_ningxia
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 616
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 616 }
+		}
+
+		highlight_state_targets = {
+			state = 616
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 616
+		}
+	}
+
+	MEN_take_jiuquan = {
+		icon = border_war
+
+		available = {
+			has_completed_focus = MEN_claim_ningxia
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 756
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 756 }
+		}
+
+		highlight_state_targets = {
+			state = 756
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 756
+		}
+	}
+
+	MEN_take_tuva = {
+		icon = border_war
+
+		available = {
+			has_country_flag = MEN_mongolia_has_been_formed_flag
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 329
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 329 }
+			has_country_flag = MEN_mongolia_has_been_formed_flag
+		}
+
+		highlight_state_targets = {
+			state = 329
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 329
+		}
+	}
+
+	MEN_take_buryatia = {
+		icon = border_war
+
+		available = {
+			has_country_flag = MEN_mongolia_has_been_formed_flag
+			is_in_faction = yes
+			any_other_country = {
+				is_in_faction_with = ROOT
+				is_ai = yes
+				has_full_control_of_state = 564
+			}	
+		}
+
+		visible = {
+			NOT = { owns_state = 564 }
+			has_country_flag = MEN_mongolia_has_been_formed_flag
+		}
+
+		highlight_state_targets = {
+			state = 564
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 5
+
+		fire_only_once = yes
+
+		days_remove = 5
+		days_re_enable = 5
+
+		remove_effect = {
+			transfer_state = 564
+		}
+	}
+
+	MEN_proclaim_mengjiang = {
+		icon = generic_nationalism
+
+		available = {
+			OR = {
+				event_target:WTT_current_china_leader = { has_war_with = JAP }
+				event_target:WTT_communist_china = { has_war_with = JAP }
+			}
+		}
+
+		visible = {
+			owns_state = 621
+			owns_state = 746			
+		}
+
+		highlight_state_targets = {
+			state = 746
+			state = 621
+			state = 611
+			state = 612
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_cosmetic_tag = MEN_mengjiang_tag
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 120
+			hidden_effect = {
+				set_country_flag = MEN_has_formed_megjiang_flag
+			}
+		}
+	}
+
+	MEN_core_western_territories = {
+		icon = generic_nationalism
+
+		available = {
+			has_completed_focus = MEN_claim_ningxia
+			has_country_flag = MEN_has_formed_megjiang_flag
+		}
+
+		visible = {
+			OR = {
+				owns_state = 616
+				owns_state = 756
+			}
+		}
+
+		highlight_state_targets = {
+			state = 616
+			state = 756
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 50
+		days_re_enable = 5
+
+		remove_effect = {
+			616 = { add_core_of = ROOT }
+			756 = { add_core_of = ROOT }
+		}
+	}
+
+	MEN_core_qinghai = {
+		icon = generic_nationalism
+
+		available = {
+			owns_state = 604
+			has_completed_focus = MEN_expand_to_qinghai
+			has_country_flag = MEN_has_formed_megjiang_flag
+		}
+
+		visible = {
+			OR = {
+				owns_state = 616
+				has_completed_focus = MEN_expand_to_qinghai
+			}
+		}
+
+		highlight_state_targets = {
+			state = 604
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		days_remove = 20
+		days_re_enable = 5
+
+		remove_effect = {
+			604 = { add_core_of = ROOT }
+		}
+	}
+
+	MEN_become_mongolia = {
+		icon = generic_nationalism
+
+		available = {
+			OR = { 
+				has_completed_focus = MEN_mongolia_war
+				has_completed_focus = MEN_mongolia_diplomacy
+			}
+			owns_state = 330
+			has_country_flag = MEN_has_formed_megjiang_flag
+		}
+
+		visible = {
+			OR = { 
+				has_completed_focus = MEN_mongolia_war
+				has_completed_focus = MEN_mongolia_diplomacy
+				has_country_flag = MEN_has_formed_megjiang_flag
+			}
+		}
+
+		highlight_state_targets = {
+			state = 330
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			set_cosmetic_tag = MEN_is_mongolia
+			329 = { add_core_of = ROOT }
+			564 = { add_core_of = ROOT }
+			add_stability = 0.05
+			add_war_support = 0.05
+			add_political_power = 120
+			hidden_effect = {
+				set_country_flag = MEN_mongolia_has_been_formed_flag
+			}
+		}
+	}
+}
+
+MEN_iron_rights_category = {
+
+	MEN_give_japanese_iron_rights = {
+		icon = eng_trade_unions_support
+
+		available = {
+			owns_state = 611
+		}
+
+		visible = {
+
+		}
+
+		ai_will_do = {
+			base = 100
+			modifier = {
+				factor = 0
+				MEN = { has_government = communism }
+			}
+		}
+
+		fire_only_once = yes
+
+		complete_effect = {
+			MEN = {
+				give_resource_rights = { receiver = JAP state = 611 }
+				add_autonomy_ratio = {
+					value = 0.1
+				}
+			}
+			hidden_effect = {
+				set_country_flag = MEN_japanese_iron_mine
+			}
+		}
+	}
+
+
+	MEN_take_away_japanese_iron_rights = {
+		icon = eng_trade_unions_demand
+
+		available = {
+			owns_state = 611
+			has_country_flag = MEN_japanese_iron_mine
+			MEN = { NOT = { is_subject_of = JAP } }
+		}
+
+		visible = {
+
+		}
+
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 0
+				MEN = { is_in_faction_with = JAP }
+			}
+		}
+
+		fire_only_once = yes
+
+		cost = 100
+
+		complete_effect = {
+			JAP = {
+				remove_resource_rights = 611
+			}
+			hidden_effect = {
+				set_country_flag = MEN_no_japanese_iron_mine
+				clr_country_flag = MEN_japanese_iron_mine
+			}
+		}
+	}
+
+	MEN_improve_mines = {
+		icon = steel
+
+		available = {
+			owns_state = 611
+			has_country_flag = MEN_japanese_iron_mine
+		}
+
+		visible = {
+			owns_state = 611
+		}
+
+		highlight_state_targets = {
+			state = 611
+		}
+
+		ai_will_do = {
+			base = 100
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 100
+		days_re_enable = 5
+
+		remove_effect = {
+			611 = { 
+				add_resource = { 
+					type = steel
+					amount = 12
+				}
+			}	
+		}
+	}
+
+	MEN_invest_money = {
+		icon = generic_research
+
+		available = {
+			owns_state = 611
+			has_country_flag = MEN_japanese_iron_mine
+			has_completed_focus = MEN_bank_of_mengjiang
+		}
+
+		visible = {
+			owns_state = 611
+		}
+
+		highlight_state_targets = {
+			state = 611
+		}
+
+		ai_will_do = {
+			base = 20
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		days_remove = 200
+		days_re_enable = 5
+
+		remove_effect = {
+			add_research_slot = 1				
+		}
+	}
+}
+
+MEN_japanese_arms_category = {#Somewhat copied from my mongolia decisions
+	MEN_japanese_guns_decision = {
+		icon = generic_prepare_civil_war
+		days_re_enable = 50
+		cost = 25
+
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }	
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 250
+				producer = JAP
+			}
+		}
+	}
+	MEN_japanese_artillery_decision = {
+		icon = ger_military_buildup
+		days_re_enable = 100
+		cost = 25
+   		available = { 
+			NOT = { MEN = { has_war_with = JAP } }	
+			has_tech = gw_artillery 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_equipment = {
+					artillery_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+				producer = JAP
+			}
+		}
+	}
+	MEN_japanese_fighters_decision = {
+		icon = generic_air
+		available = {
+			NOT = { MEN = { has_war_with = JAP } }	
+			has_tech = early_fighter 
+		}
+		days_re_enable = 150
+		cost = 25
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					fighter_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 100
+				producer = JAP
+			}
+		}
+	}
+}

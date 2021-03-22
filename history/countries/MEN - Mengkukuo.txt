@@ -19,8 +19,27 @@ set_country_flag = started_out_as_landlocked
 CHI = {
 	puppet = MEN
 }
+add_ideas = {
+	limited_conscription
+	closed_economy 
+	partial_economic_mobilisation 
+	MEN_nomadic_society 
+	MEN_bad_army_idea
+}
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	CHI = {
+		set_autonomy = {
+			target = MEN
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.75
+		}
+	}
+}
 
-set_cosmetic_tag = MongalCouncilCtag
+set_cosmetic_tag = MEN_china
 set_party_name = { ideology = neutrality long_name = MEN_mongal_council_long name = MEN_mongal_council }
 
 create_corps_commander = {
@@ -160,9 +179,22 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 35
-	neutrality = 65
+	fascism = 45
+	neutrality = 50
+	communism = 5
 }
+
+create_country_leader = {
+	name = "Prince Demchugdongrub"
+	desc = "POLITICS_DEMCHUGDONGRUB_DESC"
+	picture = "GFX_portrait_men_demchugdongrub"
+	expire = "1965.1.1"
+	ideology = rexism
+	traits = {
+		spirit_of_genghis
+	}
+}
+
 
 create_country_leader = {
 	name = "Prince Demchugdongrub"
@@ -175,5 +207,41 @@ create_country_leader = {
 	}
 }
 
+create_country_leader = {
+	name = "Serengdongrub"
+	desc = ""
+	picture = "gfx/leaders/asia/Portrait_Asia_Generic_navy_1.dds"
+	expire = "1965.1.1"
+	ideology = leninism 
+	traits = {
+		
+	}
+}
+
+create_field_marshal = {
+	name = "Prince Demchugdongrub"
+	id = 6001
+	portrait_path = "gfx/leaders/MEN/portrait_men_demchugdongrub.dds"
+	traits = { cavalry_officer inspirational_leader }
+	skill = 2
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Altanochir"
+	id = 6002
+	portrait_path = "gfx/leaders/MON/Portrait_MON_altanochir.dds"
+	traits = { old_guard cavalry_officer cavalry_leader }
+	skill = 3
+
+  	attack_skill = 2
+  	defense_skill = 1
+  	planning_skill = 3
+  	logistics_skill = 3
+}
 1939.1.1 = {
 }

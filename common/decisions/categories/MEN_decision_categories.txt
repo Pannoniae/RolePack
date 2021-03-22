@@ -1,0 +1,44 @@
+#######################
+##### Mengkukuo ######
+#######################
+
+MEN_invasion_category = {
+	
+	icon = border_conflicts
+
+	allowed = {
+		original_tag = MEN
+	}
+
+	visible = {
+		has_completed_focus = MEN_invade_suiyuan
+	}
+}
+
+MEN_iron_rights_category = {
+	
+	icon = generic_economy
+
+	allowed = {
+		original_tag = MEN
+	}
+
+	visible = {
+		has_dlc = "Man the Guns"
+		has_completed_focus = MEN_open_mines
+		owns_state = 611
+	}
+}
+
+MEN_japanese_arms_category = {
+	
+	icon = generic_arms_trade
+
+	allowed = {
+		original_tag = MEN
+	}
+
+	visible = {
+		has_completed_focus = MEN_get_japanese_equipment
+	}
+}

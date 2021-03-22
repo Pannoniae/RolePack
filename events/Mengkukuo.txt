@@ -1,0 +1,785 @@
+###########################
+# Mengkukuo Events
+###########################
+
+add_namespace = mengkukuo
+
+#Death of Yondonwangchug
+country_event = {
+	id = mengkukuo.1
+	title = mengkukuo.1.t
+	desc = mengkukuo.1.d
+	picture = GFX_report_event_generic_funeral
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1938.03.24
+		tag = MEN
+	}
+
+	option = { 
+		name = mengkukuo.1.a
+		ai_chance = {
+			base = 100
+		}
+		remove_ideas = MEN_yondonwangchug 
+		hidden_effect = {
+			set_country_flag = MEN_death_of_yondonwangchug
+		}			
+	}
+}
+
+#Sinification of Inner Mongolia
+country_event = {
+	id = mengkukuo.2
+	title = mengkukuo.2.t
+	desc = mengkukuo.2.d
+	picture = GFX_report_event_chinese_soldiers_running
+
+	fire_only_once = yes
+
+	trigger = {
+		OR = { 
+			tag = PRC
+			tag = CHI
+			tag = SHX
+			tag = GXC
+			tag = YUN
+		}
+		owns_state = 611
+		owns_state = 612
+		NOT = { country_exists = MEN }
+	}
+
+	option = {#Change the name
+		name = mengkukuo.2.a
+		ai_chance = {
+			base = 100
+		}
+		set_province_name = { id = 11752 name = "Zhangbei" }		
+	}
+	option = {#Leave it like that 
+		name = mengkukuo.2.b
+		ai_chance = {
+			base = 0
+		}			
+	}
+}
+
+#SHX Event: The invasion of Suiyuan
+country_event = {
+	id = mengkukuo.3
+	title = mengkukuo.3.t
+	desc = mengkukuo.3.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Send reinforcements
+		name = mengkukuo.3.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		add_manpower = -10000
+		random_list = {
+			75 = {
+				MEN = {
+					country_event = { id = mengkukuo.5 days = 1 }
+				}
+			}
+
+			25 = {
+				MEN = {
+					country_event = { id = mengkukuo.4 days = 1 }
+				}
+			}	
+		}
+		hidden_effect = {
+			SHX = {
+				add_opinion_modifier = { target = MEN modifier = hostile_status }
+			}
+			MEN = {
+				add_opinion_modifier = { target = SHX modifier = hostile_status }
+			}
+		}
+
+	}
+
+	option = { #Nah we will win this
+		name = mengkukuo.3.b
+		ai_chance = {
+			factor = 75
+		}
+		random_list = {
+			50 = {
+				MEN = {
+					country_event = { id = mengkukuo.5 days = 1 }
+				}
+			}
+
+			50 = {
+				MEN = {
+					country_event = { id = mengkukuo.4 days = 1 }
+				}
+			}	
+		}
+
+		hidden_effect = {
+			SHX = {
+				add_opinion_modifier = { target = MEN modifier = hostile_status }
+			}
+			MEN = {
+				add_opinion_modifier = { target = SHX modifier = hostile_status }
+			}
+		}
+
+	}
+}
+
+
+#Invasion of Suiyuan sucessful
+country_event = {
+	id = mengkukuo.4
+	title = mengkukuo.4.t
+	desc = mengkukuo.4.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #NICE
+		name = mengkukuo.4.a
+		ai_chance = {
+			factor = 100
+		}
+		add_manpower = -5000
+		transfer_state = 621
+		transfer_state = 746
+		SHX = {
+			country_event = { id = mengkukuo.6 days = 1 }
+		}
+		hidden_effect = {
+			set_country_flag = MEN_sucessful_invasion 
+		}
+	}
+}
+
+#Invasion of Suiyuan unsucessful
+country_event = {
+	id = mengkukuo.5
+	title = mengkukuo.5.t
+	desc = mengkukuo.5.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #AWW MAN
+		name = mengkukuo.5.a
+		ai_chance = {
+			factor = 75
+		}
+		add_manpower = -5000
+		SHX = {
+			country_event = { id = mengkukuo.7 days = 1 }
+		}
+	}
+
+	option = { #Use the moment
+		name = mengkukuo.5.b
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+		add_manpower = -5000
+		create_wargoal = {
+			type = annex_everything
+			target = SHX
+			expire = 0
+		}
+		SHX = {
+			country_event = { id = mengkukuo.7 days = 1 }
+		}
+	}
+}
+
+#Mongolians took our states
+country_event = {
+	id = mengkukuo.6
+	title = mengkukuo.6.t
+	desc = mengkukuo.6.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #This is a declaration of war!
+		name = mengkukuo.6.a
+		ai_chance = {
+			factor = 25
+		}
+		add_manpower = -5000
+		create_wargoal = {
+			type = annex_everything
+			target = MEN
+			expire = 0
+		}
+		SHX = { add_opinion_modifier = { target = MEN modifier = large_decrease } }
+	}
+
+	option = { #Fuck
+		name = mengkukuo.6.b
+		ai_chance = {
+			factor = 75
+		}
+		add_manpower = -5000
+		SHX = { add_opinion_modifier = { target = MEN modifier = large_decrease } }
+	}
+}
+
+
+#Mongolians lost the battle
+country_event = {
+	id = mengkukuo.7
+	title = mengkukuo.7.t
+	desc = mengkukuo.7.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Lol
+		name = mengkukuo.7.a
+		ai_chance = {
+			factor = 100
+		}
+		add_manpower = -5000
+		SHX = { add_opinion_modifier = { target = MEN modifier = large_decrease } }
+	}
+
+}
+
+#Altanochir is crowned king of mongolia
+country_event = {
+	id = mengkukuo.8
+	title = mengkukuo.8.t
+	desc = mengkukuo.8.d
+	picture = GFX_report_event_japanese_officers
+
+	is_triggered_only = yes
+
+	option = { #We lose him :(
+		name = mengkukuo.8.a
+		ai_chance = {
+			factor = 100
+		}
+		remove_unit_leader = 6002
+		remove_ideas = MEN_altanochir 
+		hidden_effect = {
+			set_country_flag = MEN_altanochir_left_flag 
+		}
+	}
+
+}
+
+#XSM Event: Push for Ningxia
+country_event = {
+	id = mengkukuo.9
+	title = mengkukuo.9.t
+	desc = mengkukuo.9.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Send reinforcements
+		name = mengkukuo.9.a
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		add_manpower = -10000
+		random_list = {
+			25 = {#Lose
+				MEN = {
+					country_event = { id = mengkukuo.11 days = 1 }
+				}
+			}
+
+			75 = {#Win
+				MEN = {
+					country_event = { id = mengkukuo.10 days = 1 }
+				}
+			}	
+		}
+		hidden_effect = {
+			XSM = {
+				add_opinion_modifier = { target = MEN modifier = hostile_status }
+			}
+			XSM = {
+				add_opinion_modifier = { target = SHX modifier = hostile_status }
+			}
+		}
+
+	}
+
+	option = { #Nah we will win this
+		name = mengkukuo.9.b
+		ai_chance = {
+			factor = 75
+		}
+		random_list = {
+			75 = {#Lose
+				MEN = {
+					country_event = { id = mengkukuo.11 days = 1 }
+				}
+			}
+
+			25 = {#Win
+				MEN = {
+					country_event = { id = mengkukuo.10 days = 1 }
+				}
+			}	
+		}
+
+		hidden_effect = {
+			XSM = {
+				add_opinion_modifier = { target = MEN modifier = hostile_status }
+			}
+			MEN = {
+				add_opinion_modifier = { target = XSM modifier = hostile_status }
+			}
+		}
+
+	}
+}
+
+#Invasion of Ningxia unsucessful
+country_event = {
+	id = mengkukuo.10
+	title = mengkukuo.10.t
+	desc = mengkukuo.10.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #AAAH
+		name = mengkukuo.10.a
+		ai_chance = {
+			factor = 25
+		}
+		add_manpower = -5000
+	}
+
+	option = { #Lets declare a real war
+		name = mengkukuo.10.b
+		ai_chance = {
+			factor = 75
+		}
+		add_manpower = -5000
+		declare_war_on = {
+			target = XSM
+			type = take_state_focus
+			generator = { 616 756 }
+		}
+		hidden_effect = {
+			set_country_flag = MEN_sucessful_invasion_ningxia 
+		}
+	}
+}
+
+#Invasion of Ningxia sucessful
+country_event = {
+	id = mengkukuo.11
+	title = mengkukuo.11.t
+	desc = mengkukuo.11.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Great
+		name = mengkukuo.11.a
+		ai_chance = {
+			factor = 75
+		}
+		add_manpower = -5000
+		transfer_state = 616
+		XSM = {
+			country_event = { id = mengkukuo.12 days = 1 }
+		}
+		hidden_effect = {
+			set_country_flag = MEN_sucessful_invasion_ningxia 
+		}
+	}
+
+	option = { #Lets push more
+		name = mengkukuo.11.b
+		ai_chance = {
+			factor = 25
+		}
+		add_manpower = -10000
+		transfer_state = 616
+		transfer_state = 756
+		XSM = {
+			country_event = { id = mengkukuo.13 days = 1 }
+		}
+		hidden_effect = {
+			set_country_flag = MEN_sucessful_invasion_ningxia 
+		}
+	}
+}
+
+#The mongols took ningxia
+country_event = {
+	id = mengkukuo.12
+	title = mengkukuo.12.t
+	desc = mengkukuo.12.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Fuck
+		name = mengkukuo.12.a
+		ai_chance = {
+			factor = 90
+		}
+		add_manpower = -5000
+	}
+
+	option = { #Attack them
+		name = mengkukuo.12.b
+		ai_chance = {
+			factor = 10
+		}
+		add_manpower = -5000
+		create_wargoal = {
+			type = annex_everything
+			target = MEN
+			expire = 0
+		}	
+	}
+}
+
+#The mongols took ningxia and more
+country_event = {
+	id = mengkukuo.13
+	title = mengkukuo.13.t
+	desc = mengkukuo.13.d
+	picture = GFX_report_event_yugoslavian_cavalry
+
+	is_triggered_only = yes
+
+	option = { #Fuck
+		name = mengkukuo.13.a
+		ai_chance = {
+			factor = 20
+		}
+		add_manpower = -5000
+	}
+
+	option = { #Attack them
+		name = mengkukuo.13.b
+		ai_chance = {
+			factor = 80
+		}
+		add_manpower = -5000
+		declare_war_on = {
+			target = MEN
+			type = take_state_focus
+			generator = { 616 756 }
+		}
+	}
+}
+
+
+#Unification of Mongolia?
+country_event = {
+	id = mengkukuo.14
+	title = mengkukuo.14.t
+	desc = mengkukuo.14.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Yes
+		name = mengkukuo.14.a
+		ai_chance = {
+			factor = 100
+		}
+		if = {
+			limit = {
+				MON = {
+					is_ai = no
+				}
+				MEN = {
+					is_ai = yes
+				}
+			}
+			MEN = {
+				every_unit_leader = {
+					set_nationality = MON
+				}
+			}
+			annex_country = { target = MEN transfer_troops = yes }
+			every_state = {
+				limit = { is_core_of = MEN }
+				add_core_of = MON
+			}
+			
+		}
+		else = {
+			MEN = { country_event = { id = mengkukuo.15 days = 1 } }
+		}
+		
+	}
+
+	option = { #No
+		name = mengkukuo.14.b
+		ai_chance = {
+			factor = 0
+		}	
+		MEN = { country_event = { id = mengkukuo.16 days = 1 } }
+	}
+}
+
+#Should we tag switch?
+country_event = {
+	id = mengkukuo.15
+	title = mengkukuo.15.t
+	desc = mengkukuo.15.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #We remain MEN
+		name = mengkukuo.15.a
+		ai_chance = {
+			factor = 100
+		}
+		MON = {
+			every_unit_leader = {
+				set_nationality = MEN
+			}
+		}
+		annex_country = { target = MON transfer_troops = yes }
+		every_state = {
+			limit = { is_core_of = MON }
+			add_core_of = MEN
+		}
+		
+	}
+
+	option = { #We become MON
+		name = mengkukuo.15.b
+		ai_chance = {
+			factor = 0
+		}
+		MON = {
+			change_tag_from = MEN
+		}
+		MEN = {
+			every_unit_leader = {
+				set_nationality = MON
+			}
+		}
+		annex_country = { target = MEN transfer_troops = yes }
+		every_state = {
+			limit = { is_core_of = MEN }
+			add_core_of = MON
+		}
+	}
+}
+
+#They said no...
+country_event = {
+	id = mengkukuo.16
+	title = mengkukuo.16.t
+	desc = mengkukuo.16.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Peace was never a option
+		name = mengkukuo.16.a
+		ai_chance = {
+			factor = 100
+		}
+		330 = { add_core_of = ROOT }
+		create_wargoal = {
+			type = annex_everything
+			target = MON
+			expire = 0
+		}
+	}
+}
+#Some Mongolian Events that can also be used for MEN
+#Elista is owned, Kalmyks are cored
+country_event = {
+	id = mengkukuo.17
+	title = mongolia.38.t
+	desc = mongolia.38.d
+	picture = GFX_report_event_long_march
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEN
+		has_full_control_of_state = 237
+		NOT = { 237 = { is_core_of = MEN } }
+	}
+
+	mean_time_to_happen = {
+		months = 2
+	}
+
+	option = { #NICE
+		name = mongolia.38.a
+		add_state_core = 237
+		237 = { set_state_name = "Kalmykia" }
+	}
+}
+
+#Buryat migration
+country_event = {
+	id = mengkukuo.18
+	title = mongolia.25.t
+	desc = mongolia.25.d
+	picture = GFX_report_event_gre_winter_soldiers_celebrating
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEN
+		NOT = {	MEN = { is_in_faction_with = SOV } }
+		country_exists = SOV
+		SOV = { has_government = communism }
+		MEN = { NOT = { has_full_control_of_state = 564 } }
+		has_country_flag = MEN_mongolia_has_been_formed_flag
+	}
+
+	option = { #A welcome addition
+		name = mongolia.25.a
+		add_ideas = MEN_buryat_migration_idea 
+		SOV = {
+			add_opinion_modifier = { target = MEN modifier = large_decrease }
+		}
+		SOV = {
+			add_ai_strategy = {
+				type = befriend
+				id = "MEN"			
+				value = -1000
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "MEN"			
+				value = -1000
+			}	
+		}
+	}
+}
+
+#Buryat migration has ended (state 564 is owned)
+country_event = {
+	id = mengkukuo.19
+	title = mongolia.26.t
+	desc = mongolia.26.d
+	picture = GFX_report_event_gre_winter_soldiers_celebrating
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEN
+		has_full_control_of_state = 564
+		has_idea = MEN_buryat_migration_idea 
+	}
+
+	option = { #OK
+		name = mongolia.26.a
+		remove_ideas = { MEN_buryat_migration_idea }
+		if = {
+			limit = {
+				564 = { is_core_of = MEN }
+			}
+			add_war_support = 0.05	
+		}
+		else_if = {
+			limit = {
+				NOT = { 564 = { is_core_of = MEN } }
+			}
+			add_state_core = 564
+		}
+	}
+}
+
+#Buryat migration has ended (Mongolia is a puppet of the soviets)
+country_event = {
+	id = mengkukuo.20
+	title = mongolia.27.t
+	desc = mongolia.27.d
+	picture = GFX_report_event_gre_winter_soldiers_celebrating
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = MEN
+		has_idea = MEN_buryat_migration_idea 
+		OR = {
+			is_subject_of = SOV
+			is_in_faction_with = SOV
+		}
+	}
+
+	option = { #OK
+		name = mongolia.27.a
+		remove_ideas = { MEN_buryat_migration_idea }
+		add_stability = -0.15
+	}
+}
+
+country_event = {
+	id = mengkukuo.21
+	title = mengkukuo.21.t
+	desc = mengkukuo.21.d
+	picture = GFX_report_event_japanese_officers
+
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+		days = 3
+	}
+
+	trigger = {
+		tag = MEN
+		has_war_with = JAP
+		OR = {
+			has_idea = MEN_japanese_settlers_idea 
+			has_idea = MEN_japanese_military_staff_idea 
+			has_idea = MEN_japanese_military_staff2_idea 
+		}
+	}
+
+	option = { #OK
+		name = mengkukuo.21.a
+		if = {
+			limit = {
+				has_idea = MEN_japanese_settlers_idea 
+			}
+		remove_ideas = { MEN_japanese_settlers_idea }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = MEN_japanese_military_staff_idea 
+					has_idea = MEN_japanese_military_staff2_idea 
+				}
+			}
+			add_timed_idea = { idea = MEN_military_staff_has_problems days = 100 }
+		}
+	}
+}

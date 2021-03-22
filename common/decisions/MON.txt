@@ -470,3 +470,144 @@ propaganda_efforts = {
 		}
 	}
 }
+MON_weapon_purchases_category = {
+	MON_purchase_guns_decision = {
+		icon = generic_prepare_civil_war
+		days_re_enable = 30
+		cost = 50
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+		}
+	}
+	MON_purchase_artillery_decision = {
+		icon = ger_military_buildup
+		days_re_enable = 60
+		cost = 75
+   		available = { 
+			has_tech = gw_artillery 
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				has_equipment = {
+					artillery_equipment < 1
+				}
+				factor = 50
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 75
+			}
+		}
+	}
+	MON_purchase_tanks_decision = {
+		icon = generic_tank
+		days_re_enable = 100
+		cost = 100
+   		available = { 
+			has_tech = basic_light_tank 
+		}
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					light_tank_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = light_tank_equipment
+				amount = 50
+			}
+		}
+	}
+	MON_purchase_fighters_decision = {
+		icon = generic_air
+		available = {
+			has_completed_focus = MON_plane_production
+			has_tech = early_fighter 
+		}
+		days_re_enable = 60
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					fighter_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = fighter_equipment
+				amount = 50
+			}
+		}
+	}
+	MON_purchase_bombers_decision = {
+		icon = generic_air
+		available = {
+			has_completed_focus = MON_plane_production
+			has_tech = early_bomber 
+		}
+		days_re_enable = 60
+		cost = 50
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				has_equipment = {
+					tac_bomber_equipment < 1
+				}
+				factor = 5
+			}
+			modifier = {
+				has_manpower < 10000 
+				factor = 0 #need to up conscription laws
+			}
+		}
+		modifier = {
+			
+		}
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = tac_bomber_equipment
+				amount = 50
+			}
+		}
+	}
+}
