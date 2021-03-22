@@ -2,8 +2,8 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "open_send_civ_window"
-		position = { x=606 y=78 }	
-		show_position = { x=-530 y =0 }
+		position = { x=626 y=78 }	
+		show_position = { x=-550 y =0 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300	
@@ -17,7 +17,7 @@ guiTypes = {
 
 		buttonType = {
 			name = "open_civ_trade_button"
-			position = { x = -450 y = -5 }
+			position = { x = -520 y = -5 }
 			quadTextureSprite ="GFX_topbar_trade_button"
 			Orientation = "UPPER_right"
 			shortcut = "shift+r"

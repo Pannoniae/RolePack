@@ -29,7 +29,7 @@ NDefines.NResistance.COMPLIANCE_GROWTH_BASE = 0.2 -- base compliance grow
 NDefines.NAir.AIR_WING_MAX_SIZE = 1600
 NDefines.NAir.AIR_DEPLOYMENT_DAYS = 0
 NDefines.NAir.AIR_WING_FLIGHT_SPEED_MULT = 0.2
-NDefines.NFocus.FOCUS_POINT_DAYS = 5
+NDefines.NFocus.FOCUS_POINT_DAYS = 4.5
 
 --NDefines_Graphics.NGraphics.CAPITAL_ICON_CUTOFF = 800						-- 1100 
 --NDefines_Graphics.NGraphics.DRAW_MAP_OBJECTS_CUTOFF = 250 					-- 550 

@@ -671,38 +671,6 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
 	
-	focus = {
-		id = HUN_revoke_the_jewish_laws
-		icon = GFX_focus_research
-		prerequisite = { focus = HUN_focus_neutrality focus = HUN_intervention}
-		x = 2
-		y = 1
-		relative_position_id = HUN_intervention
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
-	}
-	
 	############################
 	####### INTERVENTION #######
 	############################
@@ -741,6 +709,38 @@ focus_tree = {
 				add_stability = -0.05
 			}
 		}
+		
+		focus = {
+			id = HUN_revoke_the_jewish_laws
+			icon = GFX_focus_research
+			prerequisite = { focus = HUN_focus_neutrality focus = HUN_intervention}
+			x = 2
+			y = 1
+			relative_position_id = HUN_intervention
+
+			cost = 10
+
+			ai_will_do = {
+				factor = 100
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = yes
+
+			completion_reward = {
+				add_research_slot = 1
+			}
+			search_filters = { FOCUS_FILTER_RESEARCH }
+		}
 	
 		focus = {
 			id = HUN_military_factories
@@ -749,7 +749,7 @@ focus_tree = {
 			x = 0
 			y = 1
 			relative_position_id = HUN_intervention
-			mutually_exclusive { focus = HUN_Millitary_factories }
+			mutually_exclusive = { focus = HUN_army_research }
 
 			cost = 10
 
@@ -828,7 +828,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		relative_position_id = HUN_intervention
-		mutually_exclusive { focus = HUN_military_factories }
+		mutually_exclusive = { focus = HUN_military_factories }
 
 		cost = 10
 

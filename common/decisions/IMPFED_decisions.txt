@@ -96,7 +96,7 @@ ENG_imperial_conference_decision = {
 						}
 					}
 				}	
-				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_opinion }
+				#remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_opinion }
 				remove_opinion_modifier = { target = ENG modifier = ENG_imperial_conference_approved_resolution }
 			}
 			if = {

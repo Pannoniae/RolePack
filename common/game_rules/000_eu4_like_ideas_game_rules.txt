@@ -1,13 +1,13 @@
 eu4_like_ideas_rule_show_introduction = {
 	name = "EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION"
 	group = "EU4_LIKE_IDEAS_RULES"
-	option = {
+	default = {
 		name = "YES"
 		desc = "YES_EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION_DESC"
 		text = "YES"
 		allow_achievements = yes
 	}
-	default = {
+	option = {
 		name = "NO"
 		desc = "NO_EU4_LIKE_IDEAS_RULE_SHOW_INTRODUCTION_DESC"
 		text = "NO"
@@ -136,6 +136,77 @@ eu4_like_ideas_rule_AI = {
 	}
 }
 
+eu4_like_ideas_AI_idea_usage_delay = {
+	name = "EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY"
+	group = "EU4_LIKE_IDEAS_RULES"
+	default = {
+		name = "NONE"
+		desc = "NONE_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "NONE_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_1_YEAR"
+		desc = "RULE_DELAY_1_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_1_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_2_YEAR"
+		desc = "RULE_DELAY_2_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_2_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_3_YEAR"
+		desc = "RULE_DELAY_3_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_3_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_4_YEAR"
+		desc = "RULE_DELAY_4_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_4_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_5_YEAR"
+		desc = "RULE_DELAY_5_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_5_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_6_YEAR"
+		desc = "RULE_DELAY_6_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_6_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_7_YEAR"
+		desc = "RULE_DELAY_7_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_7_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_8_YEAR"
+		desc = "RULE_DELAY_8_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_8_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_9_YEAR"
+		desc = "RULE_DELAY_9_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_9_YEAR"
+		allow_achievements = yes
+	}
+	option = {
+		name = "RULE_DELAY_10_YEAR"
+		desc = "RULE_DELAY_10_YEAR_EU4_LIKE_IDEAS_AI_IDEA_USAGE_DELAY_DESC"
+		text = "RULE_DELAY_10_YEAR"
+		allow_achievements = yes
+	}
+}
+
 eu4_like_ideas_rule_AI_pp_cost_reduction = {
 	name = "EU4_LIKE_IDEAS_RULE_AI_PP_COST_REDUCTION"
 	group = "EU4_LIKE_IDEAS_RULES"
@@ -244,6 +315,24 @@ eu4_like_ideas_national_idea_groups_rule = {
 eu4_like_ideas_num_of_selectable_idea_groups_rule = {
 	name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE"
 	group = "EU4_LIKE_IDEAS_RULES"
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_2"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_2_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_2"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_4"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_4_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_4"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_6"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_6_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_6"
+		allow_achievements = yes
+	}
 	default = {
 		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_8"
 		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_8_DESC"
@@ -272,6 +361,36 @@ eu4_like_ideas_num_of_selectable_idea_groups_rule = {
 		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_16"
 		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_16_DESC"
 		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_16"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_18"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_18_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_18"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_20"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_20_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_20"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_22"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_22_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_22"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_24"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_24_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_24"
+		allow_achievements = yes
+	}
+	option = {
+		name = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_26"
+		desc = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_26_DESC"
+		text = "EU4_LIKE_IDEAS_NUM_OF_SELECTABLE_IDEA_GROUPS_RULE_26"
 		allow_achievements = yes
 	}
 }

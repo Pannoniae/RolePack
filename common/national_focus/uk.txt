@@ -6864,29 +6864,29 @@ focus_tree = {
 					exists = no
 				}
 			}
-			NOT = {
-				any_state = {
-					OR = {
-						is_core_of = ENG
-						is_core_of = CAN
-						is_core_of = SAF
-						is_core_of = AST
-						is_core_of = NZL
-					}
-					NOT = { state = 331 }
-					OWNER = {
-						NOT = {
-							OR = {
-								tag = ENG
-								tag = CAN
-								tag = SAF
-								tag = AST
-								tag = NZL
-							}
-						}
-					}
-				}
-			}
+			#NOT = {
+			#	any_state = {
+			#		OR = {
+			#			is_core_of = ENG
+			#			is_core_of = CAN
+			#			is_core_of = SAF
+			#			is_core_of = AST
+			#			is_core_of = NZL
+			#		}
+			#		NOT = { state = 331 }
+			#		OWNER = {
+			#			NOT = {
+			#				OR = {
+			#					tag = ENG
+			#					tag = CAN
+			#					tag = SAF
+			#					tag = AST
+			#					tag = NZL
+			#				}
+			#			}
+			#		}
+			#	}
+			#}
 		}
 
 		bypass = {
@@ -7724,8 +7724,6 @@ focus_tree = {
 				}	
 			}
 			add_country_leader_trait = federation_architecht_uk
-		}
-	}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 	}

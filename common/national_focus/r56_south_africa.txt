@@ -1631,7 +1631,7 @@ focus_tree = {
             factor = 0
 			modifier = {
 				is_historical_focus_on = no
-				factor = 10
+				factor = 1
 			}
         }
 
@@ -1973,7 +1973,7 @@ focus_tree = {
         y = 1
         cost = 5
         ai_will_do = {
-          factor = 20
+          factor = 50
         }
         available = {
             ENG = {
@@ -2300,7 +2300,7 @@ focus_tree = {
         y = 1
         cost = 5
         ai_will_do = {
-			factor = 8
+			factor = 1
 			modifier = {
                 is_historical_focus_on = yes
                 NOT = {
@@ -2336,7 +2336,7 @@ focus_tree = {
         y = 1
         cost = 5
         ai_will_do = {
-			factor = 4
+			factor = 1
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0
@@ -2392,7 +2392,7 @@ focus_tree = {
         cost = 10
 
         ai_will_do = {
-			factor = 3
+			factor = 1
 			modifier = {
 				is_historical_focus_on = yes
 				factor = 0

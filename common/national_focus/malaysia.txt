@@ -523,7 +523,7 @@ focus = {
 	icon =GFX_goal_tfv_strengthen_commonwealth_ties
 	bypass = {}
 	ai_will_do = {
-		factor = 2 }
+		factor = 50 }
 	x =3
 	y =2
 	mutually_exclusive = { focus = MAL_the_nation }
@@ -770,7 +770,7 @@ focus = {
 	icon =GFX_goal_support_communism
 	bypass = {}
 	ai_will_do = {
-		factor = 2 }
+		factor = 1 }
 	x =25
 	y =2
 	mutually_exclusive = { focus = MAL_the_princes }
@@ -1029,7 +1029,7 @@ focus = {
 	icon =GFX_goal_support_fascism
 	bypass = {}
 	ai_will_do = {
-		factor = 2 }
+		factor = 1 }
 	x =20
 	y =2
 	mutually_exclusive = {focus = MAL_the_workers }
@@ -1277,7 +1277,7 @@ focus = {
 	icon =GFX_goal_support_democracy
 	bypass = {}
 	ai_will_do = {
-		factor = 2 }
+		factor = 1 }
 	x =8
 	y =2
 	mutually_exclusive = { focus = MAL_the_empire }

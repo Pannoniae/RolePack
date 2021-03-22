@@ -3047,7 +3047,7 @@ country_event = {
 					}
 				}
 			}
-			add_opinion_modifier = { target = ROOT modifier = ENG_imperial_conference_opinion }
+			#add_opinion_modifier = { target = ROOT modifier = ENG_imperial_conference_opinion }
 			custom_effect_tooltip = mtg_britain.82_tt
 		}
 	}
