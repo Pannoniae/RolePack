@@ -80,6 +80,36 @@ units = {
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
 
-	
+	}
+	division= {	
+		name = "Tiro de Guerra - Porto Alegre"
+		location = 10447 # Porto Alegre
+		division_template = "Regimento de Cavalaria"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+
+	}
+	division= {	
+		name = "Voluntários de São Paulo"
+		location = 10513
+		division_template = "Regimento de Cavalaria Blindada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Linha Sorocabana"
+		location = 10513
+		division_template = "Regimento de Cavalaria Blindada"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+	}
+	division= {	
+		name = "Legião Tenentista"
+		location = 10513
+		division_template = "Batalhão de Infantaria"
+		start_experience_factor = 1
+		start_equipment_factor = 0.1
+	}
+}
 
 

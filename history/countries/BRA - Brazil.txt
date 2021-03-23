@@ -3,8 +3,11 @@
 
 oob = "BRA_1936"
 
-set_stability = 0.40
-set_war_support = 0.30
+country_event = { days = 1 id = bra.10 }
+set_convoys = 200
+
+set_stability = 0.4
+set_war_support = 0.2
 
 # Starting tech
 set_technology = {
@@ -70,9 +73,29 @@ add_ideas = {
 	bra_bandeirantes
 	bra_1930 
 	bra_rural_elite
+	bra_naval_tradition_idea
+	free_trade
+	limited_conscription
 }
 
-set_convoys = 100
+set_cosmetic_tag = BRA_RGC
+
+remove_ideas = {
+	generic_fascist_demagogue
+	generic_democratic_reformer
+	generic_communist_revolutionary
+	generic_tank_manufacturer
+	generic_naval_manufacturer
+	generic_light_aircraft_manufacturer
+	generic_medium_aircraft_manufacturer
+	generic_heavy_aircraft_manufacturer
+	generic_naval_aircraft_manufacturer
+	generic_industrial_concern
+	generic_electronics_concern
+	generic_motorized_equipment_manufacturer
+	generic_infantry_equipment_manufacturer
+	generic_artillery_manufacturer
+}
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1934.7.17"
@@ -80,9 +103,10 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 5
-	communism = 1
-	neutrality = 94
+	neutrality = 70
+	fascism = 10
+	communism = 10
+	democratic = 10
 }
 
 
@@ -152,83 +176,252 @@ create_country_leader = {
 	}
 }
 
+create_field_marshal = {
+	name = "Eurico Gaspar Dutra"
+	portrait_path = "gfx/leaders/BRA/Dutra.dds"
+	traits = { career_officer politically_connected skilled_staffer expert_delegator organisational_leader defensive_doctrine }
+	skill = 3
+	
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Pedro Aurélio de Góis Monteiro"
+	portrait_path = "gfx/leaders/BRA/Goes.dds"
+	traits = { trait_cautious politically_connected infantry_leader }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+#create_corps_commander = {
+#	name = "Ernesto Beckmann Geisel"
+#	portrait_path = "gfx/leaders/BRA/Geisel.dds"
+#	traits = { career_officer politically_connected }
+#	skill = 2
+#	
+#	attack_skill = 4
+#	defense_skill = 2
+#	planning_skill = 4
+#	logistics_skill = 4
+#}
+
+create_corps_commander = {
+	name = "José Pessoa Cavalcanti de Albuquerque"
+	portrait_path = "gfx/leaders/BRA/Albuquerque.dds"
+	traits = { war_hero panzer_leader swamp_fox }
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "João de Segadas Viana"
+	portrait_path = "gfx/leaders/BRA/Segadas.dds"
+	traits = { trait_cautious career_officer infantry_leader }
+	skill = 3
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
 create_corps_commander = { #degree as infantry and cavalry commander. infantry commander in Italy
 	name = "Euclides Zenóbio da Costa"
 	portrait_path  = "gfx/leaders/BRA/r56_portrait_BRA_Euclides_Zenobio_Da_Costa.dds"
-	traits = { infantry_officer hill_fighter }
+	traits = { old_guard infantry_leader infantry_officer hill_fighter }
 	skill = 2
-    attack_skill = 1
-    defense_skill = 3
-    planning_skill = 2
-    logistics_skill = 1
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = { #could be promoted to marshal at the beginning of the game??-> would probably be a bit far fetched but indicate his importance to the player, maybe add brilliant_strategist or inflexible_strategist???
-	name = "Mascarenhas de Morais"
+	name = "João Batista Mascarenhas de Morais"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
-	traits = { career_officer jungle_rat artillerist }
+	traits = { organizer infantry_leader hill_fighter career_officer jungle_rat artillerist }
 	skill = 3
-    attack_skill = 4
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
+	
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = { # more or less ok, I changed the trait though. close to integralism but associated with Vargas regime, he oversaw motorization of the infantry around 1940
-	name = "Newton Cavalcanti"
+	name = "Newton de Andrade Cavalcanti"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_5.dds"
-	traits = { infantry_officer politically_connected}
+	traits = { old_guard commando jungle_rat infantry_officer politically_connected}
 	skill = 2
-    attack_skill = 2
-    defense_skill = 1
-    planning_skill = 2
-    logistics_skill = 2
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 4
 }
 
+create_corps_commander = {
+	name = "João Gomes Ribeiro Filho"
+	portrait_path = "gfx/leaders/BRA/G22.dds"
+	traits = { trait_cautious career_officer infantry_leader }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "João Neves da Fontoura"
+	portrait_path = "gfx/leaders/BRA/G2.dds"
+	traits = { politically_connected media_personality winter_specialist }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Artur da Costa e Silva"
+	portrait_path = "gfx/leaders/BRA/G4.dds"
+	traits = { trait_reckless politically_connected trickster }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Álvaro Fiúza de Castro"
+	portrait_path = "gfx/leaders/BRA/G3.dds"
+	traits = { old_guard organizer trait_engineer }
+	skill = 2
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
+}
 create_corps_commander = { #not very important at the time but ok
 	name = "Canrobert Pereira da Costa"
 	portrait_path = "gfx/leaders/BRA/r56_portrait_BRA_Canrobert_Pereira_Da_Costa.dds"
-	traits = {  }
+	traits = { trait_cautious career_officer infantry_leader }
 	skill = 2
-    attack_skill = 2
-    defense_skill = 2
-    planning_skill = 1
-    logistics_skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 4
 }
 
 create_corps_commander = { #minor guy until late game, changed to level 1
 	name = "Newton Estillac Leal"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_2.dds"
-	traits = {  }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
+	portrait_path = "gfx/leaders/BRA/G15.dds"
+	traits = { trait_cautious career_officer infantry_leader }
+	skill = 2
+	
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
 }
 
-create_corps_commander = { #same as the previous guy, maybe remove
-	name = "Cyro Espírito Santo Cardoso"
-	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_3.dds"
-	traits = {  }
-	skill = 1
-    attack_skill = 1
-    defense_skill = 1
-    planning_skill = 1
-    logistics_skill = 1
+create_corps_commander = {
+	name = "Olímpio Mourão Filho"
+	portrait_path = "gfx/leaders/BRA/Mourao.dds"
+	traits = { trait_reckless media_personality trait_mountaineer }
+	skill = 2
+	
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 create_corps_commander = { #rose quickly through the ranks but he is also a bit "young" promoted colonel in 38, general in 42, pic show him much later
 	name = "Odílio Denys"
 	portrait_path = "gfx/leaders/BRA/r56_portrait_BRA_Odilio_Denys.dds"
-	traits = { politically_connected harsh_leader }
+	traits = { politically_connected harsh_leader organizer urban_assault_specialist }
 	skill = 2
-    attack_skill = 3
-    defense_skill = 2
-    planning_skill = 2
-    logistics_skill = 1
+	
+	attack_skill = 4
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 4
 }
 
+create_corps_commander = {
+	name = "Amaury Kruel"
+	portrait_path = "gfx/leaders/BRA/G18.dds"
+	traits = { politically_connected organizer ranger }
+	skill = 2
+	
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Jair Dantas Ribeiro"
+	portrait_path = "gfx/leaders/BRA/G19.dds"
+	traits = { politically_connected organizer ranger }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "José Fernandes Leite de Castro"
+	portrait_path = "gfx/leaders/BRA/G20.dds"
+	traits = { trait_cautious career_officer infantry_leader }
+	skill = 2
+	
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Augusto Inácio do Espirito Santo Cardoso"
+	portrait_path = "gfx/leaders/BRA/G21.dds"
+	traits = { trait_cautious career_officer cavalry_leader }
+	skill = 2
+	
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Cyro do Espírito Santo Cardoso"
+	portrait_path = "gfx/leaders/BRA/G16.dds"
+	traits = { trait_cautious career_officer cavalry_leader }
+	skill = 2
+	
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
 create_corps_commander = { #old but not retired, add old guard?
 	name = "João Gomes Ribeiro"
 	portrait_path = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
@@ -250,7 +443,38 @@ create_navy_leader = { #commanded one ship in wwII, and he was level 4, seriousl
 	maneuvering_skill = 1
 	coordination_skill = 1	
 }
+create_navy_leader = {
+	name = "Augusto Hamann Rademaker Grünewald"
+	portrait_path = "gfx/leaders/BRA/Rademaker.dds"
+	traits = { fleet_protector }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 4
+	coordination_skill = 4
+}
 
+create_navy_leader = {
+	name = "Adalberto de Barros Nunes"
+	portrait_path = "gfx/leaders/BRA/Nunes.dds"
+	traits = { blockade_runner }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 4
+	maneuvering_skill = 2
+	coordination_skill = 2
+}
+
+create_navy_leader = {
+	name = "Antônio Alves Câmara"
+	portrait_path = "gfx/leaders/BRA/Alves.dds"
+	traits = { seawolf }
+	skill = 2
+	attack_skill = 4
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 3
+}
 create_navy_leader = { #minister of navy in 55...
 	name = "Antônio Alves Câmara"
 	portrait_path = "gfx/leaders/BRA/r56_portrait_BRA_antonio_alves_camara.dds"
@@ -379,4 +603,3 @@ if = {
 		}
 	}
 }
-

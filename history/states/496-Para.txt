@@ -4,7 +4,7 @@ state={
 	name="STATE_496" # Minas Gerais
 	manpower = 4603600
 	
-	state_category = town
+	state_category = city
 	
 	resources={
 		steel=3 # was: 4
@@ -15,18 +15,24 @@ state={
 		victory_points = {
 			7476 3
 		}
-		victory_points = {
-			10999 1
-		}
 		victory_points = { 10945 5 }
 		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
+			infrastructure = 5
+			industrial_complex = 4
 			10999 = {
 				naval_base = 1
 			}
 		}
 		add_core_of = BRA
+		victory_points = {
+			12938 30
+		}
+		victory_points = {
+			10999 5
+		}
+		victory_points = {
+			12977 5
+		}
 	}
 
 	provinces={

@@ -10,12 +10,18 @@ state={
 	history={
 		owner = BRA
 		buildings = {
-			infrastructure = 1
+			infrastructure = 3
 		}
 		add_core_of = BRA
-		victory_points = { 12987 5 }
-		victory_points = { 5208 10 }
-		victory_points = { 5151 5 }
+		victory_points = {
+			5208 10
+		}
+		victory_points = {
+			12987 5
+		}
+		victory_points = {
+			5151 5
+		}
 	}
 
 	provinces={

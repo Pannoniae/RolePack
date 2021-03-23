@@ -1,0 +1,107 @@
+defined_text = {
+	name = GetVFBUFRJName
+	text = {
+		trigger = {
+			original_tag = BRA
+			OR = {
+				has_country_leader = {
+					name = "Prince Pedro of Orleáns-Bragança"
+					ruling_only = yes
+				}
+				has_country_leader = {	
+					name = "Pedro III"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Arlindo Veiga dos Santos"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = VFB_UFRJ_IMP_NAME
+	}
+	text = {
+		localization_key = VFB_UFRJ_FED_NAME
+	}
+}
+
+defined_text = {
+	name = GetVFBRodName
+	text = {
+		trigger = {
+			original_tag = BRA
+			OR = {
+				has_country_leader = {
+					name = "Prince Pedro of Orleáns-Bragança"
+					ruling_only = yes
+				}
+				has_country_leader = {	
+					name = "Pedro III"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Arlindo Veiga dos Santos"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = VFB_ROD_IMP_NAME
+	}
+	text = {
+		localization_key = VFB_ROD_FED_NAME
+	}
+}
+
+defined_text = {
+	name = GetVFBUniName
+	text = {
+		trigger = {
+			original_tag = BRA
+			OR = {
+				has_country_leader = {
+					name = "Prince Pedro of Orleáns-Bragança"
+					ruling_only = yes
+				}
+				has_country_leader = {	
+					name = "Pedro III"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Arlindo Veiga dos Santos"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = VFB_UNI_IMP_NAME
+	}
+	text = {
+		localization_key = VFB_UNI_FED_NAME
+	}
+}
+
+defined_text = {
+	name = GetVFBCampiiName
+	text = {
+		trigger = {
+			original_tag = BRA
+			OR = {
+				has_country_leader = {
+					name = "Prince Pedro of Orleáns-Bragança"
+					ruling_only = yes
+				}
+				has_country_leader = {	
+					name = "Pedro III"
+					ruling_only = yes
+				}
+				has_country_leader = {
+					name = "Arlindo Veiga dos Santos"
+					ruling_only = yes
+				}
+			}
+		}
+		localization_key = VFB_CAMPII_IMP_NAME
+	}
+	text = {
+		localization_key = VFB_CAMPII_FED_NAME
+	}
+}

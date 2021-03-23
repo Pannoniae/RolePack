@@ -1703,6 +1703,7 @@ country_event = {
 
 
 ######## PROMOTE MONARCHIST CAUSE ########
+add_namespace = lar_portugal_promote_monarchist_cause
 # Event for Brazil when Portugal activates "Promote Monarchist Cause in Brazil" Decision
 country_event = {
 	id = lar_portugal_promote_monarchist_cause.1
@@ -1732,8 +1733,11 @@ country_event = {
 		ai_chance = {
 			factor = 80
 			modifier = { #Not non-aligned Brazil will never accept
-				factor = 0
-				NOT = { has_government = neutrality }
+				factor = 80
+				AND = {
+					has_government = neutrality
+					has_completed_focus = bra_vital_espace
+				}
 			}
 		}
 		
@@ -1813,15 +1817,12 @@ country_event = {
 				set_country_flag = EOB_empire_of_brazil_flag
 				set_cosmetic_tag = EOB_empire_brazil_neutrality
 				create_country_leader = {
-					#name = "Prince Pedro Henrique"
-					name = "Pedro III"
-					desc = "POLITICS_PRINCE_PEDRO_HENRIQUE_DESC"
-					picture = "gfx/leaders/BRA/portrait_bra_prince_pedro_hernique_de_orleans_e_braganza.dds"
-					expire = "1981.07.05"
-					ideology = absolute_monarchism
-					traits = {
-						inexperienced_monarch
-					}					
+					name = "Prince Pedro of Orleáns-Bragança"
+					desc = "POLITICS_DPIII_DESC"
+					picture = "gfx/leaders/BRA/DPIII.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {  vfb_trait_dompedro_4 vfb_trait_dompedro_5 }
 				}
 				set_temp_variable = { POR_bra_monarchist_cw_opposition = party_popularity@fascism }
 				add_to_temp_variable = { POR_bra_monarchist_cw_opposition = party_popularity@communism }
@@ -1839,6 +1840,9 @@ country_event = {
 					}
 					POR = { 
 						add_to_war = { targeted_alliance = BRA enemy = PREV hostility_reason = asked_to_join }
+						effect_tooltip = {
+							give_military_access = BRA
+						}
 						hidden_effect = {
 							diplomatic_relation = {
 								country = BRA
@@ -1888,8 +1892,8 @@ country_event = {
 				start_civil_war = {
 					ideology = neutrality
 					size = POR_bra_monarchist_cw_opposition
-					capital = 501
-					states = { 495 497 280 502 503 504 505 }
+					capital = 500
+					states = { 496 499 498 497 495 280 505 }
 				}
 				if = {
 					limit = {
@@ -1930,6 +1934,14 @@ country_event = {
 					    ideology = fascism
 					    long_name = BRA_fascism_party_long
 					    name = BRA_fascism_party
+					}
+					create_country_leader = {
+						name = "Prince Pedro of Orleáns-Bragança"
+						desc = "POLITICS_DPIII_DESC"
+						picture = "gfx/leaders/BRA/DPIII.dds"
+						expire = "1965.1.1"
+						ideology = despotism
+						traits = {  vfb_trait_dompedro_4 vfb_trait_dompedro_5 }
 					}
 					POR = { 
 						add_to_war = { targeted_alliance = PREV enemy = BRA hostility_reason = asked_to_join }
@@ -1985,6 +1997,14 @@ country_event = {
 				traits = {
 					inexperienced_monarch
 				}					
+			}
+			create_country_leader = {
+				name = "Prince Pedro of Orleáns-Bragança"
+				desc = "POLITICS_DPIII_DESC"
+				picture = "gfx/leaders/BRA/DPIII.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {  vfb_trait_dompedro_4 vfb_trait_dompedro_5 }
 			}
 			start_civil_war = {
 				ideology = fascism
@@ -2046,6 +2066,14 @@ country_event = {
 						inexperienced_monarch
 					}					
 				}
+				create_country_leader = {
+					name = "Prince Pedro of Orleáns-Bragança"
+					desc = "POLITICS_DPIII_DESC"
+					picture = "gfx/leaders/BRA/DPIII.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {  vfb_trait_dompedro_4 vfb_trait_dompedro_5 }
+				}
 				POR = { 
 					add_to_war = { targeted_alliance = PREV enemy = BRA hostility_reason = asked_to_join }
 					give_military_access = PREV
@@ -2085,6 +2113,14 @@ country_event = {
 			traits = {
 				inexperienced_monarch
 			}					
+		}
+		create_country_leader = {
+			name = "Prince Pedro of Orleáns-Bragança"
+			desc = "POLITICS_DPIII_DESC"
+			picture = "gfx/leaders/BRA/DPIII.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {  vfb_trait_dompedro_4 vfb_trait_dompedro_5 }
 		}
 		if = {
 			limit = { NOT = { has_government = neutrality } }

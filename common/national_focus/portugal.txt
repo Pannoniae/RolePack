@@ -5856,6 +5856,7 @@ focus_tree = {
 		cost = 10
 		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
 		completion_reward = {
+			POR = { country_event = bra.20 }
 			hidden_effect = {
 				news_event = { id = lar_news.25 days = 3 random_days = 5 }
 			}
@@ -6167,7 +6168,10 @@ focus_tree = {
 	focus = {
 		id = POR_monarchist_uprising_in_brazil
 		available = {
-
+			BRA = {
+				has_completed_focus = bra_brazilian_action
+				has_government = fascism
+			}
 		}
 
 		bypass = {
@@ -6175,9 +6179,10 @@ focus_tree = {
 				NOT = { country_exists = BRA }
 				BRA = {
 					OR = {
-						has_country_leader = { name = "Pedro III" ruling_only = yes }
-						has_capitulated = yes 
-					} 	
+						has_completed_focus = bra_monarquia_focus
+						has_completed_focus = bra_populism
+						has_completed_focus = bra_regionalism
+					}
 				}
 			}
 		}
@@ -6267,27 +6272,12 @@ focus_tree = {
 			}
 		}
 
-		available = {
-			is_puppet = no
-			if = {
-				limit = {
-					BRA = {
-						has_country_leader = { name = "Pedro III" ruling_only = yes }
-					}					
-				}
-				has_country_leader = { name = "Dom Duarte Nuno" ruling_only = yes }
-			}			
+		available = {	
 		}
 
 		bypass = {
-			OR = {
-				NOT = { country_exists = BRA }
-				BRA = { has_capitulated = yes }
-				is_in_faction_with = BRA
-				BRA = {
-					has_country_leader = { name = "Pedro III" ruling_only = no }
-				}
-			}
+			NOT = { country_exists = BRA }
+			BRA = { has_capitulated = yes }
 		}
 		relative_position_id = POR_monarchist_uprising_in_brazil
 		prerequisite = { focus = POR_monarchist_uprising_in_brazil }
@@ -6299,12 +6289,14 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					BRA = {
-						has_country_leader = { name = "Pedro III" ruling_only = yes }
-						is_in_faction = yes
-					}
+					AND = {
+							has_government = fascism
+							has_completed_focus = bra_brazilian_action
+							fascism < 0.5
+						}
 
 				}
+				BRA = { country_event = lar_portugal_promote_monarchist_cause.3 }
 				BRA = {
 					FACTION_LEADER = {
 						country_event = { id = generic.2 }	
@@ -6314,71 +6306,50 @@ focus_tree = {
 				remove_ideas = POR_unstable_monarchy
 
 			}
-			if = {
-				limit = {
-					BRA = {
-						has_country_leader = { name = "Pedro III" ruling_only = yes }
-						is_in_faction = no
-					}
-				}
-				set_rule = { can_create_factions = yes }
-				create_faction = POR_lisbon_pact
-
-				BRA = {
-					country_event = { id = generic.5 }
-					add_ai_strategy = {
-						type = alliance
-						id = "POR"
-						value = 200
-					}						
-				}				
-				remove_ideas = POR_unstable_monarchy
-
-			}
 			else = {
-				if = {
-					limit = {
-						BRA = {
-							OR = {
-								has_country_flag = POR_brazil_supports_fascist_coalition_flag
-								AND = {
-									NOT = { has_government = neutrality }
-									OR = {
-										has_stability < 0.5
-										neutrality < 0.7
-									}
-								}
-							}
-						}
+				BRA = { country_event = lar_portugal_promote_monarchist_cause.4 }
+				POR = {
+					create_wargoal = {
+						target = BRA
+						type = annex_everything
 					}
-					BRA = { country_event = lar_portugal_promote_monarchist_cause.3 }
-				}
-				else = {
-					BRA = { country_event = lar_portugal_promote_monarchist_cause.4 }
-				}
-				custom_effect_tooltip = POR_the_empire_of_brazil_potential_civil_war_tt
-	
-				hidden_effect = {
-					every_country = {
-						limit = {
-							original_tag = BRA
-							has_government = neutrality
-						}
+					#hidden_effect = { country_event = lar_portugal_promote_monarchist_cause.6 }
+				}	
+			}
+			set_rule = { can_create_factions = yes }
+			create_faction = POR_lisbon_pact
+
+			BRA = {
+				country_event = { id = generic.5 }
+				add_ai_strategy = {
+					type = alliance
+					id = "POR"
+					value = 200
+				}						
+			}				
+			remove_ideas = POR_unstable_monarchy
+			custom_effect_tooltip = bra_por_potential_civil_war_tooltip
+
+			hidden_effect = {
+				every_country = {
+					limit = {
+						original_tag = BRA
+						has_government = neutrality
+					}
+					add_ai_strategy = {
+						type = befriend
+						id = ROOT
+						value = 100
+					}
+					ROOT = {
 						add_ai_strategy = {
 							type = befriend
-							id = ROOT
+							id = PREV
 							value = 100
-						}
-						ROOT = {
-							add_ai_strategy = {
-								type = befriend
-								id = PREV
-								value = 100
-							}
 						}
 					}
 				}
-			}			
+			}		
 		}
 	}
 
@@ -6461,6 +6432,8 @@ focus_tree = {
 					BRA = {
 						has_government = neutrality
 						has_civil_war = no
+						has_war = no
+						has_completed_focus = bra_brazilian_action
 						NOT = { has_war_with = ROOT }
 					}
 					NOT = {
@@ -6471,7 +6444,7 @@ focus_tree = {
 				}
 				AND = {
 					NOT = { country_exists = BRA }
-					owns_state = 500
+					POR = { owns_state = 500 }
 				}
 			}
 		}
