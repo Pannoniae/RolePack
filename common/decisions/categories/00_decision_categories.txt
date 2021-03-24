@@ -246,9 +246,9 @@ category_test_decisions = {
 
 lar_local_recruitment = {
 	allowed = { has_dlc = "La Resistance" }
-
-	visible = { has_done_agency_upgrade = upgrade_training_centers }
-
+#The Agency - Adjusted For Merged Mod
+	visible = { has_intelligence_agency = yes }
+#End Change
 	visibility_type = map_and_decisions_view
 	
 	on_map_area = {

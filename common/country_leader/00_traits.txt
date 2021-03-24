@@ -385,13 +385,16 @@ leader_traits = {
 	}
 	
 	#ESPIONAGE IDEAS#
-	
+
+#The Agency - Changed for Merge Mod	
 	head_of_intelligence = {
 		random = no
 		sprite = 15
-		operative_slot = 1
-		agency_upgrade_time = -0.15
+		operative_slot = 2
+		agency_upgrade_time = -0.1
+		operation_outcome = 0.1
 	}
+#End Change
 	
 	mastermind_code_cracker = {
 		random = no

@@ -1,0 +1,15 @@
+﻿l_english:
+  
+#Modded TALL-EIS
+ upgrade_internal_security:0 "Internal Security"
+ upgrade_internal_security_desc:0 "§LAddressing places within our own government and military easily exploited by foreign intelligence services is the best defense against the hostile actions of enemy operatives.  By educating personnel in all fields of security, and monitoring trusted personnel for risks in areas such as financial stress, political views, or vulnerability to blackmail we can counter the efforts of our enemies."
+ upgrade_communications_security:0 "Communications Security"
+ upgrade_communications_security_desc:0 "§LMeasures must be taken to deny unauthorized access to our communications.  These new techniques will further enhance our already existing emissions, transmission, cryptographic, and physical security measures."
+ operative_revolutionary:0 "Revolutionary"
+ operative_revolutionary_desc:0 "This Operative is a fearless advocate for radical, political change."
+ operative_insurgent:0 "Insurgent"
+ operative_insurgent_desc:0 "This Operative is a skilled guerrilla warrior, trained in the art of asymmetrical warfare."
+ operative_scientist:0 "Scientist"
+ operative_scientist_desc:0 "This Operative is highly educated, and commands a powerful intellect."
+ operative_web_of_lies:0 "Web Of Lies"
+ operative_web_of_lies_desc:0 "This Operative is like a spider at the center of a web.  Woven from secrets ... and lies."
